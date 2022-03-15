@@ -7,8 +7,9 @@ class Home extends React.Component {
     return (
       <>
         <Header />
-        <h1>Home</h1>
-
+        <h1>Welcome</h1>
+        <p>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</p>
+        <hr />
 
       </>
 

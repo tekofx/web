@@ -1,16 +1,33 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Navbar from './/components/Navbar/Navbar';
 import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import AboutMe from './pages/AboutMe';
+import Contact from './pages/Contact';
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate
+} from "react-router-dom";
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Navbar />
-      <Home />
+    return (
+        <>
+            <Router>
+                <div>
+                    <Routes>
+                        <Route path='/' element={<Navigate to="/home" />} />
+                        <Route path='/home' element={<Home />} />
+                        <Route path='/gallery' element={<Gallery />} />
+                        <Route path='/about' element={<AboutMe />} />
+                        <Route path='/contact' element={<Contact />} />
 
-    </div>
-  );
+
+                    </Routes>
+
+                </div>
+            </Router>
+        </>
+    );
 }
 
 export default App;

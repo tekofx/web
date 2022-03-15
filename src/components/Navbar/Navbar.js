@@ -1,18 +1,18 @@
 import React from "react";
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 class Navbar extends React.Component {
   render() {
     return (
-      <ul>
-        <li><Link to="/home">Home</Link> </li>
-        <li><Link to="/about">About Me</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+      <nav>
+        <NavLink className={({ isActive }) => (isActive ? "linkActive" : "link")} to="/home" >Home</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "linkActive" : "link")} to="/about">About Me</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "linkActive" : "link")} to="/gallery">Gallery</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "linkActive" : "link")} to="/contact">Contact</NavLink>
 
-      </ul>
+      </nav>
 
     )
   }

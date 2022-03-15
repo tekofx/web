@@ -2,4 +2,24 @@ body{
   background-color: #06090f;
   color: rgb(255, 255, 255);
   padding-left: 2%;
+  padding-right: 2%;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    margin-right: 10;
+
+}
+
+.avatar{
+  width: 20%;
+}
+
+.about{
+  display: flex;
+}
+
+p{
+  padding-left: 1%;
 }

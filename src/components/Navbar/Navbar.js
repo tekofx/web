@@ -11,7 +11,6 @@ class Navbar extends React.Component {
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/projects">Projects</NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/gallery">Gallery</NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">About Me</NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">Contact</NavLink>
 
       </nav>
 

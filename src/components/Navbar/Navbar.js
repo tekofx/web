@@ -8,8 +8,9 @@ class Navbar extends React.Component {
     return (
       <nav>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/home" >Home</NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">About Me</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/projects">Projects</NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/gallery">Gallery</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/about">About Me</NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/contact">Contact</NavLink>
 
       </nav>

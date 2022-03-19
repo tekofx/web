@@ -1,8 +1,8 @@
 body{
   background-color: #06090f;
   color: rgb(255, 255, 255);
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .icon{
@@ -12,12 +12,16 @@ body{
 
 }
 
-.avatar{
-  width: 150px;
-  height: 150px;
+.about{
+  display: flex;
+}
+
+p{
+  font-size: 120%;
 
 }
 
-.about{
-  display: flex;
+.paragraph{
+  margin-left: 6%;
+  margin-right: 6%;
 }

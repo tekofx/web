@@ -21,7 +21,3 @@ body{
 .about{
   display: flex;
 }
-
-p{
-  padding-left: 1%;
-}

@@ -10,6 +10,7 @@ class Gallery extends React.Component {
       <>
         <Header />
         <h1>Gallery</h1>
+        <p>My art/photographies</p>
         <ImageList />
       </>
     )

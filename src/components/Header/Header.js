@@ -7,8 +7,8 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <img src="/header.jpg" alt="" />
         <Navbar />
+        <br/>
       </>
 
 

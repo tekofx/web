@@ -4,10 +4,9 @@ nav {
     padding: 0;
     overflow: hidden;
     background-color: #161b22;
-    
-
+    display: inline;
 }
-  
+
 .link {
     float: left;
     display: block;
@@ -17,12 +16,12 @@ nav {
     text-decoration: none;
 }
 
-.link:hover{
-  background-color: #111;
+.link:hover {
+    background-color: #111;
 }
 
 
-.active{
+.active {
     background-color: #111;
 }
 

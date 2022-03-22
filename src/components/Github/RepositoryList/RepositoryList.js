@@ -31,7 +31,12 @@ function getRepos() {
             title: valor.name,
             description: valor.description,
             url: valor.html_url,
-            img: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
+            img: "https://raw.githubusercontent.com/tekofx/" + valor.name + "/main/assets/logo.png",
+        }
+
+        // If logo doesn't exist, use the default one
+        if (!doesFileExist(aux.img)) {
+            aux.img = "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png";
         }
 
         ouput.push(aux);
@@ -39,6 +44,14 @@ function getRepos() {
     return ouput;
 }
 
+
+function doesFileExist(urlToFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+
+    return xhr.status !== 404;
+}
 
 
 export default function BasicGrid() {

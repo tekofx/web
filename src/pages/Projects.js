@@ -5,15 +5,18 @@ import "./theme.css"
 class Projects extends React.Component {
   render() {
     return (
-      <>
+      <div className="pageContent">
         <Header />
-        <h1>Projects</h1>
         <br />
+        <div className="contentItems">
+          <h1>Projects</h1>
 
-        <p></p>
-        <hr />
+          <p></p>
+          <hr />
+        </div>
 
-      </>
+
+      </div>
 
     )
   }

@@ -5,24 +5,27 @@ body{
   padding-right: 5vw;
   padding-top: 3vw;
   padding-bottom: 3vw;
-
+  height: 100%;
   
 }
 
 p{
-  font-size: 2vw;
+  font-size: 1.5vw;
   text-align: justify;
 }
 
 .pageContent{
   background-color: #1e1e1e;
   border-radius: 40px;
+  height: 100%;
+
 
 }
 
 .contentItems{
   padding-left: 3vw;
   padding-right: 3vw;
+  padding-bottom: 3vw;
 
 }
 

@@ -11,7 +11,7 @@ class About extends React.Component {
     return (
       <div className="pageContent">
         <Header />
-
+        <br />
         <div className="contentItems">
           <h1>About</h1>
           <div className="about">

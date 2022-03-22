@@ -7,14 +7,17 @@ import ImageList from '../components/ImageList/ImageList';
 class Gallery extends React.Component {
   render() {
     return (
-      <>
+      <div className="pageContent">
         <Header />
         <br />
+        <div className="contentItems">
+          <h1>Gallery</h1>
+          <p>My art/photographies</p>
+          <ImageList />
+        </div>
 
-        <h1>Gallery</h1>
-        <p>My art/photographies</p>
-        <ImageList />
-      </>
+
+      </div>
     )
   }
 }

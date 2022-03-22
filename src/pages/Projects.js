@@ -11,10 +11,8 @@ class Projects extends React.Component {
         <br />
         <div className="contentItems">
           <h1>Projects</h1>
+          <h2>Github</h2>
           <RepositoryList />
-
-
-
 
         </div>
 

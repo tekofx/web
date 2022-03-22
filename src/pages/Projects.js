@@ -12,6 +12,7 @@ class Projects extends React.Component {
         <div className="contentItems">
           <h1>Projects</h1>
           <h2>Github</h2>
+          <p>My coding projects like Discord Bots and terminal programs</p>
           <RepositoryList />
 
         </div>

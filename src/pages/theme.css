@@ -12,10 +12,17 @@ body{
 p{
   font-size: 1.5vw;
   text-align: justify;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+
 }
 
 h1{
   font-size: 3vw;
+}
+h2{
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
 }
 
 .pageContent{

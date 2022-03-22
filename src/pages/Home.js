@@ -11,6 +11,10 @@ class Home extends React.Component {
         <div className="contentItems">
           <h1>Welcome</h1>
           <p>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</p>
+
+          <h2>News</h2>
+          - This webpage is still under construction, I will add more content as soon as possible.
+
         </div>
 
 

@@ -8,6 +8,8 @@ class Projects extends React.Component {
       <>
         <Header />
         <h1>Projects</h1>
+        <br />
+
         <p></p>
         <hr />
 

@@ -1,13 +1,29 @@
 body{
-  background-color: #06090f;
+  background-color: #101010;
   color: rgb(255, 255, 255);
   padding-left: 5vw;
   padding-right: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+
+  
 }
 
 p{
-  font-size: 120%;
+  font-size: 2vw;
   text-align: justify;
+}
+
+.pageContent{
+  background-color: #1e1e1e;
+  border-radius: 40px;
+
+}
+
+.contentItems{
+  padding-left: 3vw;
+  padding-right: 3vw;
+
 }
 
 .icon{

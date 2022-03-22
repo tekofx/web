@@ -4,7 +4,6 @@ import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
-import Card from '../components/Card/Card';
 
 class About extends React.Component {
   render() {

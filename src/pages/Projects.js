@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
+import RepositoryList from "../components/Github/RepositoryList/RepositoryList";
 import "./theme.css"
 
 class Projects extends React.Component {
@@ -10,9 +11,11 @@ class Projects extends React.Component {
         <br />
         <div className="contentItems">
           <h1>Projects</h1>
+          <RepositoryList />
 
-          <p></p>
-          <hr />
+
+
+
         </div>
 
 

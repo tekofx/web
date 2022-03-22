@@ -7,3 +7,8 @@
     background-color: #28272a;
     color: white;
 }
+
+.button.Mui-active{
+    background-color: yellow;
+    color: #01dbff;
+}

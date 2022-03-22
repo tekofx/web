@@ -5,7 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { createTheme } from '@mui/material';
 import './Repository.css';
+import { ThemeProvider } from '@emotion/react';
+import Theme from '../../Theme/Theme';
+
 
 class Repository extends React.Component {
     constructor(props) {
@@ -17,9 +21,13 @@ class Repository extends React.Component {
 
     }
 
+
+
     render() {
+
+
         return (
-            <Card sx={{ maxWidth: 345 }} className="card">
+            <Card sx={{ maxWidth: 345 }} className="card" >
                 <CardMedia
                     component="img"
                     height="140"
@@ -34,9 +42,11 @@ class Repository extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions className='cardContent'>
-                    <Button variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
+                    <ThemeProvider theme={Theme}>
+                        <Button className='button' variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
+                    </ThemeProvider>
                 </CardActions>
-            </Card>
+            </Card >
 
 
         );

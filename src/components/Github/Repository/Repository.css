@@ -1,4 +1,9 @@
-.Card{
+.card{
+    background-color: #28272a;
+    color: white;
+}
+
+.cardContent{
     background-color: #28272a;
     color: white;
 }

@@ -19,13 +19,13 @@ class Repository extends React.Component {
 
     render() {
         return (
-            <Card sx={{ maxWidth: 345 }} className="Card">
+            <Card sx={{ maxWidth: 345 }} className="card">
                 <CardMedia
                     component="img"
                     height="140"
                     image={this.img}
                 />
-                <CardContent>
+                <CardContent className='cardContent'>
                     <Typography gutterBottom variant="h5" component="div">
                         {this.title}
                     </Typography>
@@ -33,8 +33,8 @@ class Repository extends React.Component {
                         {this.description}
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button target="_blank" href={this.url} size="small">See on github</Button>
+                <CardActions className='cardContent'>
+                    <Button variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
                 </CardActions>
             </Card>
 

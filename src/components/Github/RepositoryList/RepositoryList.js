@@ -31,7 +31,7 @@ function getRepos() {
             title: valor.name,
             description: valor.description,
             url: valor.html_url,
-            img: "https://raw.githubusercontent.com/tekofx/" + valor.name + "/main/assets/logo.png",
+            img: "https://raw.githubusercontent.com/tekofx/" + valor.name + "/main/assets/banner.png",
         }
 
         // If logo doesn't exist, use the default one

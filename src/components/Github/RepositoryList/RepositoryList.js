@@ -56,7 +56,6 @@ function doesFileExist(urlToFile) {
 
 export default function BasicGrid() {
     const repos = getRepos();
-    console.log(repos);
 
     return (
         <>
@@ -64,7 +63,7 @@ export default function BasicGrid() {
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     {repos.map((item) => (
                         <Grid item xs={4}>
-                            <Repository title={item.title} description={item.description} url={item.html_url} img={item.img} />
+                            <Repository title={item.title} description={item.description} url={item.url} img={item.img} />
                         </Grid>
                     ))}
 

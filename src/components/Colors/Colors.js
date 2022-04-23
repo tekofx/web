@@ -7,9 +7,6 @@ import { Stack } from '@mui/material';
 class Colors extends React.Component {
     constructor(props) {
         super();
-        this.background = props.background;
-
-
     }
 
     render() {

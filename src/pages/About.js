@@ -4,6 +4,7 @@ import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
+import Colors from '../components/Colors/Colors';
 
 class About extends React.Component {
   render() {
@@ -18,12 +19,25 @@ class About extends React.Component {
             <p className="paragraph">I'm Teko an arctic foxxo from Spain. I love drawing, taking photos and programming. I started this webpage to challenge myself into creating a webpage and for having all my projects and stuff in one site.</p>
 
           </div>
-          <div>
-            <h2>Fursona</h2>
-            <p>Teko is an arctic fox who can control ice at his will.</p>
-            <img src={ref} alt="" className="ref" />
+
+          <h2>Fursona</h2>
+
+
+          <div className="table">
+            <div className="table_row">
+              <div className="fur">
+                <p>Teko is an arctic fox who can control ice at his will.</p>
+                <img align="left" src={ref} alt="" className="ref" />
+              </div>
+              <div className="colors">
+                <h3>Colors</h3>
+                <Colors background="red" />
+              </div>
+
+            </div>
 
           </div>
+
 
         </div>
       </div>

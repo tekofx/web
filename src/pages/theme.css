@@ -23,6 +23,32 @@ h1{
 h2{
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
+  font-size: 2.5vw;
+}
+
+.fur{
+  width: 70%;
+  display: table-cell;
+  margin-right: 100px;
+}
+
+.colors{
+  width: 30%;
+  display: table-cell;
+}
+
+.table{
+  display: table;
+}
+
+.table_row{
+  display: table-row;
+}
+
+.table_cell{
+  display: table-cell;
+  padding: 0.5vw;
+  border: 1px solid black;
 }
 
 .pageContent{
@@ -54,9 +80,8 @@ h2{
 }
 
 .ref{
-  width: 40%;
-  height: 40%;
+  width: 90%;
+  height: 60%;
   display: block;
-  margin-left: auto;
   margin-right: auto;
 }

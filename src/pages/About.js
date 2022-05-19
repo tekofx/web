@@ -1,16 +1,18 @@
 import React from "react";
-import Header from "../components/Header/Header";
 import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
 import Colors from '../components/Colors/Colors';
+import Container from '@mui/material/Container';
+import Appbar from '../components/Appbar/Appbar';
+
 
 class About extends React.Component {
   render() {
     return (
-      <div className="pageContent">
-        <Header />
+      <Container>
+        <Appbar />
         <br />
         <div className="contentItems">
           <h1>About</h1>
@@ -40,7 +42,7 @@ class About extends React.Component {
 
 
         </div>
-      </div>
+      </Container>
 
 
 

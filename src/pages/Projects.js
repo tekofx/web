@@ -1,24 +1,26 @@
 import React from "react";
-import Header from "../components/Header/Header";
 import RepositoryList from "../components/Github/RepositoryList/RepositoryList";
 import "./theme.css"
+import Appbar from '../components/Appbar/Appbar';
+import Container from '@mui/material/Container';
+
 
 class Projects extends React.Component {
   render() {
     return (
-      <div className="pageContent">
-        <Header />
+      <Container>
+        <Appbar />
         <br />
-        <div className="contentItems">
+        <Container className="contentItems">
           <h1>Projects</h1>
           <h2>Github</h2>
           <p>My coding projects like Discord Bots and terminal programs</p>
           <RepositoryList />
 
-        </div>
+        </Container>
 
 
-      </div>
+      </Container>
 
     )
   }

@@ -20,6 +20,21 @@ const Theme = createTheme({
             main: '#259bf9',
         },
     },
+    components: {
+        MuiAvatar: {
+            variants: [
+                {
+                    props: { variant: 'logo' },
+                    style: {
+                        width: '10%',
+                        height: 'auto',
+                        maxWidth: '10%',
+                        maxHeight: '10%',
+                    }
+                }
+            ]
+        }
+    }
 });
 
 export default Theme;

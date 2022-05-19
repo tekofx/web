@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "../components/Header/Header";
 import "./theme.css"
 import ImageList from '../components/ImageList/ImageList';
-
+import Container from '@mui/material/Container';
+import Appbar from '../components/Appbar/Appbar';
 
 class Gallery extends React.Component {
   render() {
     return (
-      <div className="pageContent">
-        <Header />
+      <Container>
+        <Appbar />
         <br />
         <div className="contentItems">
           <h1>Gallery</h1>
@@ -17,7 +17,7 @@ class Gallery extends React.Component {
         </div>
 
 
-      </div>
+      </Container>
     )
   }
 }

@@ -12,7 +12,7 @@ class Gallery extends React.Component {
         <Appbar />
         <br />
         <Typography variant="h1">Gallery</Typography>
-        <Typography>My art/photographies</Typography>
+        <Typography variant="p">My art/photographies</Typography>
         <ImageList />
 
 

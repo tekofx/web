@@ -13,7 +13,7 @@ class Projects extends React.Component {
         <Appbar />
         <br />
         <Typography variant="h1">Projects</Typography>
-        <p>My coding projects like Discord Bots and terminal programs</p>
+        <Typography variant="p">My coding projects like Discord Bots and terminal programs</Typography>
         <RepositoryList />
       </ThemeProvider>
 

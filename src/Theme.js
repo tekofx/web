@@ -40,18 +40,16 @@ var Theme = createTheme({
     },
     typography: {
         h1: {
-            fontSize: '3.5rem',
             fontWeight: 'bold',
             color: '#fff',
             fontStyle: 'italic',
-            paddingTop: '0.5rem',
-            paddingBottom: '0.5rem',
         },
         h2: {
             fontSize: '2.5rem',
             fontWeight: 'bold',
             color: '#fff',
             fontStyle: 'italic',
+
 
         },
         appBar: {
@@ -63,13 +61,42 @@ var Theme = createTheme({
         },
         p: {
             color: '#fff',
+            textAlign: 'justify',
+
 
         }
     },
 
 });
 
+Theme.typography.h1 = {
+    fontSize: '2rem',
+    paddingBottom: '0.5rem',
+    paddingTop: '0.5rem',
+    '@media (min-width:600px)': {
+        fontSize: '2.5rem',
+        paddingBottom: '0.7rem',
+        paddingTop: '0.7rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '3.5rem',
+        paddingBottom: '10rem',
+        paddingTop: '1rem',
+    },
+};
 
-Theme = responsiveFontSizes(Theme);
+Theme.typography.p = {
+    fontSize: '0.8rem',
+    '@media (min-width:600px)': {
+        fontSize: '1rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '1.5rem',
+    },
+};
+
+
+
+//Theme = responsiveFontSizes(Theme);
 
 export default Theme;

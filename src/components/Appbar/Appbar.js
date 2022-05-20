@@ -8,7 +8,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { NavLink } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Logo from '../../img/logo.png';
 import { useNavigate } from 'react-router';

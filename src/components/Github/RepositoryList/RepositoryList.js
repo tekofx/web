@@ -39,15 +39,25 @@ export default function BasicGrid(props) {
             });
 
 
+
+
+        var reposWithImg = [];
+        var reposWithoutImg = [];
         // Check if image exists
         for (let i = 0; i < repos.length; i++) {
             const exists = await existsImage("https://raw.githubusercontent.com/tekofx/" + repos[i].name + "/main/assets/banner.png");
             if (!exists) {
                 repos[i].img = "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png";
+                reposWithoutImg.push(repos[i]);
             } else {
                 repos[i].img = "https://raw.githubusercontent.com/tekofx/" + repos[i].name + "/main/assets/banner.png";
+                reposWithImg.push(repos[i]);
             }
         }
+
+        // Join arrays
+        repos = [];
+        repos = reposWithImg.concat(reposWithoutImg);
         setRepos(repos);
         setLoading(false);
     }
@@ -63,10 +73,10 @@ export default function BasicGrid(props) {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} alignItems="center" justifyContent="center">
+                <Grid container direction={'row'} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} alignItems="center" justifyContent="center">
                     {(loading ? Array.from(new Array(6)) : repos).map((item, index) => (
 
-                        <Grid item xs={8} sm={6} md={4}>
+                        <Grid item xs={8} sm={6} md={4} >
                             {item ? (
                                 <Repository title={item.name} description={item.description} url={item.html_url} img={item.img} />
                             ) : (

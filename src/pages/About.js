@@ -29,31 +29,18 @@ class About extends React.Component {
             </Grid>
           </Grid>
 
-
-
           <Grid container spacing={2} >
             <Grid item xs={8} >
               <p>Teko is an arctic fox who can control ice at his will.</p>
               <img align="left" src={ref} alt="" className="ref" />
-
             </Grid>
             <Grid item xs={4} >
               <h3>Colors</h3>
               <Colors background="red" />
-
             </Grid>
-
-
-
-
           </Grid>
-
-
         </Container>
       </ThemeProvider>
-
-
-
     )
   }
 }

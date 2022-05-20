@@ -1,6 +1,7 @@
 import { createTheme } from "@material-ui/core";
+import { responsiveFontSizes } from "@mui/material";
 
-const Theme = createTheme({
+var Theme = createTheme({
     palette: {
         type: 'dark',
         primary: {
@@ -33,8 +34,36 @@ const Theme = createTheme({
                     }
                 }
             ]
+        },
+
+
+    },
+    typography: {
+        h1: {
+            fontSize: '3.5rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            fontStyle: 'italic',
+        },
+        h2: {
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            fontStyle: 'italic',
+
+        },
+        appBar: {
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            fontStyle: 'italic',
+            textDecoration: 'none',
         }
-    }
+    },
+
 });
+
+
+Theme = responsiveFontSizes(Theme);
 
 export default Theme;

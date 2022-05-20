@@ -3,55 +3,11 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
-import ListSubheader from '@mui/material/ListSubheader';
 import InfoIcon from '@mui/icons-material/Info';
 import { useEffect } from 'react';
 const axios = require("axios");
 
-function getDeviationsOfUser() {
-  const url = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", url, false); // false for synchronous request
-  xmlHttp.send(null);
-  const response = xmlHttp.responseText;
 
-  var parser = new DOMParser();
-  var xmlDoc = parser.parseFromString(response, "text/xml");
-  var posts = xmlDoc.getElementsByTagName("item");
-  const postsData = [];
-
-  // Navigate each item properties
-  for (var i = 0; i < posts.length; i++) {
-    var post = posts[i].childNodes;
-    var title = null;
-    var link = null;
-
-    for (var j = 0; j < post.length; j++) {
-      if (post[j].nodeName === "title") {
-        title = post[j].childNodes[0].nodeValue;
-        //console.log(title);
-      }
-
-      if (post[j].nodeName === "media:content") {
-        link = post[j].getAttribute('url');
-        //console.log(link);
-
-      }
-
-
-
-    }
-    if (link !== null) {
-      postsData.push({
-        "title": title,
-        "img": link,
-      })
-    }
-  }
-  return postsData;
-
-
-}
 
 export default function TitlebarImageList() {
   const [posts, setPosts] = React.useState([]);

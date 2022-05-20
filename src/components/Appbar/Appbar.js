@@ -11,9 +11,10 @@ import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Logo from '../../img/logo.png';
+import { useNavigate } from 'react-router';
 const pages = [{ "page": "Home", "navigate": "/home" }, { "page": "Projects", "navigate": "/projects" }, { "page": "Gallery", "navigate": "/gallery" }, { "page": "About Me", "navigate": "/about" }];
-
 const ResponsiveAppBar = () => {
+    const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -62,8 +63,11 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.page} onClick={handleCloseNavMenu}>
-                                    <NavLink to={page.navigate} >{page.page}</NavLink>
+                                <MenuItem key={page.page} onClick={function (event) {
+                                    handleCloseNavMenu();
+                                    navigate(page.navigate);
+                                }}>
+                                    {page.page}
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -77,10 +81,13 @@ const ResponsiveAppBar = () => {
                         {pages.map((page) => (
                             <Button
                                 key={page.page}
-                                onClick={handleCloseNavMenu}
+                                onClick={function (event) {
+                                    handleCloseNavMenu();
+                                    navigate(page.navigate);
+                                }}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to={page.navigate} >{page.page}</NavLink>
+                                {page.page}
                             </Button>
                         ))}
                     </Box>

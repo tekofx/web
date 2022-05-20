@@ -22,12 +22,13 @@ class About extends React.Component {
 
           <Grid container spacing={2}>
             <Grid item xs={4} >
-              <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "200px", height: "200px" }} />
+              <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "20vw", height: "auto" }} />
             </Grid>
             <Grid item xs={8} >
               <Typography >I'm Teko an arctic foxxo from Spain. I love drawing, taking photos and programming. I started this webpage to challenge myself into creating a webpage and for having all my projects and stuff in one site.</Typography>
             </Grid>
           </Grid>
+          <br />
 
           <Grid container spacing={2} >
             <Grid item xs={8} >
@@ -35,7 +36,6 @@ class About extends React.Component {
               <img align="left" src={ref} alt="" className="ref" />
             </Grid>
             <Grid item xs={4} >
-              <h3>Colors</h3>
               <Colors background="red" />
             </Grid>
           </Grid>

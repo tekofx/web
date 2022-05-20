@@ -3,12 +3,14 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Repository from '../Repository/Repository';
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Skeleton } from '@mui/material';
 const axios = require("axios");
 
 
-
-export default function BasicGrid() {
+export default function BasicGrid(props) {
     const [repos, setRepos] = React.useState([]);
+    const [loading, setLoading] = React.useState(true);
 
     async function existsImage(url) {
         let output;
@@ -25,7 +27,7 @@ export default function BasicGrid() {
     }
 
 
-    const getGroupUsers = async () => {
+    const getRepos = async () => {
         const url = "https://api.github.com/users/tekofx/repos";
         var repos;
         await axios
@@ -48,12 +50,12 @@ export default function BasicGrid() {
             }
         }
         setRepos(repos);
-
+        setLoading(false);
     }
 
     useEffect(() => {
         const fetchData = async () => {
-            await getGroupUsers();
+            await getRepos();
         }
         fetchData();
     }, []);
@@ -63,9 +65,14 @@ export default function BasicGrid() {
         <>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    {repos.map((item) => (
+                    {(loading ? Array.from(new Array(6)) : repos).map((item, index) => (
+
                         <Grid item xs={4}>
-                            <Repository title={item.name} description={item.description} url={item.html_url} img={item.img} />
+                            {item ? (
+                                <Repository title={item.name} description={item.description} url={item.html_url} img={item.img} />
+                            ) : (
+                                <Skeleton variant="rectangular" width={300} height={200} />
+                            )}
                         </Grid>
                     ))}
 

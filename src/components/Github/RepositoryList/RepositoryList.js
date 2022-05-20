@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Repository from '../Repository/Repository';
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Skeleton } from '@mui/material';
 const axios = require("axios");
 

@@ -6,8 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Repository.css';
-import { ThemeProvider } from '@emotion/react';
-import Theme from '../../../Theme';
 
 
 class Repository extends React.Component {

@@ -40,11 +40,8 @@ class Repository extends React.Component {
                 </CardActions>
             </Card >
 
-
         );
     }
 }
-
-
 
 export default Repository;

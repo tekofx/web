@@ -1,9 +1,7 @@
-version: "1"
+version: "3"
 services:
   web:
     container_name: web
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/tekofx/web
     ports:
-      - 1337:80
+      - 80:80

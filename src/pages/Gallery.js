@@ -9,17 +9,15 @@ class Gallery extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <Container>
-          <Appbar />
-          <br />
-          <div className="contentItems">
-            <h1>Gallery</h1>
-            <p>My art/photographies</p>
-            <ImageList />
-          </div>
+        <Appbar />
+        <br />
+        <div className="contentItems">
+          <h1>Gallery</h1>
+          <p>My art/photographies</p>
+          <ImageList />
+        </div>
 
 
-        </Container>
       </ThemeProvider>
     )
   }

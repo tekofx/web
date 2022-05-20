@@ -10,19 +10,15 @@ class Projects extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <Container>
-          <Appbar />
-          <br />
-          <Container className="contentItems">
-            <h1>Projects</h1>
-            <h2>Github</h2>
-            <p>My coding projects like Discord Bots and terminal programs</p>
-            <RepositoryList />
-
-          </Container>
+        <Appbar />
+        <br />
+        <h1>Projects</h1>
+        <h2>Github</h2>
+        <p>My coding projects like Discord Bots and terminal programs</p>
+        <RepositoryList />
 
 
-        </Container>
+
       </ThemeProvider>
 
     )

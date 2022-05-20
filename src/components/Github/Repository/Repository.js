@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Repository.css';
 import { ThemeProvider } from '@emotion/react';
-import Theme from '../../Theme/Theme';
+import Theme from '../../../Theme';
 
 
 class Repository extends React.Component {
@@ -39,9 +39,7 @@ class Repository extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions className='cardContent'>
-                    <ThemeProvider theme={Theme}>
-                        <Button className='button' variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
-                    </ThemeProvider>
+                    <Button className='button' variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
                 </CardActions>
             </Card >
 

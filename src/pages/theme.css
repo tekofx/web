@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #101010;
   color: rgb(255, 255, 255);
   padding-left: 10vw;
@@ -6,10 +6,10 @@ body{
   padding-top: 3vw;
   padding-bottom: 3vw;
   height: 100%;
-  
+
 }
 
-p{
+p {
   font-size: 1.5vw;
   text-align: justify;
   margin-top: 0.5vw;
@@ -17,71 +17,82 @@ p{
 
 }
 
-h1{
+NavLink {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.5vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+
+h1 {
   font-size: 3vw;
 }
-h2{
+
+h2 {
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
   font-size: 2.5vw;
 }
 
-.fur{
+.fur {
   width: 70%;
   display: table-cell;
   margin-right: 100px;
 }
 
-.colors{
+.colors {
   width: 30%;
   display: table-cell;
 }
 
-.table{
+.table {
   display: table;
 }
 
-.table_row{
+.table_row {
   display: table-row;
 }
 
-.table_cell{
+.table_cell {
   display: table-cell;
   padding: 0.5vw;
   border: 1px solid black;
 }
 
-.pageContent{
+.pageContent {
   background-color: #1e1e1e;
   border-radius: 40px;
   height: 100%;
 }
 
-.contentItems{
+.contentItems {
   padding-left: 3vw;
   padding-right: 3vw;
   padding-bottom: 3vw;
 
 }
 
-.icon{
-    height: 30px;
-    width: 30px;
-    margin-right: 10;
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10;
 }
 
-.about{
+.about {
   display: flex;
 }
 
-.paragraph{
+.paragraph {
   margin-left: 6%;
   margin-right: 6%;
 }
 
-.ref{
-  width: 90%;
-  height: 60%;
+.ref {
+  width: 100%;
+  height: auto;
   display: block;
   margin-right: auto;
 }

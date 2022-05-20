@@ -17,7 +17,6 @@ class Repository extends React.Component {
         this.description = props.description;
         this.url = props.url;
         this.img = props.img;
-        console.log(this.url)
 
     }
 

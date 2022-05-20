@@ -44,6 +44,8 @@ var Theme = createTheme({
             fontWeight: 'bold',
             color: '#fff',
             fontStyle: 'italic',
+            paddingTop: '0.5rem',
+            paddingBottom: '0.5rem',
         },
         h2: {
             fontSize: '2.5rem',
@@ -58,6 +60,10 @@ var Theme = createTheme({
             color: '#fff',
             fontStyle: 'italic',
             textDecoration: 'none',
+        },
+        p: {
+            color: '#fff',
+
         }
     },
 

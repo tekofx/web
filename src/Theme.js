@@ -80,7 +80,7 @@ Theme.typography.h1 = {
     },
     [Theme.breakpoints.up('md')]: {
         fontSize: '3.5rem',
-        paddingBottom: '10rem',
+        paddingBottom: '1rem',
         paddingTop: '1rem',
     },
 };

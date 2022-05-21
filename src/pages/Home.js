@@ -8,7 +8,6 @@ class Home extends React.Component {
     return (
       <ThemeProvider theme={Theme}>
         <Appbar />
-        <br />
         <Typography variant="h1">Welcome</Typography>
         <Typography variant="p">On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</Typography>
 

@@ -15,31 +15,29 @@ class About extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <Container>
-          <Appbar />
-          <br />
-          <Typography variant="h1">About</Typography>
+        <Appbar />
+        <br />
+        <Typography variant="h1">About</Typography>
 
-          <Grid container spacing={2}>
-            <Grid item xs={3} >
-              <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "20vw", height: "auto" }} />
-            </Grid>
-            <Grid item xs={9} >
-              <Typography variant="p" paragraph>I'm Teko an arctic foxxo from Spain. I love drawing, taking photos and programming. I started this webpage to challenge myself into creating a webpage and for having all my projects and stuff in one site.</Typography>
-            </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={3} >
+            <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "20vw", height: "auto" }} />
           </Grid>
-          <br />
+          <Grid item xs={9} >
+            <Typography variant="p" paragraph>I'm Teko an arctic foxxo from Spain. I love drawing, taking photos and programming. I started this webpage to challenge myself into creating a webpage and for having all my projects and stuff in one site.</Typography>
+          </Grid>
+        </Grid>
+        <br />
 
-          <Grid container spacing={2} >
-            <Grid item xs={8} >
-              <Typography variant="p">Teko is an arctic fox who can control ice at his will.</Typography>
-              <img align="left" src={ref} alt="" className="ref" />
-            </Grid>
-            <Grid item xs={4} >
-              <Colors background="red" />
-            </Grid>
+        <Grid container spacing={2} >
+          <Grid item xs={8} >
+            <Typography variant="p">Teko is an arctic fox who can control ice at his will.</Typography>
+            <img align="left" src={ref} alt="" className="ref" />
           </Grid>
-        </Container>
+          <Grid item xs={4} >
+            <Colors background="red" />
+          </Grid>
+        </Grid>
       </ThemeProvider>
     )
   }

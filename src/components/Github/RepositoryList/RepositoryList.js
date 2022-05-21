@@ -69,10 +69,10 @@ export default function BasicGrid(props) {
     return (
         <>
             <Box sx={{ flexGrow: 1 }} >
-                <Grid container direction={'row'} rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 0 }} alignItems="center" justifyContent="center">
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     {(loading ? Array.from(new Array(6)) : repos).map((item, index) => (
 
-                        <Grid item xs={12} sm={6} md={4} >
+                        <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
                             {item ? (
                                 <Repository title={item.name} description={item.description} url={item.html_url} img={item.img} />
                             ) : (

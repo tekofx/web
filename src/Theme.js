@@ -45,7 +45,6 @@ var Theme = createTheme({
             fontStyle: 'italic',
         },
         h2: {
-            fontSize: '2.5rem',
             fontWeight: 'bold',
             color: '#fff',
             fontStyle: 'italic',
@@ -82,6 +81,22 @@ Theme.typography.h1 = {
         fontSize: '3.5rem',
         paddingBottom: '1rem',
         paddingTop: '1rem',
+    },
+};
+
+Theme.typography.h2 = {
+    fontSize: '2.0rem',
+    paddingBottom: '0.3rem',
+    paddingTop: '0.3rem',
+    '@media (min-width:600px)': {
+        fontSize: '2.5rem',
+        paddingBottom: '0.5rem',
+        paddingTop: '0.5rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '3rem',
+        paddingBottom: '0.7rem',
+        paddingTop: '0.7rem',
     },
 };
 

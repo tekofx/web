@@ -10,6 +10,7 @@ import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
+import ColorsTable from '../components/ColorsTable';
 
 class About extends React.Component {
   render() {
@@ -31,11 +32,10 @@ class About extends React.Component {
 
         <Grid container spacing={2} >
           <Grid item xs={8} >
-            <Typography variant='body1'>Teko is an arctic fox who can control ice at his will.</Typography>
             <img align="left" src={ref} alt="" className="ref" />
           </Grid>
           <Grid item xs={4} >
-            <Colors background="red" />
+            {/*<ColorsTable />*/}
           </Grid>
         </Grid>
       </ThemeProvider>

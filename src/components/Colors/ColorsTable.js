@@ -32,28 +32,28 @@ export default function DenseTable() {
         ),
 
         createData("Fur2",
-            <ColorChip label="160, 160, 160" bgcolor="#A0A0A0" />,
-            <ColorChip label="#A0A0A0" bgcolor="#A0A0A0" />
+            <ColorChip label="160, 160, 160" bgcolor="#A0A0A0" color="black" />,
+            <ColorChip label="#A0A0A0" bgcolor="#A0A0A0" color="black" />
         ),
         createData("Fur3",
             <ColorChip label="247, 247, 247" bgcolor="#F7F7F7" color="black" />,
             <ColorChip label="#F7F7F7" bgcolor="#F7F7F7" color="black" />
         ),
         createData("Hair1",
-            <ColorChip label="44, 125, 230" bgcolor="#2C7DE6" />,
-            <ColorChip label="#2C7DE6" bgcolor="#2C7DE6" />
+            <ColorChip label="44, 125, 230" bgcolor="#2C7DE6" color="black" />,
+            <ColorChip label="#2C7DE6" bgcolor="#2C7DE6" color="black" />
         ),
         createData("Hair2/Nails",
-            <ColorChip label="0, 219, 255" bgcolor="#00DBFF" />,
-            <ColorChip label="#00DBFF" bgcolor="#00DBFF" />
+            <ColorChip label="0, 219, 255" bgcolor="#00DBFF" color="black" />,
+            <ColorChip label="#00DBFF" bgcolor="#00DBFF" color="black" />
         ),
         createData("Paws/Ears",
             <ColorChip label="240, 161, 156" bgcolor="#F0A19C" color="black" />,
             <ColorChip label="#F0A19C" bgcolor="#F0A19C" color="black" />
         ),
         createData("Eyes1",
-            <ColorChip label="17, 181, 93" bgcolor="#11B55D" />,
-            <ColorChip label="#11B55D" bgcolor="#11B55D" />
+            <ColorChip label="17, 181, 93" bgcolor="#11B55D" color="black" />,
+            <ColorChip label="#11B55D" bgcolor="#11B55D" color="black" />
         ),
         createData("Eyes2",
             <ColorChip label="226, 229, 101" bgcolor="#E2E565" color="black" />,
@@ -68,7 +68,7 @@ export default function DenseTable() {
             <Table sx={{ minWidth: 300, backgroundColor: Theme.palette.background.main }} size="small">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Part</TableCell>
+                        <TableCell >Part</TableCell>
                         <TableCell >HEX</TableCell>
                         <TableCell >RGB</TableCell>
                     </TableRow>

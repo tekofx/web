@@ -1,9 +1,6 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import Box from '@mui/material/Box';
+import ResponsiveGallery from "react-responsive-gallery";
 import { useEffect } from 'react';
 const axios = require("axios");
 const { parse } = require('rss-to-json');
@@ -12,6 +9,7 @@ const { parse } = require('rss-to-json');
 
 export default function TitlebarImageList() {
   const [posts, setPosts] = React.useState([]);
+
 
   // FIXME: 500px blocks the API call.
   const get500pxPics = async () => {
@@ -83,8 +81,8 @@ export default function TitlebarImageList() {
       }
       if (link !== null) {
         postsData.push({
-          "title": title,
-          "img": link,
+          "lightboxTitle": title,
+          "src": link,
         })
       }
     }
@@ -99,35 +97,11 @@ export default function TitlebarImageList() {
     fetchData();
   }, []);
 
-
-
   return (
-    <ImageList cols={3}>
-      <ImageListItem>
-      </ImageListItem>
-      {
-        posts.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <ImageListItemBar
-              title={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                  aria-label={`info about ${item.title}`}
-                >
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        ))
-      }
-    </ImageList >
+
+    <Box sx={{ flexGrow: 1 }} >
+      <ResponsiveGallery useLightBox images={posts} />
+    </Box>
   );
 }
 

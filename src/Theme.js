@@ -36,7 +36,6 @@ var Theme = createTheme({
             ]
         },
 
-
     },
     typography: {
         h1: {

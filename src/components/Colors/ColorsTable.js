@@ -7,10 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react'
-import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
-import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
+
 import ColorChip from './ColorChip';
 
 function createData(part, hex, rgb) {
@@ -38,8 +35,8 @@ export default function DenseTable() {
             <ColorChip label="#A0A0A0" bgcolor="#A0A0A0" />
         ),
         createData("Fur3",
-            <ColorChip label="247, 247, 247" bgcolor="#F7F7F7" />,
-            <ColorChip label="#F7F7F7" bgcolor="#F7F7F7" />
+            <ColorChip label="247, 247, 247" bgcolor="#F7F7F7" color="black" />,
+            <ColorChip label="#F7F7F7" bgcolor="#F7F7F7" color="black" />
         ),
         createData("Hair1",
             <ColorChip label="44, 125, 230" bgcolor="#2C7DE6" />,
@@ -50,16 +47,16 @@ export default function DenseTable() {
             <ColorChip label="#00DBFF" bgcolor="#00DBFF" />
         ),
         createData("Paws/Ears",
-            <ColorChip label="240, 161, 156" bgcolor="#F0A19C" />,
-            <ColorChip label="#F0A19C" bgcolor="#F0A19C" />
+            <ColorChip label="240, 161, 156" bgcolor="#F0A19C" color="black" />,
+            <ColorChip label="#F0A19C" bgcolor="#F0A19C" color="black" />
         ),
         createData("Eyes1",
             <ColorChip label="17, 181, 93" bgcolor="#11B55D" />,
             <ColorChip label="#11B55D" bgcolor="#11B55D" />
         ),
         createData("Eyes2",
-            <ColorChip label="226, 229, 101" bgcolor="#E2E565" />,
-            <ColorChip label="#E2E565" bgcolor="#E2E565" />
+            <ColorChip label="226, 229, 101" bgcolor="#E2E565" color="black" />,
+            <ColorChip label="#E2E565" bgcolor="#E2E565" color="black" />
         ),
 
     ];

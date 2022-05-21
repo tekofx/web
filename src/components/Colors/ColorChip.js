@@ -1,17 +1,7 @@
 import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import { useState } from 'react'
-import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
-import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import { Popover } from '@mui/material';
 import Slide from '@mui/material/Slide';
 
 
@@ -27,7 +17,7 @@ export default function DenseTable(props) {
 
 
     return (
-        <><Chip sx={{ bgcolor: props.bgcolor }} label={props.label} size='small' onClick={handleClick} />
+        <><Chip sx={{ bgcolor: props.bgcolor, color: props.color }} label={props.label} size='small' onClick={handleClick} />
             <Snackbar
                 open={open}
                 onClose={() => setOpen(false)}

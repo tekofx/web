@@ -10,7 +10,7 @@ import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import ColorsTable from '../components/ColorsTable';
+import ColorsTable from '../components/Colors/ColorsTable';
 
 class About extends React.Component {
   render() {
@@ -35,7 +35,7 @@ class About extends React.Component {
             <img align="left" src={ref} alt="" className="ref" />
           </Grid>
           <Grid item xs={4} >
-            {/*<ColorsTable />*/}
+            {<ColorsTable />}
           </Grid>
         </Grid>
       </ThemeProvider>

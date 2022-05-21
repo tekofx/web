@@ -11,7 +11,7 @@ var Theme = createTheme({
             main: '#edf069',
         },
         background: {
-            default: '#101010',
+            main: '#101010',
             paper: '#28272a',
         },
         error: {

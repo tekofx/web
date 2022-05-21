@@ -17,7 +17,7 @@ export default function DenseTable(props) {
 
 
     return (
-        <><Chip sx={{ bgcolor: props.bgcolor, color: props.color }} label={props.label} size='small' onClick={handleClick} />
+        <><Chip sx={{ bgcolor: props.bgcolor, color: props.color, minWidth: 95 }} label={props.label} size='small' onClick={handleClick} />
             <Snackbar
                 open={open}
                 onClose={() => setOpen(false)}

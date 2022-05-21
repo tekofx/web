@@ -6,7 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useState } from 'react'
+import Theme from '../../Theme';
+import { useState } from 'react';
 
 import ColorChip from './ColorChip';
 
@@ -26,7 +27,7 @@ export default function DenseTable() {
 
     const rows = [
         createData("Fur",
-            <ColorChip label="45, 45, 45" bgcolor="#2D2D2D" />,
+            <ColorChip label="45 , 45 , 45" bgcolor="#2D2D2D" />,
             <ColorChip label="#2D2D2D" bgcolor="#2D2D2D" />
         ),
 
@@ -64,7 +65,7 @@ export default function DenseTable() {
 
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
+            <Table sx={{ minWidth: 300, backgroundColor: Theme.palette.background.main }} size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell>Part</TableCell>

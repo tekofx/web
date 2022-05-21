@@ -11,6 +11,7 @@ import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
+import ColorsList from '../components/Colors/ColorsList';
 
 class About extends React.Component {
   render() {
@@ -32,10 +33,23 @@ class About extends React.Component {
 
         <Grid container spacing={2} >
           <Grid item xs={8} >
+            <Typography variant="h2">Reference Sheet</Typography>
+          </Grid>
+          <Grid item xs={8} >
             <img align="left" src={ref} alt="" className="ref" />
           </Grid>
+
+        </Grid>
+
+        <Grid container spacing={2} >
+          <Grid item xs={12} >
+            <Typography variant="h2">Colors</Typography>
+          </Grid>
           <Grid item xs={4} >
-            {<ColorsTable />}
+            <ColorsTable />
+          </Grid>
+          <Grid item xs={4} >
+            {/*<ColorsList />*/}
           </Grid>
         </Grid>
       </ThemeProvider>

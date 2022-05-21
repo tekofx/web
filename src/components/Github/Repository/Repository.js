@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+
 import './Repository.css';
 
 
@@ -27,7 +28,7 @@ class Repository extends React.Component {
                     height="140"
                     image={this.img}
                 />
-                <CardContent className='cardContent'>
+                <CardContent className='cardContent' sx={{ minHeight: 80 }}>
                     <Typography gutterBottom variant="h5" component="div">
                         {this.title}
                     </Typography>

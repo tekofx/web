@@ -6,11 +6,45 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { useEffect } from 'react';
 const axios = require("axios");
+const { parse } = require('rss-to-json');
 
 
 
 export default function TitlebarImageList() {
   const [posts, setPosts] = React.useState([]);
+
+  // FIXME: 500px blocks the API call.
+  const get500pxPics = async () => {
+    const url = "https://500px.com/tekofx/rss";
+    var rss = await parse(url);
+
+    var posts = JSON.stringify(rss, null, 3);
+
+    posts = JSON.parse(posts);
+    console.log(posts);
+
+    var output = [];
+
+    // Recorrer posts
+    for (var i = 0; i < posts.items.length; i++) {
+      var item = posts.items[i];
+      var image = item.link;
+      var title = item.title;
+      await axios
+        .get(image)
+        .then(function (response) {
+          console.log(response)
+        });
+
+
+      output.push({ "img": image, "title": title });
+    }
+    console.log(output)
+
+    setPosts(output);
+
+
+  }
 
   const getImages = async () => {
     const url = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
@@ -60,6 +94,7 @@ export default function TitlebarImageList() {
   useEffect(() => {
     const fetchData = async () => {
       await getImages();
+      //await get500pxPics();
     }
     fetchData();
   }, []);

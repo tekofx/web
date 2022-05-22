@@ -1,7 +1,7 @@
 import React from "react";
 import "./theme.css"
-import ImageList from '../components/ImageList/ImageList';
-import Appbar from '../components/Appbar/Appbar';
+import ImageList from '../components/ImageList';
+import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";

@@ -1,7 +1,7 @@
 import React from "react";
 import RepositoryList from "../components/Github/RepositoryList/RepositoryList";
 import "./theme.css"
-import Appbar from '../components/Appbar/Appbar';
+import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";

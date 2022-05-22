@@ -5,7 +5,7 @@ import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
 import Colors from '../components/Colors/Colors';
 import Container from '@mui/material/Container';
-import Appbar from '../components/Appbar/Appbar';
+import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";

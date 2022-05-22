@@ -1,5 +1,5 @@
 import React from "react";
-import Appbar from '../components/Appbar/Appbar';
+import Appbar from '../components/Appbar';
 import { ThemeProvider } from '@emotion/react';
 import Theme from '../Theme';
 import { Typography } from "@mui/material";

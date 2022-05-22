@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import Logo from '../../img/logo.png';
+import Logo from '../img/logo.png';
 import { useNavigate } from 'react-router';
 const pages = [{ "page": "Home", "navigate": "/home" }, { "page": "Projects", "navigate": "/projects" }, { "page": "Gallery", "navigate": "/gallery" }, { "page": "About Me", "navigate": "/about" }];
 const ResponsiveAppBar = () => {

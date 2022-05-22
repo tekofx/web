@@ -57,7 +57,7 @@ var Theme = createTheme({
             fontStyle: 'italic',
             textDecoration: 'none',
         },
-        p: {
+        body1: {
             color: '#fff',
             textAlign: 'justify',
 
@@ -99,7 +99,7 @@ Theme.typography.h2 = {
     },
 };
 
-Theme.typography.p = {
+Theme.typography.body1 = {
     fontSize: '0.8rem',
     '@media (min-width:600px)': {
         fontSize: '1rem',

@@ -1,5 +1,5 @@
 import React from "react";
-import RepositoryList from "../components/Github/RepositoryList/RepositoryList";
+import RepositoryList from "../components/Github/RepositoryList";
 import "./theme.css"
 import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";

@@ -38,18 +38,13 @@ var Theme = createTheme({
 
     },
     typography: {
-        h1: {
-            fontWeight: 'bold',
-            color: '#fff',
-            fontStyle: 'italic',
-        },
-        h2: {
-            fontWeight: 'bold',
-            color: '#fff',
-            fontStyle: 'italic',
+        fontFamily: [
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+        ].join(','),
 
-
-        },
         appBar: {
             fontSize: '1.5rem',
             fontWeight: 'bold',
@@ -57,18 +52,19 @@ var Theme = createTheme({
             fontStyle: 'italic',
             textDecoration: 'none',
         },
-        body1: {
-            color: '#fff',
-            textAlign: 'justify',
-
-
+        colorSquareText: {
+            textAlign: 'center',
+            fontSize: '1.5rem',
         }
     },
 
 });
 
+
+/* These atrributes overrides the top attributes*/
 Theme.typography.h1 = {
     fontSize: '2rem',
+
     paddingBottom: '0.5rem',
     paddingTop: '0.5rem',
     '@media (min-width:600px)': {
@@ -87,6 +83,7 @@ Theme.typography.h2 = {
     fontSize: '2.0rem',
     paddingBottom: '0.3rem',
     paddingTop: '0.3rem',
+
     '@media (min-width:600px)': {
         fontSize: '2.5rem',
         paddingBottom: '0.5rem',
@@ -101,6 +98,9 @@ Theme.typography.h2 = {
 
 Theme.typography.body1 = {
     fontSize: '0.8rem',
+    textAlign: 'justify',
+
+
     '@media (min-width:600px)': {
         fontSize: '1rem',
     },

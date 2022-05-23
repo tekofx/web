@@ -1,5 +1,4 @@
 import { createTheme } from "@material-ui/core";
-import { responsiveFontSizes } from "@mui/material";
 
 var Theme = createTheme({
     palette: {

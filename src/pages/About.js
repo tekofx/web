@@ -3,15 +3,13 @@ import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
-import Colors from '../components/Colors/Colors';
-import Container from '@mui/material/Container';
 import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
-import ColorsList from '../components/Colors/ColorsList';
+import ColorsThing from '../components/Colors/ColorsList';
 
 class About extends React.Component {
   render() {
@@ -67,6 +65,9 @@ class About extends React.Component {
           </Grid>
           <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
             <ColorsTable />
+            <br />
+            {/* <ColorsThing /> */}
+
           </Grid>
 
         </Grid>

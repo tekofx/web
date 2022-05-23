@@ -27,7 +27,7 @@ class Repository extends React.Component {
                     height="140"
                     image={this.img}
                 />
-                <CardContent className='cardContent' sx={{ minHeight: 80 }}>
+                <CardContent className='cardContent' sx={{ minHeight: 100 }}>
                     <Typography gutterBottom variant="h5" component="div">
                         {this.title}
                     </Typography>

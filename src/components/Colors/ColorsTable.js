@@ -65,7 +65,7 @@ export default function DenseTable() {
 
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 300, backgroundColor: Theme.palette.background.main }} size="small">
+            <Table sx={{ maxWith: "100%", minWidth: "100%", backgroundColor: Theme.palette.background.main }} size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell >Part</TableCell>

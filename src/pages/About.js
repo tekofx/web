@@ -62,10 +62,10 @@ class About extends React.Component {
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Typography variant="h2">Reference Sheet</Typography>
           </Grid>
-          <Grid item xs={8} sm={8} md={7} lg={8} xl={8}>
+          <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
             <img align="left" src={ref} alt="" width={"100%"} />
           </Grid>
-          <Grid item xs={8} sm={8} md={5} lg={4} xl={4}>
+          <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
             <ColorsTable />
           </Grid>
 

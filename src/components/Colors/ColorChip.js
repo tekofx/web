@@ -3,8 +3,8 @@ import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
 import Chip from '@mui/material/Chip';
 import Slide from '@mui/material/Slide';
-
-
+import Theme from '../../Theme'
+import Alert from '@mui/material/Alert';
 
 
 export default function DenseTable(props) {
@@ -23,9 +23,12 @@ export default function DenseTable(props) {
                 onClose={() => setOpen(false)}
                 autoHideDuration={2000}
                 TransitionComponent={Slide}
-                message="Copied to clipboard"
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            />
+            >
+                <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
+                    Copied to clipboard
+                </Alert>
+            </Snackbar>
         </>
     )
 }

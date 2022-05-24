@@ -20,23 +20,23 @@ class About extends React.Component {
         <Typography variant="h1">About</Typography>
 
         <Grid container spacing={2}>
-          <Grid item xs={3} >
-            <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "20vw", height: "auto" }} />
+          <Grid item xs={4} sm={3} md={2} lg={2} >
+            <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "90%", height: "auto" }} />
           </Grid>
-          <Grid item xs={9} >
+          <Grid item xs={8} sm={8} md={8} lg={8}>
             <Typography variant='body1' paragraph>Welcome to my webpage!</Typography>
             <Typography variant='body1' paragraph>I'm Teko, a computer engineering student from Spain.</Typography>
             <Typography variant='body1' paragraph>I am a learning computer engineer and programmer, who likes to code simple projects like Discord bots or this webpage. </Typography>
             <Typography variant='body1' paragraph>Besides that I also enjoy photography and drawing furries and cute stuff.</Typography>
-
-
-
           </Grid>
         </Grid>
+
         <br />
+
         <Grid container spacing={2} >
-          <Grid item xs={8} >
+          <Grid item xs={12} >
             <Typography variant="h2">Fursona Information</Typography>
+            <Typography variant="body1">Teko is an arctic fox with blue hair and green&yellow eyes. He has ice powers and can use them to create objects made of ice.</Typography>
           </Grid>
           <Grid item xs={8} >
             <Typography variant="body1"><b>Name: </b>Teko</Typography>
@@ -48,11 +48,6 @@ class About extends React.Component {
             <Typography variant="body1"><b>Likes: </b>Music, computers, games, anime, nature, waffles and photography</Typography>
             <Typography variant="body1"><b>Dislikes: </b>Noisy people, crowds and hot places</Typography>
             <Typography variant="body1"><b>Abilities: </b>Ice powers</Typography>
-
-
-
-
-
           </Grid>
         </Grid>
 

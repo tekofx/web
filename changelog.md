@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Appbar only shows menu in xs sizes
+- Message when copying a color to clipboard
+- Better avatar responsiveness in about
 
 
 ## [v0.1.0] - 24/05/2022

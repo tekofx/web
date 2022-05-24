@@ -32,7 +32,7 @@ const ResponsiveAppBar = () => {
 
                     {/*Mobile Menu*/}
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none', lg: "none" } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -58,7 +58,7 @@ const ResponsiveAppBar = () => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: { xs: 'block', sm: 'none', md: 'none' },
                             }}
                         >
                             {pages.map((page) => (
@@ -76,7 +76,7 @@ const ResponsiveAppBar = () => {
                     {/*Desktop Menu*/}
                     <Avatar src={Logo} />
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page.page}

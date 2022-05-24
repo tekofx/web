@@ -3,17 +3,28 @@ import Appbar from '../components/Appbar';
 import { ThemeProvider } from '@emotion/react';
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
+import NewsList from "../components/News/NewsList";
+import { Grid } from "@mui/material";
+
 class Home extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
         <Appbar />
-        <Typography variant="h1">Welcome</Typography>
-        <Typography variant='body1'>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</Typography>
+        <br />
+        <Grid container spacing={4}>
 
-        <Typography variant="h2">News</Typography>
-        <Typography variant='body1'>- This webpage is still under construction, I will add more content as soon as possible.</Typography>
+          <Grid item xs={12} sm={8} md={9} lg={10}>
+            <Typography variant="h1">Welcome</Typography>
 
+            <Typography variant='body1'>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</Typography>
+          </Grid>
+
+          <Grid item xs={10} sm={4} md={3} lg={2}>
+            <Typography variant="h3">News</Typography>
+            <NewsList />
+          </Grid>
+        </Grid>
       </ThemeProvider>
 
     );

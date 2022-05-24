@@ -95,6 +95,34 @@ Theme.typography.h2 = {
     },
 };
 
+Theme.typography.h3 = {
+
+    '@media (min-width:600px)': {
+        fontSize: '2.0rem',
+        paddingBottom: '0.2rem',
+        paddingTop: '0.2rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '2.2rem',
+        paddingBottom: '0.4rem',
+        paddingTop: '0.4rem',
+    },
+};
+
+Theme.typography.h4 = {
+
+    '@media (min-width:600px)': {
+        fontSize: '1.8em',
+        paddingBottom: '0.1rem',
+        paddingTop: '0.1rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '1.6rem',
+        paddingBottom: '0.0rem',
+        paddingTop: '0.0rem',
+    },
+};
+
 Theme.typography.body1 = {
     fontSize: '0.8rem',
     textAlign: 'justify',

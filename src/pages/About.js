@@ -23,7 +23,7 @@ class About extends React.Component {
           <Grid item xs={4} sm={3} md={2} lg={2} >
             <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "90%", height: "auto" }} />
           </Grid>
-          <Grid item xs={8} sm={8} md={8} lg={8}>
+          <Grid item xs={8} sm={8} md={8} lg={10}>
             <Typography variant='body1' paragraph>Welcome to my webpage!</Typography>
             <Typography variant='body1' paragraph>I'm Teko, a computer engineering student from Spain.</Typography>
             <Typography variant='body1' paragraph>I am a learning computer engineer and programmer, who likes to code simple projects like Discord bots or this webpage. </Typography>

@@ -12,6 +12,7 @@ import { CardActions } from '@mui/material';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 export default function NewsCard(props) {
     const [open, setOpen] = React.useState(false);
     const toggleOpen = () => {
@@ -21,7 +22,7 @@ export default function NewsCard(props) {
     return (
         <>
             <Grid item key={props.index} >
-                <Card sx={{}}>
+                <Card>
                     <CardContent>
                         <Typography variant="h6" component="h2">{props.title}</Typography>
                         <Typography variant="body2" component="h2">{props.date}</Typography>
@@ -29,7 +30,7 @@ export default function NewsCard(props) {
                     <CardActions>
                         <Button onClick={toggleOpen}>More</Button>
                     </CardActions>
-                    <Dialog open={open}>
+                    <Dialog open={open} PaperProps={{ sx: { left: '50%', m: 0 } }} sx={{ width: '50%', alignSelf: 'center' }}>
                         <DialogTitle>
                             <Typography variant='h6'>{props.title} </Typography>
                             <IconButton aria-label="close" onClick={toggleOpen} sx={{ position: 'absolute', right: 8, top: 8, }}>

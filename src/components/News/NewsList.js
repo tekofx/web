@@ -76,7 +76,9 @@ export default function NewsList() {
             {
                 (loading ? Array.from(new Array(30)) : releases).map((item, index) => (
 
-                    <Grid item key={index} >
+                    <Grid item key={index} sx={{
+                        paddingBottom: "5%", left: '50%'
+                    }}>
                         {item ? (
                             <NewsCard title={item.title} date={item.date} text={item.text} changes={item.changes} index={index} />
                         ) : (

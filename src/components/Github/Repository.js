@@ -11,20 +11,30 @@ import Typography from '@mui/material/Typography';
 class Repository extends React.Component {
     constructor(props) {
         super();
-        this.title = props.title;
-        this.description = props.description;
-        this.url = props.url;
-        this.img = props.img;
+
+        if (props.title === undefined) {
+            this.width = 200;
+
+        } else {
+            this.title = props.title;
+            this.description = props.description;
+            this.url = props.url;
+            this.img = props.img;
+            this.width = "auto";
+
+        }
+
 
     }
 
     render() {
 
         return (
-            <Card sx={{ maxWidth: 345 }} className="card" >
+            <Card className="card" >
                 <CardMedia
                     component="img"
                     height="140"
+                    width="auto"
                     image={this.img}
                 />
                 <CardContent className='cardContent' sx={{ minHeight: 100 }}>

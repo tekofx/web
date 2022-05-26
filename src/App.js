@@ -4,6 +4,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Theme from './Theme';
 import { ThemeProvider } from '@material-ui/core';
+import Appbar from './components/Appbar';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,15 +15,14 @@ function App() {
   return (
     <ThemeProvider theme={Theme}>
       <Router>
-        <div>
-          <Routes>
-            <Route path='/' element={<Navigate to="/home" />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/gallery' element={<Gallery />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/about' element={<About />} />
-          </Routes>
-        </div>
+        <Appbar />
+        <Routes>
+          <Route path='/' element={<Navigate to="/home" />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );

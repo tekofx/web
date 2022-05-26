@@ -1,5 +1,4 @@
 import React from "react";
-import Appbar from '../components/Appbar';
 import { ThemeProvider } from '@emotion/react';
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
@@ -12,8 +11,6 @@ class Home extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <Appbar />
-        <br />
         <Grid container spacing={4}>
 
           <Grid item xs={12} sm={8} md={9} lg={10}>

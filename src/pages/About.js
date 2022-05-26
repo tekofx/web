@@ -15,8 +15,6 @@ class About extends React.Component {
   render() {
     return (
       <ThemeProvider theme={Theme}>
-        <Appbar />
-        <br />
         <Typography variant="h1">About</Typography>
 
         <Grid container spacing={2}>

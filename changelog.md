@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Favicon
+- Footer to all pages
+- Added social networks to footer
 
 ## [v0.1.1] - 25/05/2022
 A new version of the web in a such a sort time. I'm too exited about this webpage and think a lot of what to add so in this version I added a news section. 

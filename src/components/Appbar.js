@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
 import Logo from '../img/logo.png';
+import { FaDeviantart, FaGithub, FaTwitter, FaMastodon, Fa500Px, FaInstagram } from 'react-icons/fa';
 import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
@@ -29,7 +30,7 @@ const ResponsiveAppBar = () => {
 
     return (
         <ThemeProvider theme={Theme}>
-            <AppBar position="static">
+            <AppBar position="sticky">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
@@ -75,7 +76,6 @@ const ResponsiveAppBar = () => {
                             </Menu>
                         </Box>
 
-
                         {/*Desktop Menu*/}
                         <Avatar src={Logo} />
 
@@ -92,9 +92,19 @@ const ResponsiveAppBar = () => {
                                     {page.page}
                                 </Button>
                             ))}
+
                         </Box>
-
-
+                        <Box>
+                            <IconButton target="_blank" href="https://twitter.com/teko_fx">
+                                <FaTwitter />
+                            </IconButton>
+                            <IconButton target="_blank" href="https://meow.social/web/@teko">
+                                <FaMastodon />
+                            </IconButton>
+                            <IconButton target="_blank" href="https://github.com/tekofx">
+                                <FaGithub />
+                            </IconButton>
+                        </Box>
                     </Toolbar>
                 </Container>
             </AppBar>

@@ -10,6 +10,7 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
 import ColorsThing from '../components/Colors/ColorsList';
+import Footer from "../components/Footer";
 
 class About extends React.Component {
   render() {
@@ -64,6 +65,7 @@ class About extends React.Component {
           </Grid>
 
         </Grid>
+        <Footer />
 
 
       </ThemeProvider>

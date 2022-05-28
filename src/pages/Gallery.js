@@ -4,6 +4,7 @@ import ImageList from '../components/ImageList';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";
+import Footer from "../components/Footer";
 class Gallery extends React.Component {
   render() {
     return (
@@ -11,8 +12,7 @@ class Gallery extends React.Component {
         <Typography variant="h1">Gallery</Typography>
         <Typography variant='body1'>My art/photographies</Typography>
         <ImageList />
-
-
+        <Footer />
       </ThemeProvider>
     )
   }

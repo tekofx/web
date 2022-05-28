@@ -17,7 +17,6 @@ class Home extends React.Component {
             <Typography variant="h1">Welcome</Typography>
 
             <Typography variant='body1'>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</Typography>
-            <SocialNetworks />
           </Grid>
 
           <Grid item xs={10} sm={4} md={3} lg={2}>

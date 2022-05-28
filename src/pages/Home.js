@@ -24,11 +24,8 @@ class Home extends React.Component {
             <NewsList />
           </Grid>
         </Grid>
-        <Footer />
       </ThemeProvider>
-
     );
   }
-
 }
 export default Home;

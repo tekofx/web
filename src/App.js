@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Theme from './Theme';
 import { ThemeProvider } from '@material-ui/core';
 import Appbar from './components/Appbar';
+import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Route,
@@ -23,6 +24,7 @@ function App() {
           <Route path='/projects' element={<Projects />} />
           <Route path='/about' element={<About />} />
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

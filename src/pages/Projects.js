@@ -12,9 +12,7 @@ class Projects extends React.Component {
         <Typography variant="h1">Projects</Typography>
         <Typography variant='body1'>My coding projects like Discord Bots and terminal programs</Typography>
         <RepositoryList />
-        <Footer />
       </ThemeProvider>
-
     )
   }
 }

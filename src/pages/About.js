@@ -61,13 +61,8 @@ class About extends React.Component {
             <ColorsTable />
             <br />
             {/* <ColorsThing /> */}
-
           </Grid>
-
         </Grid>
-        <Footer />
-
-
       </ThemeProvider>
     )
   }

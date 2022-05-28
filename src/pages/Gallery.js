@@ -12,7 +12,6 @@ class Gallery extends React.Component {
         <Typography variant="h1">Gallery</Typography>
         <Typography variant='body1'>My art/photographies</Typography>
         <ImageList />
-        <Footer />
       </ThemeProvider>
     )
   }

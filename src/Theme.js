@@ -34,6 +34,15 @@ var Theme = createTheme({
                 }
             ]
         },
+        MuiAppBar: {
+            styleOverrides: {
+                // Name of the slot
+                root: {
+                    // Some CSS
+                    background: '#101010',
+                },
+            },
+        }
 
     },
     typography: {

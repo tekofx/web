@@ -1,19 +1,22 @@
 import * as React from 'react';
 import { Grid } from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { IconButton } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { FaDeviantart, FaGithub, FaTwitter } from 'react-icons/fa';
 import { Typography } from '@mui/material';
+import SocialNetworks from './SocialNetworks';
 
 export default function Footer() {
 
+    const year = new Date().getFullYear();
+
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={6} lg={12}>
-                <Typography variant='body2'>Teko's Tundra 2022</Typography>
-
-
+        <Grid container spacing={2}
+            sx={{ paddingBottom: '2%', paddingTop: '2%' }}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+        >
+            <Grid item xs={12} sm={6} md={2} lg={8}>
+                <Typography display='inline' variant='body2'>Teko's Tundra {year}</Typography>
+                <SocialNetworks />
             </Grid>
         </Grid>
     );

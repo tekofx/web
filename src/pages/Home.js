@@ -4,8 +4,6 @@ import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import NewsList from "../components/News/NewsList";
 import { Grid } from "@mui/material";
-import SocialNetworks from "../components/SocialNetworks";
-import Footer from "../components/Footer";
 
 class Home extends React.Component {
   render() {

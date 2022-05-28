@@ -7,7 +7,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Theme from '../../Theme';
-import { useState } from 'react';
 
 import ColorChip from './ColorChip';
 
@@ -18,12 +17,6 @@ function createData(part, hex, rgb) {
 
 
 export default function DenseTable() {
-    const [open, setOpen] = useState(false)
-    const handleClick = () => {
-        setOpen(true)
-        navigator.clipboard.writeText(window.location.toString())
-    }
-
 
     const rows = [
         createData("Fur",

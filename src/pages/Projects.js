@@ -4,7 +4,6 @@ import "./theme.css"
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";
-import Footer from "../components/Footer";
 class Projects extends React.Component {
   render() {
     return (

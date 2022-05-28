@@ -3,14 +3,12 @@ import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';
-import Appbar from '../components/Appbar';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
 import ColorsThing from '../components/Colors/ColorsList';
-import Footer from "../components/Footer";
 
 class About extends React.Component {
   render() {

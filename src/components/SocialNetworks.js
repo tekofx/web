@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { Grid } from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { IconButton } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { FaDeviantart, FaGithub, FaTwitter, FaMastodon, Fa500Px, FaInstagram } from 'react-icons/fa';
 
 

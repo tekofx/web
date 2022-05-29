@@ -37,9 +37,6 @@ export default function NewsCard(props) {
                     <Dialog open={open} PaperProps={{ sx: { left: '50%', m: 0 } }} sx={{ width: '50%', alignSelf: 'center' }}>
                         <DialogTitle>
                             <Typography variant='h6'>{props.title} </Typography>
-                            <IconButton aria-label="close" onClick={toggleOpen} sx={{ position: 'absolute', right: 8, top: 8, }}>
-                                <CloseIcon />
-                            </IconButton>
                         </DialogTitle>
                         <DialogContent>
                             <Typography variant='body1'>{props.text}</Typography>

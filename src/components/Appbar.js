@@ -103,7 +103,7 @@ const ResponsiveAppBar = () => {
                             ))}
 
                         </Box>
-                        <Box>
+                        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' } }}>
                             <IconButton target="_blank" href="https://twitter.com/teko_fx">
                                 <FaTwitter />
                             </IconButton>
@@ -115,7 +115,7 @@ const ResponsiveAppBar = () => {
                             </IconButton>
                         </Box>
 
-                        <Box>
+                        <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex' } }}>
                             <Button onClick={() => changeLanguageHandler('es')}>ESP</Button>
                             <Button onClick={() => changeLanguageHandler('en')}>ENG</Button>
 

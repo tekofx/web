@@ -135,6 +135,7 @@ Theme.typography.h4 = {
 Theme.typography.body1 = {
     fontSize: '0.8rem',
     textAlign: 'justify',
+    paddingBottom: '0.8rem',
 
 
     '@media (min-width:600px)': {

@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #101010;
+  color: #fff;
+  font-size: large;
+}
+
+.routes {
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 code {

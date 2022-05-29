@@ -1,5 +1,4 @@
 import React from "react";
-import "./theme.css"
 import ImageList from '../components/ImageList';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';

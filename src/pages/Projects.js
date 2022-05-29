@@ -1,6 +1,5 @@
 import React from "react";
 import RepositoryList from "../components/Github/RepositoryList";
-import "./theme.css"
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";

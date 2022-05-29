@@ -12,13 +12,15 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
+import './index.css';
+
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
       <Router>
         <Appbar />
-        <Routes>
+        <Routes >
           <Route path='/' element={<Navigate to="/home" />} />
           <Route path='/home' element={<Home />} />
           <Route path='/gallery' element={<Gallery />} />

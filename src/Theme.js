@@ -72,6 +72,8 @@ var Theme = createTheme({
 /* These atrributes overrides the top attributes*/
 Theme.typography.h1 = {
     fontSize: '2rem',
+    color: '#fff',
+
 
     paddingBottom: '0.5rem',
     paddingTop: '0.5rem',
@@ -88,6 +90,8 @@ Theme.typography.h1 = {
 };
 
 Theme.typography.h2 = {
+    color: '#fff',
+
     fontSize: '2.0rem',
     paddingBottom: '0.3rem',
     paddingTop: '0.3rem',
@@ -105,6 +109,8 @@ Theme.typography.h2 = {
 };
 
 Theme.typography.h3 = {
+    color: '#fff',
+
 
     '@media (min-width:600px)': {
         fontSize: '2.0rem',
@@ -119,6 +125,8 @@ Theme.typography.h3 = {
 };
 
 Theme.typography.h4 = {
+    color: '#fff',
+
 
     '@media (min-width:600px)': {
         fontSize: '1.8em',
@@ -133,6 +141,8 @@ Theme.typography.h4 = {
 };
 
 Theme.typography.body1 = {
+    color: '#fff',
+
     fontSize: '0.8rem',
     textAlign: 'justify',
     paddingBottom: '0.8rem',
@@ -145,7 +155,6 @@ Theme.typography.body1 = {
         fontSize: '1.5rem',
     },
 };
-
 
 
 //Theme = responsiveFontSizes(Theme);

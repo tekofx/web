@@ -11,8 +11,8 @@ function Home() {
   const { t, i18n } = useTranslation();
 
   return (
-    <ThemeProvider theme={Theme}>
-      <Grid container spacing={4}>
+    <ThemeProvider theme={Theme} >
+      <Grid container spacing={4}/*  sx={{ backgroundColor: 'white' }} */>
 
         <Grid item xs={12} sm={8} md={9} lg={10}>
           <Typography variant="h1">{t('homeTitle')}</Typography>

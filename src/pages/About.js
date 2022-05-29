@@ -1,5 +1,4 @@
 import React from "react";
-import "./theme.css"
 import Avatar from '@mui/material/Avatar';
 import avatar from '../img/avatar.png';
 import ref from '../img/ref.png';

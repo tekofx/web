@@ -39,7 +39,7 @@ var Theme = createTheme({
                 // Name of the slot
                 root: {
                     // Some CSS
-                    background: '#101010',
+                    background: '#161b22',
                 },
             },
         }

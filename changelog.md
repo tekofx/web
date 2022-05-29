@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Appbar color 
 
+### Removed
+- X icon on news
+
 ## [v0.1.2] - 28/05/2022
 ### Added
 - Favicon

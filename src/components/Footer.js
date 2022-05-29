@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <ThemeProvider theme={Theme}>
             <Grid container spacing={2}
-                sx={{ paddingBottom: '2%', paddingTop: '2%' }}
+                sx={{ paddingBottom: '1%', paddingTop: '1%' }}
                 direction="column"
                 alignItems="center"
                 justifyContent="center"

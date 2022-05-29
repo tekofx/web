@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Theme from '../../Theme';
+import { useTranslation } from 'react-i18next';
 
 import ColorChip from './ColorChip';
 
@@ -17,38 +18,39 @@ function createData(part, hex, rgb) {
 
 
 export default function DenseTable() {
+    const { t, i18n } = useTranslation();
 
     const rows = [
-        createData("Fur",
+        createData(t('colorPart1'),
             <ColorChip label="45 , 45 , 45" bgcolor="#2D2D2D" />,
             <ColorChip label="#2D2D2D" bgcolor="#2D2D2D" />
         ),
 
-        createData("Fur2",
+        createData(t('colorPart2'),
             <ColorChip label="160, 160, 160" bgcolor="#A0A0A0" color="black" />,
             <ColorChip label="#A0A0A0" bgcolor="#A0A0A0" color="black" />
         ),
-        createData("Fur3",
+        createData(t('colorPart3'),
             <ColorChip label="247, 247, 247" bgcolor="#F7F7F7" color="black" />,
             <ColorChip label="#F7F7F7" bgcolor="#F7F7F7" color="black" />
         ),
-        createData("Hair1",
+        createData(t('colorPart4'),
             <ColorChip label="44, 125, 230" bgcolor="#2C7DE6" color="black" />,
             <ColorChip label="#2C7DE6" bgcolor="#2C7DE6" color="black" />
         ),
-        createData("Hair2/Nails",
+        createData(t('colorPart5'),
             <ColorChip label="0, 219, 255" bgcolor="#00DBFF" color="black" />,
             <ColorChip label="#00DBFF" bgcolor="#00DBFF" color="black" />
         ),
-        createData("Paws/Ears",
+        createData(t('colorPart6'),
             <ColorChip label="240, 161, 156" bgcolor="#F0A19C" color="black" />,
             <ColorChip label="#F0A19C" bgcolor="#F0A19C" color="black" />
         ),
-        createData("Eyes1",
+        createData(t('colorPart7'),
             <ColorChip label="17, 181, 93" bgcolor="#11B55D" color="black" />,
             <ColorChip label="#11B55D" bgcolor="#11B55D" color="black" />
         ),
-        createData("Eyes2",
+        createData(t('colorPart8'),
             <ColorChip label="226, 229, 101" bgcolor="#E2E565" color="black" />,
             <ColorChip label="#E2E565" bgcolor="#E2E565" color="black" />
         ),
@@ -61,7 +63,7 @@ export default function DenseTable() {
             <Table sx={{ maxWith: "100%", minWidth: "100%", backgroundColor: Theme.palette.background.main }} size="small">
                 <TableHead>
                     <TableRow>
-                        <TableCell >Part</TableCell>
+                        <TableCell >{t('colorParts')}</TableCell>
                         <TableCell >HEX</TableCell>
                         <TableCell >RGB</TableCell>
                     </TableRow>

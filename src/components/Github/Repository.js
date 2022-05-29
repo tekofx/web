@@ -5,53 +5,38 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useTranslation } from 'react-i18next';
 
 
 
-class Repository extends React.Component {
-    constructor(props) {
-        super();
+function Repository(props) {
 
-        if (props.title === undefined) {
-            this.width = 200;
-
-        } else {
-            this.title = props.title;
-            this.description = props.description;
-            this.url = props.url;
-            this.img = props.img;
-            this.width = "auto";
-
-        }
+    const { t, i18n } = useTranslation();
 
 
-    }
 
-    render() {
+    return (
+        <Card className="card" >
+            <CardMedia
+                component="img"
+                height="140"
+                width="auto"
+                image={props.img}
+            />
+            <CardContent className='cardContent' sx={{ minHeight: 100 }}>
+                <Typography gutterBottom variant="h5" component="div">
+                    {props.title}
+                </Typography>
+                <Typography variant="body2">
+                    {props.description}
+                </Typography>
+            </CardContent>
+            <CardActions className='cardContent'>
+                <Button className='button' variant='contained' target="_blank" href={props.url} size="small">{t('githubButton')}</Button>
+            </CardActions>
+        </Card >
 
-        return (
-            <Card className="card" >
-                <CardMedia
-                    component="img"
-                    height="140"
-                    width="auto"
-                    image={this.img}
-                />
-                <CardContent className='cardContent' sx={{ minHeight: 100 }}>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {this.title}
-                    </Typography>
-                    <Typography variant="body2">
-                        {this.description}
-                    </Typography>
-                </CardContent>
-                <CardActions className='cardContent'>
-                    <Button className='button' variant='contained' target="_blank" href={this.url} size="small">See on github</Button>
-                </CardActions>
-            </Card >
-
-        );
-    }
+    );
 }
 
 export default Repository;

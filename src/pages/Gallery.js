@@ -4,16 +4,18 @@ import ImageList from '../components/ImageList';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@material-ui/core";
-class Gallery extends React.Component {
-  render() {
-    return (
-      <ThemeProvider theme={Theme}>
-        <Typography variant="h1">Gallery</Typography>
-        <Typography variant='body1'>My art/photographies</Typography>
-        <ImageList />
-      </ThemeProvider>
-    )
-  }
+import { useTranslation } from 'react-i18next';
+
+function Gallery() {
+  const { t, i18n } = useTranslation();
+
+  return (
+    <ThemeProvider theme={Theme}>
+      <Typography variant="h1">{t('galleryTitle')}</Typography>
+      <Typography variant='body1'>{t('galleryText')}</Typography>
+      <ImageList />
+    </ThemeProvider>
+  )
 }
 
 export default Gallery;

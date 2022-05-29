@@ -4,26 +4,28 @@ import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import NewsList from "../components/News/NewsList";
 import { Grid } from "@mui/material";
+import { useTranslation } from 'react-i18next';
 
-class Home extends React.Component {
-  render() {
-    return (
-      <ThemeProvider theme={Theme}>
-        <Grid container spacing={4}>
 
-          <Grid item xs={12} sm={8} md={9} lg={10}>
-            <Typography variant="h1">Welcome</Typography>
+function Home() {
+  const { t, i18n } = useTranslation();
 
-            <Typography variant='body1'>On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom</Typography>
-          </Grid>
+  return (
+    <ThemeProvider theme={Theme}>
+      <Grid container spacing={4}>
 
-          <Grid item xs={10} sm={4} md={3} lg={2}>
-            <Typography variant="h3">News</Typography>
-            <NewsList />
-          </Grid>
+        <Grid item xs={12} sm={8} md={9} lg={10}>
+          <Typography variant="h1">{t('homeTitle')}</Typography>
+
+          <Typography variant='body1'>{t('homeText')}</Typography>
         </Grid>
-      </ThemeProvider>
-    );
-  }
+
+        <Grid item xs={10} sm={4} md={3} lg={2}>
+          <Typography variant="h3">{t('homeNews')}</Typography>
+          <NewsList />
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
 }
 export default Home;

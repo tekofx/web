@@ -11,10 +11,14 @@ import { DialogActions } from '@material-ui/core';
 import { CardActions } from '@mui/material';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from 'react-i18next';
+
 
 
 export default function NewsCard(props) {
     const [open, setOpen] = React.useState(false);
+    const { t, i18n } = useTranslation();
+
     const toggleOpen = () => {
         setOpen(!open);
     }
@@ -28,7 +32,7 @@ export default function NewsCard(props) {
                         <Typography variant="body2" component="h2">{props.date}</Typography>
                     </CardContent>
                     <CardActions>
-                        <Button onClick={toggleOpen}>More</Button>
+                        <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
                     </CardActions>
                     <Dialog open={open} PaperProps={{ sx: { left: '50%', m: 0 } }} sx={{ width: '50%', alignSelf: 'center' }}>
                         <DialogTitle>
@@ -42,7 +46,7 @@ export default function NewsCard(props) {
                             {props.changes}
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={toggleOpen}>Close</Button>
+                            <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
                         </DialogActions>
                     </Dialog>
                 </Card>

@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Social icons in appbar
+- EN/ES language support
 
 ### Changed
 - Appbar color 

@@ -14,10 +14,15 @@ import { FaDeviantart, FaGithub, FaTwitter, FaMastodon, Fa500Px, FaInstagram } f
 import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
-const pages = [{ "page": "Home", "navigate": "/home" }, { "page": "Projects", "navigate": "/projects" }, { "page": "Gallery", "navigate": "/gallery" }, { "page": "About Me", "navigate": "/about" }];
+import { useTranslation } from 'react-i18next';
+
+
 const ResponsiveAppBar = () => {
     const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const { t, i18n } = useTranslation();
+    const pages = [{ "page": t('pageHome'), "navigate": "/home" }, { "page": t('pageProjects'), "navigate": "/projects" }, { "page": t('pageGallery'), "navigate": "/gallery" }, { "page": t('pageAbout'), "navigate": "/about" }];
+
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -27,6 +32,10 @@ const ResponsiveAppBar = () => {
         setAnchorElNav(null);
     };
 
+    const changeLanguageHandler = (value) => {
+        const languageValue = value
+        i18n.changeLanguage(languageValue);
+    }
 
     return (
         <ThemeProvider theme={Theme}>
@@ -104,6 +113,13 @@ const ResponsiveAppBar = () => {
                             <IconButton target="_blank" href="https://github.com/tekofx">
                                 <FaGithub />
                             </IconButton>
+                        </Box>
+
+                        <Box>
+                            <Button onClick={() => changeLanguageHandler('es')}>ESP</Button>
+                            <Button onClick={() => changeLanguageHandler('en')}>ENG</Button>
+
+
                         </Box>
                     </Toolbar>
                 </Container>

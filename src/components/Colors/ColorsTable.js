@@ -18,7 +18,7 @@ function createData(part, hex, rgb) {
 
 
 export default function DenseTable() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const rows = [
         createData(t('colorPart1'),

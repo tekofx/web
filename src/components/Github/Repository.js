@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 function Repository(props) {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
 
 

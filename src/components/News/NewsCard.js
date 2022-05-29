@@ -9,15 +9,13 @@ import { DialogTitle } from '@mui/material';
 import { DialogContent } from '@material-ui/core';
 import { DialogActions } from '@material-ui/core';
 import { CardActions } from '@mui/material';
-import { IconButton } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
 
 
 
 export default function NewsCard(props) {
     const [open, setOpen] = React.useState(false);
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const toggleOpen = () => {
         setOpen(!open);

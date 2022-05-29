@@ -6,7 +6,7 @@ import { Typography } from "@material-ui/core";
 import { useTranslation } from 'react-i18next';
 
 function Projects() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <ThemeProvider theme={Theme}>

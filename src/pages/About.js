@@ -16,7 +16,7 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container maxWidth='xl'>
       <ThemeProvider theme={Theme}>
         <Typography variant="h1">{t('aboutTitle1')}</Typography>
 

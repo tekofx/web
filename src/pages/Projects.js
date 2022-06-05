@@ -9,7 +9,7 @@ function Projects() {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container maxWidth='xl'>
       <ThemeProvider theme={Theme}>
         <Typography variant="h1">{t('projectsTitle')}</Typography>
         <Typography variant='body1'>{t('projectsText')}</Typography>

@@ -10,7 +10,7 @@ function Gallery() {
 
   return (
 
-    <Container >
+    <Container maxWidth='xl'>
       <ThemeProvider theme={Theme}>
         <Typography variant="h1">{t('galleryTitle')}</Typography>
         <Typography variant='body1'>{t('galleryText')}</Typography>

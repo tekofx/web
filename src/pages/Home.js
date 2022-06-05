@@ -13,7 +13,7 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container maxWidth='xl'>
       <ThemeProvider theme={Theme} >
         <Grid container spacing={4}>
           <Grid item xs={12} sm={8} md={9} lg={10}>

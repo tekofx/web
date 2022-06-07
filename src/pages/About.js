@@ -7,7 +7,6 @@ import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
-import ColorsThing from '../components/Colors/ColorsList';
 import { useTranslation } from 'react-i18next';
 import { Container } from "@material-ui/core";
 

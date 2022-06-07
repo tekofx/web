@@ -60,10 +60,6 @@ var Theme = createTheme({
             fontStyle: 'italic',
             textDecoration: 'none',
         },
-        colorSquareText: {
-            textAlign: 'center',
-            fontSize: '1.5rem',
-        }
     },
 
 });

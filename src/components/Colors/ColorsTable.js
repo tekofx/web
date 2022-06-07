@@ -17,7 +17,7 @@ function createData(part, hex, rgb) {
 
 
 
-export default function DenseTable() {
+export default function ColorsTable() {
     const { t } = useTranslation();
 
     const rows = [

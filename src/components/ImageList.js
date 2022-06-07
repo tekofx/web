@@ -7,7 +7,7 @@ const { parse } = require('rss-to-json');
 
 
 
-export default function TitlebarImageList() {
+export default function ImageList() {
   const [posts, setPosts] = React.useState([]);
 
 

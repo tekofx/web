@@ -6,7 +6,7 @@ import Slide from '@mui/material/Slide';
 import Alert from '@mui/material/Alert';
 
 
-export default function DenseTable(props) {
+export default function ColorChip(props) {
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(true)

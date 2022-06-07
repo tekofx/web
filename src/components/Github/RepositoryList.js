@@ -7,7 +7,7 @@ import { Skeleton } from '@mui/material';
 const axios = require("axios");
 
 
-export default function BasicGrid(props) {
+export default function RepositoryList(props) {
     const [repos, setRepos] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
 

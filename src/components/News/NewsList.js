@@ -31,6 +31,9 @@ export default function NewsList() {
             return new Date(b.published_at) - new Date(a.published_at);
         });
 
+        // Get first 4
+        webReleases = webReleases.slice(0, 4);
+
         webReleases.forEach(element => {
             var release = {}
             release["version"] = element.tag_name;

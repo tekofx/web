@@ -23,29 +23,27 @@ export default function NewsCard(props) {
 
     return (
         <>
-            <Grid item key={props.index} >
-                <Card>
-                    <CardContent>
-                        <Typography variant="h6" component="h2">{props.title}</Typography>
-                        <Typography variant="body2" component="h2">{props.date}</Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
-                    </CardActions>
-                    <Dialog open={open} PaperProps={{ sx: { left: '50%', m: 0 } }} sx={{ width: '50%', alignSelf: 'center' }}>
-                        <DialogTitle>
-                            <Typography variant='h6'>{props.title} </Typography>
-                        </DialogTitle>
-                        <DialogContent>
-                            <Typography variant='body1'>{props.text}</Typography>
-                            {props.changes}
-                        </DialogContent>
-                        <DialogActions>
-                            <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
-                        </DialogActions>
-                    </Dialog>
-                </Card>
-            </Grid>
+            <Card>
+                <CardContent>
+                    <Typography variant="h6" component="h2">{props.title}</Typography>
+                    <Typography variant="body2" component="h2">{props.date}</Typography>
+                </CardContent>
+                <CardActions>
+                    <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
+                </CardActions>
+                <Dialog open={open} maxWidth={'sm'}>
+                    <DialogTitle>
+                        <Typography variant='h6'>{props.title} </Typography>
+                    </DialogTitle>
+                    <DialogContent>
+                        <Typography variant='body1'>{props.text}</Typography>
+                        {props.changes}
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
+                    </DialogActions>
+                </Dialog>
+            </Card>
         </ >
     );
 }

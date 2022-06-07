@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Translation
+- News width on mobile view
 
 ### Changed
 - Changed padding in pages

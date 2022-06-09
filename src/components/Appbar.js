@@ -15,13 +15,18 @@ import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import routes from '../routes.json';
 
 
 const ResponsiveAppBar = () => {
     const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const { t, i18n } = useTranslation();
-    const pages = [{ "page": t('pageHome'), "navigate": "/home" }, { "page": t('pageProjects'), "navigate": "/projects" }, { "page": t('pageGallery'), "navigate": "/gallery" }, { "page": t('pageAbout'), "navigate": "/about" }];
+    const pages = [
+        { "page": t('pageHome'), "navigate": routes.home },
+        { "page": t('pageProjects'), "navigate": routes.projects },
+        { "page": t('pageGallery'), "navigate": routes.gallery },
+        { "page": t('pageAbout'), "navigate": routes.about }];
 
 
     const handleOpenNavMenu = (event) => {

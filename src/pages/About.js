@@ -1,7 +1,5 @@
 import React from "react";
 import Avatar from '@mui/material/Avatar';
-import avatar from '../img/avatar.png';
-import ref from '../img/ref.png';
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
 import { Typography } from "@mui/material";
@@ -9,10 +7,29 @@ import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';
 import { useTranslation } from 'react-i18next';
 import { Container } from "@material-ui/core";
+import { useState } from "react";
+import { Dialog } from "@mui/material";
+import Slide from '@mui/material/Slide';
+// Images
+import avatar from '../img/avatar.jpg';
+import refSmall from '../img/ref-small.jpg';
+import ref from '../img/ref.png';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 
 function About() {
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+
+
+  const toggleOpen = () => {
+    console.log("toggleOpen");
+    setOpen(!open);
+  };
+
 
   return (
     <Container maxWidth='xl'>
@@ -56,12 +73,16 @@ function About() {
             <Typography variant="h2">{t('aboutTitle3')}</Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
-            <img align="left" src={ref} alt="" width={"100%"} />
+
+            <img align="left" src={refSmall} alt="" width={"100%"} onClick={toggleOpen} />
+            <Dialog TransitionComponent={Transition} open={open} >
+              <img align="left" src={ref} alt="" onClick={toggleOpen} />
+
+            </Dialog>
           </Grid>
           <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
             <ColorsTable />
             <br />
-            {/* <ColorsThing /> */}
           </Grid>
         </Grid>
       </ThemeProvider>

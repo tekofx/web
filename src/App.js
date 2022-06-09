@@ -13,6 +13,7 @@ import {
   Navigate
 } from "react-router-dom";
 import './index.css';
+import routes from './routes.json';
 
 
 function App() {
@@ -21,11 +22,11 @@ function App() {
       <Router>
         <Appbar />
         <Routes >
-          <Route path='/' element={<Navigate to="/home" />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/gallery' element={<Gallery />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/' element={<Navigate to={routes.home} />} />
+          <Route path={routes.home} element={<Home />} />
+          <Route path={routes.gallery} element={<Gallery />} />
+          <Route path={routes.projects} element={<Projects />} />
+          <Route path={routes.about} element={<About />} />
         </Routes>
         <Footer />
       </Router>

@@ -11,7 +11,7 @@ export default function ColorChip(props) {
     const handleClick = () => {
         setOpen(true)
         navigator.clipboard.writeText(props.label)
-        console.log(props.label)
+        console.log(props)
     }
 
 

@@ -183,7 +183,6 @@ Theme.typography.body2 = {
     color: '#fff',
 
     fontSize: '0.8rem',
-    textAlign: 'justify',
 
 
     '@media (min-width:600px)': {

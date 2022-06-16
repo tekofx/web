@@ -23,8 +23,8 @@ export default function ColorsTable() {
 
     const rows = [
         createData(t('colorPart1'),
-            <ColorChip label="45 , 45 , 45" bgcolor="#2D2D2D" />,
-            <ColorChip label="#2D2D2D" bgcolor="#2D2D2D" />
+            <ColorChip label="45 , 45 , 45" bgcolor="#2D2D2D" color="white" />,
+            <ColorChip label="#2D2D2D" bgcolor="#2D2D2D" color="white" />
         ),
 
         createData(t('colorPart2'),

@@ -2,7 +2,8 @@ import React from "react";
 import RepositoryList from "../components/Github/RepositoryList";
 import { ThemeProvider } from "@emotion/react";
 import Theme from '../Theme';
-import { Container, Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import { useTranslation } from 'react-i18next';
 
 function Projects() {
@@ -10,11 +11,9 @@ function Projects() {
 
   return (
     <Container maxWidth='xl'>
-      <ThemeProvider theme={Theme}>
-        <Typography variant="h1">{t('projectsTitle')}</Typography>
-        <Typography variant='body1'>{t('projectsText')}</Typography>
-        <RepositoryList />
-      </ThemeProvider>
+      <Typography variant="h1">{t('projectsTitle')}</Typography>
+      <Typography variant='body1'>{t('projectsText')}</Typography>
+      <RepositoryList />
     </Container>
   )
 }

@@ -6,8 +6,8 @@ import { Grid } from '@mui/material';
 import { Dialog } from '@mui/material';
 import { Button } from '@mui/material';
 import { DialogTitle } from '@mui/material';
-import { DialogContent } from '@material-ui/core';
-import { DialogActions } from '@material-ui/core';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
 import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 

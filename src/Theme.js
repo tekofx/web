@@ -1,4 +1,4 @@
-import { createTheme } from "@material-ui/core";
+import { createTheme } from "@mui/material/styles";
 
 var Theme = createTheme({
     palette: {
@@ -136,6 +136,31 @@ Theme.typography.h4 = {
     },
 };
 
+Theme.typography.h5 = {
+    color: '#fff',
+
+    fontSize: '0.8rem',
+
+    '@media (min-width:600px)': {
+        fontSize: '1rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '1.5rem',
+    },
+};
+Theme.typography.h6 = {
+    color: '#fff',
+
+    fontSize: '0.8rem',
+
+    '@media (min-width:600px)': {
+        fontSize: '1rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '1.3rem',
+    },
+};
+
 Theme.typography.body1 = {
     color: '#fff',
 
@@ -149,6 +174,23 @@ Theme.typography.body1 = {
     },
     [Theme.breakpoints.up('md')]: {
         fontSize: '1.5rem',
+    },
+};
+
+
+
+Theme.typography.body2 = {
+    color: '#fff',
+
+    fontSize: '0.8rem',
+    textAlign: 'justify',
+
+
+    '@media (min-width:600px)': {
+        fontSize: '0.8rem',
+    },
+    [Theme.breakpoints.up('md')]: {
+        fontSize: '1rem',
     },
 };
 

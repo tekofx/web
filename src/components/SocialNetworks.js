@@ -8,22 +8,22 @@ export default function SocialNetworks() {
     return (
         < >
             <IconButton lg={12} target="_blank" href="https://twitter.com/teko_fx">
-                <FaTwitter />
+                <FaTwitter color='white' />
             </IconButton>
             <IconButton target="_blank" href="https://github.com/tekofx">
-                <FaGithub />
+                <FaGithub color='white' />
             </IconButton>
             <IconButton target="_blank" href="https://www.deviantart.com/tekofx">
-                <FaDeviantart />
+                <FaDeviantart color='white' />
             </IconButton>
             <IconButton target="_blank" href="https://meow.social/web/@teko">
-                <FaMastodon />
+                <FaMastodon color='white' />
             </IconButton>
             <IconButton target="_blank" href="https://500px.com/p/tekofx">
-                <Fa500Px />
+                <Fa500Px color='white' />
             </IconButton>
             <IconButton target="_blank" href="https://instagram.com/teko_fx">
-                <FaInstagram />
+                <FaInstagram color='white' />
             </IconButton>
 
         </>

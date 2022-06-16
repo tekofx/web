@@ -4,6 +4,8 @@ import { Typography } from '@mui/material';
 import { Skeleton } from '@mui/material';
 import { Grid } from '@mui/material';
 import NewsCard from './NewsCard';
+import { ThemeProvider } from '@mui/material/styles';
+
 const axios = require("axios");
 
 

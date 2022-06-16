@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Theme from '../../Theme';
+import { Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import ColorChip from './ColorChip';
@@ -63,9 +64,9 @@ export default function ColorsTable() {
             <Table sx={{ maxWith: "100%", minWidth: "100%", backgroundColor: Theme.palette.background.main }} size="small">
                 <TableHead>
                     <TableRow>
-                        <TableCell >{t('colorParts')}</TableCell>
-                        <TableCell >HEX</TableCell>
-                        <TableCell >RGB</TableCell>
+                        <TableCell ><Typography variant='body2'>{t('colorParts')}</Typography></TableCell>
+                        <TableCell ><Typography variant='body2'>HEX</Typography></TableCell>
+                        <TableCell ><Typography variant='body2'>RGB</Typography></TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -75,7 +76,7 @@ export default function ColorsTable() {
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                {row.part}
+                                <Typography variant='body2'>{row.part}</Typography>
                             </TableCell>
                             <TableCell >{row.hex}</TableCell>
                             <TableCell >{row.rgb}</TableCell>

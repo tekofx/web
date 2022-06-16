@@ -3,7 +3,7 @@ import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Theme from './Theme';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material/styles';
 import Appbar from './components/Appbar';
 import Footer from './components/Footer';
 import {

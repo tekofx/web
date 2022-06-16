@@ -110,13 +110,13 @@ const ResponsiveAppBar = () => {
                         </Box>
                         <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' } }}>
                             <IconButton target="_blank" href="https://twitter.com/teko_fx">
-                                <FaTwitter />
+                                <FaTwitter color='white' />
                             </IconButton>
                             <IconButton target="_blank" href="https://meow.social/web/@teko">
-                                <FaMastodon />
+                                <FaMastodon color='white' />
                             </IconButton>
                             <IconButton target="_blank" href="https://github.com/tekofx">
-                                <FaGithub />
+                                <FaGithub color='white' />
                             </IconButton>
                         </Box>
 

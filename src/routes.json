@@ -1,4 +1,5 @@
 {
+    "root": "/",
     "home": "/home",
     "projects": "/projects",
     "about": "/about",

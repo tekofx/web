@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
   Navigate,

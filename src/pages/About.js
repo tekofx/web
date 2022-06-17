@@ -1,7 +1,5 @@
 import React from "react";
 import Avatar from '@mui/material/Avatar';
-import { ThemeProvider } from "@emotion/react";
-import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from '../components/Colors/ColorsTable';

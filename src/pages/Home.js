@@ -1,6 +1,4 @@
 import React from "react";
-import { ThemeProvider } from '@emotion/react';
-import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import NewsList from "../components/News/NewsList";
 import { Grid } from "@mui/material";

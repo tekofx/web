@@ -1,7 +1,5 @@
 import React from "react";
 import RepositoryList from "../components/Github/RepositoryList";
-import { ThemeProvider } from "@emotion/react";
-import Theme from '../Theme';
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import { useTranslation } from 'react-i18next';

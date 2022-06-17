@@ -25,7 +25,6 @@ export default function NewsList() {
             })
             .catch((error) => {
             });
-
         var releasesTemp = [];
 
         // Sort webreleases by date
@@ -39,8 +38,7 @@ export default function NewsList() {
         webReleases.forEach(element => {
             var release = {}
             release["version"] = element.tag_name;
-            release["url"] = element.upload_url;
-            release["name"] = element.name;
+            release["url"] = element.html_url;
             release["title"] = element.name;
 
             // Date
@@ -49,7 +47,7 @@ export default function NewsList() {
 
             // Body
             var body = element.body;
-            body = body.replace("\n", "");
+            /* body = body.replace("\n", ""); */
 
             var changes = []
             release["changes"] = body.split("\n").forEach(line => {
@@ -85,7 +83,7 @@ export default function NewsList() {
                         paddingBottom: "5%", left: '50%'
                     }}>
                         {item ? (
-                            <NewsCard title={item.title} date={item.date} text={item.text} changes={item.changes} index={index} />
+                            <NewsCard title={item.title} date={item.date} url={item.url} changes={item.changes} index={index} />
                         ) : (
                             <Skeleton variant="rectangular" width={300} height={250} />
                         )}

@@ -10,7 +10,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-
+import ReactMarkdown from 'react-markdown'
 
 
 export default function NewsCard(props) {
@@ -31,16 +31,19 @@ export default function NewsCard(props) {
                 <CardActions>
                     <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
                 </CardActions>
-                <Dialog open={open} maxWidth={'sm'}>
+                <Dialog open={open} maxWidth={'lg'}>
                     <DialogTitle>
                         <Typography variant='h6'>{props.title} </Typography>
                     </DialogTitle>
                     <DialogContent>
-                        <Typography variant='body1'>{props.text}</Typography>
-                        {props.changes}
+                        <Typography variant='body1'>
+                            {props.changes}
+                        </Typography>
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
+                        <Button target="_blank" href={props.url}>Go to release</Button>
+
                     </DialogActions>
                 </Dialog>
             </Card>

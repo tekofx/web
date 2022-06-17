@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <Container maxWidth='xl'>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         <Grid item xs={12} sm={8} md={9} lg={10}>
           <Typography variant="h1">{t('homeTitle')}</Typography>
           <Typography variant='body1'>{t('homeText')}</Typography>

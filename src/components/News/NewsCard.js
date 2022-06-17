@@ -10,8 +10,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import ReactMarkdown from 'react-markdown'
-
 
 export default function NewsCard(props) {
     const [open, setOpen] = React.useState(false);
@@ -42,7 +40,7 @@ export default function NewsCard(props) {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
-                        <Button target="_blank" href={props.url}>Go to release</Button>
+                        <Button target="_blank" href={props.url}>{t('homeNewsButton')}</Button>
 
                     </DialogActions>
                 </Dialog>

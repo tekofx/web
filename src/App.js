@@ -27,7 +27,7 @@ function App() {
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes >
-            <Route path='/' element={<Navigate to={routes.home} />} />
+            <Route path={routes.root} element={<Navigate to={routes.home} />} />
             <Route path={routes.home} element={<Home />} />
             <Route path={routes.gallery} element={<Gallery />} />
             <Route path={routes.projects} element={<Projects />} />

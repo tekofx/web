@@ -2,6 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import ResponsiveGallery from "react-responsive-gallery";
 import { useEffect } from 'react';
+import { Grid } from "@mui/material";
+
+import { Skeleton } from '@mui/material';
 const axios = require("axios");
 const { parse } = require('rss-to-json');
 
@@ -9,6 +12,7 @@ const { parse } = require('rss-to-json');
 
 export default function ImageList() {
   const [posts, setPosts] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
 
   // FIXME: 500px blocks the API call.
@@ -93,6 +97,7 @@ export default function ImageList() {
     const fetchData = async () => {
       await getImages();
       //await get500pxPics();
+      setLoading(false);
     }
     fetchData();
   }, []);
@@ -100,7 +105,17 @@ export default function ImageList() {
   return (
 
     <Box sx={{ flexGrow: 1 }} >
-      <ResponsiveGallery useLightBox images={posts} />
+      {loading ?
+        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 10, xl: 12 }}>
+          {Array.from(Array(30).keys()).map((_, i) => (
+            <Grid item lg={2}>
+              <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
+            </Grid>
+          ))}
+        </Grid>
+        :
+        <ResponsiveGallery useLightBox='true' images={posts} />
+      }
     </Box>
   );
 }

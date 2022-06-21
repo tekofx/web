@@ -21,7 +21,7 @@ function Home() {
           <AmongUS />
         </Grid>
         <Grid item xs={10} sm={4} md={3} lg={2}>
-          <Typography variant="h3">{t('homeNews')}</Typography>
+          <Typography variant="h2">{t('homeNews')}</Typography>
           <NewsList />
         </Grid>
       </Grid>

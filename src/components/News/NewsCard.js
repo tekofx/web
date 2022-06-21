@@ -22,7 +22,7 @@ export default function NewsCard(props) {
         <>
             <Card>
                 <CardContent>
-                    <Typography variant="h5">{props.title}</Typography>
+                    <Typography variant="h4">{props.title}</Typography>
                     <Typography variant="body2">{props.date}</Typography>
                 </CardContent>
                 <CardActions>

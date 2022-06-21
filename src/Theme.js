@@ -164,7 +164,7 @@ Theme.typography.h6 = {
 Theme.typography.body1 = {
     color: '#fff',
 
-    fontSize: '0.8rem',
+    fontSize: '1rem',
     textAlign: 'justify',
     paddingBottom: '0.8rem',
 

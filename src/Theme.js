@@ -69,8 +69,6 @@ var Theme = createTheme({
 Theme.typography.h1 = {
     fontSize: '2rem',
     color: '#fff',
-
-
     paddingBottom: '0.5rem',
     paddingTop: '0.5rem',
     '@media (min-width:600px)': {
@@ -88,7 +86,7 @@ Theme.typography.h1 = {
 Theme.typography.h2 = {
     color: '#fff',
 
-    fontSize: '2.0rem',
+    fontSize: '1.8rem',
     paddingBottom: '0.3rem',
     paddingTop: '0.3rem',
 
@@ -107,6 +105,7 @@ Theme.typography.h2 = {
 Theme.typography.h3 = {
     color: '#fff',
 
+    fontSize: '1.6rem',
 
     '@media (min-width:600px)': {
         fontSize: '2.0rem',
@@ -123,6 +122,7 @@ Theme.typography.h3 = {
 Theme.typography.h4 = {
     color: '#fff',
 
+    fontSize: '1.4rem',
 
     '@media (min-width:600px)': {
         fontSize: '1.8em',
@@ -139,7 +139,7 @@ Theme.typography.h4 = {
 Theme.typography.h5 = {
     color: '#fff',
 
-    fontSize: '0.8rem',
+    fontSize: '1.2rem',
 
     '@media (min-width:600px)': {
         fontSize: '1rem',
@@ -151,7 +151,7 @@ Theme.typography.h5 = {
 Theme.typography.h6 = {
     color: '#fff',
 
-    fontSize: '0.8rem',
+    fontSize: '1rem',
 
     '@media (min-width:600px)': {
         fontSize: '1rem',

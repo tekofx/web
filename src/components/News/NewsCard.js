@@ -22,8 +22,8 @@ export default function NewsCard(props) {
         <>
             <Card>
                 <CardContent>
-                    <Typography variant="h6" component="h2">{props.title}</Typography>
-                    <Typography variant="body2" component="h2">{props.date}</Typography>
+                    <Typography variant="h5">{props.title}</Typography>
+                    <Typography variant="body2">{props.date}</Typography>
                 </CardContent>
                 <CardActions>
                     <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>

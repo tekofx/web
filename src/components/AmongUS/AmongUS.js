@@ -1,7 +1,5 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Container from '@mui/material/Container';
-const config = require('./config.json')
 const amongUS = require('./among_us.png')
 
 const App = () => {

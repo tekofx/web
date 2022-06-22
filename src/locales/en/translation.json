@@ -3,6 +3,7 @@
     "pageProjects": "Projects",
     "pageGallery": "Gallery",
     "pageAbout": "About",
+    "pageExperimental": "Experimental",
     "homeTitle": "Welcome",
     "homeText": "On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom",
     "homeNews": "News",
@@ -45,5 +46,7 @@
     "colorPart5": "Hair2/Nails",
     "colorPart6": "Paws/Ears",
     "colorPart7": "Eyes1",
-    "colorPart8": "Eyes2"
+    "colorPart8": "Eyes2",
+    "experimentalTitle": "Experimental",
+    "experimentalText": "In this page there are some experiments for this webpage. They are currently being tested, so they might not work for you."
 }

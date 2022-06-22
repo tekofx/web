@@ -26,7 +26,9 @@ const ResponsiveAppBar = () => {
         { "page": t('pageHome'), "navigate": routes.home },
         { "page": t('pageProjects'), "navigate": routes.projects },
         { "page": t('pageGallery'), "navigate": routes.gallery },
-        { "page": t('pageAbout'), "navigate": routes.about }];
+        { "page": t('pageAbout'), "navigate": routes.about },
+        { "page": t('pageExperimental'), "navigate": routes.experimental }];
+
 
 
     const handleOpenNavMenu = (event) => {

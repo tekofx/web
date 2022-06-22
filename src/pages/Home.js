@@ -5,7 +5,6 @@ import { Grid } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import '../index.css'
 import Container from '@mui/material/Container';
-import WebGL from '../components/WebGL'
 
 function Home() {
   const { t } = useTranslation();

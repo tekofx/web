@@ -8,6 +8,8 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
     "@mui/styles": "^5.8.4",
+    "@react-three/drei": "^9.13.2",
+    "@react-three/fiber": "^8.0.27",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
@@ -22,8 +24,10 @@
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.1.0",
     "rss-to-json": "^2.0.2",
+    "three": "^0.141.0",
     "tsparticles": "^2.1.0",
     "tsparticles-slim": "^2.1.0",
+    "use-cannon": "^0.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

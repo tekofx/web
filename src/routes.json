@@ -3,5 +3,6 @@
     "home": "/home",
     "projects": "/projects",
     "about": "/about",
-    "gallery": "/gallery"
+    "gallery": "/gallery",
+    "experimental": "/experimental"
 }

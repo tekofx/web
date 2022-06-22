@@ -5,8 +5,6 @@ import { Grid } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import '../index.css'
 import Container from '@mui/material/Container';
-import Seasons from '../components/Seasons/Seasons'
-import AmongUS from '../components/AmongUS/AmongUS'
 
 
 function Home() {
@@ -18,7 +16,6 @@ function Home() {
         <Grid item xs={12} sm={8} md={9} lg={10}>
           <Typography variant="h1">{t('homeTitle')}</Typography>
           <Typography variant='body1'>{t('homeText')}</Typography>
-          <AmongUS />
         </Grid>
         <Grid item xs={10} sm={4} md={3} lg={2}>
           <Typography variant="h2">{t('homeNews')}</Typography>

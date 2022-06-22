@@ -9,7 +9,7 @@ const axios = require("axios");
 
 
 export default function NewsList() {
-    const [releases, setReleases] = React.useState([]);
+    const [releases, setReleases] = React.useState([{ title: 'a', date: 'b', url: 'c' }]);
     const [loading, setLoading] = React.useState(true);
 
 
@@ -84,7 +84,9 @@ export default function NewsList() {
                         {item ? (
                             <NewsCard title={item.title} date={item.date} url={item.url} changes={item.changes} index={index} />
                         ) : (
-                            <Skeleton variant="rectangular" width={200} height={150} />
+                            <Skeleton variant="rectangular"  >
+                                <NewsCard title="Default new title" date="16/03/2020" url="url" changes="changes" index={index} />
+                            </Skeleton>
                         )}
                     </Grid>
                 ))

@@ -3,12 +3,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
 ## [Unreleased]
 This release contains some fixes on fonts and general look and feel and a new page. This new page is for testing cool things to add to this page, they might not work.
 
 ### Changed
 - Size of images in about page
 - Font sizes of news
+- Improved charging components
 
 ### Added 
 - Experimental page

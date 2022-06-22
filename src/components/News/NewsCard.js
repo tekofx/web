@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 export default function NewsCard(props) {
     const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
+    console.log(props)
 
     const toggleOpen = () => {
         setOpen(!open);

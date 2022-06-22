@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React from 'react'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Container } from '@mui/material'
-import { PerspectiveCamera } from 'three';
 
 function Box() {
     return (

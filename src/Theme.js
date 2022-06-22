@@ -42,6 +42,13 @@ var Theme = createTheme({
                     background: '#161b22',
                 },
             },
+        },
+        MuiSkeleton: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#383838'
+                }
+            }
         }
 
     },

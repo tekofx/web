@@ -92,7 +92,7 @@ const ResponsiveAppBar = () => {
                         </Box>
 
                         {/*Desktop Menu*/}
-                        <Avatar src='/logo.png' />
+                        <Avatar src='logo.png' />
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
                             {pages.map((page) => (

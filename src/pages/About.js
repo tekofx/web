@@ -32,7 +32,7 @@ function About() {
 
       <Grid container spacing={2}>
         <Grid item xs={4} sm={3} md={2} lg={2} >
-          <Avatar alt="Remy Sharp" src='/avatar.jpg' sx={{ width: "90%", height: "auto" }} />
+          <Avatar alt="Remy Sharp" src='avatar.jpg' sx={{ width: "90%", height: "auto" }} />
         </Grid>
         <Grid item xs={8} sm={8} md={8} lg={10}>
           <Typography variant='body1' paragraph>{t('aboutText1')}</Typography>
@@ -68,9 +68,9 @@ function About() {
         </Grid>
         <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
 
-          <img align="left" src="/ref-small.jpg" alt="" width={"100%"} onClick={toggleOpen} />
+          <img align="left" src="ref-small.jpg" alt="" width={"100%"} onClick={toggleOpen} />
           <Dialog fullScreen='true' TransitionComponent={Transition} open={open} >
-            <img align="left" src="/ref.png" alt="" onClick={toggleOpen} />
+            <img align="left" src="ref.png" alt="" onClick={toggleOpen} />
 
           </Dialog>
         </Grid>

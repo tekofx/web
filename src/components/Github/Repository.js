@@ -8,18 +8,12 @@ import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 
 
-
 function Repository(props) {
-
     const { t } = useTranslation();
-
-
-
     return (
         <Card className="card" >
             <CardMedia
                 component="img"
-                height="140"
                 width="auto"
                 image={props.img}
             />

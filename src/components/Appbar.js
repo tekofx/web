@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import Logo from '../img/logo.png';
 import { FaGithub, FaTwitter, FaMastodon } from 'react-icons/fa';
 import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
@@ -93,7 +92,7 @@ const ResponsiveAppBar = () => {
                         </Box>
 
                         {/*Desktop Menu*/}
-                        <Avatar src={Logo} />
+                        <Avatar src='/logo.png' />
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
                             {pages.map((page) => (

@@ -6,13 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 This release contains some fixes on fonts and general look and feel and a new page. This new page is for testing cool things to add to this page, they might not work.
 
-### Added 
-- Experimental page
 ### Changed
 - Size of images in about page
 - Font sizes of news
 
 ### Added 
+- Experimental page
 - Popup in about page
 - Animation on page change
 - Button to see release on github

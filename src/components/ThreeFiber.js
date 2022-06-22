@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Container } from '@mui/material'
+import { PerspectiveCamera } from 'three';
 
 function Box() {
     return (
@@ -22,11 +23,11 @@ function Plane() {
     )
 }
 
-export default function App() {
+export default function ThreeFiber() {
     return (
         <Container sx={{ height: '50vh' }}>
             <Canvas>
-                <OrbitControls />
+                <OrbitControls autoRotate='true' />
                 <Stars />
                 <ambientLight intensity={0.5} />
                 <spotLight position={[10, 15, 10]} angle={0.3} />

@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import '../index.css'
 import Container from '@mui/material/Container';
-import WebGL from '../components/WebGL'
+import ThreeFiber from '../components/ThreeFiber'
 import AmongUS from '../components/AmongUS/AmongUS'
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
 
                 <Grid item xs={6} sm={6} md={6} lg={6}>
                     <Typography variant='h3'>ThreeFiber</Typography>
-                    <WebGL />
+                    <ThreeFiber />
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
                     <Typography variant='h3'>TsParticles</Typography>

@@ -27,7 +27,6 @@
     "three": "^0.141.0",
     "tsparticles": "^2.1.0",
     "tsparticles-slim": "^2.1.0",
-    "use-cannon": "^0.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

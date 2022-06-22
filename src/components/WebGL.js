@@ -1,10 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
-
+import { Container } from '@mui/material'
 
 function Box() {
-
     return (
         <mesh position={[0, 1, 0]}>
             <boxBufferGeometry attach="geometry" />
@@ -25,7 +24,7 @@ function Plane() {
 
 export default function App() {
     return (
-        <div style={{ width: "50vw", height: "50vh" }}>
+        <Container sx={{ height: '50vh' }}>
             <Canvas>
                 <OrbitControls />
                 <Stars />
@@ -34,6 +33,6 @@ export default function App() {
                 <Box />
                 <Plane />
             </Canvas>
-        </div>
+        </Container>
     )
 }

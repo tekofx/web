@@ -49,6 +49,14 @@ var Theme = createTheme({
                     backgroundColor: '#383838'
                 }
             }
+        },
+        MuiCardContent: {
+            styleOverrides: {
+                root: {
+                    paddingBottom: '0px',
+
+                }
+            }
         }
 
     },
@@ -118,7 +126,7 @@ Theme.typography.h4 = {
     fontSize: '1.2rem',
 
     [Theme.breakpoints.up('md')]: {
-        fontSize: '1.5rem',
+        fontSize: '1.3rem',
         paddingBottom: '0.0rem',
         paddingTop: '0.0rem',
     },

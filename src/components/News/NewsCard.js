@@ -19,32 +19,30 @@ export default function NewsCard(props) {
     }
 
     return (
-        <>
-            <Card>
-                <CardContent>
-                    <Typography variant="h4">{props.title}</Typography>
-                    <Typography variant="body2">{props.date}</Typography>
-                </CardContent>
-                <CardActions>
-                    <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
-                </CardActions>
-                <Dialog open={open} maxWidth={'lg'}>
-                    <DialogTitle>
-                        <Typography variant='h4'>{props.title} </Typography>
-                    </DialogTitle>
-                    <DialogContent>
-                        <Typography variant='body1'>
-                            {props.changes}
-                        </Typography>
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
-                        <Button target="_blank" href={props.url}>{t('homeNewsButton')}</Button>
+        <Card>
+            <CardContent >
+                <Typography variant="h4">{props.title}</Typography>
+                <Typography variant="body2">{props.date}</Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+                <Button onClick={toggleOpen}>{t('newsButtonMore')}</Button>
+            </CardActions>
+            <Dialog open={open} maxWidth={'lg'}>
+                <DialogTitle>
+                    <Typography variant='h4'>{props.title} </Typography>
+                </DialogTitle>
+                <DialogContent>
+                    <Typography variant='body1'>
+                        {props.changes}
+                    </Typography>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={toggleOpen}>{t('newsButtonClose')}</Button>
+                    <Button target="_blank" href={props.url}>{t('homeNewsButton')}</Button>
 
-                    </DialogActions>
-                </Dialog>
-            </Card>
-        </ >
+                </DialogActions>
+            </Dialog>
+        </Card>
     );
 }
 

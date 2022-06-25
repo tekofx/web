@@ -57,6 +57,17 @@ var Theme = createTheme({
 
                 }
             }
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: '1.2rem',
+                    textTransform: 'none',
+                }
+            }
+
         }
 
     },

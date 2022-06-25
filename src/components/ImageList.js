@@ -3,53 +3,21 @@ import Box from '@mui/material/Box';
 import ResponsiveGallery from "react-responsive-gallery";
 import { useEffect } from 'react';
 import { Grid } from "@mui/material";
-
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import { Skeleton } from '@mui/material';
 const axios = require("axios");
 const { parse } = require('rss-to-json');
 
-
-
+const allPostsGallery = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
+const drawingsGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation"
+const photographyGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation"
 export default function ImageList() {
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [value, setValue] = React.useState(0);
 
-
-  // FIXME: 500px blocks the API call.
-  const get500pxPics = async () => {
-    const url = "https://500px.com/tekofx/rss";
-    var rss = await parse(url);
-
-    var posts = JSON.stringify(rss, null, 3);
-
-    posts = JSON.parse(posts);
-    console.log(posts);
-
-    var output = [];
-
-    // Recorrer posts
-    for (var i = 0; i < posts.items.length; i++) {
-      var item = posts.items[i];
-      var image = item.link;
-      var title = item.title;
-      await axios
-        .get(image)
-        .then(function (response) {
-          console.log(response)
-        });
-
-
-      output.push({ "img": image, "title": title });
-    }
-    console.log(output)
-
-    setPosts(output);
-
-
-  }
-
-  const getImages = async () => {
-    const url = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
+  const getImages = async (url) => {
 
     var repos;
     await axios
@@ -93,9 +61,26 @@ export default function ImageList() {
     setPosts(postsData);
   }
 
+  const handleChange = (event, newValue) => {
+    switch (newValue) {
+      case 0:
+        getImages(allPostsGallery);
+        break;
+      case 1:
+        getImages(drawingsGallery);
+        break;
+      case 2:
+        getImages(photographyGallery);
+        break;
+      default:
+        break;
+    }
+    setValue(newValue);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
-      await getImages();
+      await getImages(allPostsGallery);
       //await get500pxPics();
       setLoading(false);
     }
@@ -105,6 +90,14 @@ export default function ImageList() {
   return (
 
     <Box sx={{ flexGrow: 1 }} >
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab label="All" />
+          <Tab label="Drawings" />
+          <Tab label="Photography" />
+        </Tabs>
+
+      </Box>
       {loading ?
         <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 10, xl: 12 }}>
           {Array.from(Array(30).keys()).map((_, i) => (

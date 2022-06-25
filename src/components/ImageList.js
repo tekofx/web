@@ -7,7 +7,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Skeleton } from '@mui/material';
 const axios = require("axios");
-const { parse } = require('rss-to-json');
 
 const allPostsGallery = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
 const drawingsGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation"
@@ -18,6 +17,7 @@ export default function ImageList() {
   const [value, setValue] = React.useState(0);
 
   const getImages = async (url) => {
+    setLoading(true);
 
     var repos;
     await axios
@@ -43,12 +43,10 @@ export default function ImageList() {
       for (var j = 0; j < post.length; j++) {
         if (post[j].nodeName === "title") {
           title = post[j].childNodes[0].nodeValue;
-          //console.log(title);
         }
 
         if (post[j].nodeName === "media:content") {
           link = post[j].getAttribute('url');
-          //console.log(link);
         }
       }
       if (link !== null) {
@@ -59,6 +57,7 @@ export default function ImageList() {
       }
     }
     setPosts(postsData);
+    setLoading(false);
   }
 
   const handleChange = (event, newValue) => {
@@ -81,8 +80,6 @@ export default function ImageList() {
   useEffect(() => {
     const fetchData = async () => {
       await getImages(allPostsGallery);
-      //await get500pxPics();
-      setLoading(false);
     }
     fetchData();
   }, []);

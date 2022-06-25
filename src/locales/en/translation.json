@@ -13,7 +13,7 @@
     "projectsTitle": "Projects",
     "projectsText": "Here I will show you all the projects I have done, and the ones I am working on. I usually create Discord bots and simple terminal programs",
     "galleryTitle": "Gallery",
-    "galleryText": "My art/photographies",
+    "galleryText": "My art/photographies published on Deviantart",
     "aboutTitle1": "About",
     "aboutText1": "Welcome to my webpage!",
     "aboutText2": "I'm Teko, a computer engineering student from Spain.",
@@ -52,5 +52,5 @@
     "prideText": "Happy Pride Month!!!",
     "halloweenText": "Spooky Halloween!!!",
     "christmasText": "Happy Christmas!!!",
-    "autumnText":"Happy Autumn!!!"
+    "autumnText": "Happy Autumn!!!"
 }

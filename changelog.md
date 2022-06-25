@@ -4,12 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
+
+### Added 
+- Different tabs in gallery 
+
 ### Fixed
 - Font sizes again
 
 ### Changed
 - Edited bottom padding on news
-
+- Improved view of images in gallery with a button to go to deviantart and image title
 
 ## [v0.2] - 22-06-2022
 This release contains some fixes on fonts and general look and feel and a new page. This new page is for testing cool things to add to this page, they might not work. There's also a pride widget in the home page that will appear every pride month.

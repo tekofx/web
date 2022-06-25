@@ -1,8 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import ResponsiveGallery from "react-responsive-gallery";
+import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { Grid } from "@mui/material";
+import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Skeleton } from '@mui/material';
@@ -11,10 +13,11 @@ const axios = require("axios");
 const allPostsGallery = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
 const drawingsGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation"
 const photographyGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation"
-export default function ImageList() {
+export default function ImageGallery() {
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
+  const { t } = useTranslation();
 
   const getImages = async (url) => {
     setLoading(true);
@@ -38,7 +41,8 @@ export default function ImageList() {
     for (var i = 0; i < posts.length; i++) {
       var post = posts[i].childNodes;
       var title = null;
-      var link = null;
+      var imageLink = null;
+      var deviantartLink = null;
 
       for (var j = 0; j < post.length; j++) {
         if (post[j].nodeName === "title") {
@@ -46,13 +50,18 @@ export default function ImageList() {
         }
 
         if (post[j].nodeName === "media:content") {
-          link = post[j].getAttribute('url');
+          imageLink = post[j].getAttribute('url');
+        }
+
+        if (post[j].nodeName === "link") {
+          deviantartLink = post[j].childNodes[0].nodeValue;
         }
       }
-      if (link !== null) {
+      if (imageLink !== null) {
         postsData.push({
           "lightboxTitle": title,
-          "src": link,
+          "src": imageLink,
+          "lightboxCaption": <Button target="_blank" href={deviantartLink}>{t('lightboxButton')}</Button>
         })
       }
     }
@@ -76,6 +85,25 @@ export default function ImageList() {
     }
     setValue(newValue);
   };
+
+  const lightBoxProps = {
+    reactModalStyle: {
+      overlay: {
+        position: 'fixed',
+        top: 10,
+        left: 0,
+        right: 0,
+        bottom: 0,
+      },
+      content: {
+        position: 'absolute',
+        top: '50px',
+        borderRadius: '4px',
+        outline: 'none',
+      },
+    }
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -104,7 +132,7 @@ export default function ImageList() {
           ))}
         </Grid>
         :
-        <ResponsiveGallery useLightBox='true' images={posts} />
+        <ResponsiveGallery useLightBox='true' lightBoxAdditionalProps={lightBoxProps} images={posts} />
       }
     </Box>
   );

@@ -6,6 +6,7 @@ import '../index.css'
 import Container from '@mui/material/Container';
 import ThreeFiber from '../components/ThreeFiber'
 import AmongUS from '../components/AmongUS/AmongUS'
+import Snow from '../components/Snow'
 
 function Home() {
     const { t } = useTranslation();
@@ -19,15 +20,16 @@ function Home() {
                 </Grid >
 
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                    <Typography variant='h3'>ThreeFiber</Typography>
+                    <Typography variant='h2'>ThreeFiber</Typography>
                     <ThreeFiber />
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                    <Typography variant='h3'>TsParticles</Typography>
-                    <AmongUS />
+                    <Typography variant='h2'>TsParticles</Typography>
+                    {/* <AmongUS /> */}
+                    <Snow />
                 </Grid>
             </Grid>
-        </Container>
+        </Container >
     );
 }
 export default Home;

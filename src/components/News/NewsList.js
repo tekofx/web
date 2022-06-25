@@ -50,7 +50,7 @@ export default function NewsList() {
             var changes = []
             release["changes"] = body.split("\n").forEach(line => {
                 if (line.startsWith("###")) {
-                    changes.push(<Typography variant='h6'>{line.replace("###", "")}</Typography>);
+                    changes.push(<Typography variant='h4'>{line.replace("###", "")}</Typography>);
                 } else {
                     changes.push(<Typography variant="body2">{line}</Typography>)
                 }

@@ -74,17 +74,13 @@ var Theme = createTheme({
 
 /* These atrributes overrides the top attributes*/
 Theme.typography.h1 = {
-    fontSize: '2rem',
+    fontSize: '2.5rem',
     color: '#fff',
     paddingBottom: '0.5rem',
     paddingTop: '0.5rem',
-    '@media (min-width:600px)': {
-        fontSize: '2.5rem',
-        paddingBottom: '0.7rem',
-        paddingTop: '0.7rem',
-    },
+
     [Theme.breakpoints.up('md')]: {
-        fontSize: '3.5rem',
+        fontSize: '3rem',
         paddingBottom: '1rem',
         paddingTop: '1rem',
     },
@@ -93,17 +89,12 @@ Theme.typography.h1 = {
 Theme.typography.h2 = {
     color: '#fff',
 
-    fontSize: '1.8rem',
+    fontSize: '2rem',
     paddingBottom: '0.3rem',
     paddingTop: '0.3rem',
 
-    '@media (min-width:600px)': {
-        fontSize: '2.5rem',
-        paddingBottom: '0.5rem',
-        paddingTop: '0.5rem',
-    },
     [Theme.breakpoints.up('md')]: {
-        fontSize: '3rem',
+        fontSize: '2.5rem',
         paddingBottom: '0.7rem',
         paddingTop: '0.7rem',
     },
@@ -112,15 +103,10 @@ Theme.typography.h2 = {
 Theme.typography.h3 = {
     color: '#fff',
 
-    fontSize: '1.6rem',
+    fontSize: '1.5rem',
 
-    '@media (min-width:600px)': {
-        fontSize: '2.0rem',
-        paddingBottom: '0.2rem',
-        paddingTop: '0.2rem',
-    },
     [Theme.breakpoints.up('md')]: {
-        fontSize: '2.2rem',
+        fontSize: '2rem',
         paddingBottom: '0.4rem',
         paddingTop: '0.4rem',
     },
@@ -129,44 +115,16 @@ Theme.typography.h3 = {
 Theme.typography.h4 = {
     color: '#fff',
 
-    fontSize: '1.4rem',
+    fontSize: '1.2rem',
 
-    '@media (min-width:600px)': {
-        fontSize: '1.8em',
-        paddingBottom: '0.1rem',
-        paddingTop: '0.1rem',
-    },
     [Theme.breakpoints.up('md')]: {
-        fontSize: '1.6rem',
+        fontSize: '1.5rem',
         paddingBottom: '0.0rem',
         paddingTop: '0.0rem',
     },
 };
 
-Theme.typography.h5 = {
-    color: '#fff',
 
-    fontSize: '1.2rem',
-
-    '@media (min-width:600px)': {
-        fontSize: '1rem',
-    },
-    [Theme.breakpoints.up('md')]: {
-        fontSize: '1.5rem',
-    },
-};
-Theme.typography.h6 = {
-    color: '#fff',
-
-    fontSize: '1rem',
-
-    '@media (min-width:600px)': {
-        fontSize: '1rem',
-    },
-    [Theme.breakpoints.up('md')]: {
-        fontSize: '1.3rem',
-    },
-};
 
 Theme.typography.body1 = {
     color: '#fff',

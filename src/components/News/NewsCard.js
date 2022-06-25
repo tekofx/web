@@ -30,7 +30,7 @@ export default function NewsCard(props) {
                 </CardActions>
                 <Dialog open={open} maxWidth={'lg'}>
                     <DialogTitle>
-                        <Typography variant='h6'>{props.title} </Typography>
+                        <Typography variant='h4'>{props.title} </Typography>
                     </DialogTitle>
                     <DialogContent>
                         <Typography variant='body1'>

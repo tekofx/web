@@ -18,7 +18,7 @@ function Repository(props) {
                 image={props.img}
             />
             <CardContent className='cardContent' sx={{ minHeight: 100 }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h4" component="div">
                     {props.title}
                 </Typography>
                 <Typography variant="body2">

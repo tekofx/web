@@ -25,8 +25,9 @@
     "react-tsparticles": "^2.1.0",
     "rss-to-json": "^2.0.2",
     "three": "^0.141.0",
+    "tslib": "^2.4.0",
     "tsparticles": "^2.1.0",
-    "tsparticles-slim": "^2.1.0",
+    "tsparticles-engine": "^2.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

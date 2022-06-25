@@ -16,8 +16,14 @@ function Home() {
         <Grid item xs={12} sm={8} md={9} lg={10}>
           <Typography variant="h1">{t('homeTitle')}</Typography>
           <Typography variant='body1'>{t('homeText')}</Typography>
-          <Seasons />
+          <Grid container>
+
+            <Grid item xs={12} sm={10} md={6} lg={6}>
+              <Seasons />
+            </Grid>
+          </Grid>
         </Grid>
+
         <Grid item xs={10} sm={4} md={3} lg={2}>
           <Typography variant="h2">{t('homeNews')}</Typography>
           <NewsList />

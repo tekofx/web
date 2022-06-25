@@ -139,14 +139,12 @@ Theme.typography.body1 = {
 
     fontSize: '1rem',
     textAlign: 'justify',
-    paddingBottom: '0.8rem',
+    paddingBottom: '0.2rem',
 
-
-    '@media (min-width:600px)': {
-        fontSize: '1rem',
-    },
     [Theme.breakpoints.up('md')]: {
         fontSize: '1.5rem',
+        paddingBottom: '0.4rem',
+
     },
 };
 

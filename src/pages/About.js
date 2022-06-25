@@ -31,10 +31,10 @@ function About() {
       <Typography variant="h1">{t('aboutTitle1')}</Typography>
 
       <Grid container spacing={2}>
-        <Grid item xs={4} sm={3} md={2} lg={2} >
-          <Avatar alt="Remy Sharp" src='avatar.jpg' sx={{ width: "90%", height: "auto" }} />
+        <Grid item xs={12} sm={3} md={3} lg={2} >
+          <Avatar style={{ alignSelf: 'center' }} alt="Remy Sharp" src='avatar.jpg' sx={{ width: "100%", height: "auto" }} />
         </Grid>
-        <Grid item xs={8} sm={8} md={8} lg={10}>
+        <Grid item xs={12} sm={9} md={9} lg={9}>
           <Typography variant='body1' paragraph>{t('aboutText1')}</Typography>
           <Typography variant='body1' paragraph>{t('aboutText2')}</Typography>
           <Typography variant='body1' paragraph>{t('aboutText3')} </Typography>

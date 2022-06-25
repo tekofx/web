@@ -96,7 +96,7 @@ export default function ImageList() {
 
       </Box>
       {loading ?
-        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 10, xl: 12 }}>
+        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
           {Array.from(Array(30).keys()).map((_, i) => (
             <Grid item lg={2}>
               <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />

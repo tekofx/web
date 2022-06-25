@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 const pride = require('./summer - lgtb.jpg')
 const halloween = require('./juaguelin.png')
 const christmas = require('./Merry Foxmas.png')
+const autumn = require('./Autumn.png')
 
 
 export default function Footer() {
@@ -14,45 +15,35 @@ export default function Footer() {
     const month = today.getMonth();
     const day = parseInt(String(today.getDate()).padStart(2, '0'));
 
-    switch (month) {
-        case 5:
-            return (
-                <div >
-                    <Typography>{t('prideText')}</Typography>
-                    {/* <Confetti className="particles" /> */}
-                    <img alt="" src={pride} width='100%' />
-                </div >
-            )
-            break;
+    var image = null;
+    var text = "";
 
-        case 9:
-            if (day === 31) {
-                return (
-                    <div >
-                        <Typography>{t('halloweenText')}</Typography>
-                        {/* <Confetti className="particles" /> */}
-                        <img alt="" src={halloween} width='100%' />
-                    </div >
-                )
+    if (8 <= month <= 10) { // Autumn and halloween
+        if (day === 31) {
+            image = halloween;
+            text = t('halloweenText');
+        } else {
+            image = autumn;
+            text = t('autumnText');
+        }
+    }
 
-            }
-            break
+    if (month === 5) { // Pride
+        image = pride;
+        text = t('prideText');
+    }
 
-        case 11:
-            if (23 < day < 30) {
-                return (
-                    <div >
-                        <Typography>{t('christmasText')}</Typography>
-                        {/* <Confetti className="particles" /> */}
-                        <img alt="" src={christmas} width='100%' />
-                    </div >
-                )
+    if (month === 11 && 23 < day < 30) { // Christmas
+        image = christmas;
+        text = t('christmasText');
+    }
 
-            }
-            break
-
-
-        default:
-            break;
+    if (image != null) {
+        return (
+            <div >
+                <Typography>{text}</Typography>
+                <img alt="" src={image} width='100%' />
+            </div >
+        )
     }
 }

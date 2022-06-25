@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import ResponsiveGallery from "react-responsive-gallery";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -117,9 +117,9 @@ export default function ImageGallery() {
     <Box sx={{ flexGrow: 1 }} >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="All" />
-          <Tab label="Drawings" />
-          <Tab label="Photography" />
+          <Tab label={<Typography>All</Typography>} />
+          <Tab label={<Typography>Drawings</Typography>} />
+          <Tab label={<Typography>Photography</Typography>} />
         </Tabs>
 
       </Box>

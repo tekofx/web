@@ -20,7 +20,6 @@ export default function ImageGallery() {
   const { t } = useTranslation();
 
   const getImages = async (url) => {
-    setLoading(true);
 
     var repos;
     await axios
@@ -66,7 +65,6 @@ export default function ImageGallery() {
       }
     }
     setPosts(postsData);
-    setLoading(false);
   }
 
   const handleChange = (event, newValue) => {
@@ -108,6 +106,7 @@ export default function ImageGallery() {
   useEffect(() => {
     const fetchData = async () => {
       await getImages(allPostsGallery);
+      setLoading(false);
     }
     fetchData();
   }, []);

@@ -6,6 +6,7 @@ import '../index.css'
 import Container from '@mui/material/Container';
 import ThreeFiber from '../components/ThreeFiber'
 import AmongUS from '../components/AmongUS/AmongUS'
+import Spring from '../components/Spring';
 
 function Home() {
     const { t } = useTranslation();
@@ -14,17 +15,26 @@ function Home() {
         <Container maxWidth='xl'>
             <Grid container spacing={1} >
                 <Grid item xs={12} sm={12} md={12} lg={12}>
+
                     <Typography variant="h1">{t('experimentalTitle')}</Typography>
                     <Typography variant='body1'>{t('experimentalText')}</Typography>
+
                 </Grid >
 
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Typography variant='h2'>ThreeFiber</Typography>
                     <ThreeFiber />
+
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
+
                     <Typography variant='h2'>TsParticles</Typography>
                     <AmongUS />
+
+                </Grid>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Typography variant='h2'>Spring</Typography>
+                    <Spring />
                 </Grid>
             </Grid>
         </Container >

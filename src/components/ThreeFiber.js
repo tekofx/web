@@ -2,6 +2,8 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Container } from '@mui/material'
+import { Paper } from '@mui/material'
+
 
 function Box() {
     return (
@@ -24,8 +26,8 @@ function Plane() {
 
 export default function ThreeFiber() {
     return (
-        <Container sx={{ height: '50vh' }}>
-            <Canvas>
+        <Paper sx={{ height: '400px' }}>
+            <Canvas style={{ background: "black" }}>
                 <OrbitControls autoRotate='true' />
                 <Stars />
                 <ambientLight intensity={0.5} />
@@ -33,6 +35,6 @@ export default function ThreeFiber() {
                 <Box />
                 <Plane />
             </Canvas>
-        </Container>
+        </Paper>
     )
 }

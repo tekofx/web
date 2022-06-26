@@ -109,13 +109,13 @@ Theme.typography.h2 = {
     color: '#fff',
 
     fontSize: '2rem',
-    paddingBottom: '0.3rem',
-    paddingTop: '0.3rem',
+    paddingBottom: '0.1rem',
+    paddingTop: '0.1rem',
 
     [Theme.breakpoints.up('md')]: {
         fontSize: '2.5rem',
-        paddingBottom: '0.7rem',
-        paddingTop: '0.7rem',
+        paddingBottom: '0.2rem',
+        paddingTop: '0.2rem',
     },
 };
 

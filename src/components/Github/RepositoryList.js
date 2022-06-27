@@ -54,12 +54,12 @@ export default function RepositoryList(props) {
         repos = [];
         repos = reposWithImg.concat(reposWithoutImg);
         setRepos(repos);
-        setLoading(false);
     }
 
     useEffect(() => {
         const fetchData = async () => {
             await getRepos();
+            setLoading(false);
         }
         fetchData();
     }, []);

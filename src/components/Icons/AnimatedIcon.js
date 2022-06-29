@@ -11,7 +11,7 @@ export default function AnimatedIcon(props) {
         loop: false,
         from: { scale: 1, color: props.color1 },
         to: {
-            scale: state ? 1 : 2,
+            scale: state ? 1 : 1.5,
             color: state ? props.color1 : Theme.palette.secondary.main,
         },
 

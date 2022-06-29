@@ -42,7 +42,6 @@ export default function NewsList() {
 
             // Date
             var date = new Date(element.published_at);
-            console.log(date)
             var month = date.getMonth() + 1;
             release["date"] = date.getDate() + "/" + month + "/" + date.getFullYear();
 

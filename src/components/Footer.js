@@ -17,7 +17,7 @@ export default function Footer() {
                 alignItems="center"
                 justifyContent="center"
             >
-                <Grid item xs={12} sm={6} md={2} lg={8}>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Typography display='inline' variant='body2'>Teko's Tundra {year} </Typography>
                     <SocialNetworks />
                 </Grid>

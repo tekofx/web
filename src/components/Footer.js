@@ -10,19 +10,17 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <ThemeProvider theme={Theme}>
-            <Grid container spacing={2}
-                sx={{ paddingBottom: '1%', paddingTop: '1%' }}
-                direction="column"
-                alignItems="center"
-                justifyContent="center"
-            >
-                <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Typography display='inline' variant='body2'>Teko's Tundra {year} </Typography>
-                    <SocialNetworks />
-                </Grid>
+        <Grid container spacing={2}
+            sx={{ paddingBottom: '1%', paddingTop: '1%' }}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+        >
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Typography display='inline' variant='body2'>Teko's Tundra {year} </Typography>
+                <SocialNetworks />
             </Grid>
-        </ThemeProvider>
+        </Grid>
     );
 }
 

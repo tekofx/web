@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { FaDeviantart, FaGithub, FaTwitter, FaMastodon, Fa500Px, FaInstagram } from 'react-icons/fa';
-import AnimatedIcon from '../AnimatedIcon';
+import { FaInstagram } from 'react-icons/fa';
+import AnimatedIcon from './AnimatedIcon';
 
 export default function Instagram() {
 

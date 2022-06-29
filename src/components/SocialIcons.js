@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { IconButton } from '@mui/material';
-import { FaDeviantart, FaGithub, FaTwitter, FaMastodon, Fa500Px, FaInstagram } from 'react-icons/fa';
-import AnimatedIcon from './AnimatedIcon';
 import Twitter from './Icons/Twitter'
 import Deviantart from './Icons/Deviantart'
 import Mastodon from './Icons/Mastodon'

@@ -2,8 +2,6 @@ import * as React from 'react';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
 import SocialIcons from './SocialIcons';
-import Theme from '../Theme';
-import { ThemeProvider } from '@mui/material';
 
 export default function Footer() {
 

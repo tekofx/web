@@ -14,6 +14,7 @@ import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import AnimatedIcon from './AnimatedIcon';
 import routes from '../routes.json';
 
 

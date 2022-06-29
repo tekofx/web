@@ -5,6 +5,7 @@ import Mastodon from './Icons/Mastodon'
 import Github from './Icons/Github'
 import Instagram from './Icons/Instagram'
 import Icon500px from './Icons/500px';
+import FurAffinity from './Icons/FurAffinity';
 
 export default function SocialIcons() {
 
@@ -16,6 +17,7 @@ export default function SocialIcons() {
             <Deviantart />
             <Icon500px />
             <Instagram />
+            <FurAffinity />
         </>
     );
 }

@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import { FaGithub, FaTwitter, FaMastodon } from 'react-icons/fa';
 import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';

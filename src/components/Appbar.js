@@ -14,6 +14,9 @@ import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import Twitter from './Icons/Twitter';
+import Mastodon from './Icons/Mastodon';
+import Github from './Icons/Github';
 import routes from '../routes.json';
 
 
@@ -110,15 +113,9 @@ const ResponsiveAppBar = () => {
 
                         </Box>
                         <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' } }}>
-                            <IconButton target="_blank" href="https://twitter.com/teko_fx">
-                                <FaTwitter color='white' />
-                            </IconButton>
-                            <IconButton target="_blank" href="https://meow.social/web/@teko">
-                                <FaMastodon color='white' />
-                            </IconButton>
-                            <IconButton target="_blank" href="https://github.com/tekofx">
-                                <FaGithub color='white' />
-                            </IconButton>
+                            <Twitter />
+                            <Mastodon />
+                            <Github />
                         </Box>
 
                         <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex' } }}>

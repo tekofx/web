@@ -42,7 +42,9 @@ export default function NewsList() {
 
             // Date
             var date = new Date(element.published_at);
-            release["date"] = date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
+            console.log(date)
+            var month = date.getMonth() + 1;
+            release["date"] = date.getDay() + "/" + month + "/" + date.getFullYear();
 
             // Body
             var body = element.body;

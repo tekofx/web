@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Animation when opening a new
 - New experiment on experimental page
 
+### Fixed
+- Date month on news
 
 ## [v0.2.1] - 25-6-2022
 Improved the gallery by adding deviantart galleries and minor changes and fixes.

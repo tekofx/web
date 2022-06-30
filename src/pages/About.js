@@ -37,9 +37,9 @@ function About() {
           <Typography variant='body1' paragraph>{t('aboutText3')} </Typography>
           <Typography variant='body1' paragraph>{t('aboutText4')}</Typography>
         </Grid>
-        {/* <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
           <SocialCards />
-        </Grid> */}
+        </Grid>
       </Grid>
 
       <br />

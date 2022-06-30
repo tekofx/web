@@ -6,19 +6,33 @@ const pride = require('./summer - lgtb.jpg')
 const halloween = require('./juaguelin.png')
 const christmas = require('./Merry Foxmas.png')
 const autumn = require('./Autumn.png')
-
+/**
+     * January:0
+     * February:1
+     * March:2
+     * April:3
+     * May:4
+     * June:5
+     * July:6
+     * August:7
+     * September:8
+     * October:9
+     * November:10
+     * December:11
+*/
 
 export default function Footer() {
     const { t } = useTranslation();
 
     const today = new Date();
-    const month = today.getMonth();
+    const month = parseInt(today.getMonth());
     const day = parseInt(String(today.getDate()).padStart(2, '0'));
 
     var image = null;
     var text = "";
 
-    if (8 <= month <= 10) { // Autumn and halloween
+
+    if (7 < month && month < 11) { // Autumn and halloween
         if (day === 31) {
             image = halloween;
             text = t('halloweenText');

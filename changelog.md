@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+[Unreleased
+Bugfix about seasons displayed on home page
+
+# Fixed
+- Bug that shows autumn season on home page when it should be hidden
+
+
+
 ## [v0.2.2] - 30-6-2022
 
 In this release there are colorful and animated social icons.

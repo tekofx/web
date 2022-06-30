@@ -14,15 +14,27 @@ import AnimatedCard from './AnimatedCard';
 export default function SocialCards() {
 
     return (
-        <Grid container spacing={2} >
-            <Grid item xs={4} sm={4} xmd={4} lg={4}>
+        <Grid container spacing={1} >
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
                 <AnimatedCard icon={<FaTwitter />} content="Twitter" url="https://twitter.com/teko_fx" />
             </Grid>
-            <Grid item xs={4} sm={4} xmd={4} lg={4}>
-                <AnimatedCard content="Social Network" />
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="Mastodon" url="https://twitter.com/teko_fx" />
             </Grid>
-            <Grid item xs={4} sm={4} xmd={4} lg={4}>
-                <AnimatedCard content="Social Network" />
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="Github" url="https://twitter.com/teko_fx" />
+            </Grid>
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="DeviantArt" url="https://twitter.com/teko_fx" />
+            </Grid>
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="500px" url="https://twitter.com/teko_fx" />
+            </Grid>
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="Instagram" url="https://twitter.com/teko_fx" />
+            </Grid>
+            <Grid item xs={2} sm={2} xmd={2} lg={2}>
+                <AnimatedCard icon={<FaTwitter />} content="FurAffinity" url="https://twitter.com/teko_fx" />
             </Grid>
         </Grid>
     );

@@ -28,13 +28,17 @@ export default function AnimatedCard(props) {
                 onMouseEnter={() => toggle(!state)}
                 onMouseLeave={() => toggle(!state)}
                 onClick={() => window.open(props.url)}
-                style={styles} sx={{ bgcolor: styles.bgcolor.animation.to }}>
+                style={styles}
+                sx={{ bgcolor: styles.bgcolor.animation.to, width: '15vw' }}
+
+
+            >
                 <CardContent sx={{ paddingBottom: 16 }}>
                     <Grid container spacing={2}>
                         <Grid item xs={2} sm={2} md={2} lg={2}>
                             {props.icon}
                         </Grid>
-                        <Grid item xs={8} sm={8} md={8} lg={8}>
+                        <Grid item xs={8} sm={8} md={8} lg={8} justifyContent='flex-end'>
                             {props.content}
                         </Grid>
                         <Grid item xs={2} sm={2} md={2} lg={2}>

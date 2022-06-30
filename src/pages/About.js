@@ -8,22 +8,20 @@ import Container from '@mui/material/Container';
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from '@mui/material/Slide';
+import SocialCards from "../components/SocialCards";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-
 function About() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
-
 
   const toggleOpen = () => {
     console.log("toggleOpen");
     setOpen(!open);
   };
-
 
   return (
     <Container maxWidth='xl'>
@@ -38,12 +36,9 @@ function About() {
           <Typography variant='body1' paragraph>{t('aboutText2')}</Typography>
           <Typography variant='body1' paragraph>{t('aboutText3')} </Typography>
           <Typography variant='body1' paragraph>{t('aboutText4')}</Typography>
-
-
-
-
-
-
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <SocialCards />
         </Grid>
       </Grid>
 
@@ -72,11 +67,9 @@ function About() {
           <Typography variant="h2">{t('aboutTitle3')}</Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
-
           <img align="left" src="ref-small.jpg" alt="" width={"100%"} onClick={toggleOpen} />
           <Dialog fullScreen='true' TransitionComponent={Transition} open={open} >
             <img align="left" src="ref.png" alt="" onClick={toggleOpen} />
-
           </Dialog>
         </Grid>
         <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>

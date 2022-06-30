@@ -1,7 +1,9 @@
 import { useSpring, animated } from 'react-spring'
 import { useState } from 'react'
-import { Card, CardContent, ThemeProvider, Button, IconButton } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Card, CardContent, ThemeProvider, Button, IconButton, Grid } from '@mui/material';
 import { Fa500Px, FaInstagram } from 'react-icons/fa';
+
 
 import Theme from '../Theme';
 
@@ -25,10 +27,20 @@ export default function AnimatedCard(props) {
             <AnimatedCard
                 onMouseEnter={() => toggle(!state)}
                 onMouseLeave={() => toggle(!state)}
-                onClick={() => window.open('https://stackoverflow.com/')}
+                onClick={() => window.open(props.url)}
                 style={styles} sx={{ bgcolor: styles.bgcolor.animation.to }}>
-                <CardContent>
-                    <Fa500Px /> CardContent <FaInstagram />
+                <CardContent sx={{ paddingBottom: 16 }}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={2} sm={2} md={2} lg={2}>
+                            {props.icon}
+                        </Grid>
+                        <Grid item xs={8} sm={8} md={8} lg={8}>
+                            {props.content}
+                        </Grid>
+                        <Grid item xs={2} sm={2} md={2} lg={2}>
+                            <ArrowForwardIcon />
+                        </Grid>
+                    </Grid>
                 </CardContent>
             </AnimatedCard>
         </ThemeProvider >

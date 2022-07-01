@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Fa500Px } from 'react-icons/fa';
-import AnimatedIcon from './AnimatedIcon';
+import AnimatedIcon from '../AnimatedIcon';
 
 export default function Icon500px() {
 

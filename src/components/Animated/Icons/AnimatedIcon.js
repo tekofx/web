@@ -1,7 +1,7 @@
 import { useSpring, animated } from 'react-spring'
 import { useState } from 'react'
 import { IconButton } from '@mui/material';
-import Theme from '../../Theme';
+import Theme from '../../../Theme';
 
 export default function AnimatedIcon(props) {
     const [state, toggle] = useState(true);

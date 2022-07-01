@@ -13,9 +13,9 @@ import { ThemeProvider } from '@mui/material';
 import Theme from '../Theme';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import Twitter from './Icons/Twitter';
-import Mastodon from './Icons/Mastodon';
-import Github from './Icons/Github';
+import Twitter from './Animated/Icons/Twitter';
+import Mastodon from './Animated/Icons/Mastodon';
+import Github from './Animated/Icons/Github';
 import routes from '../routes.json';
 
 

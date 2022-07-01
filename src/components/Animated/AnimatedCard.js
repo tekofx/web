@@ -5,7 +5,7 @@ import { Card, CardContent, ThemeProvider, Button, IconButton, Grid, Typography 
 import { Fa500Px, FaInstagram } from 'react-icons/fa';
 
 
-import Theme from '../Theme';
+import Theme from '../../Theme';
 
 export default function AnimatedCard(props) {
     const [state, toggle] = useState(true);

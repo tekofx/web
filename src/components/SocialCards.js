@@ -4,7 +4,7 @@ import { FaTwitter, FaDeviantart, FaMastodon, Fa500Px, FaInstagram, FaGithub } f
 import { Grid } from '@mui/material';
 import FurAffinity from './Icons/FurAffinity';
 
-import AnimatedCard from './AnimatedCard';
+import AnimatedCard from './Animated/AnimatedCard';
 
 export default function SocialCards() {
 

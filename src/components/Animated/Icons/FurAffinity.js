@@ -2,8 +2,8 @@ import { useSpring, animated } from 'react-spring'
 import { useState } from 'react'
 import { IconButton } from '@mui/material';
 import SvgIcon from '@mui/material/SvgIcon';
-import Theme from '../../Theme';
-import FurAffinity from './FurAffinity';
+import Theme from '../../../Theme';
+import FurAffinity from '../../Icons/FurAffinity';
 
 export default function AnimatedFurAffinity() {
     const [state, toggle] = useState(true);

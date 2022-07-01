@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Twitter from './Icons/Twitter'
-import Deviantart from './Icons/Deviantart'
-import Mastodon from './Icons/Mastodon'
-import Github from './Icons/Github'
-import Instagram from './Icons/Instagram'
-import Icon500px from './Icons/500px';
-import AnimatedFurAffinity from './Icons/AnimatedFurAffinity';
+import Twitter from './Animated/Icons/Twitter'
+import Deviantart from './Animated/Icons/Deviantart'
+import Mastodon from './Animated/Icons/Mastodon'
+import Github from './Animated/Icons/Github'
+import Instagram from './Animated/Icons/Instagram'
+import Icon500px from './Animated/Icons/500px';
+import AnimatedFurAffinity from './Animated/Icons/FurAffinity';
 
 export default function SocialIcons() {
 

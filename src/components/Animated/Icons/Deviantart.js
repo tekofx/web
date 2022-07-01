@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FaDeviantart } from 'react-icons/fa';
-import AnimatedIcon from '../AnimatedIcon';
+import AnimatedIcon from '../Icon';
 
 export default function Deviantart() {
 

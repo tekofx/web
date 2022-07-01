@@ -5,7 +5,7 @@ import AnimatedIcon from '../Icon';
 export default function Github() {
 
     return (
-        <AnimatedIcon icon={< FaGithub />} url="https://twitter.com/teko_fx" color1="#333" color2="#f542b5" />
+        <AnimatedIcon icon={< FaGithub />} url="https://github.com/tekofx" color1="#333" color2="#f542b5" />
 
 
     );

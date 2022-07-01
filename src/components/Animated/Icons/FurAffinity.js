@@ -21,8 +21,8 @@ export default function FurAffinity() {
     })
 
     return (
-        <IconButton sx={{}}>
-            <AnimatedSVGIcon onMouseEnter={() => toggle(!state)} onMouseLeave={() => toggle(!state)} style={styles} target="_blank" href='https://www.furaffinity.net/user/teko.'>
+        <IconButton href='https://www.furaffinity.net/user/teko.' target="_blank">
+            <AnimatedSVGIcon onMouseEnter={() => toggle(!state)} onMouseLeave={() => toggle(!state)} style={styles}  >
                 <FurAffinityIcon />
             </AnimatedSVGIcon>
         </IconButton>

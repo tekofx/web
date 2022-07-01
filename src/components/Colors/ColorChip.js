@@ -16,7 +16,16 @@ export default function ColorChip(props) {
 
 
     return (
-        <><Chip sx={{ bgcolor: props.bgcolor, color: props.color, minWidth: 95 }} label={props.label} size='small' onClick={handleClick} />
+        <><Chip
+            sx={{
+                bgcolor: props.bgcolor,
+                color: props.color,
+                minWidth: 95,
+                "&:hover": {
+                    background: "#5a5a5a",
+                }
+            }}
+            label={props.label} size='small' onClick={handleClick} />
             <Snackbar
                 open={open}
                 onClose={() => setOpen(false)}

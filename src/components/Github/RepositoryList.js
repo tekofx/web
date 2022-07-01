@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import { useEffect } from 'react';
 import { Skeleton } from '@mui/material';
 import GithubRepo from '../Animated/GithubRepo';
+const TemplateImage = require('./repo-banner-template.png')
 const axios = require("axios");
 
 
@@ -42,7 +43,7 @@ export default function RepositoryList(props) {
         for (let i = 0; i < repos.length; i++) {
             const exists = await existsImage("https://raw.githubusercontent.com/tekofx/" + repos[i].name + "/main/assets/banner.png");
             if (!exists) {
-                repos[i].img = "/repo-banner-template.png";
+                repos[i].img = TemplateImage;
                 reposWithoutImg.push(repos[i]);
             } else {
                 repos[i].img = "https://raw.githubusercontent.com/tekofx/" + repos[i].name + "/main/assets/banner.png";

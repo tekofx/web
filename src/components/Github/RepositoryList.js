@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Repository from './Repository';
 import { useEffect } from 'react';
 import { Skeleton } from '@mui/material';
+import GithubRepo from '../Animated/GithubRepo';
 const axios = require("axios");
 
 
@@ -71,12 +72,12 @@ export default function RepositoryList(props) {
                 {(loading ? Array.from(new Array(10)) : repos).map((item, index) => (
                     item ? (
                         <Grid item xs={6} sm={4} md={3} lg={2} xl={2} key={index} >
-                            <Repository title={item.name} description={item.description} url={item.html_url} img={item.img} />
+                            <GithubRepo title={item.name} description={item.description} url={item.html_url} img={item.img} />
                         </Grid>
                     ) : (
                         <Grid item xs={6} sm={4} md={3} lg={2} xl={2} key={index} >
                             <Skeleton animation='wave' variant="rectangular"  >
-                                <Repository title="Title" description="Cool description " url='url' img='/repo-banner-template.png' />
+                                <GithubRepo title="Title" description="Cool description " url='url' img='/repo-banner-template.png' />
 
                             </Skeleton>
                         </Grid>

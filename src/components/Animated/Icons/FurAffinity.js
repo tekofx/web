@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { IconButton } from '@mui/material';
 import SvgIcon from '@mui/material/SvgIcon';
 import Theme from '../../../Theme';
-import FurAffinity from '../../Icons/FurAffinity';
+import FurAffinityIcon from '../../Icons/FurAffinity';
 
-export default function AnimatedFurAffinity() {
+export default function FurAffinity() {
     const [state, toggle] = useState(true);
     const AnimatedSVGIcon = animated(SvgIcon);
 
@@ -23,7 +23,7 @@ export default function AnimatedFurAffinity() {
     return (
         <IconButton sx={{}}>
             <AnimatedSVGIcon onMouseEnter={() => toggle(!state)} onMouseLeave={() => toggle(!state)} style={styles} target="_blank" href='https://www.furaffinity.net/user/teko.'>
-                <FurAffinity />
+                <FurAffinityIcon />
             </AnimatedSVGIcon>
         </IconButton>
     )

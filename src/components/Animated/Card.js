@@ -10,7 +10,6 @@ import Theme from '../../Theme';
 export default function AnimatedCard(props) {
     const [state, toggle] = useState(true);
     const AnimatedCard = animated(Card);
-    const AnimatedTypography = animated(Typography);
 
     const styles = useSpring({
         loop: false,
@@ -30,7 +29,7 @@ export default function AnimatedCard(props) {
                 onMouseLeave={() => toggle(!state)}
                 onClick={() => window.open(props.url)}
                 style={styles}
-                sx={{ bgcolor: styles.bgcolor.animation.to, width: '90%', padding: 1 }}
+                sx={{ bgcolor: styles.bgcolor.animation.to, width: '95%', padding: 1 }}
 
 
             >
@@ -51,9 +50,9 @@ export default function AnimatedCard(props) {
                     <Grid item xs={8} sm={8} md={8} lg={8} >
                         <b>
 
-                            <p style={{ textAlign: 'center', padding: 0, margin: 0 }}>{props.content}</p>
+                            <p style={{ padding: 0, margin: 0 }}>{props.content}</p>
                         </b>
-                        <p style={{ textAlign: 'center', padding: 0, margin: 0, fontSize: '70%' }}>{props.subContent}</p>
+                        <p style={{ padding: 0, margin: 0, fontSize: '70%' }}>{props.subContent}</p>
 
                     </Grid>
                     <Grid item xs={2} sm={2} md={2} lg={2}

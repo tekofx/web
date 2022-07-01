@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
-import SocialIcons from './Animated/SocialIcons';
+import SocialIcons from './SocialIcons';
 
 export default function Footer() {
 

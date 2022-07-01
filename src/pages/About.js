@@ -8,7 +8,7 @@ import Container from '@mui/material/Container';
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from '@mui/material/Slide';
-import SocialCards from "../components/Animated/SocialCards";
+import SocialCards from "../components/SocialCards";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

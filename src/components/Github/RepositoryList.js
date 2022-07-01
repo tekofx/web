@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Repository from './Repository';
 import { useEffect } from 'react';
 import { Skeleton } from '@mui/material';
 import GithubRepo from '../Animated/GithubRepo';

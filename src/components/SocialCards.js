@@ -2,9 +2,9 @@ import * as React from 'react';
 import { FaTwitter, FaDeviantart, FaMastodon, Fa500Px, FaInstagram, FaGithub } from 'react-icons/fa';
 
 import { Grid } from '@mui/material';
-import FurAffinity from '../Icons/FurAffinity';
+import FurAffinity from './Animated/Icons/FurAffinity';
 
-import AnimatedCard from './Card';
+import AnimatedCard from './Animated/Card';
 
 export default function SocialCards() {
 

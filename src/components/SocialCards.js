@@ -1,12 +1,7 @@
 import * as React from 'react';
-import { FaTwitter } from 'react-icons/fa';
+import { FaTwitter, FaDeviantart, FaMastodon, Fa500Px, FaInstagram, FaGithub } from 'react-icons/fa';
 
 import { Grid } from '@mui/material';
-import Deviantart from './Icons/Deviantart'
-import Mastodon from './Icons/Mastodon'
-import Github from './Icons/Github'
-import Instagram from './Icons/Instagram'
-import Icon500px from './Icons/500px';
 import FurAffinity from './Icons/FurAffinity';
 
 import AnimatedCard from './AnimatedCard';
@@ -19,22 +14,25 @@ export default function SocialCards() {
                 <AnimatedCard icon={<FaTwitter />} content="Twitter" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="Mastodon" url="https://twitter.com/teko_fx" />
+                <AnimatedCard icon={<FaMastodon />} content="Mastodon" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="Github" url="https://twitter.com/teko_fx" />
+                <AnimatedCard icon={<FaGithub />} content="Github" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="DeviantArt" url="https://twitter.com/teko_fx" />
+                <AnimatedCard icon={<FaDeviantart />} content="DeviantArt" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="500px" url="https://twitter.com/teko_fx" />
+                <AnimatedCard icon={<Fa500Px />} content="500px" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="Instagram" url="https://twitter.com/teko_fx" />
+                <AnimatedCard icon={<FaInstagram />} content="Instagram" url="https://twitter.com/teko_fx" />
             </Grid>
             <Grid item xs={2} sm={2} xmd={2} lg={2}>
-                <AnimatedCard icon={<FaTwitter />} content="FurAffinity" url="https://twitter.com/teko_fx" />
+                <AnimatedCard
+                    icon={<FurAffinity />}
+                    content="FurAffinity"
+                    url="https://twitter.com/teko_fx" />
             </Grid>
         </Grid>
     );

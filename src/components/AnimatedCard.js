@@ -1,7 +1,7 @@
 import { useSpring, animated } from 'react-spring'
 import { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Card, CardContent, ThemeProvider, Button, IconButton, Grid } from '@mui/material';
+import { Card, CardContent, ThemeProvider, Button, IconButton, Grid, Typography } from '@mui/material';
 import { Fa500Px, FaInstagram } from 'react-icons/fa';
 
 
@@ -10,6 +10,7 @@ import Theme from '../Theme';
 export default function AnimatedCard(props) {
     const [state, toggle] = useState(true);
     const AnimatedCard = animated(Card);
+    const AnimatedTypography = animated(Typography);
 
     const styles = useSpring({
         loop: false,
@@ -33,13 +34,14 @@ export default function AnimatedCard(props) {
 
 
             >
-                <CardContent sx={{ paddingBottom: 16 }}>
-                    <Grid container spacing={2}>
+                <CardContent sx={{ paddingBottom: '0px', border: '1px' }}>
+                    <Grid container spacing={1}>
                         <Grid item xs={2} sm={2} md={2} lg={2}>
+
                             {props.icon}
                         </Grid>
-                        <Grid item xs={8} sm={8} md={8} lg={8} justifyContent='flex-end'>
-                            {props.content}
+                        <Grid item xs={8} sm={8} md={8} lg={8} >
+                            <p style={{ textAlign: 'center', padding: 0, margin: 0 }}>{props.content}</p>
                         </Grid>
                         <Grid item xs={2} sm={2} md={2} lg={2}>
                             <ArrowForwardIcon />

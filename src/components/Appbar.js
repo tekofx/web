@@ -104,7 +104,12 @@ const ResponsiveAppBar = () => {
                                         handleCloseNavMenu();
                                         navigate(page.navigate);
                                     }}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    size='small'
+                                    sx={{
+                                        color: 'white', display: 'block', "&:hover": {
+                                            background: "#a8a8a8",
+                                        }
+                                    }}
                                 >
                                     {page.page}
                                 </Button>

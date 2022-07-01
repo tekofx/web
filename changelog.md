@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Section on about page with my social networks
+- Social networks section on about page
+- Animation in projects repos
 
 ### Fixed
 - URLs of social icons

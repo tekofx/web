@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FaTwitter, FaDeviantart, FaMastodon, Fa500Px, FaInstagram, FaGithub } from 'react-icons/fa';
 
 import { Grid } from '@mui/material';
-import FurAffinity from './Animated/Icons/FurAffinity';
+import FurAffinity from './Icons/FurAffinity';
 
 import AnimatedCard from './Animated/Card';
 

@@ -65,8 +65,8 @@ export default function ColorsTable() {
                 <TableHead>
                     <TableRow>
                         <TableCell ><Typography variant='body2'>{t('colorParts')}</Typography></TableCell>
-                        <TableCell ><Typography variant='body2'>HEX</Typography></TableCell>
                         <TableCell ><Typography variant='body2'>RGB</Typography></TableCell>
+                        <TableCell ><Typography variant='body2'>HEX</Typography></TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

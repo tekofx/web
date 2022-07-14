@@ -23,6 +23,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.4.5",
+    "react-terminal": "^1.2.8",
     "react-tsparticles": "^2.1.0",
     "rss-to-json": "^2.0.2",
     "three": "^0.141.0",

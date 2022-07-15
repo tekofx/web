@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import '../index.css'
 import Container from '@mui/material/Container';
 import Seasons from '../components/Seasons/Seasons'
-import Terminal from '../components/Terminal';
 
 
 function Home() {
@@ -24,7 +23,6 @@ function Home() {
 
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />
-              <Terminal />
 
 
             </Grid>

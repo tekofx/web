@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
+import Timeline from "../components/Timeline";
 
 function Home() {
   const { t } = useTranslation();
@@ -31,6 +32,10 @@ function Home() {
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">Spring</Typography>
           <Spring />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Typography variant="h2">Timeline</Typography>
+          <Timeline />
         </Grid>
       </Grid>
     </Container>

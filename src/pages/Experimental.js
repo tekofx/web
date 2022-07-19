@@ -7,7 +7,6 @@ import Container from "@mui/material/Container";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
-import Terminal from "../components/Terminal";
 
 function Home() {
   const { t } = useTranslation();

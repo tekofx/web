@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
-  <Router>
+  <HashRouter>
     <App />
-  </Router>,
+  </HashRouter>,
   document.getElementById('root')
 );
 

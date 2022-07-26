@@ -1,6 +1,7 @@
 {
   "name": "web",
   "version": "0.1.0",
+  "homepage": "https://tekofx.github.io/web",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",

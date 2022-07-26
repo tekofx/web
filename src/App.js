@@ -17,6 +17,13 @@ import {
 } from "react-router-dom";
 import './index.css';
 import routes from './routes.json';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+
+// Default language en
+if (cookies.get('lang') == undefined) {
+  cookies.set('lang', 'en');
+}
 
 
 function App() {

@@ -17,6 +17,7 @@ import Twitter from './Animated/Icons/Twitter';
 import Mastodon from './Animated/Icons/Mastodon';
 import Github from './Animated/Icons/Github';
 import routes from '../routes.json';
+import Cookies from 'universal-cookie';
 
 
 const ResponsiveAppBar = () => {
@@ -41,8 +42,9 @@ const ResponsiveAppBar = () => {
     };
 
     const changeLanguageHandler = (value) => {
-        const languageValue = value
-        i18n.changeLanguage(languageValue);
+        const cookies = new Cookies();
+        cookies.set('lang', value)
+        i18n.changeLanguage(value);
     }
 
     return (

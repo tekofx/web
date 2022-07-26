@@ -6,7 +6,8 @@ import { initReactI18next } from "react-i18next";
 
 import translationEN from "./locales/en/translation.json";
 import translationES from "./locales/es/translation.json";
-
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 //Creating object with the variables of imported translation files
 const resources = {
@@ -24,7 +25,7 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: "en", //default language
+        lng: cookies.get('lang'), //default language
         keySeparator: false,
         interpolation: {
             escapeValue: false,

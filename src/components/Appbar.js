@@ -29,7 +29,7 @@ const ResponsiveAppBar = () => {
         { "page": t('pageProjects'), "navigate": routes.projects },
         { "page": t('pageGallery'), "navigate": routes.gallery },
         { "page": t('pageAbout'), "navigate": routes.about },
-        { "page": t('pageExperimental'), "navigate": routes.experimental }];
+    ];
 
 
 

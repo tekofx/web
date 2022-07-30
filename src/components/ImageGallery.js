@@ -7,8 +7,18 @@ import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Skeleton } from '@mui/material';
+import ImageList from '@mui/material/ImageList';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import ImageListItem from '@mui/material/ImageListItem';
+import Slide from '@mui/material/Slide';
+import { useState } from "react";
+
+import { Dialog } from "@mui/material";
 const axios = require("axios");
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 const allPostsGallery = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
 const drawingsGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation"
 const photographyGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation"
@@ -17,7 +27,11 @@ export default function ImageGallery() {
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
 
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
   const getImages = async (url) => {
 
     var repos;
@@ -57,9 +71,9 @@ export default function ImageGallery() {
       }
       if (imageLink !== null) {
         postsData.push({
-          "lightboxTitle": title,
+          "title": title,
           "src": imageLink,
-          "lightboxCaption": <Button target="_blank" href={deviantartLink}>{t('lightboxButton')}</Button>
+          "description": <Button target="_blank" href={deviantartLink}>{t('lightboxButton')}</Button>
         })
       }
     }
@@ -83,22 +97,13 @@ export default function ImageGallery() {
     setValue(newValue);
   };
 
-  const lightBoxProps = {
-    reactModalStyle: {
-      overlay: {
-        position: 'fixed',
-        top: 10,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      },
-      content: {
-        position: 'absolute',
-        top: '50px',
-        borderRadius: '4px',
-        outline: 'none',
-      },
-    }
+  function srcset(image, size, rows = 1, cols = 1) {
+    return {
+      src: image,
+
+      width: size * cols,
+      height: size * rows
+    };
   }
 
 
@@ -131,13 +136,29 @@ export default function ImageGallery() {
         </Grid>
         :
 
-        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
-          {posts.map((post, index) => (
-            <Grid item lg={2}>
-              <img src={post.src} width='100%' />
-            </Grid>
+        <ImageList
+          variant="quilted"
+          cols={4}
+          rowHeight='100%'
+        >
+          {posts.map((item) => (
+            <>
+              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <img
+                  {...srcset(item.src, 100, item.rows, item.cols)}
+                  alt={item.lightboxTitle}
+                  loading="lazy"
+                  onClick={toggleOpen}
+                />
+                <ImageListItemBar
+                  title={item.title}
+                  subtitle={item.description}
+                />
+              </ImageListItem>
+            </>
+
           ))}
-        </Grid>
+        </ImageList>
 
 
       }

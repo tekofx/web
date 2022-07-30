@@ -19,7 +19,6 @@ function About() {
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
-    console.log("toggleOpen");
     setOpen(!open);
   };
 

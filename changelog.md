@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Hidden experimental page. Since its experimental it is not necessary to be public.
 
+### Removed
+- Responsive gallery. It was not compatible.
+
 ## [v0.2.4] - 01-07-2022
 
 New release!!! This time more animations on projects page and hover color on appbar

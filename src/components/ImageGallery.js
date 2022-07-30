@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import ResponsiveGallery from "react-responsive-gallery";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { Grid, Typography } from "@mui/material";
@@ -131,7 +130,16 @@ export default function ImageGallery() {
           ))}
         </Grid>
         :
-        <ResponsiveGallery useLightBox='true' lightBoxAdditionalProps={lightBoxProps} images={posts} />
+
+        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
+          {posts.map((post, index) => (
+            <Grid item lg={2}>
+              <img src={post.src} width='100%' />
+            </Grid>
+          ))}
+        </Grid>
+
+
       }
     </Box>
   );

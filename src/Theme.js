@@ -153,7 +153,7 @@ Theme.typography.body1 = {
     paddingBottom: '0.2rem',
 
     [Theme.breakpoints.up('md')]: {
-        fontSize: '1.5rem',
+        fontSize: '1.2rem',
         paddingBottom: '0.4rem',
 
     },

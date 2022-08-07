@@ -22,7 +22,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <img src="/ref.png" width={"100%"} height="auto" alt="ref" />
+          <img src="ref.png" width={"100%"} height="auto" alt="ref" />
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -36,7 +36,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <img src="/ref.png" width={"100%"} height="auto" alt="ref" />
+          <img src="ref.png" width={"100%"} height="auto" alt="ref" />
         </TimelineContent>
       </TimelineItem>
     </Timeline>

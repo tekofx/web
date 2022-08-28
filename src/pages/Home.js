@@ -6,12 +6,21 @@ import { useTranslation } from "react-i18next";
 import "../index.css";
 import Container from "@mui/material/Container";
 import Seasons from "../components/Seasons/Seasons";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const { t } = useTranslation();
 
   return (
     <Container maxWidth="xl">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="og:title" content="Home" />
+        <meta name="og:description" content="Home page" />
+        <meta name="og:type" content="website" />
+      </Helmet>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={8} md={9} lg={10}>
           <Typography variant="h1">{t("homeTitle")}</Typography>

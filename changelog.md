@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Hidden experimental page. Since its experimental it is not necessary to be public.
+- Changed github icon color
 
 ### Removed
 - Responsive gallery. It was not compatible.

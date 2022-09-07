@@ -1,8 +1,8 @@
 {
-    "root": "/",
-    "home": "/home",
-    "projects": "/projects",
-    "about": "/about",
-    "gallery": "/gallery",
-    "experimental": "/experimental"
+  "root": "/",
+  "home": "/home",
+  "projects": "/projects",
+  "about": "/about",
+  "gallery": "/gallery",
+  "experimental": "/experimental"
 }

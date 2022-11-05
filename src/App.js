@@ -29,7 +29,7 @@ function App() {
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes>
-            <Route path={routes.root} element={<Home />} />
+            <Route path={routes.home} element={<Home />} />
             <Route path={routes.gallery} element={<Gallery />} />
             <Route path={routes.projects} element={<Projects />} />
             <Route path={routes.about} element={<About />} />

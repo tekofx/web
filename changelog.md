@@ -5,13 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v0.2.5]
 
 ### Added
 
 - Meta tags 
 - Language cookie to make permanent language election
-- New timeline component on exprimental
+- New timeline component on experimental
+- Pages titles
 
 ### Fixed
 
@@ -23,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Responsive gallery. It was not compatible.
+- News section
 
 ## [v0.2.4] - 01-07-2022
 

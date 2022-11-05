@@ -8,12 +8,17 @@ import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
 import Timeline from "../components/Timeline";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const { t } = useTranslation();
 
   return (
     <Container maxWidth="xl">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Experimental</title>
+      </Helmet>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography variant="h1">{t("experimentalTitle")}</Typography>

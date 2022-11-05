@@ -13,12 +13,24 @@ function Home() {
   return (
     <Container maxWidth="xl">
       <Helmet>
+
         <meta charSet="utf-8" />
         <title>Home</title>
         <link rel="canonical" href="http://mysite.com/example" />
+
         <meta name="og:title" content="Home" />
         <meta name="og:description" content="Home page" />
         <meta name="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="tekofx.github.io" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta name="twitter:title" content="Teko's Tundra" />
+        <meta name="twitter:description" content="Home" />
+        <meta
+          name="twitter:image"
+          content={window.location.href + "ref-small.jpg"}
+        />
       </Helmet>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={12} lg={12}>

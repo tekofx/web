@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Meta tags 
 - Language cookie to make permanent language election
-- New timeline component on exprimental
+- New timeline component on experimental
+- Pages titles
 
 ### Fixed
 
@@ -22,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Responsive gallery. It was not compatible.
+- News section
 
 ## [v0.2.4] - 01-07-2022
 

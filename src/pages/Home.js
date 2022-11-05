@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import NewsList from "../components/News/NewsList";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import "../index.css";
@@ -22,7 +21,7 @@ function Home() {
         <meta name="og:type" content="website" />
       </Helmet>
       <Grid container spacing={4}>
-        <Grid item xs={12} sm={8} md={9} lg={10}>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography variant="h1">{t("homeTitle")}</Typography>
           <Typography variant="body1">{t("homeText")}</Typography>
           <Grid container>
@@ -30,11 +29,6 @@ function Home() {
               <Seasons />
             </Grid>
           </Grid>
-        </Grid>
-
-        <Grid item xs={10} sm={4} md={3} lg={2}>
-          <Typography variant="h2">{t("homeNews")}</Typography>
-          <NewsList />
         </Grid>
       </Grid>
     </Container>

@@ -15,7 +15,7 @@ function Home() {
     <Container maxWidth="xl">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>My Title</title>
+        <title>Home</title>
         <link rel="canonical" href="http://mysite.com/example" />
         <meta name="og:title" content="Home" />
         <meta name="og:description" content="Home page" />

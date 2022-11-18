@@ -75,7 +75,7 @@ function About() {
           <Typography variant="h2">{t("aboutTitle2")}</Typography>
           <Typography variant="body1">{t("aboutText5")}</Typography>
         </Grid>
-        <Grid item xs={8} lg={8} className={"test"}>
+        <Grid item xs={12} lg={12}>
           <Typography variant="body1">
             <b>{t("aboutName")}: </b>Teko
           </Typography>

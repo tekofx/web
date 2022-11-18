@@ -27,6 +27,8 @@ const ResponsiveAppBar = () => {
     { page: t("pageHome"), navigate: routes.home },
     { page: t("pageProjects"), navigate: routes.projects },
     { page: t("pageGallery"), navigate: routes.gallery },
+    { page: "Fursona", navigate: routes.fursona },
+
     { page: t("pageAbout"), navigate: routes.about },
   ];
 

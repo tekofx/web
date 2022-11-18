@@ -3,6 +3,7 @@ import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experimental from "./pages/Experimental";
+import Fursona from "./pages/Fursona";
 import Theme from "./Theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Appbar from "./components/Appbar";
@@ -33,6 +34,7 @@ function App() {
             <Route path={routes.gallery} element={<Gallery />} />
             <Route path={routes.projects} element={<Projects />} />
             <Route path={routes.about} element={<About />} />
+            <Route path={routes.fursona} element={<Fursona />} />
             <Route path={routes.experimental} element={<Experimental />} />
           </Routes>
         </CSSTransition>

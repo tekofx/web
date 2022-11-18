@@ -8,17 +8,32 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import { Helmet } from "react-helmet";
-
+import QRCode from "../components/QRCode";
+import Fab from "@mui/material/Fab";
+import ShareIcon from "@mui/icons-material/Share";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+const style = {
+  margin: 0,
+  top: "auto",
+  right: 20,
+  bottom: 20,
+  left: "auto",
+  position: "fixed",
+};
 
 function About() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [qrCodeOpen, setQrCodeOpen] = useState(false);
 
   const toggleOpen = () => {
     setOpen(!open);
+  };
+
+  const toggleQRCode = () => {
+    setQrCodeOpen(!qrCodeOpen);
   };
 
   return (
@@ -27,13 +42,40 @@ function About() {
         <meta charSet="utf-8" />
         <title>About</title>
       </Helmet>
+      <Fab
+        color="primary"
+        aria-label="share"
+        style={style}
+        onClick={toggleQRCode}
+      >
+        <ShareIcon />
+      </Fab>
+
+      <Dialog
+        TransitionComponent={Transition}
+        open={qrCodeOpen}
+        onClick={toggleQRCode}
+        /* PaperProps={{
+          style: {
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          },
+        }} */
+        sx={{ width: "100%" }}
+      >
+        <Grid container>
+          <Grid item lg={7}>
+            <QRCode size={500} />
+          </Grid>
+        </Grid>
+      </Dialog>
 
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h2">{t("aboutTitle2")}</Typography>
           <Typography variant="body1">{t("aboutText5")}</Typography>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} lg={8} className={"test"}>
           <Typography variant="body1">
             <b>{t("aboutName")}: </b>Teko
           </Typography>
@@ -68,6 +110,7 @@ function About() {
             {t("aboutAbilitiesValue")}
           </Typography>
         </Grid>
+        <Grid item lg={4} className="QRCode"></Grid>
       </Grid>
 
       <Grid container spacing={2}>

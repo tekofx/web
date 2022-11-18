@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "@mui/material/Avatar";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from "../components/Colors/ColorsTable";
@@ -8,7 +7,6 @@ import Container from "@mui/material/Container";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
-import SocialCards from "../components/SocialCards";
 import { Helmet } from "react-helmet";
 
 const Transition = React.forwardRef(function Transition(props, ref) {

@@ -10,14 +10,14 @@ import Appbar from "./components/Appbar";
 import Footer from "./components/Footer";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 import routes from "./routes.json";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 // Default language en
-if (cookies.get("lang") == undefined) {
+if (cookies.get("lang") === undefined) {
   cookies.set("lang", "en");
 }
 

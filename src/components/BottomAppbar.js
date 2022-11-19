@@ -11,29 +11,40 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
+import { useLocation } from "react-router";
 
 export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
-
-  const [value, setValue] = React.useState(0);
+  const location = useLocation();
   const { t } = useTranslation();
-
   const pages = [
-    { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
+    { id: 0, page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
     {
+      id: 1,
       page: t("pageProjects"),
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
+      id: 2,
       page: t("pageGallery"),
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
-    { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
+    { id: 3, page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
+    { id: 4, page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
   ];
+
+  const [value, setValue] = React.useState(getIdFromPath(location.pathname));
+
+  function getIdFromPath(path) {
+    var array = pages.filter(function (page) {
+      return page.navigate === path;
+    });
+    array = array[0];
+    return array.id;
+  }
 
   return (
     <Box sx={{ width: 500, zIndex: 20 }}>

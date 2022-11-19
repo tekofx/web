@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
-import Timeline from "../components/Timeline";
+import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
 import Likes from "../components/Fursona/Likes";
 import Card from "../components/Fursona/Card";

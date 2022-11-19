@@ -55,7 +55,7 @@ function About() {
             Teko Fresnes Xaiden
           </Typography>
         </Grid>
-        <Grid item xs={12} lg={3} order={{ xs: 1, lg: 2 }}>
+        <Grid item xs={12} lg={4} order={{ xs: 1, lg: 2 }}>
           <Avatar
             style={{ alignSelf: "center" }}
             alt="Remy Sharp"
@@ -68,7 +68,7 @@ function About() {
             }}
           />
         </Grid>
-        <Grid item xs={12} lg={6} order={{ xs: 2, lg: 1 }}>
+        <Grid item xs={12} lg={4} order={{ xs: 2, lg: 1 }}>
           <Typography align="center" variant="body1">
             <b>{t("aboutSpecies")}: </b>
             {t("aboutSpeciesValue")}
@@ -93,11 +93,25 @@ function About() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} order={{ xs: 4, lg: 4 }}>
+        <Grid item xs={12} lg={4} order={{ xs: 4, lg: 3 }}>
+          <Typography>Likes</Typography>
+          <ul style={{ marginTop: 0, paddingLeft: 25 }}>
+            <li>
+              <Typography>una cosa</Typography>
+            </li>
+            <li>
+              <Typography>otra cosa</Typography>
+            </li>
+            <li>
+              <Typography>uwu</Typography>
+            </li>
+          </ul>
+        </Grid>
+        <Grid item xs={12} lg={4} order={{ xs: 5, lg: 5 }}>
           <Items />
         </Grid>
 
-        <Grid item xs={12} lg={2} order={{ xs: 5, lg: 5 }}>
+        <Grid item xs={12} lg={2} order={{ xs: 6, lg: 6 }}>
           <Attributes />
         </Grid>
       </Grid>

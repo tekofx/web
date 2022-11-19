@@ -36,10 +36,6 @@ function About() {
     setOpen(!open);
   };
 
-  const toggleQRCode = () => {
-    setQrCodeOpen(!qrCodeOpen);
-  };
-
   return (
     <Container maxWidth="xl">
       <Helmet>
@@ -155,28 +151,6 @@ function About() {
           <br />
         </Grid>
       </Grid>
-      <Fab
-        color="primary"
-        aria-label="share"
-        style={style}
-        onClick={toggleQRCode}
-      >
-        <ShareIcon />
-      </Fab>
-
-      <Dialog
-        TransitionComponent={Transition}
-        open={qrCodeOpen}
-        onClick={toggleQRCode}
-        sx={{ width: "100%" }}
-      >
-        <Grid container>
-          <Grid item lg={7}>
-            <QRCode size={500} />
-          </Grid>
-        </Grid>
-      </Dialog>
-      <br />
     </Container>
   );
 }

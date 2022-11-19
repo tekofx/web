@@ -11,8 +11,6 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
-import { Divider } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
 
 export default function SimpleBottomNavigation() {
   const navigate = useNavigate();

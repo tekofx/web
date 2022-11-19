@@ -23,7 +23,7 @@ function About() {
           <Avatar
             style={{ alignSelf: "center" }}
             alt="Remy Sharp"
-            src="avatar.jpg"
+            src="logo-color.png"
             sx={{ width: "100%", height: "auto" }}
           />
         </Grid>

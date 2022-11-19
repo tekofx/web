@@ -47,7 +47,7 @@ function App() {
       <Box
         height={100}
         sx={{
-          display: { md: "none", lg: "none" },
+          display: { xs: "block", sm: "block", md: "none", lg: "none" },
         }}
       />
     </ThemeProvider>

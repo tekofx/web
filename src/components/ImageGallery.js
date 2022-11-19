@@ -1,16 +1,16 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
-import Button from '@mui/material/Button';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import { Skeleton } from '@mui/material';
-import ImageList from '@mui/material/ImageList';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ImageListItem from '@mui/material/ImageListItem';
-import Slide from '@mui/material/Slide';
+import Button from "@mui/material/Button";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import { Skeleton } from "@mui/material";
+import ImageList from "@mui/material/ImageList";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ImageListItem from "@mui/material/ImageListItem";
+import Slide from "@mui/material/Slide";
 import { useState } from "react";
 
 import { Dialog } from "@mui/material";
@@ -19,9 +19,12 @@ const axios = require("axios");
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-const allPostsGallery = "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall"
-const drawingsGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation"
-const photographyGallery = "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation"
+const allPostsGallery =
+  "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall";
+const drawingsGallery =
+  "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968067&type=deviation";
+const photographyGallery =
+  "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation";
 export default function ImageGallery() {
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
@@ -33,7 +36,6 @@ export default function ImageGallery() {
     setOpen(!open);
   };
   const getImages = async (url) => {
-
     var repos;
     await axios
       .get(url)
@@ -41,8 +43,7 @@ export default function ImageGallery() {
         repos = response.data;
         // Check if image exists
       })
-      .catch((error) => {
-      });
+      .catch((error) => {});
 
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(repos, "text/xml");
@@ -62,7 +63,7 @@ export default function ImageGallery() {
         }
 
         if (post[j].nodeName === "media:content") {
-          imageLink = post[j].getAttribute('url');
+          imageLink = post[j].getAttribute("url");
         }
 
         if (post[j].nodeName === "link") {
@@ -71,14 +72,18 @@ export default function ImageGallery() {
       }
       if (imageLink !== null) {
         postsData.push({
-          "title": title,
-          "src": imageLink,
-          "description": <Button target="_blank" href={deviantartLink}>{t('lightboxButton')}</Button>
-        })
+          title: title,
+          src: imageLink,
+          description: (
+            <Button target="_blank" href={deviantartLink}>
+              {t("lightboxButton")}
+            </Button>
+          ),
+        });
       }
     }
     setPosts(postsData);
-  }
+  };
 
   const handleChange = (event, newValue) => {
     switch (newValue) {
@@ -102,48 +107,60 @@ export default function ImageGallery() {
       src: image,
 
       width: size * cols,
-      height: size * rows
+      height: size * rows,
     };
   }
-
 
   useEffect(() => {
     const fetchData = async () => {
       await getImages(allPostsGallery);
       setLoading(false);
-    }
+    };
     fetchData();
   }, []);
 
   return (
-
-    <Box sx={{ flexGrow: 1 }} >
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label={<Typography>All</Typography>} />
           <Tab label={<Typography>Drawings</Typography>} />
           <Tab label={<Typography>Photography</Typography>} />
         </Tabs>
-
       </Box>
-      {loading ?
-        <Grid container spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }} columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
+      {loading ? (
+        <Grid
+          container
+          spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+          columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
+        >
           {Array.from(Array(30).keys()).map((_, i) => (
             <Grid item lg={2}>
               <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
             </Grid>
           ))}
         </Grid>
-        :
-
+      ) : (
         <ImageList
           variant="quilted"
-          cols={4}
-          rowHeight='100%'
+          rowHeight="100%"
+          sx={{
+            mb: 8,
+            gridTemplateColumns:
+              "repeat(auto-fill,minmax(280px,1fr))!important",
+          }}
         >
           {posts.map((item) => (
             <>
-              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+              <ImageListItem
+                key={item.img}
+                cols={item.cols || 1}
+                rows={item.rows || 1}
+              >
                 <img
                   {...srcset(item.src, 100, item.rows, item.cols)}
                   alt={item.lightboxTitle}
@@ -153,16 +170,13 @@ export default function ImageGallery() {
                 <ImageListItemBar
                   title={item.title}
                   subtitle={item.description}
+                  position="bottom"
                 />
               </ImageListItem>
             </>
-
           ))}
         </ImageList>
-
-
-      }
+      )}
     </Box>
   );
 }
-

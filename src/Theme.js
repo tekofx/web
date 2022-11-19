@@ -136,7 +136,7 @@ Theme.typography.h4 = {
 Theme.typography.body1 = {
   color: "#fff",
 
-  fontSize: "1rem",
+  fontSize: "1.2rem",
   textAlign: "justify",
   paddingBottom: "0.2rem",
 
@@ -149,7 +149,7 @@ Theme.typography.body1 = {
 Theme.typography.body2 = {
   color: "#fff",
 
-  fontSize: "0.8rem",
+  fontSize: "1rem",
 
   "@media (min-width:600px)": {
     fontSize: "0.8rem",

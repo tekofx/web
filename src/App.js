@@ -15,6 +15,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 import routes from "./routes.json";
 import Cookies from "universal-cookie";
+import { Box } from "@mui/material";
 const cookies = new Cookies();
 
 // Default language en
@@ -42,6 +43,13 @@ function App() {
       </TransitionGroup>
       <BottomAppbar />
       <Footer />
+      {/*This box is to create a little space in mobile view, that lets footer show above BottomAppbar */}
+      <Box
+        height={100}
+        sx={{
+          display: { md: "none", lg: "none" },
+        }}
+      />
     </ThemeProvider>
   );
 }

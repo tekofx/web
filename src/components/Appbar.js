@@ -13,16 +13,16 @@ import Twitter from "./Animated/Icons/Twitter";
 import Mastodon from "./Animated/Icons/Mastodon";
 import Github from "./Animated/Icons/Github";
 import routes from "../routes.json";
-import Cookies from "universal-cookie";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
+import LanguageSelector from "./LanguageSelector";
 
 const ResponsiveAppBar = () => {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const pages = [
     { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
     {
@@ -39,12 +39,6 @@ const ResponsiveAppBar = () => {
 
     { page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
   ];
-
-  const changeLanguageHandler = (value) => {
-    const cookies = new Cookies();
-    cookies.set("lang", value);
-    i18n.changeLanguage(value);
-  };
 
   return (
     <ThemeProvider theme={Theme}>
@@ -93,14 +87,7 @@ const ResponsiveAppBar = () => {
               <Github />
             </Box>
 
-            <Box
-              sx={{
-                display: { xs: "flex", sm: "flex", md: "flex", lg: "flex" },
-              }}
-            >
-              <Button onClick={() => changeLanguageHandler("es")}>ESP</Button>
-              <Button onClick={() => changeLanguageHandler("en")}>ENG</Button>
-            </Box>
+            <LanguageSelector />
           </Toolbar>
         </Container>
       </AppBar>

@@ -10,6 +10,7 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
+import LanguageSelector from "./LanguageSelector";
 
 export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ export default function SimpleBottomNavigation() {
             icon={page.icon}
           />
         ))}
+        <LanguageSelector />
       </BottomNavigation>
     </Box>
   );

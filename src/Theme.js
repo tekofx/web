@@ -159,6 +159,37 @@ Theme.typography.body2 = {
   },
 };
 
+// Presentation Card text
+Theme.typography.card_name = {
+  color: "#000",
+
+  fontSize: "0.5rem",
+
+  [Theme.breakpoints.up("md")]: {
+    fontSize: "1.8rem",
+  },
+};
+
+Theme.typography.card_headline = {
+  color: "#889ac5",
+
+  fontSize: "0.4rem",
+
+  [Theme.breakpoints.up("md")]: {
+    fontSize: "0.8rem",
+  },
+};
+
+Theme.typography.card_value = {
+  color: "#000",
+
+  fontSize: "0.3rem",
+
+  [Theme.breakpoints.up("md")]: {
+    fontSize: "1rem",
+  },
+};
+
 //Theme = responsiveFontSizes(Theme);
 
 export default Theme;

@@ -15,7 +15,7 @@ export default function PresentationCard() {
         <Grid item lg={5}>
           <CardMedia
             component="img"
-            image="/card_picture.png"
+            image="card_picture.png"
             alt="green iguana"
             sx={{
               width: "80%",

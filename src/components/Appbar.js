@@ -18,18 +18,31 @@ import Mastodon from "./Animated/Icons/Mastodon";
 import Github from "./Animated/Icons/Github";
 import routes from "../routes.json";
 import Cookies from "universal-cookie";
+import HomeIcon from "@mui/icons-material/Home";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import PetsIcon from "@mui/icons-material/Pets";
+import InfoIcon from "@mui/icons-material/Info";
 
 const ResponsiveAppBar = () => {
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const { t, i18n } = useTranslation();
   const pages = [
-    { page: t("pageHome"), navigate: routes.home },
-    { page: t("pageProjects"), navigate: routes.projects },
-    { page: t("pageGallery"), navigate: routes.gallery },
-    { page: "Fursona", navigate: routes.fursona },
+    { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
+    {
+      page: t("pageProjects"),
+      navigate: routes.projects,
+      icon: <AccountTreeIcon />,
+    },
+    {
+      page: t("pageGallery"),
+      navigate: routes.gallery,
+      icon: <CollectionsIcon />,
+    },
+    { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("pageAbout"), navigate: routes.about },
+    { page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   const handleOpenNavMenu = (event) => {
@@ -67,7 +80,6 @@ const ResponsiveAppBar = () => {
                 <Button
                   key={page.page}
                   onClick={function (event) {
-                    handleCloseNavMenu();
                     navigate(page.navigate);
                   }}
                   size="small"
@@ -79,6 +91,7 @@ const ResponsiveAppBar = () => {
                     },
                   }}
                 >
+                  <IconButton sx={{ color: "white" }}>{page.icon}</IconButton>
                   {page.page}
                 </Button>
               ))}

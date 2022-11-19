@@ -11,6 +11,8 @@ import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
 import Likes from "../components/Fursona/Likes";
 import Card from "../components/Fursona/Card";
+import Abilities from "../components/Fursona/Abilities";
+
 function Home() {
   const { t } = useTranslation();
 
@@ -49,6 +51,9 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Likes />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Abilities />
         </Grid>
       </Grid>
     </Container>

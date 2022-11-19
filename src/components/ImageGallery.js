@@ -122,9 +122,9 @@ export default function ImageGallery() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label={<Typography>All</Typography>} />
-          <Tab label={<Typography>Drawings</Typography>} />
-          <Tab label={<Typography>Photography</Typography>} />
+          <Tab label={<Typography>{t("galleryTabAll")}</Typography>} />
+          <Tab label={<Typography>{t("galleryTabDrawings")}</Typography>} />
+          <Tab label={<Typography>{t("galleryTabPhotography")}</Typography>} />
         </Tabs>
       </Box>
       {loading ? (

@@ -52,5 +52,10 @@
   "prideText": "Feliz Mes del Orgullo!!!",
   "halloweenText": "Halloween 👻",
   "christmasText": "Feliz navidad!!!",
-  "autumnText": "Viva el otoño 🍂"
+  "autumnText": "Viva el otoño 🍂",
+  "attributes": "Atributos",
+  "attributesStrength": "Fuerza",
+  "attributesSpeed": "Velocidad",
+  "attributesIntelligence": "Inteligencia",
+  "attributesDefense": "Defensa"
 }

@@ -52,5 +52,11 @@
   "prideText": "Happy Pride Month!!!",
   "halloweenText": "Spooky Halloween!!!",
   "christmasText": "Happy Christmas!!!",
-  "autumnText": "Happy Autumn!!!"
+  "autumnText": "Happy Autumn!!!",
+  "attributes": "Attributes",
+
+  "attributesStrength": "Strength",
+  "attributesSpeed": "Speed",
+  "attributesIntelligence": "Intelligence",
+  "attributesDefense": "Defense"
 }

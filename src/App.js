@@ -7,6 +7,7 @@ import Fursona from "./pages/Fursona";
 import Theme from "./Theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Appbar from "./components/Appbar";
+import BottomAppbar from "./components/BottomAppbar";
 import Footer from "./components/Footer";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -39,6 +40,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
+      <BottomAppbar />
       <Footer />
     </ThemeProvider>
   );

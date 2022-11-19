@@ -67,6 +67,13 @@ var Theme = createTheme({
         },
       },
     },
+    MuiBottomNavigationAction: {
+      styleOverrides: {
+        root: {
+          color: "white",
+        },
+      },
+    },
   },
   typography: {
     fontFamily: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"].join(","),

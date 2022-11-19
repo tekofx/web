@@ -48,7 +48,10 @@ const ResponsiveAppBar = () => {
 
   return (
     <ThemeProvider theme={Theme}>
-      <AppBar position="sticky">
+      <AppBar
+        position="sticky"
+        sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/*Mobile Menu*/}

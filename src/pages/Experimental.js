@@ -9,7 +9,7 @@ import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
-import Likes from "../components/Fursona/Likes";
+import Items from "../components/Fursona/Items";
 import Card from "../components/Fursona/Card";
 import Abilities from "../components/Fursona/Abilities";
 
@@ -50,7 +50,7 @@ function Home() {
           <Card />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Likes />
+          <Items />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Abilities />

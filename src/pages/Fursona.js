@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from "../components/Fursona/Colors/ColorsTable";
 import { useTranslation } from "react-i18next";
@@ -11,10 +11,9 @@ import { Helmet } from "react-helmet";
 import QRCode from "../components/QRCode";
 import Fab from "@mui/material/Fab";
 import ShareIcon from "@mui/icons-material/Share";
-import Stats from "../components/Fursona/Attributes";
+import Attributes from "../components/Fursona/Attributes";
 import ColorPalette from "../components/Fursona/Colors/ColorPalette";
-import Likes from "../components/Fursona/Likes";
-import Card from "../components/Fursona/Card";
+import Items from "../components/Fursona/Items";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -48,8 +47,66 @@ function About() {
         <title>Fursona</title>
       </Helmet>
       <br />
+
+      {/** Fursona information */}
+      <Grid container spacing={2}>
+        <Grid item xs={12} lg={12}>
+          <Typography align="center" variant="h3">
+            Teko Fresnes Xaiden
+          </Typography>
+        </Grid>
+        <Grid item xs={12} lg={3} order={{ xs: 1, lg: 2 }}>
+          <Avatar
+            style={{ alignSelf: "center" }}
+            alt="Remy Sharp"
+            src="avatar.jpg"
+            sx={{
+              width: "80%",
+              height: "auto",
+              marginLeft: "10%",
+              marginRigth: "10%",
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} lg={6} order={{ xs: 2, lg: 1 }}>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutSpecies")}: </b>
+            {t("aboutSpeciesValue")}
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutGender")}: </b>
+            {t("aboutGenderValue")}
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutHeight")}: </b>1.80m
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutBirth")}: </b>22/09
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutPersonality")}: </b>
+            {t("aboutPersonalityValue")}
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutAbilities")}: </b>
+            {t("aboutAbilitiesValue")}
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} order={{ xs: 4, lg: 4 }}>
+          <Items />
+        </Grid>
+
+        <Grid item xs={12} lg={2} order={{ xs: 5, lg: 5 }}>
+          <Attributes />
+        </Grid>
+      </Grid>
+
+      {/** Reference */}
       <Grid container spacing={2}>
         <Grid item xs={12}>
+          <br />
+          <Typography variant="h2">Reference</Typography>
           <Typography variant="body1">{t("aboutText5")}</Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
@@ -97,56 +154,6 @@ function About() {
         </Grid>
       </Dialog>
       <br />
-
-      <Grid container spacing={2}>
-        <Grid item lg={12}>
-          <Typography variant="h2">{t("aboutTitle2")}</Typography>
-
-          <Typography variant="h4">Teko Fresnes Xaiden</Typography>
-        </Grid>
-        <Grid item xs={12} lg={8}>
-          <Typography variant="body1">
-            <b>{t("aboutName")}: </b>Teko
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutSpecies")}: </b>
-            {t("aboutSpeciesValue")}
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutGender")}: </b>
-            {t("aboutGenderValue")}
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutHeight")}: </b>1.80m
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutBirth")}: </b>22/09
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutPersonality")}: </b>
-            {t("aboutPersonalityValue")}
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutLikes")}: </b>
-            {t("aboutLikesValue")}
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutDislikes")}: </b>
-            {t("aboutDislikesValue")}
-          </Typography>
-          <Typography variant="body1">
-            <b>{t("aboutAbilities")}: </b>
-            {t("aboutAbilitiesValue")}
-          </Typography>
-        </Grid>
-        <Grid item lg={4}>
-          {/* <Likes /> */}
-        </Grid>
-        <Grid item lg={4}>
-          <Typography variant="h2">Stats</Typography>
-          <Stats />
-        </Grid>
-      </Grid>
     </Container>
   );
 }

@@ -10,15 +10,10 @@ import { Skeleton } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
-import Slide from "@mui/material/Slide";
 import { useState } from "react";
 
-import { Dialog } from "@mui/material";
 const axios = require("axios");
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 const allPostsGallery =
   "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall";
 const drawingsGallery =
@@ -139,7 +134,7 @@ export default function ImageGallery() {
           columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
         >
           {Array.from(Array(30).keys()).map((_, i) => (
-            <Grid item lg={2}>
+            <Grid item lg={2} key={i}>
               <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
             </Grid>
           ))}
@@ -147,17 +142,16 @@ export default function ImageGallery() {
       ) : (
         <ImageList
           variant="quilted"
-          rowHeight="100%"
           sx={{
             mb: 8,
             gridTemplateColumns:
               "repeat(auto-fill,minmax(280px,1fr))!important",
           }}
         >
-          {posts.map((item) => (
+          {posts.map((item, key) => (
             <>
               <ImageListItem
-                key={item.img}
+                key={key}
                 cols={item.cols || 1}
                 rows={item.rows || 1}
               >

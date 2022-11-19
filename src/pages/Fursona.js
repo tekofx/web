@@ -8,29 +8,16 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import { Helmet } from "react-helmet";
-import QRCode from "../components/QRCode";
-import Fab from "@mui/material/Fab";
-import ShareIcon from "@mui/icons-material/Share";
 import Attributes from "../components/Fursona/Attributes";
 import ColorPalette from "../components/Fursona/Colors/ColorPalette";
-import Items from "../components/Fursona/Items";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-const style = {
-  margin: 0,
-  top: "auto",
-  right: 20,
-  bottom: 20,
-  left: "auto",
-  position: "fixed",
-};
 
-function About() {
+export default function Fursona() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [qrCodeOpen, setQrCodeOpen] = useState(false);
 
   const toggleOpen = () => {
     setOpen(!open);
@@ -65,6 +52,7 @@ function About() {
           />
         </Grid>
         <Grid
+          item
           xs={12}
           lg={4}
           order={{ xs: 2, lg: 1 }}
@@ -136,11 +124,7 @@ function About() {
             width={"100%"}
             onClick={toggleOpen}
           />
-          <Dialog
-            fullScreen="true"
-            TransitionComponent={Transition}
-            open={open}
-          >
+          <Dialog fullScreen TransitionComponent={Transition} open={open}>
             <img align="left" src="ref.png" alt="" onClick={toggleOpen} />
           </Dialog>
         </Grid>
@@ -154,5 +138,3 @@ function About() {
     </Container>
   );
 }
-
-export default About;

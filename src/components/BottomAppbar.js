@@ -2,9 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import routes from "../routes.json";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
@@ -52,8 +49,9 @@ export default function SimpleBottomNavigation() {
           display: { md: "none", lg: "none" },
         }}
       >
-        {pages.map((page) => (
+        {pages.map((page, key) => (
           <BottomNavigationAction
+            key={key}
             label={page.page}
             onClick={function (event) {
               navigate(page.navigate);

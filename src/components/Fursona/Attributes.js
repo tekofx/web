@@ -24,46 +24,46 @@ export default function Attributes() {
         <TableBody>
           <TableRow>
             <TableCell>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 <GiBroadsword />
                 Ataque
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="body2">1</Typography>
+              <Typography variant="body1">1</Typography>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 <BsFillLightningChargeFill />
                 Velocidad
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="body2">4</Typography>
+              <Typography variant="body1">4</Typography>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 <FaBrain />
                 Inteligencia
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="body2">2</Typography>
+              <Typography variant="body1">2</Typography>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 <BsFillShieldFill />
                 Defensa
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="body2">3</Typography>
+              <Typography variant="body1">3</Typography>
             </TableCell>
           </TableRow>
         </TableBody>

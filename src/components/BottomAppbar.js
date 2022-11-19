@@ -16,7 +16,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   const [value, setValue] = React.useState(0);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const pages = [
     { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },

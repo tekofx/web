@@ -1,11 +1,11 @@
 import * as React from "react";
-import { IconButton, Button, Menu, MenuItem } from "@mui/material";
+import { IconButton, Menu, MenuItem } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 import Cookies from "universal-cookie";
 import CheckIcon from "@mui/icons-material/Check";
 export default function BasicMenu() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {

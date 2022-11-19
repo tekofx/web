@@ -9,7 +9,6 @@ import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { makeStyles } from "@mui/material";
 
 export default function Attributes() {
   const { t } = useTranslation();

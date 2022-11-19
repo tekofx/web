@@ -8,6 +8,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import routes from "../routes.json";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
+import HomeIcon from "@mui/icons-material/Home";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import PetsIcon from "@mui/icons-material/Pets";
+import InfoIcon from "@mui/icons-material/Info";
 
 export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
@@ -16,12 +21,20 @@ export default function SimpleBottomNavigation() {
   const { t, i18n } = useTranslation();
 
   const pages = [
-    { page: t("pageHome"), navigate: routes.home, icon: "" },
-    { page: t("pageProjects"), navigate: routes.projects },
-    { page: t("pageGallery"), navigate: routes.gallery },
-    { page: "Fursona", navigate: routes.fursona },
+    { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
+    {
+      page: t("pageProjects"),
+      navigate: routes.projects,
+      icon: <AccountTreeIcon />,
+    },
+    {
+      page: t("pageGallery"),
+      navigate: routes.gallery,
+      icon: <CollectionsIcon />,
+    },
+    { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("pageAbout"), navigate: routes.about },
+    { page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   return (
@@ -45,6 +58,7 @@ export default function SimpleBottomNavigation() {
             onClick={function (event) {
               navigate(page.navigate);
             }}
+            icon={page.icon}
           />
         ))}
       </BottomNavigation>

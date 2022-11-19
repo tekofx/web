@@ -113,6 +113,7 @@ Theme.typography.h3 = {
   color: "#fff",
 
   fontSize: "1.5rem",
+  paddingBottom: "0.2rem",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "2rem",

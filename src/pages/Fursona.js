@@ -14,6 +14,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import Stats from "../components/Fursona/Attributes";
 import ColorPalette from "../components/Fursona/Colors/ColorPalette";
 import Likes from "../components/Fursona/Likes";
+import Card from "../components/Fursona/Card";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -139,7 +140,7 @@ function About() {
           </Typography>
         </Grid>
         <Grid item lg={4}>
-          <Likes />
+          {/* <Likes /> */}
         </Grid>
         <Grid item lg={4}>
           <Typography variant="h2">Stats</Typography>

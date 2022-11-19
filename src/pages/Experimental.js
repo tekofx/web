@@ -9,7 +9,8 @@ import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
 import Timeline from "../components/Timeline";
 import { Helmet } from "react-helmet";
-
+import Likes from "../components/Fursona/Likes";
+import Card from "../components/Fursona/Card";
 function Home() {
   const { t } = useTranslation();
 
@@ -41,6 +42,13 @@ function Home() {
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">Timeline</Typography>
           <Timeline />
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Card />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Likes />
         </Grid>
       </Grid>
     </Container>

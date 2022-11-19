@@ -68,7 +68,16 @@ function About() {
             }}
           />
         </Grid>
-        <Grid item xs={12} lg={4} order={{ xs: 2, lg: 1 }}>
+        <Grid
+          xs={12}
+          lg={4}
+          order={{ xs: 2, lg: 1 }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           <Typography align="center" variant="body1">
             <b>{t("aboutSpecies")}: </b>
             {t("aboutSpeciesValue")}
@@ -91,27 +100,27 @@ function About() {
             <b>{t("aboutAbilities")}: </b>
             {t("aboutAbilitiesValue")}
           </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutLikes")}: </b>
+            {t("aboutLikesValue")}
+          </Typography>
+          <Typography align="center" variant="body1">
+            <b>{t("aboutDislikes")}: </b>
+            {t("aboutDislikesValue")}
+          </Typography>
         </Grid>
 
-        <Grid item xs={12} lg={4} order={{ xs: 4, lg: 3 }}>
-          <Typography>Likes</Typography>
-          <ul style={{ marginTop: 0, paddingLeft: 25 }}>
-            <li>
-              <Typography>una cosa</Typography>
-            </li>
-            <li>
-              <Typography>otra cosa</Typography>
-            </li>
-            <li>
-              <Typography>uwu</Typography>
-            </li>
-          </ul>
-        </Grid>
-        <Grid item xs={12} lg={4} order={{ xs: 5, lg: 5 }}>
-          <Items />
-        </Grid>
-
-        <Grid item xs={12} lg={2} order={{ xs: 6, lg: 6 }}>
+        <Grid
+          item
+          xs={12}
+          lg={4}
+          order={{ xs: 5, lg: 5 }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           <Attributes />
         </Grid>
       </Grid>

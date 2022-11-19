@@ -1,5 +1,3 @@
-import { Paper, Grid, Container, Box } from "@mui/material";
-
 export default function ColorPalette() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>

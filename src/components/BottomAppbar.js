@@ -42,8 +42,13 @@ export default function SimpleBottomNavigation() {
     var array = pages.filter(function (page) {
       return page.navigate === path;
     });
-    array = array[0];
-    return array.id;
+    console.log(array);
+    if (array.length !== 0) {
+      array = array[0];
+      return array.id;
+    } else {
+      return 0;
+    }
   }
 
   return (

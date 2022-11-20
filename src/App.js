@@ -10,12 +10,12 @@ import Appbar from "./components/Appbar";
 import BottomAppbar from "./components/BottomAppbar";
 import Footer from "./components/Footer";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
+import Reference from "./components/Fursona/Reference";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 import routes from "./routes.json";
 import Cookies from "universal-cookie";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 const cookies = new Cookies();
 
 // Default language en
@@ -37,6 +37,15 @@ function App() {
             <Route path={routes.projects} element={<Projects />} />
             <Route path={routes.about} element={<About />} />
             <Route path={routes.fursona} element={<Fursona />} />
+            <Route
+              path={routes.fursona + "/reference"}
+              element={
+                <Container maxWidth="xl">
+                  <Reference />
+                </Container>
+              }
+            />
+
             <Route path={routes.experimental} element={<Experimental />} />
           </Routes>
         </CSSTransition>

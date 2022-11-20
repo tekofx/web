@@ -10,6 +10,7 @@ import Slide from "@mui/material/Slide";
 import { Helmet } from "react-helmet";
 import Attributes from "../components/Fursona/Attributes";
 import ColorPalette from "../components/Fursona/Colors/ColorPalette";
+import Reference from "../components/Fursona/Reference";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -113,31 +114,7 @@ export default function Fursona() {
       </Grid>
 
       {/** Reference */}
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <br />
-          <Typography variant="h2">Reference</Typography>
-          <Typography variant="body1">{t("aboutText5")}</Typography>
-        </Grid>
-        <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
-          <img
-            align="left"
-            src="ref-small.jpg"
-            alt=""
-            width={"100%"}
-            onClick={toggleOpen}
-          />
-          <Dialog fullScreen TransitionComponent={Transition} open={open}>
-            <img align="left" src="ref.png" alt="" onClick={toggleOpen} />
-          </Dialog>
-        </Grid>
-        <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
-          <Typography variant="h3">Color Reference</Typography>
-          <ColorPalette />
-          <ColorsTable />
-          <br />
-        </Grid>
-      </Grid>
+      <Reference />
     </Container>
   );
 }

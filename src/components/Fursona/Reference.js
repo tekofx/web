@@ -1,14 +1,11 @@
 import React from "react";
-import { Avatar, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import ColorsTable from "./Colors/ColorsTable";
 import { useTranslation } from "react-i18next";
-import Container from "@mui/material/Container";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
-import { Helmet } from "react-helmet";
-import Attributes from "./Attributes";
 import ColorPalette from "./Colors/ColorPalette";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

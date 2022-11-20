@@ -31,23 +31,25 @@ function App() {
       <Appbar />
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
-          <Routes>
-            <Route path={routes.home} element={<Home />} />
-            <Route path={routes.gallery} element={<Gallery />} />
-            <Route path={routes.projects} element={<Projects />} />
-            <Route path={routes.about} element={<About />} />
-            <Route path={routes.fursona} element={<Fursona />} />
-            <Route
-              path={routes.fursona + "/reference"}
-              element={
-                <Container maxWidth="xl">
-                  <Reference />
-                </Container>
-              }
-            />
+          <Container maxWidth="xl">
+            <Routes>
+              <Route path={routes.home} element={<Home />} />
+              <Route path={routes.gallery} element={<Gallery />} />
+              <Route path={routes.projects} element={<Projects />} />
+              <Route path={routes.about} element={<About />} />
+              <Route path={routes.fursona} element={<Fursona />} />
+              <Route
+                path={routes.fursona + "/reference"}
+                element={
+                  <Container maxWidth="xl">
+                    <Reference />
+                  </Container>
+                }
+              />
 
-            <Route path={routes.experimental} element={<Experimental />} />
-          </Routes>
+              <Route path={routes.experimental} element={<Experimental />} />
+            </Routes>
+          </Container>
         </CSSTransition>
       </TransitionGroup>
       <BottomAppbar />

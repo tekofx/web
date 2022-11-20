@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import "../index.css";
-import Container from "@mui/material/Container";
 import Seasons from "../components/Seasons/Seasons";
 import { Helmet } from "react-helmet";
 
@@ -11,9 +10,8 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <Container maxWidth="xl">
+    <div>
       <Helmet>
-
         <meta charSet="utf-8" />
         <title>Home</title>
         <link rel="canonical" href="http://mysite.com/example" />
@@ -43,7 +41,7 @@ function Home() {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </div>
   );
 }
 export default Home;

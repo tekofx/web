@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import "../index.css";
-import Container from "@mui/material/Container";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS/AmongUS";
 import Spring from "../components/Spring";
@@ -17,7 +16,7 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <Container maxWidth="xl">
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Experimental</title>
@@ -56,7 +55,7 @@ function Home() {
           <Abilities />
         </Grid>
       </Grid>
-    </Container>
+    </div>
   );
 }
 export default Home;

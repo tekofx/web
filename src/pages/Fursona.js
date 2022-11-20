@@ -1,31 +1,16 @@
 import React from "react";
 import { Avatar, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import ColorsTable from "../components/Fursona/Colors/ColorsTable";
 import { useTranslation } from "react-i18next";
-import Container from "@mui/material/Container";
-import { useState } from "react";
-import { Dialog } from "@mui/material";
-import Slide from "@mui/material/Slide";
 import { Helmet } from "react-helmet";
 import Attributes from "../components/Fursona/Attributes";
-import ColorPalette from "../components/Fursona/Colors/ColorPalette";
 import Reference from "../components/Fursona/Reference";
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 export default function Fursona() {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
 
   return (
-    <Container maxWidth="xl">
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Fursona</title>
@@ -115,6 +100,6 @@ export default function Fursona() {
 
       {/** Reference */}
       <Reference />
-    </Container>
+    </div>
   );
 }

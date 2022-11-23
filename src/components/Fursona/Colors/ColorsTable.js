@@ -64,12 +64,11 @@ export default function ColorsTable() {
   ];
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer>
       <Table
         sx={{
           maxWith: "100%",
           minWidth: "100%",
-          backgroundColor: Theme.palette.background.main,
         }}
         size="small"
       >

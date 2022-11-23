@@ -9,8 +9,9 @@ import Spring from "../components/Spring";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
 import Items from "../components/Fursona/Items";
-import Card from "../components/Fursona/Card";
+import Card from "../components/Fursona/TekoCard";
 import Abilities from "../components/Fursona/Abilities";
+import CardCreator from "../components/CardCreator";
 
 function Home() {
   const { t } = useTranslation();
@@ -53,6 +54,9 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Abilities />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <CardCreator />
         </Grid>
       </Grid>
     </div>

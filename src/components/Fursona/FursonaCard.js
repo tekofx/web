@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 
-export default function PresentationCard() {
+export default function PresentationCard(props) {
   return (
     <Card
       sx={{
@@ -45,33 +45,31 @@ export default function PresentationCard() {
           <CardContent sx={{ flex: "1 0 auto" }}>
             <Grid container>
               <Grid item lg={12}>
-                <Typography variant="card_name">Teko</Typography>
+                <Typography variant="card_name">{props.name}</Typography>
               </Grid>
               <Grid item lg={12}>
                 <Typography variant="card_headline">Species</Typography>
               </Grid>
               <Grid item lg={12}>
-                <Typography variant="card_value">Arctic Fox </Typography>
+                <Typography variant="card_value">{props.species}</Typography>
                 <Typography variant="card_value" sx={{ color: "#969696" }}>
-                  Vulpes Lagopus
+                  {props.speciesLatin}
                 </Typography>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={5}>
                 <Typography variant="card_headline">Pronouns</Typography>
                 <br />
-                <Typography variant="card_value">He/Him</Typography>
+                <Typography variant="card_value">{props.pronouns}</Typography>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={4}>
                 <Typography variant="card_headline">Birthday</Typography>
                 <br />
-                <Typography variant="card_value">01/01/2001</Typography>
+                <Typography variant="card_value">{props.birthday}</Typography>
               </Grid>
               <Grid item lg={12}>
                 <Typography variant="card_headline">Website</Typography>
                 <br />
-                <Typography variant="card_value">
-                  tekofx.github.com/web
-                </Typography>
+                <Typography variant="card_value">{props.web}</Typography>
               </Grid>
             </Grid>
           </CardContent>

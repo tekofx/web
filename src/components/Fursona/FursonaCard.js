@@ -3,6 +3,7 @@ import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 export default function PresentationCard(props) {
   return (
     <Card
+      id="fursonaCard"
       sx={{
         display: "flex",
         backgroundColor: "#fff",
@@ -11,7 +12,7 @@ export default function PresentationCard(props) {
         borderRadius: 3,
       }}
     >
-      <Grid container>
+      <Grid container sx={{ backgroundColor: "white" }}>
         <Grid item lg={5}>
           <CardMedia
             component="img"

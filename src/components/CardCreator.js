@@ -1,5 +1,7 @@
 import Card from "./Fursona/FursonaCard";
 import { TextField, Grid, Button, Box } from "@mui/material";
+import downloadjs from "downloadjs";
+import html2canvas from "html2canvas";
 import { useState } from "react";
 
 export default function CardCreator() {
@@ -10,6 +12,12 @@ export default function CardCreator() {
     pronouns: "They/Them",
     web: "google.com",
     birthday: "1/1/2000",
+  };
+
+  const handleCaptureClick = async () => {
+    const canvas = await html2canvas(document.getElementById("fursonaCard"));
+    const dataURL = canvas.toDataURL("image/png");
+    downloadjs(dataURL, "download.png", "image/png");
   };
 
   const [name, setName] = useState(def.name);
@@ -85,6 +93,7 @@ export default function CardCreator() {
               onChange={(e) => setBirthday(e.target.value)}
             />
             <Button onClick={(e) => resetValues()}>Reset</Button>
+            <Button onClick={(e) => handleCaptureClick()}>Save</Button>
           </Box>
         </Grid>
       </Grid>

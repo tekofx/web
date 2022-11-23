@@ -55,7 +55,7 @@ function Home() {
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Abilities />
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
           <CardCreator />
         </Grid>
       </Grid>

@@ -15,7 +15,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./index.css";
 import routes from "./routes.json";
 import Cookies from "universal-cookie";
-import { Box, Container } from "@mui/material";
+import { Box, Container, CssBaseline } from "@mui/material";
 const cookies = new Cookies();
 
 // Default language en
@@ -29,6 +29,7 @@ function App() {
   return (
     <ThemeProvider theme={Theme}>
       <Appbar />
+      <CssBaseline />
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Container maxWidth="xl">

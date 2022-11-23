@@ -7,8 +7,8 @@ export default function PresentationCard(props) {
       sx={{
         display: "flex",
         backgroundColor: "#fff",
-        width: 480,
-        height: 270,
+        width: "30rem",
+        height: "16rem",
         borderRadius: 4,
       }}
     >

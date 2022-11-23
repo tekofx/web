@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 var Theme = createTheme({
   palette: {
-    type: "dark",
+    mode: "dark",
     primary: {
       main: "#0099b2",
     },
@@ -71,6 +71,13 @@ var Theme = createTheme({
       styleOverrides: {
         root: {
           color: "white",
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          color: "#e0e0e0",
         },
       },
     },

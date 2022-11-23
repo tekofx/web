@@ -14,7 +14,7 @@ export default function CardCreator() {
     birthday: "1/1/2000",
   };
 
-  const handleCaptureClick = async () => {
+  const saveFursonaCard = async () => {
     const canvas = await html2canvas(document.getElementById("fursonaCard"));
     const dataURL = canvas.toDataURL("image/png");
     downloadjs(dataURL, "download.png", "image/png");
@@ -39,7 +39,7 @@ export default function CardCreator() {
   return (
     <div>
       <Grid container>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={8} lg={5}>
           <Card
             name={name}
             species={species}
@@ -49,51 +49,56 @@ export default function CardCreator() {
             birthday={birthday}
           />
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={4} lg={7}>
           <Box
             component="form"
             sx={{
-              "& .MuiTextField-root": { m: 1, width: "25ch" },
+              "& .MuiTextField-root": {
+                m: 1,
+                width: "25ch",
+              },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField
-              required
-              label="Name"
-              variant="standard"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <TextField
-              required
-              label="Species"
-              variant="standard"
-              onChange={(e) => setSpecies(e.target.value)}
-            />
-            <TextField
-              label="Latin Species"
-              variant="standard"
-              onChange={(e) => setSpeciesLatin(e.target.value)}
-            />
-            <TextField
-              required
-              label="Pronouns"
-              variant="standard"
-              onChange={(e) => setPronouns(e.target.value)}
-            />
-            <TextField
-              label="Web"
-              variant="standard"
-              onChange={(e) => setWeb(e.target.value)}
-            />
-            <TextField
-              required
-              label="Birthday"
-              variant="standard"
-              onChange={(e) => setBirthday(e.target.value)}
-            />
-            <Button onClick={(e) => resetValues()}>Reset</Button>
-            <Button onClick={(e) => handleCaptureClick()}>Save</Button>
+            <div>
+              <TextField
+                required
+                label="Name"
+                variant="standard"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <TextField
+                required
+                label="Species"
+                variant="standard"
+                onChange={(e) => setSpecies(e.target.value)}
+              />
+              <TextField
+                label="Latin Species"
+                variant="standard"
+                onChange={(e) => setSpeciesLatin(e.target.value)}
+              />
+              <TextField
+                required
+                label="Pronouns"
+                variant="standard"
+                onChange={(e) => setPronouns(e.target.value)}
+              />
+              <TextField
+                label="Web"
+                variant="standard"
+                onChange={(e) => setWeb(e.target.value)}
+              />
+              <TextField
+                required
+                label="Birthday"
+                variant="standard"
+                onChange={(e) => setBirthday(e.target.value)}
+              />
+              <Button onClick={() => resetValues()}>Reset</Button>
+              <Button onClick={() => saveFursonaCard()}>Save</Button>
+            </div>
           </Box>
         </Grid>
       </Grid>

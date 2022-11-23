@@ -10,7 +10,7 @@ var Theme = createTheme({
       main: "#edf069",
     },
     background: {
-      main: "#101010",
+      main: "#303030",
       paper: "#28272a",
     },
     error: {
@@ -39,7 +39,7 @@ var Theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          background: "#161b22",
+          background: "#2B2B2B",
         },
       },
     },

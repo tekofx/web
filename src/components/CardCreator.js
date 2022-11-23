@@ -39,7 +39,7 @@ export default function CardCreator() {
   return (
     <div>
       <Grid container>
-        <Grid item lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           <Card
             name={name}
             species={species}
@@ -49,7 +49,7 @@ export default function CardCreator() {
             birthday={birthday}
           />
         </Grid>
-        <Grid item lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           <Box
             component="form"
             sx={{

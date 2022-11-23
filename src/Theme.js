@@ -170,7 +170,7 @@ Theme.typography.body2 = {
 Theme.typography.card_name = {
   color: "#000",
 
-  fontSize: "0.5rem",
+  fontSize: "1.8rem",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "1.8rem",
@@ -180,7 +180,7 @@ Theme.typography.card_name = {
 Theme.typography.card_headline = {
   color: "#889ac5",
 
-  fontSize: "0.4rem",
+  fontSize: "0.8rem",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "0.8rem",
@@ -190,7 +190,7 @@ Theme.typography.card_headline = {
 Theme.typography.card_value = {
   color: "#000",
 
-  fontSize: "0.3rem",
+  fontSize: "1rem",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "1rem",

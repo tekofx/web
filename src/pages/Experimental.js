@@ -9,7 +9,6 @@ import Spring from "../components/Spring";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
 import Items from "../components/Fursona/Items";
-import Card from "../components/Fursona/TekoCard";
 import Abilities from "../components/Fursona/Abilities";
 import CardCreator from "../components/CardCreator";
 
@@ -46,9 +45,6 @@ function Home() {
           <Timeline />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Card />
-        </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Items />
         </Grid>

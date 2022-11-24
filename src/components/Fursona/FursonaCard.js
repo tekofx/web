@@ -12,20 +12,22 @@ export default function PresentationCard(props) {
         borderRadius: 4,
       }}
     >
-      <Grid container sx={{ backgroundColor: "white", borderRadius: 4 }}>
+      <Grid
+        container
+        sx={{ backgroundColor: "white", borderRadius: 4 }}
+        justify="flex-end"
+        alignItems="center"
+      >
         <Grid item xs={5} sm={5} md={5} lg={5}>
           <CardMedia
             component="img"
-            image="card_picture.png"
+            image={props.img}
             alt="green iguana"
             sx={{
-              width: "80%",
-              height: "auto",
+              width: "10rem",
+              height: "12rem",
               objectFit: "cover",
-              marginTop: "15%",
-              marginBottom: "15%",
               marginLeft: "10%",
-
               borderRadius: 3,
             }}
           />

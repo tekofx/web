@@ -26,6 +26,11 @@ export default function CardCreator() {
   const [pronouns, setPronouns] = useState(def.pronouns);
   const [web, setWeb] = useState(def.web);
   const [birthday, setBirthday] = useState(def.birthday);
+  const [file, setFile] = useState("avatar.jpg");
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
 
   function resetValues() {
     setName(def.name);
@@ -47,6 +52,7 @@ export default function CardCreator() {
             pronouns={pronouns}
             web={web}
             birthday={birthday}
+            img={file}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={7}>
@@ -98,6 +104,10 @@ export default function CardCreator() {
               />
               <Button onClick={() => resetValues()}>Reset</Button>
               <Button onClick={() => saveFursonaCard()}>Save</Button>
+              <Button type="file" component="label">
+                <input type="file" onChange={handleChange} hidden />
+                Upload image
+              </Button>
             </div>
           </Box>
         </Grid>

@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import "../index.css";
-import Seasons from "../components/Seasons/Seasons";
+import Seasons from "../components/Seasons";
 import { Helmet } from "react-helmet";
 
 function Home() {

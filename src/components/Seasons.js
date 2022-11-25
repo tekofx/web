@@ -2,10 +2,6 @@ import * as React from "react";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-const pride = require("./summer - lgtb.jpg");
-const halloween = require("./juaguelin.png");
-const christmas = require("./Merry Foxmas.png");
-const autumn = require("./Autumn.png");
 /**
  * January:0
  * February:1
@@ -35,23 +31,23 @@ export default function Footer() {
 
   if (new Date(year, 8, 21) < today && today < new Date(year, 11, 21)) {
     if (day === 31 && month === 9) {
-      image = halloween;
+      image = "juaguelin.png";
       text = t("halloweenText");
     } else {
-      image = autumn;
+      image = "Autumn.png";
       text = t("autumnText");
     }
   }
 
   if (month === 5) {
     // Pride
-    image = pride;
+    image = "summer - lgtb.png";
     text = t("prideText");
   }
 
   if (new Date(year, 11, 23) < today && today < new Date(year, 11, 30)) {
     // Christmas
-    image = christmas;
+    image = "Merry Foxmas.png";
     text = t("christmasText");
   }
 

@@ -6,8 +6,17 @@ import ProTip from "../src/ProTip";
 import Link from "../src/Link";
 import Copyright from "../src/Copyright";
 import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 export default function Index() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <Container maxWidth="sm">
       <Box sx={{ my: 4 }}>

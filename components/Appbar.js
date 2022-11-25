@@ -19,6 +19,7 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
+import Link from "next/link";
 
 const ResponsiveAppBar = () => {
   const { t } = useTranslation();
@@ -57,23 +58,22 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Button
-                  key={page.page}
-                  onClick={function (event) {
-                    navigate(page.navigate);
-                  }}
-                  size="small"
-                  sx={{
-                    color: "white",
-                    marginRight: "1%",
-                    "&:hover": {
-                      background: "#a8a8a8",
-                    },
-                  }}
-                  startIcon={page.icon}
-                >
-                  {page.page}
-                </Button>
+                <Link href={page.navigate}>
+                  <Button
+                    key={page.page}
+                    size="small"
+                    sx={{
+                      color: "white",
+                      marginRight: "1%",
+                      "&:hover": {
+                        background: "#a8a8a8",
+                      },
+                    }}
+                    startIcon={page.icon}
+                  >
+                    {page.page}
+                  </Button>
+                </Link>
               ))}
             </Box>
             <Box

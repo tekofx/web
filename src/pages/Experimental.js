@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import "../index.css";
 import ThreeFiber from "../components/ThreeFiber";
-import AmongUS from "../components/AmongUS/AmongUS";
+import AmongUS from "../components/AmongUS";
 import Spring from "../components/Spring";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";

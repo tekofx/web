@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import "../index.css";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS";
-import Spring from "../components/Spring";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
 import Items from "../components/Fursona/Items";
@@ -36,10 +35,6 @@ function Home() {
           <AmongUS />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Typography variant="h2">Spring</Typography>
-          <Spring />
-        </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">Timeline</Typography>
           <Timeline />

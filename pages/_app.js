@@ -9,6 +9,8 @@ import theme from "../src/theme";
 import { appWithTranslation, AppWithTranslation } from "next-i18next";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/layout";
+import "../styles/transition.css";
+import Transition from "../components/Transition";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -16,20 +18,24 @@ function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (
-    <CacheProvider value={emotionCache}>
+    <div>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Layout>
-          <Container maxWidth="xl">
-            <Component {...pageProps} />
-          </Container>
-        </Layout>
-      </ThemeProvider>
-    </CacheProvider>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Layout>
+            <Transition>
+              <Container maxWidth="xl">
+                <Component {...pageProps} />
+              </Container>
+            </Transition>
+          </Layout>
+        </ThemeProvider>
+      </CacheProvider>
+    </div>
   );
 }
 

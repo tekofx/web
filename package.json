@@ -22,6 +22,7 @@
     "@react-three/fiber": "^8.9.1",
     "axios": "^1.2.0",
     "downloadjs": "^1.4.7",
+    "framer-motion": "^7.6.12",
     "html2canvas": "^1.4.1",
     "i18next": "^22.0.6",
     "next": "latest",

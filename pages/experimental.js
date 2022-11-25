@@ -2,11 +2,12 @@ import React from "react";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import "../index.css";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS";
 import Timeline from "../components/Fursona/Timeline";
 import { Helmet } from "react-helmet";
+import Head from "next/head";
+
 import Items from "../components/Fursona/Items";
 import Abilities from "../components/Fursona/Abilities";
 import CardCreator from "../components/CardCreator";
@@ -16,10 +17,10 @@ function Home() {
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Experimental</title>
-      </Helmet>
+      </Head>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography variant="h1">{t("experimentalTitle")}</Typography>

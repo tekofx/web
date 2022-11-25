@@ -3,10 +3,10 @@ import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router";
 import routes from "../routes.json";
+import Link from "next/link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const navigate = useNavigate();
 
   return (
     <Grid
@@ -21,15 +21,11 @@ export default function Footer() {
         <Typography display="inline" variant="body2">
           T
         </Typography>
-        <Typography
-          display="inline"
-          variant="body2"
-          onClick={function (event) {
-            navigate(routes.experimental);
-          }}
-        >
-          e
-        </Typography>
+        <Link href="/experimental">
+          <Typography display="inline" variant="body2">
+            e
+          </Typography>
+        </Link>
         <Typography display="inline" variant="body2">
           ko's Tundra {year}{" "}
         </Typography>

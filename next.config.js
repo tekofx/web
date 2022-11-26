@@ -1,8 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   reactStrictMode: false,
-  assetPrefix: isProd ? '/your-github-repo-name/' : '',
+  assetPrefix: isProd ? "/web/" : "",
   images: {
     unoptimized: true,
   },

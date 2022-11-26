@@ -36,13 +36,11 @@ export default function SimpleBottomNavigation() {
   ];
 
   const [value, setValue] = React.useState(getIdFromPath(router.pathname));
-  console.log(router.pathname);
 
   function getIdFromPath(path) {
     var array = pages.filter(function (page) {
       return page.navigate === path;
     });
-    console.log(array);
     if (array.length !== 0) {
       array = array[0];
       return array.id;

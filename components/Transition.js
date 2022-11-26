@@ -19,7 +19,6 @@ const variants = {
 };
 const Transition = ({ children }) => {
   const { asPath } = useRouter();
-  console.log(asPath);
   return (
     <div className="effect-1">
       <motion.div

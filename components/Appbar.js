@@ -58,7 +58,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.navigate}>
+                <Link href={page.navigate} key={page.navigate} passHref>
                   <Button
                     key={page.page}
                     size="small"

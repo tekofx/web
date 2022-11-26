@@ -5,20 +5,12 @@ import ProTip from "../src/ProTip";
 import Link from "../src/Link";
 import Copyright from "../src/Copyright";
 import Seasons from "../components/Seasons";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+
 export default function Index() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
   return (
     <div>
       <Head>
@@ -37,8 +29,8 @@ export default function Index() {
       </Head>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">titutlo</Typography>
-          <Typography variant="body1">texto</Typography>
+          <Typography variant="h1">{t("title")}</Typography>
+          <Typography variant="body1">{t("text")}</Typography>
           <Grid container>
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />

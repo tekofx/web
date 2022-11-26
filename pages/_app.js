@@ -6,16 +6,19 @@ import { Container } from "@mui/system";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
 import theme from "../src/theme";
-import { appWithTranslation, AppWithTranslation } from "next-i18next";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/layout";
 import "../styles/transition.css";
 import Transition from "../components/Transition";
+import { appWithI18Next, useSyncLanguage } from "ni18n";
+import { ni18nConfig } from "../ni18n.config";
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  useSyncLanguage("es");
 
   return (
     <div>
@@ -45,4 +48,4 @@ MyApp.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export default appWithTranslation(MyApp);
+export default appWithI18Next(MyApp, ni18nConfig);

@@ -17,8 +17,8 @@ import { useTranslation } from "react-i18next";
  * December:11
  */
 
-export default function Footer() {
-  const { t } = useTranslation();
+export default function Seasons() {
+  const { t } = useTranslation("common");
 
   const today = new Date();
   const year = today.getFullYear();

@@ -27,6 +27,7 @@
     "i18next": "^22.0.6",
     "next": "latest",
     "next-i18next": "^13.0.0",
+    "ni18n": "^1.0.5",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -43,5 +44,10 @@
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-next": "latest"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

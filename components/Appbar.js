@@ -20,8 +20,11 @@ import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const ResponsiveAppBar = () => {
+  const router = useRouter();
+
   const { t } = useTranslation("pages");
   const pages = [
     { page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
@@ -58,22 +61,21 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.navigate} key={page.navigate} passHref>
-                  <Button
-                    key={page.page}
-                    size="small"
-                    sx={{
-                      color: "white",
-                      marginRight: "1%",
-                      "&:hover": {
-                        background: "#a8a8a8",
-                      },
-                    }}
-                    startIcon={page.icon}
-                  >
-                    {page.page}
-                  </Button>
-                </Link>
+                <Button
+                  key={page.page}
+                  size="small"
+                  sx={{
+                    color: "white",
+                    marginRight: "1%",
+                    "&:hover": {
+                      background: "#a8a8a8",
+                    },
+                  }}
+                  onClick={() => router.push(page.navigate)}
+                  startIcon={page.icon}
+                >
+                  {page.page}
+                </Button>
               ))}
             </Box>
             <Box

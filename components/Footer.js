@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
-import { useNavigate } from "react-router";
 import routes from "../routes.json";
 import Link from "next/link";
 

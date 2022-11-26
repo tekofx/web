@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import { ThemeProvider } from "@mui/material";
 import Theme from "../src/theme";
-import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 import Twitter from "./Animated/Icons/Twitter";
 import Mastodon from "./Animated/Icons/Mastodon";

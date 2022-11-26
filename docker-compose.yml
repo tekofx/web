@@ -2,6 +2,6 @@ version: "3"
 services:
   web:
     container_name: web
-    image: ghcr.io/tekofx/web
+    image: test
     ports:
-      - 80:80
+      - 80:3000

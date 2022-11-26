@@ -1,67 +1,53 @@
 {
-  "name": "web",
-  "version": "0.1.0",
+  "name": "nextjs",
+  "version": "5.0.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/lab": "^5.0.0-alpha.91",
-    "@mui/material": "^5.9.1",
-    "@react-three/drei": "^9.17.1",
-    "@react-three/fiber": "^8.2.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.3.0",
-    "axios": "^0.27.2",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/lab": "^5.0.0-alpha.109",
+    "@mui/material": "latest",
+    "@next/font": "latest",
+    "@react-three/drei": "^9.43.3",
+    "@react-three/fiber": "^8.9.1",
+    "axios": "^1.2.0",
     "downloadjs": "^1.4.7",
+    "framer-motion": "^7.6.12",
     "html2canvas": "^1.4.1",
-    "i18next": "^21.8.14",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "i18next": "^22.0.6",
+    "next": "latest",
+    "next-i18next": "^13.0.0",
+    "ni18n": "^1.0.5",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.18.1",
+    "react-i18next": "^12.0.0",
     "react-icons": "^4.6.0",
     "react-qr-code": "^2.0.8",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "react-spring": "^9.5.0",
-    "react-tsparticles": "^2.1.3",
-    "rss-to-json": "^2.1.0",
-    "three": "^0.141.0",
-    "tslib": "^2.4.0",
-    "tsparticles": "^2.1.3",
-    "tsparticles-engine": "^2.1.3",
-    "universal-cookie": "^4.0.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-router-dom": "^6.4.3",
+    "react-spring": "^9.5.5",
+    "react-tsparticles": "^2.5.3",
+    "tsparticles": "^2.5.3",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "eslint": "latest",
+    "eslint-config-next": "latest"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

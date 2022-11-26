@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 web.code-workspace
 .vscode/settings.json
+
+.next/

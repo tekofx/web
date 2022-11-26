@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
 function Gallery() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("gallery");
 
   return (
     <div>
@@ -13,8 +13,8 @@ function Gallery() {
         <meta charSet="utf-8" />
         <title>Gallery</title>
       </Helmet>
-      <Typography variant="h1">{t("galleryTitle")}</Typography>
-      <Typography variant="body1">{t("galleryText")}</Typography>
+      <Typography variant="h1">{t("title")}</Typography>
+      <Typography variant="body1">{t("text")}</Typography>
       <ImageGallery />
     </div>
   );

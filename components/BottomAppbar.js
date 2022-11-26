@@ -16,24 +16,24 @@ import { useLocation } from "react-router";
 export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t } = useTranslation("pages");
   const pages = [
-    { id: 0, page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
+    { id: 0, page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
     {
       id: 1,
-      page: t("pageProjects"),
+      page: t("projects"),
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
       id: 2,
-      page: t("pageGallery"),
+      page: t("gallery"),
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { id: 3, page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { id: 4, page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
+    { id: 4, page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   const [value, setValue] = React.useState(getIdFromPath(location.pathname));

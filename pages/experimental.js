@@ -13,7 +13,7 @@ import Abilities from "../components/Fursona/Abilities";
 import CardCreator from "../components/CardCreator";
 
 function Home() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("experimental");
 
   return (
     <div>
@@ -23,8 +23,8 @@ function Home() {
       </Head>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t("experimentalTitle")}</Typography>
-          <Typography variant="body1">{t("experimentalText")}</Typography>
+          <Typography variant="h1">{t("title")}</Typography>
+          <Typography variant="body1">{t("text")}</Typography>
         </Grid>
 
         <Grid item xs={12} sm={12} md={6} lg={6}>

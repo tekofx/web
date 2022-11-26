@@ -7,7 +7,7 @@ import Attributes from "../components/Fursona/Attributes";
 import Reference from "../components/Fursona/Reference";
 
 export default function Fursona() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("fursona");
 
   return (
     <div>
@@ -51,34 +51,34 @@ export default function Fursona() {
           }}
         >
           <Typography align="center" variant="body1">
-            <b>{t("aboutSpecies")}: </b>
-            {t("aboutSpeciesValue")}
+            <b>{t("species.title")}: </b>
+            {t("species.value")}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutGender")}: </b>
-            {t("aboutGenderValue")}
+            <b>{t("gender.title")}: </b>
+            {t("gender.value")}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutHeight")}: </b>1.80m
+            <b>{t("height")}: </b>1.80m
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutBirth")}: </b>22/09
+            <b>{t("birth")}: </b>22/09
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutPersonality")}: </b>
-            {t("aboutPersonalityValue")}
+            <b>{t("personality.title")}: </b>
+            {t("personality.value")}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutAbilities")}: </b>
-            {t("aboutAbilitiesValue")}
+            <b>{t("abilities.title")}: </b>
+            {t("abilities.value")}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutLikes")}: </b>
-            {t("aboutLikesValue")}
+            <b>{t("likes.title")}: </b>
+            {t("likes.value")}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("aboutDislikes")}: </b>
-            {t("aboutDislikesValue")}
+            <b>{t("dislikes.title")}: </b>
+            {t("dislikes.value")}
           </Typography>
         </Grid>
 

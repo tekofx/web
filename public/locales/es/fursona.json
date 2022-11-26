@@ -1,0 +1,21 @@
+{
+  "text": "Teko es un zorro ártico de pelo azul y ojos amarillos y verdes. Tiene poderes de hielo y puede usarlos para crear objetos a partir del hielo.",
+  "name": "Nombre",
+  "species": { "title": "Especie", "value": "Zorro Ártico" },
+  "gender": { "title": "Género", "value": "Hombre" },
+  "height": "Altura",
+  "birth": "Fecha nacimiento",
+  "personality": {
+    "title": "Personalidad",
+    "value": "Positivo, tímido, animado"
+  },
+  "likes": {
+    "title": "Gustos",
+    "value": "Música, ordenadores, juegos, anime, naturaleza, gofres y fotografía"
+  },
+  "dislikes": {
+    "title": "Disgustos",
+    "value": "Gente ruidosa, multitudes y sitios calientes"
+  },
+  "abilities": { "title": "Habilidades", "value": "Poderes de hielo" }
+}

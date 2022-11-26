@@ -24,7 +24,7 @@ export default function ImageGallery() {
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
-  const { t } = useTranslation();
+  const { t } = useTranslation("gallery");
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -71,7 +71,7 @@ export default function ImageGallery() {
           src: imageLink,
           description: (
             <Button target="_blank" href={deviantartLink}>
-              {t("lightboxButton")}
+              {t("button")}
             </Button>
           ),
         });
@@ -122,9 +122,9 @@ export default function ImageGallery() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label={<Typography>{t("galleryTabAll")}</Typography>} />
-          <Tab label={<Typography>{t("galleryTabDrawings")}</Typography>} />
-          <Tab label={<Typography>{t("galleryTabPhotography")}</Typography>} />
+          <Tab label={<Typography>{t("tabAll")}</Typography>} />
+          <Tab label={<Typography>{t("tabDrawings")}</Typography>} />
+          <Tab label={<Typography>{t("tabPhotography")}</Typography>} />
         </Tabs>
       </Box>
       {loading ? (

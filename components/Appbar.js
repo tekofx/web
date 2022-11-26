@@ -22,22 +22,22 @@ import LanguageSelector from "./LanguageSelector";
 import Link from "next/link";
 
 const ResponsiveAppBar = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("pages");
   const pages = [
-    { page: t("pageHome"), navigate: routes.home, icon: <HomeIcon /> },
+    { page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
     {
-      page: t("pageProjects"),
+      page: t("projects"),
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
-      page: t("pageGallery"),
+      page: t("gallery"),
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("pageAbout"), navigate: routes.about, icon: <InfoIcon /> },
+    { page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   return (

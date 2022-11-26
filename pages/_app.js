@@ -19,12 +19,12 @@ const clientSideEmotionCache = createEmotionCache();
 // Set language cookie
 const cookies = new Cookies();
 if (cookies.get("lang") === undefined) {
-  cookies.set("lang", "en");
+  cookies.set("lang", "es");
 }
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  useSyncLanguage("es");
+  useSyncLanguage(cookies.get("lang"));
 
   return (
     <div>

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
 function Projects() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("projects");
 
   return (
     <div>
@@ -13,8 +13,8 @@ function Projects() {
         <meta charSet="utf-8" />
         <title>Projects</title>
       </Helmet>
-      <Typography variant="h1">{t("projectsTitle")}</Typography>
-      <Typography variant="body1">{t("projectsText")}</Typography>
+      <Typography variant="h1">{t("title")}</Typography>
+      <Typography variant="body1">{t("text")}</Typography>
       <RepositoryList />
     </div>
   );

@@ -44,7 +44,7 @@ export default function RepositoryList(props) {
           "/main/assets/banner.png"
       );
       if (!exists) {
-        repos[i].img = "repo-banner-template.png";
+        repos[i].img = "img/repo-banner-template.png";
         reposWithoutImg.push(repos[i]);
       } else {
         repos[i].img =

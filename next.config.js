@@ -1,12 +1,22 @@
-const isProd = process.env.NODE_ENV === "production";
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+let assetPrefix = ''
+let basePath = ''
+let imagePath = ""
+
+if (isGithubActions) {
+  // trim off `<owner>/`
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+  imagePath = `/${repo}`
+}
 
 module.exports = {
   reactStrictMode: false,
   images: {
-    loader: "akamai",
-    unoptimized: true,
-    path: "/web"
+    path: imagePath
   },
-  basePath: "/web",
-  assetPrefix: "/web"
+  basePath: basePath,
+  assetPrefix: assetPrefix
 };

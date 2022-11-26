@@ -11,26 +11,26 @@ import { FaBrain } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export default function Attributes() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("fursona");
   var style = { marginRight: "2%", verticalAlign: "middle" };
   const values = [
     {
-      name: t("attributesStrength"),
+      name: t("attributes.strength"),
       value: 1,
       icon: <GiBroadsword style={style} />,
     },
     {
-      name: t("attributesSpeed"),
+      name: t("attributes.speed"),
       value: 4,
       icon: <BsFillLightningChargeFill style={style} />,
     },
     {
-      name: t("attributesIntelligence"),
+      name: t("attributes.intelligence"),
       value: 2,
       icon: <FaBrain style={style} />,
     },
     {
-      name: t("attributesDefense"),
+      name: t("attributes.defense"),
       value: 3,
       icon: <BsFillShieldFill style={style} />,
     },
@@ -42,7 +42,7 @@ export default function Attributes() {
         <TableHead>
           <TableRow>
             <TableCell>
-              <Typography>{t("attributes")}</Typography>
+              <Typography>{t("attributes.title")}</Typography>
             </TableCell>
             <TableCell></TableCell>
           </TableRow>

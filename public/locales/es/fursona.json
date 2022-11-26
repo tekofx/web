@@ -17,5 +17,23 @@
     "title": "Disgustos",
     "value": "Gente ruidosa, multitudes y sitios calientes"
   },
-  "abilities": { "title": "Habilidades", "value": "Poderes de hielo" }
+  "abilities": { "title": "Habilidades", "value": "Poderes de hielo" },
+  "attributes": {
+    "title": "Atributos",
+    "strength": "Fuerza",
+    "speed": "Velocidad",
+    "intelligence": "Inteligencia",
+    "defense": "Defensa"
+  },
+  "colors": {
+    "parts": "Partes",
+    "part1": "Pelaje 1",
+    "part2": "Pelaje 2",
+    "part3": "Pelaje 3",
+    "part4": "Pelo 1",
+    "part5": "Pelo2/Uñas",
+    "part6": "Patas/Orejas",
+    "part7": "Ojos 1",
+    "part8": "Ojos 2"
+  }
 }

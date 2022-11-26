@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
  */
 
 export default function Seasons() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("home");
 
   const today = new Date();
   const year = today.getFullYear();

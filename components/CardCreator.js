@@ -29,7 +29,7 @@ export default function CardCreator() {
   const [pronouns, setPronouns] = useState(def.pronouns);
   const [web, setWeb] = useState(def.web);
   const [birthday, setBirthday] = useState(def.birthday);
-  const [file, setFile] = useState("avatar.jpg");
+  const [file, setFile] = useState("img/avatar.jpg");
   function handleChange(e) {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));

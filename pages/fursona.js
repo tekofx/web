@@ -28,7 +28,7 @@ export default function Fursona() {
           <Avatar
             style={{ alignSelf: "center" }}
             alt="Remy Sharp"
-            src="avatar.jpg"
+            src="img/avatar.jpg"
             sx={{
               width: "80%",
               height: "auto",

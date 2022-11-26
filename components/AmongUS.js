@@ -522,7 +522,7 @@ const App = () => {
               type: "images",
               options: {
                 images: {
-                  src: "among_us.png",
+                  src: "img/among_us.png",
                   width: 500,
                   height: 634,
                 },

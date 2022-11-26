@@ -28,7 +28,7 @@ export default function Reference() {
       <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
         <img
           align="left"
-          src="ref-small.jpg"
+          src="img/ref-small.jpg"
           alt=""
           width={"100%"}
           onClick={toggleOpen}

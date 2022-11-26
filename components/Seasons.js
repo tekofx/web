@@ -31,23 +31,23 @@ export default function Seasons() {
 
   if (new Date(year, 8, 21) < today && today < new Date(year, 11, 21)) {
     if (day === 31 && month === 9) {
-      image = "juaguelin.png";
+      image = "img/juaguelin.png";
       text = t("halloweenText");
     } else {
-      image = "Autumn.png";
+      image = "img/Autumn.png";
       text = t("autumnText");
     }
   }
 
   if (month === 5) {
     // Pride
-    image = "summer - lgtb.png";
+    image = "img/summer - lgtb.png";
     text = t("prideText");
   }
 
   if (new Date(year, 11, 23) < today && today < new Date(year, 11, 30)) {
     // Christmas
-    image = "Merry Foxmas.png";
+    image = "img/Merry Foxmas.png";
     text = t("christmasText");
   }
 

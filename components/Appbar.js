@@ -49,7 +49,7 @@ const ResponsiveAppBar = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/*Desktop Menu*/}
-            <Avatar src="logo.png" />
+            <Avatar src="img/logo.png" />
 
             <Box
               sx={{

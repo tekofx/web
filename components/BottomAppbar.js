@@ -4,19 +4,18 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import routes from "../routes.json";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
-import { useLocation } from "react-router";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SimpleBottomNavigation() {
-  const navigate = useNavigate();
-  const location = useLocation();
   const { t } = useTranslation("pages");
+  const router = useRouter();
   const pages = [
     { id: 0, page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
     {
@@ -36,7 +35,8 @@ export default function SimpleBottomNavigation() {
     { id: 4, page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
-  const [value, setValue] = React.useState(getIdFromPath(location.pathname));
+  const [value, setValue] = React.useState(getIdFromPath(router.pathname));
+  console.log(router.pathname);
 
   function getIdFromPath(path) {
     var array = pages.filter(function (page) {
@@ -63,17 +63,15 @@ export default function SimpleBottomNavigation() {
           position: "fixed",
           bottom: 0,
           width: "100%",
-          display: { md: "none", lg: "none" },
+          display: { sx: "block", md: "none", lg: "none" },
         }}
       >
         {pages.map((page, key) => (
           <BottomNavigationAction
             key={key}
             label={page.page}
-            onClick={function (event) {
-              navigate(page.navigate);
-            }}
             icon={page.icon}
+            onClick={() => router.push(page.navigate)}
           />
         ))}
         <LanguageSelector />

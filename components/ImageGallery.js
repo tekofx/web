@@ -71,7 +71,7 @@ export default function ImageGallery() {
           src: imageLink,
           description: (
             <Button target="_blank" href={deviantartLink}>
-              {t("button")}
+              Deviantart
             </Button>
           ),
         });

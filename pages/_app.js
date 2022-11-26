@@ -12,9 +12,15 @@ import "../styles/transition.css";
 import Transition from "../components/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
-
+import Cookies from "universal-cookie";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+
+// Set language cookie
+const cookies = new Cookies();
+if (cookies.get("lang") === undefined) {
+  cookies.set("lang", "en");
+}
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;

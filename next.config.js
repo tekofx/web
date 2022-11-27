@@ -8,7 +8,7 @@ if (isGithubActions) {
   const repo = "web"
 
   assetPrefix = `/${repo}/`
-  basePath = `/${repo}/`
+  basePath = `/${repo}`
   imagePath = `/${repo}/`
 }
 

@@ -40,6 +40,7 @@ export default function Index() {
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />
               {t.learn_react}
+              <Typography variant="body1">test</Typography>
 
             </Grid>
           </Grid>

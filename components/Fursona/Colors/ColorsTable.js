@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import Theme from "../../../src/theme";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import getLang from "../../Lang";
 
 import ColorChip from "./ColorChip";
 
@@ -17,47 +18,48 @@ function createData(part, hex, rgb) {
 }
 
 export default function ColorsTable() {
-  const { t } = useTranslation("fursona");
+  const t = getLang().fursona;
+
 
   const rows = [
     createData(
-      t("colors.part1"),
+      t.colors.part1,
       <ColorChip label="45 , 45 , 45" bgcolor="#2D2D2D" color="white" />,
       <ColorChip label="#2D2D2D" bgcolor="#2D2D2D" color="white" />
     ),
 
     createData(
-      t("colors.part2"),
+      t.colors.part2,
       <ColorChip label="160, 160, 160" bgcolor="#A0A0A0" color="black" />,
       <ColorChip label="#A0A0A0" bgcolor="#A0A0A0" color="black" />
     ),
     createData(
-      t("colors.part3"),
+      t.colors.part3,
       <ColorChip label="247, 247, 247" bgcolor="#F7F7F7" color="black" />,
       <ColorChip label="#F7F7F7" bgcolor="#F7F7F7" color="black" />
     ),
     createData(
-      t("colors.part4"),
+      t.colors.part4,
       <ColorChip label="44, 125, 230" bgcolor="#2C7DE6" color="black" />,
       <ColorChip label="#2C7DE6" bgcolor="#2C7DE6" color="black" />
     ),
     createData(
-      t("colors.part5"),
+      t.colors.part5,
       <ColorChip label="0, 219, 255" bgcolor="#00DBFF" color="black" />,
       <ColorChip label="#00DBFF" bgcolor="#00DBFF" color="black" />
     ),
     createData(
-      t("colors.part6"),
+      t.colors.part6,
       <ColorChip label="240, 161, 156" bgcolor="#F0A19C" color="black" />,
       <ColorChip label="#F0A19C" bgcolor="#F0A19C" color="black" />
     ),
     createData(
-      t("colors.part7"),
+      t.colors.part7,
       <ColorChip label="17, 181, 93" bgcolor="#11B55D" color="black" />,
       <ColorChip label="#11B55D" bgcolor="#11B55D" color="black" />
     ),
     createData(
-      t("colors.part8"),
+      t.colors.part8,
       <ColorChip label="226, 229, 101" bgcolor="#E2E565" color="black" />,
       <ColorChip label="#E2E565" bgcolor="#E2E565" color="black" />
     ),
@@ -75,7 +77,7 @@ export default function ColorsTable() {
         <TableHead>
           <TableRow>
             <TableCell>
-              <Typography variant="body2">{t("colors.parts")}</Typography>
+              <Typography variant="body2">{t.colors.parts}</Typography>
             </TableCell>
             <TableCell>
               <Typography variant="body2">RGB</Typography>

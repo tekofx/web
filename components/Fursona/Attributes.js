@@ -9,28 +9,29 @@ import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import getLang from "../Lang";
 
 export default function Attributes() {
-  const { t } = useTranslation("fursona");
+  const t = getLang().fursona;
   var style = { marginRight: "2%", verticalAlign: "middle" };
   const values = [
     {
-      name: t("attributes.strength"),
+      name: t.attributes.strength,
       value: 1,
       icon: <GiBroadsword style={style} />,
     },
     {
-      name: t("attributes.speed"),
+      name: t.attributes.speed,
       value: 4,
       icon: <BsFillLightningChargeFill style={style} />,
     },
     {
-      name: t("attributes.intelligence"),
+      name: t.attributes.intelligence,
       value: 2,
       icon: <FaBrain style={style} />,
     },
     {
-      name: t("attributes.defense"),
+      name: t.attributes.defense,
       value: 3,
       icon: <BsFillShieldFill style={style} />,
     },
@@ -42,7 +43,7 @@ export default function Attributes() {
         <TableHead>
           <TableRow>
             <TableCell>
-              <Typography>{t("attributes.title")}</Typography>
+              <Typography>{t.attributes.title}</Typography>
             </TableCell>
             <TableCell></TableCell>
           </TableRow>

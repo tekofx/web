@@ -5,9 +5,11 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import Attributes from "../components/Fursona/Attributes";
 import Reference from "../components/Fursona/Reference";
+import getLang from "../components/Lang";
 
 export default function Fursona() {
-  const { t } = useTranslation("fursona");
+  const t = getLang().fursona;
+
 
   return (
     <div>
@@ -51,34 +53,34 @@ export default function Fursona() {
           }}
         >
           <Typography align="center" variant="body1">
-            <b>{t("species.title")}: </b>
-            {t("species.value")}
+            <b>{t.species.title}: </b>
+            {t.species.value}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("gender.title")}: </b>
-            {t("gender.value")}
+            <b>{t.gender.title}: </b>
+            {t.gender.value}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("height")}: </b>1.80m
+            <b>{t.height}: </b>1.80m
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("birth")}: </b>22/09
+            <b>{t.birth}: </b>22/09
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("personality.title")}: </b>
-            {t("personality.value")}
+            <b>{t.personality.title}: </b>
+            {t.personality.value}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("abilities.title")}: </b>
-            {t("abilities.value")}
+            <b>{t.abilities.title}: </b>
+            {t.abilities.value}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("likes.title")}: </b>
-            {t("likes.value")}
+            <b>{t.likes.title}: </b>
+            {t.likes.value}
           </Typography>
           <Typography align="center" variant="body1">
-            <b>{t("dislikes.title")}: </b>
-            {t("dislikes.value")}
+            <b>{t.dislikes.title}: </b>
+            {t.dislikes.value}
           </Typography>
         </Grid>
 

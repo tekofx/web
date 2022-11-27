@@ -1,4 +1,80 @@
 {
-  "edit_and_save": "Editar src/App.js y guardar para recargar.",
-  "learn_react": "Aprender React"
+  "pages": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "gallery": "Galería",
+    "about": "Acerca de",
+    "experimental": "Experimental"
+  },
+  "home": {
+    "page": "Inicio",
+    "title": "Bienvenido",
+    "text": "En esta pagina web podras encontrar información/proyectos que haga, la mayoría relacionados con el Furry Fandom",
+    "prideText": "Feliz Mes del Orgullo!!!",
+    "halloweenText": "Halloween 👻",
+    "christmasText": "Feliz navidad!!!",
+    "autumnText": "Viva el otoño 🍂"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "text": "Proyectos que haga y en los que estoy trabajando. Sobre todo hago bots de Discord y programas simples de terminal"
+  },
+  "gallery": {
+    "title": "Galería",
+    "text": "Mis dibujos/fotografías desde Deviantart",
+    "tabAll": "Todo",
+    "tabDrawings": "Arte",
+    "tabPhotography": "Fotografía"
+  },
+  "fursona": {
+    "text": "Teko es un zorro ártico de pelo azul y ojos amarillos y verdes. Tiene poderes de hielo y puede usarlos para crear objetos a partir del hielo.",
+    "name": "Nombre",
+    "species": { "title": "Especie", "value": "Zorro Ártico" },
+    "gender": { "title": "Género", "value": "Hombre" },
+    "height": "Altura",
+    "birth": "Fecha nacimiento",
+    "personality": {
+      "title": "Personalidad",
+      "value": "Positivo, tímido, animado"
+    },
+    "likes": {
+      "title": "Gustos",
+      "value": "Música, ordenadores, juegos, anime, naturaleza, gofres y fotografía"
+    },
+    "dislikes": {
+      "title": "Disgustos",
+      "value": "Gente ruidosa, multitudes y sitios calientes"
+    },
+    "abilities": { "title": "Habilidades", "value": "Poderes de hielo" },
+    "attributes": {
+      "title": "Atributos",
+      "strength": "Fuerza",
+      "speed": "Velocidad",
+      "intelligence": "Inteligencia",
+      "defense": "Defensa"
+    },
+    "colors": {
+      "parts": "Partes",
+      "part1": "Pelaje 1",
+      "part2": "Pelaje 2",
+      "part3": "Pelaje 3",
+      "part4": "Pelo 1",
+      "part5": "Pelo2/Uñas",
+      "part6": "Patas/Orejas",
+      "part7": "Ojos 1",
+      "part8": "Ojos 2"
+    }
+  },
+  "about": {
+    "title": "Acerca de",
+    "text1": "Bienvenido a mi página web!",
+    "text2": "Soy Teko, un estudiante de Ingeniería Informática en España",
+    "text3": "Programador e ingeniero informático en proceso, a quien le gusta programar proyectos sencillos como bots de Discord o esta página web.",
+    "text4": "Ademas me gusta la fotografía y dibujar sobre todo furries.",
+    "subtitle": "Redes Sociales"
+  },
+  "experimental": {
+    "title": "Experimental",
+    "text": "Esta página contiene una serie de experimentos para esta web. Es posible que no funcionen en tu navegador debido a que están en fase de pruebas"
+  }
 }

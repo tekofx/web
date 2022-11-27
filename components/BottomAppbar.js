@@ -12,27 +12,29 @@ import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import getLang from "./Lang";
 
 export default function SimpleBottomNavigation() {
-  const { t } = useTranslation("pages");
+  const t = getLang().pages;
+
   const router = useRouter();
   const pages = [
-    { id: 0, page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
+    { id: 0, page: t.home, navigate: routes.home, icon: <HomeIcon /> },
     {
       id: 1,
-      page: t("projects"),
+      page: t.projects,
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
       id: 2,
-      page: t("gallery"),
+      page: t.gallery,
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { id: 3, page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { id: 4, page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
+    { id: 4, page: t.about, navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   const [value, setValue] = React.useState(getIdFromPath(router.pathname));

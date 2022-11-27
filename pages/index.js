@@ -6,7 +6,7 @@ import getLang from "../components/Lang";
 
 
 export default function Index() {
-  const t = getLang()
+  const t = getLang().home
   return (
     <div>
       <Head>
@@ -27,13 +27,11 @@ export default function Index() {
 
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t.learn_react}</Typography>
-          <Typography variant="body1">{t.learn_react}</Typography>
+          <Typography variant="h1">{t.title}</Typography>
+          <Typography variant="body1">{t.text}</Typography>
           <Grid container>
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />
-              {t.learn_react}
-              <Typography variant="body1">test</Typography>
 
             </Grid>
           </Grid>

@@ -20,26 +20,28 @@ import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "./LanguageSelector";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import getLang from "./Lang";
 
 const ResponsiveAppBar = () => {
   const router = useRouter();
 
-  const { t } = useTranslation("pages");
+  const t = getLang().pages;
+
   const pages = [
-    { page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
+    { page: t.home, navigate: routes.home, icon: <HomeIcon /> },
     {
-      page: t("projects"),
+      page: t.projects,
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
-      page: t("gallery"),
+      page: t.gallery,
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
+    { page: t.about, navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   return (

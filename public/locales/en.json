@@ -1,4 +1,78 @@
 {
-  "edit_and_save": "Edit src/App.js and save to reload.",
-  "learn_react": "Learn React"
+  "pages": {
+    "home": "Home",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "about": "About",
+    "experimental": "Experimental"
+  },
+  "home": {
+    "page": "Home",
+    "title": "Welcome",
+    "text": "On this page I will collect all the information / projects that I am doing, most of them related to Furry Fandom",
+    "prideText": "Happy Pride Month!!!",
+    "halloweenText": "Spooky Halloween!!!",
+    "christmasText": "Happy Christmas!!!",
+    "autumnText": "Happy Autumn!!!",
+    "attributes": "Attributes"
+  },
+  "projects": {
+    "title": "Projects",
+    "text": "Here I will show you all the projects I have done, and the ones I am working on. I usually create Discord bots and simple terminal programs"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "text": "My art/photographies published on Deviantart",
+    "tabAll": "All",
+    "tabDrawings": "Drawings",
+    "tabPhotography": "Photography"
+  },
+  "fursona": {
+    "text": "Teko is an arctic fox with blue hair and green&yellow eyes. He has ice powers and can use them to create objects made of ice.",
+    "name": "Name",
+    "species": { "title": "Species", "value": "Arctic Fox" },
+    "gender": { "title": "Gender", "value": "Male" },
+    "height": "Height",
+    "birth": "Birth",
+    "personality": {
+      "title": "Personality",
+      "value": "Positive, shy, cheerful"
+    },
+    "likes": { "title": "Likes", "value": "Positive, shy, cheerful" },
+    "dislikes": {
+      "title": "Dislike",
+      "value": "Noisy people, crowds and hot places"
+    },
+    "abilities": { "title": "Abilities", "value": "Ice powers" },
+    "attributes": {
+      "title": "Attributes",
+      "strength": "Strength",
+      "speed": "Speed",
+      "intelligence": "Intelligence",
+      "defense": "Defense"
+    },
+    "colors": {
+      "parts": "Parts",
+      "part1": "Fur 1",
+      "part2": "Fur 2",
+      "part3": "Fur 3",
+      "part4": "Hair 1",
+      "part5": "Hair 2/Nails",
+      "part6": "Paws/Ears",
+      "part7": "Eyes 1",
+      "part8": "Eyes 2"
+    }
+  },
+  "about": {
+    "title": "About",
+    "text1": "Welcome to my webpage!",
+    "text2": "I'm Teko, a computer engineering student from Spain.",
+    "text3": "I am a learning computer engineer and programmer, who likes to code simple projects like Discord bots or this webpage.",
+    "text4": "Besides that I also enjoy photography and drawing furries and cute stuff.",
+    "subtitle": "Redes Sociales"
+  },
+  "experimental": {
+    "title": "Experimental",
+    "text": "In this page there are some experiments for this webpage. They are currently being tested, so they might not work for you."
+  }
 }

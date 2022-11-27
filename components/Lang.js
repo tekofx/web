@@ -3,6 +3,7 @@ import en from "../public/locales/en.json"
 import Cookies from "universal-cookie";
 
 export default function getLang() {
+    console.log("uwu")
     const cookies = new Cookies();
     var lang = cookies.get("lang");
     if (lang === "") {

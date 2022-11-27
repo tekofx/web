@@ -10,6 +10,7 @@ import { Skeleton } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
+import getLang from "./Lang";
 import { useState } from "react";
 
 const axios = require("axios");
@@ -24,7 +25,8 @@ export default function ImageGallery() {
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
-  const { t } = useTranslation("gallery");
+  const t = getLang().gallery;
+
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -38,7 +40,7 @@ export default function ImageGallery() {
         repos = response.data;
         // Check if image exists
       })
-      .catch((error) => {});
+      .catch((error) => { });
 
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(repos, "text/xml");
@@ -122,9 +124,9 @@ export default function ImageGallery() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label={<Typography>{t("tabAll")}</Typography>} />
-          <Tab label={<Typography>{t("tabDrawings")}</Typography>} />
-          <Tab label={<Typography>{t("tabPhotography")}</Typography>} />
+          <Tab label={<Typography>{t.tabAll}</Typography>} />
+          <Tab label={<Typography>{t.tabDrawings}</Typography>} />
+          <Tab label={<Typography>{t.tabPhotography}</Typography>} />
         </Tabs>
       </Box>
       {loading ? (

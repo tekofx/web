@@ -11,9 +11,10 @@ import Head from "next/head";
 import Items from "../components/Fursona/Items";
 import Abilities from "../components/Fursona/Abilities";
 import CardCreator from "../components/CardCreator";
-
+import getLang from "../components/Lang";
 function Home() {
-  const { t } = useTranslation("experimental");
+  const t = getLang().experimental;
+
 
   return (
     <div>
@@ -23,8 +24,8 @@ function Home() {
       </Head>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t("title")}</Typography>
-          <Typography variant="body1">{t("text")}</Typography>
+          <Typography variant="h1">{t.title}</Typography>
+          <Typography variant="body1">{t.text}</Typography>
         </Grid>
 
         <Grid item xs={12} sm={12} md={6} lg={6}>

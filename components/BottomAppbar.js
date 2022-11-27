@@ -17,22 +17,22 @@ export default function SimpleBottomNavigation() {
   const { t } = useTranslation("pages");
   const router = useRouter();
   const pages = [
-    { id: 0, page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
+    { id: 0, page: t("home"), process.env.BACKEND_URL + navigate: routes.home, icon: <HomeIcon /> },
     {
       id: 1,
       page: t("projects"),
-      navigate: routes.projects,
+      process.env.BACKEND_URL + navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
       id: 2,
       page: t("gallery"),
-      navigate: routes.gallery,
+      process.env.BACKEND_URL + navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
-    { id: 3, page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
+    { id: 3, page: "Fursona", process.env.BACKEND_URL + navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { id: 4, page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
+    { id: 4, page: t("about"), process.env.BACKEND_URL + navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   const [value, setValue] = React.useState(getIdFromPath(router.pathname));

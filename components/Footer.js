@@ -20,7 +20,7 @@ export default function Footer() {
         <Typography display="inline" variant="body2">
           T
         </Typography>
-        <Link href="/experimental">
+        <Link href="/experimental" as={process.env.BACKEND_URL + "/experimental"}>
           <Typography display="inline" variant="body2">
             e
           </Typography>

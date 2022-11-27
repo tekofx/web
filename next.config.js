@@ -2,17 +2,18 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false
 let assetPrefix = ''
 let basePath = ''
 let imagePath = ""
+let backendUrl = ""
 
 if (isGithubActions) {
-  // trim off `<owner>/`
-  const repo = "web"
-
-  assetPrefix = "https://tekofx.github.io/web/"
+  assetPrefix = "/web"
   basePath = "/web"
-  imagePath = "https://tekofx.github.io/web/"
+  imagePath = "/web"
+
+  backendUrl = "/web"
 }
 
 module.exports = {
+  'process.env.BACKEND_URL': backendUrl,
   reactStrictMode: false,
   images: {
     path: imagePath

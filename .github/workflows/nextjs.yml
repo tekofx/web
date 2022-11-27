@@ -26,6 +26,7 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm i --force
+      - run: npm ci --force
       - run: npm run build
       - run: npm run export
       - run: touch ./out/.nojekyll

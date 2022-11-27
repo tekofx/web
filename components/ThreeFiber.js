@@ -1,8 +1,7 @@
 import React from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls, Stars, useGLTF } from "@react-three/drei";
+import { OrbitControls, Stars } from "@react-three/drei";
 import { Paper } from "@mui/material";
-import { useRef } from "react";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense } from "react";
 

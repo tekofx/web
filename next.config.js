@@ -8,7 +8,7 @@ if (isGithubActions) {
   const repo = "web"
 
   assetPrefix = "https://tekofx.github.io/web/"
-  basePath = "https://tekofx.github.io/web"
+  basePath = "/web"
   imagePath = "https://tekofx.github.io/web/"
 }
 

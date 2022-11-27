@@ -17,5 +17,6 @@ module.exports = {
     path: imagePath
   },
   basePath: basePath,
-  assetPrefix: assetPrefix
+  assetPrefix: assetPrefix,
+
 };

@@ -13,7 +13,6 @@ import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
 import Page from "../components/page";
 import Cookies from "universal-cookie";
-import { I18nContextProvider } from "../components/i18n";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -41,12 +40,10 @@ function MyApp(props) {
           <Layout>
             <Transition>
               <Container maxWidth="xl">
-                <I18nContextProvider>
 
-                  <Page>
-                    <Component {...pageProps} />
-                  </Page>
-                </I18nContextProvider>
+                <Page>
+                  <Component {...pageProps} />
+                </Page>
               </Container>
             </Transition>
           </Layout>

@@ -7,18 +7,20 @@ import { ni18nConfig } from "../ni18n.config";
 import { loadTranslations } from 'ni18n'
 import Cookies from "universal-cookie";
 import { useContext } from "react";
-import LanguageSelect from "../components/LanguageSelect";
+import es from "../public/locales/es.json"
+import en from "../public/locales/en.json"
+import getLang from "../components/Lang";
 
-import { I18nContext } from '../components/i18n';
+
 export default function Index() {
-  const { translate } = useContext(I18nContext);
-  /*   const lang = getLocaleJSON("home"); */
+  const t = getLang()
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
         <title>Home</title>
         <link rel="canonical" href="http://mysite.com/example" />
+
 
         <meta name="og:title" content="Home" />
         <meta name="og:description" content="Home page" />
@@ -32,12 +34,12 @@ export default function Index() {
 
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{translate('learn_react')}</Typography>
-          <Typography variant="body1">{translate('learn_react')}</Typography>
+          <Typography variant="h1">{t.learn_react}</Typography>
+          <Typography variant="body1">{t.learn_react}</Typography>
           <Grid container>
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />
-              <LanguageSelect />
+              {t.learn_react}
 
             </Grid>
           </Grid>

@@ -1,18 +1,18 @@
 import * as React from "react";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import ProTip from "../src/ProTip";
-import Link from "../src/Link";
-import Copyright from "../src/Copyright";
 import Seasons from "../components/Seasons";
 import { useTranslation } from "react-i18next";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
 import { ni18nConfig } from "../ni18n.config";
 import { loadTranslations } from 'ni18n'
+import Cookies from "universal-cookie";
+import { useContext } from "react";
+import LanguageSelect from "../components/LanguageSelect";
 
+import { I18nContext } from '../components/i18n';
 export default function Index() {
-  const { t } = useTranslation("home");
+  const { translate } = useContext(I18nContext);
+  /*   const lang = getLocaleJSON("home"); */
   return (
     <div>
       <Head>
@@ -29,13 +29,16 @@ export default function Index() {
         <meta name="twitter:title" content="Teko's Tundra" />
         <meta name="twitter:description" content="Home" />
       </Head>
+
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t("title")}</Typography>
-          <Typography variant="body1">{t("text")}</Typography>
+          <Typography variant="h1">{translate('learn_react')}</Typography>
+          <Typography variant="body1">{translate('learn_react')}</Typography>
           <Grid container>
             <Grid item xs={12} sm={10} md={6} lg={6}>
               <Seasons />
+              <LanguageSelect />
+
             </Grid>
           </Grid>
         </Grid>

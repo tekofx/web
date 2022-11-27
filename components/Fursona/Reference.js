@@ -34,7 +34,7 @@ export default function Reference() {
           onClick={toggleOpen}
         />
         <Dialog fullScreen TransitionComponent={Transition} open={open}>
-          <img align="left" src="ref.png" alt="" onClick={toggleOpen} />
+          <img align="left" src="img/ref.png" alt="" onClick={toggleOpen} />
         </Dialog>
       </Grid>
       <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>

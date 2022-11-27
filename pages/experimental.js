@@ -37,7 +37,7 @@ function Home() {
           <AmongUS />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={8} lg={8}>
           <Typography variant="h2">Timeline</Typography>
           <Timeline />
         </Grid>

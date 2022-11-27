@@ -8,8 +8,8 @@ if (isGithubActions) {
   const repo = "web"
 
   assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-  imagePath = `/${repo}`
+  basePath = `/${repo}/`
+  imagePath = `/${repo}/`
 }
 
 module.exports = {

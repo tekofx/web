@@ -43,13 +43,4 @@ export default function Index() {
     </div>
   );
 }
-export const getServerSideProps = async (props) => {
-  return {
-    props: {
-      ...(await loadTranslations(ni18nConfig, props.locale, [
-        'home',
-        'projects',
-      ])),
-    },
-  }
-}
+

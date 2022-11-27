@@ -5,7 +5,7 @@ let imagePath = ""
 
 if (isGithubActions) {
   // trim off `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+  const repo = "web"
 
   assetPrefix = `/${repo}/`
   basePath = `/${repo}`

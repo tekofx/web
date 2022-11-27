@@ -1,7 +1,10 @@
+import { motion } from "framer-motion";
 export default function ColorPalette() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -9,7 +12,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -17,7 +22,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -25,7 +32,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -33,7 +42,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -41,7 +52,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -49,7 +62,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",
@@ -57,7 +72,9 @@ export default function ColorPalette() {
           paddingBottom: "12.5%",
         }}
       />
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
         style={{
           height: 0,
           width: "12.5%",

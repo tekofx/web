@@ -31,7 +31,7 @@ function MyApp(props) {
     <div>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="icon" href={process.env.FAVICON + "/favicon.ico"} />
+        <link rel="icon" href="https://raw.githubusercontent.com/tekofx/web/main/public/favicon.ico" />
       </Head>
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>

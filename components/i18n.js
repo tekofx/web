@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 
-import EN from "/locales/en.json";
-import TR from "/locales/tr.json";
-import ES from "/locales/es.json";
+import EN from "locales/en.json";
+import TR from "locales/tr.json";
+import ES from "locales/es.json";
 
 // To make it easier to read from JSON files
 const translations = {

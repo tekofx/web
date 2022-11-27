@@ -7,9 +7,9 @@ if (isGithubActions) {
   // trim off `<owner>/`
   const repo = "web"
 
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-  imagePath = `/${repo}/`
+  assetPrefix = "https://tekofx.github.io/web/"
+  basePath = "https://tekofx.github.io/web"
+  imagePath = "https://tekofx.github.io/web/"
 }
 
 module.exports = {

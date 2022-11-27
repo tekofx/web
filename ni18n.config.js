@@ -4,7 +4,7 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false
 let localePath = '/locales/{{lng}}/{{ns}}.json'
 
 if (isGithubActions) {
-  localePath = '/locales/{{lng}}/{{ns}}.json'
+  localePath = '/web/locales/{{lng}}/{{ns}}.json'
 
 
 }

@@ -8,6 +8,8 @@ import Seasons from "../components/Seasons";
 import { useTranslation } from "react-i18next";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
+import { ni18nConfig } from "../ni18n.config";
+import { loadTranslations } from 'ni18n'
 
 export default function Index() {
   const { t } = useTranslation("home");
@@ -40,4 +42,14 @@ export default function Index() {
       </Grid>
     </div>
   );
+}
+export const getServerSideProps = async (props) => {
+  return {
+    props: {
+      ...(await loadTranslations(ni18nConfig, props.locale, [
+        'home',
+        'projects',
+      ])),
+    },
+  }
 }

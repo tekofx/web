@@ -1,8 +1,8 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
+
 let assetPrefix = ''
 let basePath = ''
 let imagePath = ""
-let backendUrl = ""
 
 if (isGithubActions) {
   assetPrefix = "/web"

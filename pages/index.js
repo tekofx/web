@@ -1,14 +1,7 @@
 import * as React from "react";
 import Seasons from "../components/Seasons";
-import { useTranslation } from "react-i18next";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
-import { ni18nConfig } from "../ni18n.config";
-import { loadTranslations } from 'ni18n'
-import Cookies from "universal-cookie";
-import { useContext } from "react";
-import es from "../public/locales/es.json"
-import en from "../public/locales/en.json"
 import getLang from "../components/Lang";
 
 

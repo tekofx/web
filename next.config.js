@@ -9,11 +9,9 @@ if (isGithubActions) {
   basePath = "/web"
   imagePath = "/web"
 
-  backendUrl = "/web"
 }
 
 module.exports = {
-  'process.env.BACKEND_URL': backendUrl,
   reactStrictMode: false,
   images: {
     path: imagePath

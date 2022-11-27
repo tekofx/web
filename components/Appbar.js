@@ -26,20 +26,20 @@ const ResponsiveAppBar = () => {
 
   const { t } = useTranslation("pages");
   const pages = [
-    { page: t("home"), navigate: process.env.BACKEND_URL + routes.home, icon: <HomeIcon /> },
+    { page: t("home"), navigate: routes.home, icon: <HomeIcon /> },
     {
       page: t("projects"),
-      navigate: process.env.BACKEND_URL + routes.projects,
+      navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
       page: t("gallery"),
-      navigate: process.env.BACKEND_URL + routes.gallery,
+      navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
-    { page: "Fursona", navigate: process.env.BACKEND_URL + routes.fursona, icon: <PetsIcon /> },
+    { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t("about"), navigate: process.env.BACKEND_URL + routes.about, icon: <InfoIcon /> },
+    { page: t("about"), navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   return (

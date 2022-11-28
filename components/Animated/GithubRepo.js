@@ -7,29 +7,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
+
 
 export default function AnimatedIcon(props) {
-    const [state, toggle] = useState(true);
-    const AnimatedCard = animated(Card);
     const { t } = useTranslation();
 
 
-    const styles = useSpring({
-        loop: false,
-        from: { scale: 1 },
-        to: {
-            scale: state ? 1 : 1.05,
-        },
-
-        config: { duration: 200 }
-    })
 
     return (
-        <AnimatedCard className="card" style={styles} onMouseEnter={() => toggle(!state)} onMouseLeave={() => toggle(!state)}>
+        <Card className="card" component={motion.div} whileHover={{ scale: 1.080 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}>
             <CardMedia
                 component="img"
                 width="auto"
                 image={props.img}
+
             />
             <CardContent className='cardContent' sx={{ minHeight: 100 }}>
                 <Typography gutterBottom variant="h4" component="div">
@@ -42,6 +35,6 @@ export default function AnimatedIcon(props) {
             <CardActions className='cardContent'>
                 <Button className='button' variant='contained' target="_blank" href={props.url} size="small">{t('githubButton')}</Button>
             </CardActions>
-        </AnimatedCard >
+        </Card >
     )
 }

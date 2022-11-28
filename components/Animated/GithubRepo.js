@@ -8,10 +8,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
+import getLang from "../Lang";
+
 
 
 export default function AnimatedIcon(props) {
-    const { t } = useTranslation();
+    const t = getLang().projects;
+
 
 
 
@@ -33,7 +36,7 @@ export default function AnimatedIcon(props) {
                 </Typography>
             </CardContent>
             <CardActions className='cardContent'>
-                <Button className='button' variant='contained' target="_blank" href={props.url} size="small">{t('githubButton')}</Button>
+                <Button className='button' variant='contained' target="_blank" href={props.url} size="small">{t.button}</Button>
             </CardActions>
         </Card >
     )

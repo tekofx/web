@@ -18,7 +18,8 @@
   },
   "projects": {
     "title": "Projects",
-    "text": "Here I will show you all the projects I have done, and the ones I am working on. I usually create Discord bots and simple terminal programs"
+    "text": "Here I will show you all the projects I have done, and the ones I am working on. I usually create Discord bots and simple terminal programs",
+    "button": "See on Github"
   },
   "gallery": {
     "title": "Gallery",
@@ -30,20 +31,32 @@
   "fursona": {
     "text": "Teko is an arctic fox with blue hair and green&yellow eyes. He has ice powers and can use them to create objects made of ice.",
     "name": "Name",
-    "species": { "title": "Species", "value": "Arctic Fox" },
-    "gender": { "title": "Gender", "value": "Male" },
+    "species": {
+      "title": "Species",
+      "value": "Arctic Fox"
+    },
+    "gender": {
+      "title": "Gender",
+      "value": "Male"
+    },
     "height": "Height",
     "birth": "Birth",
     "personality": {
       "title": "Personality",
       "value": "Positive, shy, cheerful"
     },
-    "likes": { "title": "Likes", "value": "Positive, shy, cheerful" },
+    "likes": {
+      "title": "Likes",
+      "value": "Positive, shy, cheerful"
+    },
     "dislikes": {
       "title": "Dislike",
       "value": "Noisy people, crowds and hot places"
     },
-    "abilities": { "title": "Abilities", "value": "Ice powers" },
+    "abilities": {
+      "title": "Abilities",
+      "value": "Ice powers"
+    },
     "attributes": {
       "title": "Attributes",
       "strength": "Strength",

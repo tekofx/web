@@ -17,7 +17,8 @@
   },
   "projects": {
     "title": "Proyectos",
-    "text": "Proyectos que haga y en los que estoy trabajando. Sobre todo hago bots de Discord y programas simples de terminal"
+    "text": "Proyectos que haga y en los que estoy trabajando. Sobre todo hago bots de Discord y programas simples de terminal",
+    "button":"Ver en Github"
   },
   "gallery": {
     "title": "Galería",

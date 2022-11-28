@@ -14,6 +14,7 @@ if (isGithubActions) {
 }
 
 module.exports = {
+  output: 'standalone',
   reactStrictMode: false,
   images: {
     path: imagePath

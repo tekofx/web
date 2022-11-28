@@ -27,3 +27,4 @@ web.code-workspace
 .vscode/settings.json
 
 .next/
+package-lock.json

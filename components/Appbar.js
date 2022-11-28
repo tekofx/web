@@ -79,15 +79,7 @@ const ResponsiveAppBar = () => {
                 </Button>
               ))}
             </Box>
-            <Box
-              sx={{
-                display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
-              }}
-            >
-              <Twitter />
-              <Mastodon />
-              <Github />
-            </Box>
+
 
             <LanguageSelector />
           </Toolbar>

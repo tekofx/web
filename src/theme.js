@@ -182,6 +182,19 @@ Theme.typography.body2 = {
   },
 };
 
+Theme.typography.body3 = {
+  color: "#A7A7A7",
+
+  fontSize: "0.8rem",
+
+  "@media (min-width:600px)": {
+    fontSize: "0.8rem",
+  },
+  [Theme.breakpoints.up("md")]: {
+    fontSize: "1rem",
+  },
+};
+
 // Presentation Card text
 Theme.typography.card_name = {
   color: "#000",

@@ -12,6 +12,7 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
 import getLang from "./Lang";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 const axios = require("axios");
 
@@ -151,25 +152,26 @@ export default function ImageGallery() {
           }}
         >
           {posts.map((item, key) => (
-            <>
-              <ImageListItem
-                key={key}
-                cols={item.cols || 1}
-                rows={item.rows || 1}
-              >
-                <img
-                  {...srcset(item.src, 100, item.rows, item.cols)}
-                  alt={item.lightboxTitle}
-                  loading="lazy"
-                  onClick={toggleOpen}
-                />
-                <ImageListItemBar
-                  title={item.title}
-                  subtitle={item.description}
-                  position="bottom"
-                />
-              </ImageListItem>
-            </>
+            <ImageListItem
+              component={motion.li}
+              whileHover={{ scale: 1.080 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              key={key}
+              cols={item.cols || 1}
+              rows={item.rows || 1}
+            >
+              <img
+                {...srcset(item.src, 100, item.rows, item.cols)}
+                alt={item.lightboxTitle}
+                loading="lazy"
+                onClick={toggleOpen}
+              />
+              <ImageListItemBar
+                title={item.title}
+                subtitle={item.description}
+                position="bottom"
+              />
+            </ImageListItem>
           ))}
         </ImageList>
       )}

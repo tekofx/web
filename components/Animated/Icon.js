@@ -1,32 +1,16 @@
-import { useSpring, animated } from "react-spring";
-import { useState } from "react";
 import { IconButton } from "@mui/material";
-import Theme from "../../src/theme";
+import { motion } from "framer-motion";
 
 export default function AnimatedIcon(props) {
-  const [state, toggle] = useState(true);
-  const AnimatedIconButton = animated(IconButton);
-
-  const styles = useSpring({
-    loop: false,
-    from: { scale: 1, color: props.color1 },
-    to: {
-      scale: state ? 1 : 1.5,
-      color: state ? props.color1 : Theme.palette.secondary.main,
-    },
-
-    config: { duration: 200 },
-  });
-
   return (
-    <AnimatedIconButton
-      onMouseEnter={() => toggle(!state)}
-      onMouseLeave={() => toggle(!state)}
-      style={styles}
+    <IconButton
+      LinkComponent={motion.a}
       target="_blank"
       href={props.url}
+      whileHover={{ scale: 1.080, backgroundColor: "white", color: "black" }}
+      transition={{ type: "spring", stiffness: 400, damping: 20 }}
     >
       {props.icon}
-    </AnimatedIconButton>
+    </IconButton>
   );
 }

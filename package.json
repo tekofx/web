@@ -31,7 +31,7 @@
     "next-i18next": "^13.0.0",
     "ni18n": "^1.0.5",
     "prop-types": "latest",
-    "react": "latest",
+    "react": "18.2.0",
     "react-dom": "latest",
     "react-helmet": "^6.1.0",
     "react-i18next": "^12.0.0",
@@ -42,10 +42,6 @@
     "react-tsparticles": "^2.5.3",
     "tsparticles": "^2.5.3",
     "universal-cookie": "^4.0.4"
-  },
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "latest"
   },
   "browser": {
     "fs": false,

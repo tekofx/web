@@ -1,34 +1,20 @@
-import { useSpring, animated } from "react-spring";
-import { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Card, ThemeProvider, Grid, SvgIcon } from "@mui/material";
+import { motion } from "framer-motion";
 
 import Theme from "../../src/theme";
 
 export default function AnimatedCard(props) {
-  const [state, toggle] = useState(true);
-  const AnimatedCard = animated(Card);
-
-  const styles = useSpring({
-    loop: false,
-    from: { scale: 1, color: "white", bgcolor: Theme.palette.background.paper },
-    to: {
-      scale: state ? 1 : 1.05,
-      color: state ? "white" : "black",
-      bgcolor: state ? "white" : Theme.palette.background.paper,
-    },
-    config: { duration: 200 },
-  });
-
   return (
     <ThemeProvider theme={Theme}>
-      <AnimatedCard
-        onMouseEnter={() => toggle(!state)}
-        onMouseLeave={() => toggle(!state)}
+
+      <Card component={motion.div}
         onClick={() => window.open(props.url)}
-        style={styles}
-        sx={{ bgcolor: styles.bgcolor.animation.to, width: "95%", padding: 1 }}
+        whileHover={{ scale: 1.080, backgroundColor: "white", color: "black" }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+        sx={{ bgcolor: Theme.palette.background.paper, width: "95%", padding: 1 }}
       >
+
         <Grid container spacing={1}>
           <Grid
             item
@@ -67,7 +53,7 @@ export default function AnimatedCard(props) {
             <ArrowForwardIcon />
           </Grid>
         </Grid>
-      </AnimatedCard>
+      </Card>
     </ThemeProvider>
   );
 }

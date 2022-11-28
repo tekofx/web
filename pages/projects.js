@@ -1,7 +1,8 @@
 import React from "react";
 import RepositoryList from "../components/Github/RepositoryList";
 import { Typography } from "@mui/material";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+
 import getLang from "../components/Lang";
 
 
@@ -10,10 +11,10 @@ function Projects() {
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Projects</title>
-      </Helmet>
+      </Head>
       <Typography variant="h1">{t.title}</Typography>
       <Typography variant="body1">{t.text}</Typography>
       <RepositoryList />

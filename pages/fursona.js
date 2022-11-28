@@ -2,7 +2,8 @@ import React from "react";
 import { Avatar, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+
 import Attributes from "../components/Fursona/Attributes";
 import Reference from "../components/Fursona/Reference";
 import getLang from "../components/Lang";
@@ -13,10 +14,10 @@ export default function Fursona() {
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Fursona</title>
-      </Helmet>
+      </Head>
       <br />
 
       {/** Fursona information */}

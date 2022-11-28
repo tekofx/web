@@ -4,18 +4,19 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import SocialCards from "../components/SocialCards";
-import { Helmet } from "react-helmet";
 import getLang from "../components/Lang";
+import Head from "next/head";
+
 
 function About() {
   const t = getLang().about;
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>About</title>
-      </Helmet>
+      </Head>
       <Typography variant="h1">{t.title}</Typography>
 
       <Grid container spacing={2}>

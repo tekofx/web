@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS";
 import Timeline from "../components/Fursona/Timeline";
-import { Helmet } from "react-helmet";
+
 import Head from "next/head";
 
 import Items from "../components/Fursona/Items";

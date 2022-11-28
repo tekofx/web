@@ -2,7 +2,8 @@ import React from "react";
 import ImageGallery from "../components/ImageGallery";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+
 import getLang from "../components/Lang";
 
 function Gallery() {
@@ -10,10 +11,10 @@ function Gallery() {
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Gallery</title>
-      </Helmet>
+      </Head>
       <Typography variant="h1">{t.title}</Typography>
       <Typography variant="body1">{t.text}</Typography>
       <ImageGallery />

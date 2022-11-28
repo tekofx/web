@@ -7,12 +7,15 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import ColorPalette from "./Colors/ColorPalette";
+import getLang from "../Lang";
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function Reference() {
-  const { t } = useTranslation("fursona");
+  const t = getLang().fursona;
+
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -23,7 +26,7 @@ export default function Reference() {
       <Grid item xs={12}>
         <br />
         <Typography variant="h2">Reference</Typography>
-        <Typography variant="body1">{t("text")}</Typography>
+        <Typography variant="body1">{t.text}</Typography>
       </Grid>
       <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
         <img

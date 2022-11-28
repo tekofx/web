@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/AmongUS";
 import Timeline from "../components/Fursona/Timeline";
-
+import Presentation from "../components/Presentation";
 import Head from "next/head";
 
 import Items from "../components/Fursona/Items";
@@ -50,6 +50,10 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <CardCreator />
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <Presentation />
         </Grid>
       </Grid>
     </div>

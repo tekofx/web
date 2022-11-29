@@ -33,15 +33,19 @@ export default function RepositoryList(props) {
         repos = response.data;
         // Check if image exists
       })
-      .catch((error) => {});
+      .catch((error) => { });
     var reposWithImg = [];
     var reposWithoutImg = [];
     // Check if image exists
     for (let i = 0; i < repos.length; i++) {
+
+
+
+
       const exists = await existsImage(
         "https://raw.githubusercontent.com/tekofx/" +
-          repos[i].name +
-          "/main/assets/banner.png"
+        repos[i].name +
+        "/main/assets/banner.png"
       );
       if (!exists) {
         repos[i].img = "img/repo-banner-template.png";
@@ -84,6 +88,7 @@ export default function RepositoryList(props) {
                 description={item.description}
                 url={item.html_url}
                 img={item.img}
+                topics={item.topics}
               />
             </Grid>
           ) : (
@@ -94,6 +99,7 @@ export default function RepositoryList(props) {
                   description="Cool description "
                   url="url"
                   img="/repo-banner-template.png"
+                  topics={[]}
                 />
               </Skeleton>
             </Grid>

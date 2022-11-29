@@ -35,7 +35,7 @@ export default function Footer() {
         <Grid container justifyContent="flex-end" alignItems="right">
 
           <Grid item xs={12} sm={12} md={12} lg={12}>
-            <a href="google.es" style={{ textDecoration: "none" }}>
+            <a href="https://github.com/tekofx/web" style={{ textDecoration: "none" }}>
 
               <Typography align="right" variant="body2" >
                 Website source code

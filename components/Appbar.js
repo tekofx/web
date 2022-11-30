@@ -21,6 +21,7 @@ import LanguageSelector from "./LanguageSelector";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import getLang from "./Lang";
+import { motion } from "framer-motion";
 
 const ResponsiveAppBar = () => {
   const router = useRouter();
@@ -63,6 +64,9 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <Button
+                  component={motion.div}
+                  whileHover={{ scale: 1.080, backgroundColor: "white", color: "black" }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
                   key={page.page}
                   size="small"
                   sx={{

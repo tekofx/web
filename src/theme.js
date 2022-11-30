@@ -14,10 +14,10 @@ var Theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#0099b2",
+      main: "#00DBFF",
     },
     secondary: {
-      main: "#edf069",
+      main: "#259bf9",
     },
     background: {
       main: "#303030",
@@ -26,7 +26,7 @@ var Theme = createTheme({
       main: "#f0a19c",
     },
     info: {
-      main: "#259bf9",
+      main: "#edf069",
     },
   },
   components: {

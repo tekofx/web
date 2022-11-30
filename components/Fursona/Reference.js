@@ -4,23 +4,17 @@ import { Grid } from "@mui/material";
 import ColorsTable from "./Colors/ColorsTable";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import ColorPalette from "./Colors/ColorPalette";
 import getLang from "../Lang";
+import { useRouter } from "next/router";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 export default function Reference() {
   const t = getLang().fursona;
+  const router = useRouter();
 
-  const [open, setOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -34,11 +28,9 @@ export default function Reference() {
           src="img/ref-small.jpg"
           alt=""
           width={"100%"}
-          onClick={toggleOpen}
+          onClick={() => router.push("img/ref.png")}
         />
-        <Dialog fullScreen TransitionComponent={Transition} open={open}>
-          <img align="left" src="img/ref.png" alt="" onClick={toggleOpen} />
-        </Dialog>
+
       </Grid>
       <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
         <Typography variant="h3">Color Reference</Typography>

@@ -11,7 +11,7 @@ export default function Blog({ posts }) {
 
     return (
         <Grid container spacing={2}>
-            {posts.map(post => {
+            {posts.map((post, key) => {
                 //extract slug and frontmatter
                 const { slug, frontmatter } = post
                 //extract frontmatter properties
@@ -20,7 +20,7 @@ export default function Blog({ posts }) {
                 //JSX for individual blog listing
 
                 return (
-                    <Grid item lg={3}>
+                    <Grid item lg={3} key={key}>
                         <Card key={title}>
                             <CardMedia component="img" width="100%" image={bannerImage} />
                             <CardContent>

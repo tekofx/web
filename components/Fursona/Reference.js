@@ -8,7 +8,7 @@ import Slide from "@mui/material/Slide";
 import ColorPalette from "./Colors/ColorPalette";
 import getLang from "../Language/Lang";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
 
 export default function Reference() {
   const t = getLang().fursona;

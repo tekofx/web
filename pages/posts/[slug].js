@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from 'markdown-it';
+import Image from "next/image";
 
 // The page for each post
 export default function Post({ frontmatter, content }) {
@@ -8,7 +9,7 @@ export default function Post({ frontmatter, content }) {
     const { title, author, category, date, bannerImage, tags } = frontmatter
 
     return <main>
-        <img src={bannerImage} width="100%" />
+        <Image src={bannerImage} width="100%" />
         <h1>{title}</h1>
         <h2>{author} || {date}</h2>
         <h3>{category} || {tags.join()}</h3>

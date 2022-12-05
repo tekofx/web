@@ -8,10 +8,10 @@ import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/layout";
 import "../styles/transition.css";
-import Transition from "../components/Transition";
+import Transition from "../components/Layout/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
-import Page from "../components/page";
+import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 
 // Client-side cache, shared for the whole session of the user in the browser.

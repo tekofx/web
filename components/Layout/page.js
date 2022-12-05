@@ -1,4 +1,4 @@
-import Footer from "./Layout/Footer";
+import Footer from "./Footer";
 import { Box } from "@mui/material";
 export default function Page({ children }) {
   return (

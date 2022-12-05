@@ -9,7 +9,7 @@ import Paper from "@mui/material/Paper";
 import Theme from "../../../src/theme";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import getLang from "../../Lang";
+import getLang from "../../Language/Lang";
 
 import ColorChip from "./ColorChip";
 

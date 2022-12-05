@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import SocialCards from "../components/Social/SocialCards";
-import getLang from "../components/Lang";
+import getLang from "../components/Language/Lang";
 import Head from "next/head";
 
 

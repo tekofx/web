@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Slide from "@mui/material/Slide";
 import ColorPalette from "./Colors/ColorPalette";
-import getLang from "../Lang";
+import getLang from "../Language/Lang";
 import { useRouter } from "next/router";
 
 

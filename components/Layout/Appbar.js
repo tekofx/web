@@ -12,9 +12,9 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
-import LanguageSelector from "../LanguageSelector";
+import LanguageSelector from "../Language/LanguageSelector";
 import { useRouter } from "next/router";
-import getLang from "../Lang";
+import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 
 const ResponsiveAppBar = () => {

@@ -2,7 +2,7 @@ import * as React from "react";
 import Seasons from "../components/Seasons";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
-import getLang from "../components/Lang";
+import getLang from "../components/Language/Lang";
 
 
 export default function Index() {

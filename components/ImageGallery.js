@@ -10,7 +10,7 @@ import { Skeleton } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
-import getLang from "./Lang";
+import getLang from "./Language/Lang";
 import { useState } from "react";
 import { motion } from "framer-motion"
 

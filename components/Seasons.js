@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Typography } from "@mui/material";
-import getLang from "./Lang";
+import getLang from "./Language/Lang";
 
 /**
  * January:0

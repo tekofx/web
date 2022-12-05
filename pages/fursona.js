@@ -6,7 +6,7 @@ import Head from "next/head";
 
 import Attributes from "../components/Fursona/Attributes";
 import Reference from "../components/Fursona/Reference";
-import getLang from "../components/Lang";
+import getLang from "../components/Language/Lang";
 
 export default function Fursona() {
   const t = getLang().fursona;

@@ -1,5 +1,5 @@
-import es from "../public/locales/es.json"
-import en from "../public/locales/en.json"
+import es from "../../public/locales/es.json"
+import en from "../../public/locales/en.json"
 import Cookies from "universal-cookie";
 
 export default function getLang() {

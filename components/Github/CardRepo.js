@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Chip, Grid } from '@mui/material';
 import { motion } from "framer-motion";
-import getLang from "../Lang";
+import getLang from "../Language/Lang";
 
 
 export default function AnimatedIcon(props) {

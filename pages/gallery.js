@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
 
-import getLang from "../components/Lang";
+import getLang from "../components/Language/Lang";
 
 function Gallery() {
   const t = getLang().projects;

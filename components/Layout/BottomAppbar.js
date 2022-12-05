@@ -2,17 +2,15 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import routes from "../routes.json";
-import { useTranslation } from "react-i18next";
+import routes from "../../routes.json";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
-import LanguageSelector from "./LanguageSelector";
-import Link from "next/link";
+import LanguageSelector from "../LanguageSelector";
 import { useRouter } from "next/router";
-import getLang from "./Lang";
+import getLang from "../Lang";
 
 export default function SimpleBottomNavigation() {
   const t = getLang().pages;

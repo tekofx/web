@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
-import Layout from "../components/layout";
+import Layout from "../components/Layout/layout";
 import "../styles/transition.css";
 import Transition from "../components/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";

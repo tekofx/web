@@ -1,12 +1,10 @@
 import * as React from "react";
 import { Typography, Box, Grid } from "@mui/material";
-import routes from "../routes.json";
-import Link from "next/link";
-import Twitter from "./Icons/Twitter";
-import Github from "./Icons/Github";
-import Mastodon from "./Icons/Mastodon";
-import FurAffinity from "./Icons/FurAffinity";
-import Deviantart from "./Icons/Deviantart";
+import Twitter from "../Icons/Twitter";
+import Github from "../Icons/Github";
+import Mastodon from "../Icons/Mastodon";
+import FurAffinity from "../Icons/FurAffinity";
+import Deviantart from "../Icons/Deviantart";
 
 export default function Footer() {
   const year = new Date().getFullYear();

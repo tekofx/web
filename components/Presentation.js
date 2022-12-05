@@ -1,7 +1,10 @@
 import { Grid, Avatar, Typography, Box, Stack } from "@mui/material";
 import Chip from "./Chip";
+import { useRouter } from "next/router";
 
 export default function Presentation() {
+    const router = useRouter();
+
     return (
         <Grid container spacing={4}
             direction="row"
@@ -32,8 +35,9 @@ export default function Presentation() {
                     <Stack direction="row" spacing={7}
 
                     >
-                        <Chip sx={{ width: "120%", height: "100px" }} label="Recent Blog Posts" />
-                        <Chip label="My Fursona" />
+                        <Chip text="Recent Blog Posts" onClick={() => router.push("/blog")} />
+                        <Chip text="My Fursona" onClick={() => router.push("/fursona")} />
+
                     </Stack>
                 </Box>
             </Grid>

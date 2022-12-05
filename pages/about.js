@@ -3,7 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import SocialCards from "../components/SocialCards";
+import SocialCards from "../components/Social/SocialCards";
 import getLang from "../components/Lang";
 import Head from "next/head";
 

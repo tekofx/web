@@ -38,15 +38,14 @@ export default function Footer() {
             <a href="https://github.com/tekofx/web" style={{ textDecoration: "none" }}>
 
               <Typography align="right" variant="body2" >
-                Website source code
+                &lt;Website source code&gt;
               </Typography>
             </a>
 
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography align="right" variant="body2">
-              Teko's Tundra {year}{" "}
-              {/**TODO: Add first commit year */}
+              Teko's Tundra {2022 > year ? `${2022}-` : ""}{year}
             </Typography>
 
           </Grid>

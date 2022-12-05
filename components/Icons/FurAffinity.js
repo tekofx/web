@@ -1,7 +1,17 @@
+import * as React from 'react';
+import AnimatedIcon from './AnimatedIcon';
 import SvgIcon from '@mui/material/SvgIcon';
 
+export default function Icon500px() {
 
-export default function FurAffinity() {
+    return (
+        <AnimatedIcon icon={FurAffinity()} url="https://www.furaffinity.net/user/teko." color1="#faaf3a" />
+    );
+}
+
+
+
+function FurAffinity() {
     return (
         <SvgIcon>
             <title>fur-affinity</title>

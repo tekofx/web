@@ -1,5 +1,5 @@
-import { Grid, Avatar, Chip, Typography, Box, Stack } from "@mui/material";
-
+import { Grid, Avatar, Typography, Box, Stack } from "@mui/material";
+import Chip from "./Chip";
 
 export default function Presentation() {
     return (
@@ -32,7 +32,7 @@ export default function Presentation() {
                     <Stack direction="row" spacing={7}
 
                     >
-                        <Chip label="Recent Blog Posts" />
+                        <Chip sx={{ width: "120%", height: "100px" }} label="Recent Blog Posts" />
                         <Chip label="My Fursona" />
                     </Stack>
                 </Box>

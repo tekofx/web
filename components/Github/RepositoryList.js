@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useEffect } from "react";
 import { Skeleton } from "@mui/material";
-import GithubRepo from "../Animated/GithubRepo";
+import GithubRepo from "./CardRepo";
 import axios, * as others from "axios";
 
 export default function RepositoryList(props) {

@@ -5,12 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Chip, Grid } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
 import getLang from "../Lang";
-import { useState } from 'react';
-
-
 
 
 export default function AnimatedIcon(props) {

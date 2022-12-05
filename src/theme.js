@@ -226,6 +226,16 @@ Theme.typography.card_value = {
   },
 };
 
+Theme.typography.chip = {
+  color: "#000",
+
+  fontSize: "1.2rem",
+
+  [Theme.breakpoints.up("md")]: {
+    fontSize: "1.5rem",
+  },
+};
+
 //Theme = responsiveFontSizes(Theme);
 
 export default Theme;

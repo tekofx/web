@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
-import QRCode from "../QRCode";
+import QRCode from "./QRCode";
 
 export default function PresentationCard(props) {
   return (

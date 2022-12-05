@@ -1,4 +1,4 @@
-import Card from "./Fursona/FursonaCard";
+import Card from "./FursonaCard";
 import { TextField, Grid, Button, Box, IconButton } from "@mui/material";
 import { PhotoCamera } from "@mui/icons-material";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";

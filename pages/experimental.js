@@ -10,7 +10,7 @@ import Head from "next/head";
 
 import Items from "../components/Fursona/Items";
 import Abilities from "../components/Fursona/Abilities";
-import CardCreator from "../components/CardCreator";
+import CardCreator from "../components/Fursona/CardCreator";
 import getLang from "../components/Lang";
 function Home() {
   const t = getLang().experimental;

@@ -22,13 +22,16 @@ export default function BasicMenu() {
   };
 
   return (
-    <div>
+    <div
+
+    >
       <IconButton
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        onMouseOver={(e) => handleClick(e)}
+        onMouseLeave={() => handleClose}
       >
         <LanguageIcon color="primary" />
       </IconButton>
@@ -37,9 +40,7 @@ export default function BasicMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
+        MenuListProps={{ onMouseLeave: handleClose }}
       >
         <MenuItem
           onClick={function (event) {

@@ -13,7 +13,8 @@ function Projects() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Projects</title>
+        <title>Projects | Teko Tundra</title>
+
       </Head>
       <Typography variant="h1">{t.title}</Typography>
       <Typography variant="body1">{t.text}</Typography>

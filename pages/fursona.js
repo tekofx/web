@@ -16,7 +16,8 @@ export default function Fursona() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Fursona</title>
+        <title>Fursona | Teko Tundra</title>
+
       </Head>
       <br />
 

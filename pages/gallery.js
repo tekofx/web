@@ -13,7 +13,8 @@ function Gallery() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Gallery</title>
+        <title>Gallery | Teko Tundra</title>
+
       </Head>
       <Typography variant="h1">{t.title}</Typography>
       <Typography variant="body1">{t.text}</Typography>

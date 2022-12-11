@@ -7,7 +7,7 @@ import Head from "next/head";
 import getLang from "../components/Language/Lang";
 
 function Gallery() {
-  const t = getLang().projects;
+  const t = getLang().gallery;
 
   return (
     <div>

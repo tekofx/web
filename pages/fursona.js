@@ -3,6 +3,7 @@ import { Avatar, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
+import Data from "../components/Fursona/Data"
 
 import Attributes from "../components/Fursona/Attributes";
 import Reference from "../components/Fursona/Reference";
@@ -16,7 +17,8 @@ export default function Fursona() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Fursona</title>
+        <title>Fursona | Teko Tundra</title>
+
       </Head>
       <br />
 
@@ -53,36 +55,7 @@ export default function Fursona() {
             justifyContent: "center",
           }}
         >
-          <Typography align="center" variant="body1">
-            <b>{t.species.title}: </b>
-            {t.species.value}
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.gender.title}: </b>
-            {t.gender.value}
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.height}: </b>1.80m
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.birth}: </b>22/09
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.personality.title}: </b>
-            {t.personality.value}
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.abilities.title}: </b>
-            {t.abilities.value}
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.likes.title}: </b>
-            {t.likes.value}
-          </Typography>
-          <Typography align="center" variant="body1">
-            <b>{t.dislikes.title}: </b>
-            {t.dislikes.value}
-          </Typography>
+          <Data />
         </Grid>
 
         <Grid

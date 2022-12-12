@@ -7,13 +7,14 @@ import Head from "next/head";
 import getLang from "../components/Language/Lang";
 
 function Gallery() {
-  const t = getLang().projects;
+  const t = getLang().gallery;
 
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Gallery</title>
+        <title>Gallery | Teko Tundra</title>
+
       </Head>
       <Typography variant="h1">{t.title}</Typography>
       <Typography variant="body1">{t.text}</Typography>

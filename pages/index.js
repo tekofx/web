@@ -11,7 +11,7 @@ export default function Index() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Home</title>
+        <title>Home | Teko Tundra</title>
         <link rel="canonical" href="http://mysite.com/example" />
 
 

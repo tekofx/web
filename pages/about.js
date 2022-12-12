@@ -15,7 +15,8 @@ function About() {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>About</title>
+        <title>About | Teko Tundra</title>
+
       </Head>
       <Typography variant="h1">{t.title}</Typography>
 

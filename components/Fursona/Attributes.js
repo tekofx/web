@@ -10,6 +10,8 @@ import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import getLang from "../Language/Lang";
+import { motion } from "framer-motion"
+import { MoreTimeOutlined } from "@mui/icons-material";
 
 export default function Attributes() {
   const t = getLang().fursona;
@@ -38,32 +40,33 @@ export default function Attributes() {
   ];
 
   return (
-    <TableContainer>
-      <Table size="small">
-        <TableHead>
-          <TableRow>
+    <Table size="small" >
+      <TableHead>
+        <TableRow>
+          <TableCell>
+            <Typography>{t.attributes.title}</Typography>
+          </TableCell>
+          <TableCell></TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {values.map((value, key) => (
+          <TableRow key={key} component={motion.tr}
+            whileHover={{ scale: 1.080 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          >
             <TableCell>
-              <Typography>{t.attributes.title}</Typography>
+              <Typography variant="body1">
+                {value.icon}
+                {value.name}
+              </Typography>
             </TableCell>
-            <TableCell></TableCell>
+            <TableCell>
+              <Typography variant="body1">{value.value}</Typography>
+            </TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {values.map((value, key) => (
-            <TableRow key={key}>
-              <TableCell>
-                <Typography variant="body1">
-                  {value.icon}
-                  {value.name}
-                </Typography>
-              </TableCell>
-              <TableCell>
-                <Typography variant="body1">{value.value}</Typography>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+        ))}
+      </TableBody>
+    </Table>
   );
 }

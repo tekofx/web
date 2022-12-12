@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-export default function ColorPalette() {
+export default function ColorPalette(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       <motion.div
@@ -10,7 +10,11 @@ export default function ColorPalette() {
           width: "12.5%",
           backgroundColor: "#2D2D2D",
           paddingBottom: "12.5%",
+
         }}
+        onMouseOver={() => props.setSelectedColor("#2D2D2D")}
+        onMouseLeave={() => props.setSelectedColor("")}
+
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -21,6 +25,8 @@ export default function ColorPalette() {
           backgroundColor: "#A0A0A0",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#A0A0A0")}
+        onMouseLeave={() => props.setSelectedColor("")}
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -31,6 +37,9 @@ export default function ColorPalette() {
           backgroundColor: "#F7F7F7",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#F7F7F7")}
+        onMouseLeave={() => props.setSelectedColor("")}
+
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -41,6 +50,9 @@ export default function ColorPalette() {
           backgroundColor: "#2C7DE6",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#2C7DE6")}
+        onMouseLeave={() => props.setSelectedColor("")}
+
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -51,6 +63,9 @@ export default function ColorPalette() {
           backgroundColor: "#00DBFF",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#00DBFF")}
+        onMouseLeave={() => props.setSelectedColor("")}
+
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -61,6 +76,9 @@ export default function ColorPalette() {
           backgroundColor: "#F0A19C",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#F0A19C")}
+        onMouseLeave={() => props.setSelectedColor("")}
+
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -71,6 +89,8 @@ export default function ColorPalette() {
           backgroundColor: "#11B55D",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#11B55D")}
+        onMouseLeave={() => props.setSelectedColor("")}
       />
       <motion.div
         whileHover={{ scale: 1.1 }}
@@ -81,6 +101,8 @@ export default function ColorPalette() {
           backgroundColor: "#E2E565",
           paddingBottom: "12.5%",
         }}
+        onMouseOver={() => props.setSelectedColor("#E2E565")}
+        onMouseLeave={() => props.setSelectedColor("")}
       />
     </div>
   );

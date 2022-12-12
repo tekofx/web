@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 
 function convertFromRGBToHex(r, g, b) {
@@ -17,13 +17,22 @@ function convertFromRGBToHex(r, g, b) {
 }
 
 function convertFromHexToRGB(hex) {
+
     var red = parseInt(hex.substring(1, 3), 16);
     var green = parseInt(hex.substring(3, 5), 16);
     var blue = parseInt(hex.substring(5, 7), 16);
 
     return [red, green, blue];
 }
+// Function that turns a color a little into gray and dims it and returns it as rgb. It takes rgb as input.
+function convertToGray(r, g, b) {
+    var gray = (r + g + b) / 3;
+    var red = Math.round(gray * 0.4);
+    var green = Math.round(gray * 0.4);
+    var blue = Math.round(gray * 0.4);
 
+    return [red, green, blue];
+}
 const Canvas = props => {
 
     const canvasRef = useRef(null)
@@ -35,46 +44,33 @@ const Canvas = props => {
         var ctx = canvas.getContext("2d");
         var img = new Image();
         img.onload = draw;
-        img.src = "/img/ref-small.jpg";
+        img.src = props.src;
 
-        var colorToReplace = convertFromHexToRGB("#01dbff")
+        // This color whill be shown in the image and the rest will be grayed out.
+        var colorToMaintain = convertFromHexToRGB(props.selectedColor)
 
         function draw() {
             ctx.drawImage(img, 0, 0);
             const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
             const pixels = imgData.data;
 
-            var tolerance = 150;
+            // Tolerance to get the color. The lower the more precise.
+            var tolerance = 80;
             for (let i = 0; i < pixels.length; i += 4) {
-                // Turn into grayscale
-                /* const total = pixels[i] + pixels[i + 1] + pixels[i + 2];
-                const avg = total / 3;
-                pixels[i] = avg;
-                pixels[i + 1] = avg;
-                pixels[i + 2] = avg; */
-                var diff = Math.abs(pixels[i] - colorToReplace[0]) + Math.abs(pixels[i + 1] - colorToReplace[1]) + Math.abs(pixels[i + 2] - colorToReplace[2]);
-                var hex = convertFromRGBToHex(pixels[i], pixels[i + 1], pixels[i + 2]);
-
-                if (diff < tolerance) {
-                    pixels[i] = 108;
-                    pixels[i + 1] = 122;
-                    pixels[i + 2] = 137;
+                // Get the difference between the color to maintain and the current color of the pixel.
+                var diff = Math.abs(pixels[i] - colorToMaintain[0]) + Math.abs(pixels[i + 1] - colorToMaintain[1]) + Math.abs(pixels[i + 2] - colorToMaintain[2]);
+                if (diff > tolerance) {
+                    var gray = convertToGray(pixels[i], pixels[i + 1], pixels[i + 2]);
+                    pixels[i] = gray[0];
+                    pixels[i + 1] = gray[1];
+                    pixels[i + 2] = gray[2];
                 }
-
-                // Replace color
-                /* if (hex == testHex) {
-                    pixels[i] = 108;
-                    pixels[i + 1] = 122;
-                    pixels[i + 2] = 137;
-                } */
-
             }
             ctx.putImageData(imgData, 0, 0);
         }
+    }, [props.selectedColor])
 
-    }, [])
-
-    return <canvas ref={canvasRef} {...props} />
+    return <canvas ref={canvasRef} {...props} onClick={props.onClick} />
 }
 
 export default Canvas

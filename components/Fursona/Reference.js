@@ -9,10 +9,12 @@ import ColorPalette from "./Colors/ColorPalette";
 import getLang from "../Language/Lang";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Canvas from "../Canvas";
 
 export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
+  const [selectedColor, setSelectedColor] = useState("");
 
 
   return (
@@ -23,18 +25,18 @@ export default function Reference() {
         <Typography variant="body1">{t.text}</Typography>
       </Grid>
       <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
-        <img
+        <Canvas
           align="left"
           src="img/ref-small.jpg"
-          alt=""
           width={"100%"}
           onClick={() => router.push("img/ref.png")}
+          selectedColor={selectedColor}
         />
 
       </Grid>
       <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
         <Typography variant="h3">Color Reference</Typography>
-        <ColorPalette />
+        <ColorPalette setSelectedColor={setSelectedColor} />
         <ColorsTable />
         <br />
       </Grid>

@@ -36,22 +36,31 @@ function convertToGray(r, g, b) {
 const Canvas = props => {
 
     const canvasRef = useRef(null)
+    console.log(props.selectedColor)
 
     useEffect(() => {
         const canvas = canvasRef.current
-        canvas.width = 1000;
-        canvas.height = 1000;
+
         var ctx = canvas.getContext("2d", { willReadFrequently: true });
         var img = new Image();
         img.onload = draw;
         img.src = props.src;
 
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.width = img.width;
+        canvas.height = img.height
         // This color whill be shown in the image and the rest will be grayed out.
         var colorToMaintain = convertFromHexToRGB(props.selectedColor)
 
         function draw() {
             ctx.drawImage(img, 0, 0);
             const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            if (props.selectedColor === "") {
+                ctx.putImageData(imgData, 0, 0);
+                return;
+            }
+
             const pixels = imgData.data;
 
             // Tolerance to get the color. The lower the more precise.
@@ -70,7 +79,7 @@ const Canvas = props => {
         }
     }, [props.selectedColor])
 
-    return <canvas ref={canvasRef} {...props} onClick={props.onClick} />
+    return <div><canvas ref={canvasRef} {...props} onClick={props.onClick} /></div>
 }
 
 export default Canvas

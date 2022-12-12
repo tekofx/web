@@ -25,6 +25,8 @@ export default function Reference() {
         <Typography variant="body1">{t.text}</Typography>
       </Grid>
       <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
+
+
         <Canvas
           align="left"
           src="img/ref-small.jpg"

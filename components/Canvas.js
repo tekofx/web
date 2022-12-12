@@ -41,7 +41,7 @@ const Canvas = props => {
         const canvas = canvasRef.current
         canvas.width = 1000;
         canvas.height = 1000;
-        var ctx = canvas.getContext("2d");
+        var ctx = canvas.getContext("2d", { willReadFrequently: true });
         var img = new Image();
         img.onload = draw;
         img.src = props.src;

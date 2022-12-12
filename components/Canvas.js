@@ -56,10 +56,6 @@ const Canvas = props => {
         function draw() {
             ctx.drawImage(img, 0, 0);
             const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-            if (props.selectedColor === "") {
-                ctx.putImageData(imgData, 0, 0);
-                return;
-            }
 
             const pixels = imgData.data;
 

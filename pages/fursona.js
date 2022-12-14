@@ -1,11 +1,10 @@
 import React from "react";
 import { Avatar, Typography } from "@mui/material";
-import { Grid } from "@mui/material";
+import { Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
-import Data from "../components/Fursona/Data"
-
-import Attributes from "../components/Fursona/Attributes";
+import Curiosities from "../components/Fursona/Curiosities";
+import Info from "../components/Fursona/Info";
 import Reference from "../components/Fursona/Reference";
 import getLang from "../components/Language/Lang";
 
@@ -23,59 +22,20 @@ export default function Fursona() {
       <br />
 
       {/** Fursona information */}
-      <Grid container spacing={2}>
-        <Grid item xs={12} lg={12}>
-          <Typography align="center" variant="h3">
-            Teko Fresnes Xaiden
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={4} order={{ xs: 1, lg: 2 }}>
-          <Avatar
-            style={{ alignSelf: "center" }}
-            alt="Remy Sharp"
-            src="img/avatar.jpg"
-            sx={{
-              width: "80%",
-              height: "auto",
-              marginLeft: "10%",
-              marginRigth: "10%",
-            }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          md={5}
-          lg={4}
-          order={{ xs: 2, lg: 1 }}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <Data />
+      <Grid container spacing={5}>
+        <Grid item xs={12}>
+          <Info />
+
         </Grid>
 
-        <Grid
-          item
-          xs={12}
-          md={3}
-          lg={4}
-          order={{ xs: 5, lg: 5 }}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <Attributes />
+        {/** Reference */}
+        <Grid item xs={12}>
+          <Reference />
         </Grid>
+        {/* <Grid item xs={12}>
+          <Curiosities />
+        </Grid> */}
       </Grid>
-
-      {/** Reference */}
-      <Reference />
     </div>
   );
 }

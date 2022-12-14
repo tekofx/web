@@ -58,12 +58,12 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Button
                 component={motion.div}
-                whileHover={{ scale: 1.080 }}
+                whileHover={{ scale: 1.2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 key={page.id}
                 size="small"
                 style={{
-                  marginRight: 2,
+                  marginRight: 10,
                   backgroundColor: router.asPath === page.navigate ? "rgba(255,255,255)" : "rgb(255, 255, 255, 0)",
                   color: router.asPath === page.navigate ? "rgb(0,0,0)" : "rgba(255,255,255)",
 

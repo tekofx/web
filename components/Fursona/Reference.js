@@ -10,11 +10,19 @@ import getLang from "../Language/Lang";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Canvas from "../Canvas";
+import Alert from '@mui/material/Alert';
 
 export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
   const [selectedColor, setSelectedColor] = useState("");
+  function Imagen(props) {
+    if (props.selectedColor == "") {
+      return <img src="img/ref-small.jpg" width="100%" />;
+    } else {
+      return <img src="img/among_us.png" width="100%" />;
+    }
+  }
 
 
   return (
@@ -38,10 +46,15 @@ export default function Reference() {
       </Grid>
       <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
         <Typography variant="h3">Color Reference</Typography>
+        <Typography variant="body1">This palette highlights the color on the ref</Typography>
+        <Alert severity="warning" variant="filled">Experimental. Could not work</Alert>
+        <br />
         <ColorPalette setSelectedColor={setSelectedColor} />
         <ColorsTable />
+
         <br />
       </Grid>
     </Grid>
   );
 }
+

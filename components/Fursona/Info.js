@@ -32,6 +32,7 @@ export default function Info() {
                             height: "auto",
                             marginLeft: "10%",
                             marginRigth: "10%",
+                            marginBottom: "5%",
                         }}
                     />
                 </Grid>

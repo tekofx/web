@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 
 const ResponsiveAppBar = () => {
   const router = useRouter();
-
+  const [value, setValue] = React.useState(router.asPath);
   const t = getLang().pages;
 
   const pages = [
@@ -58,16 +58,15 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Button
                 component={motion.div}
-                whileHover={{ scale: 1.080, backgroundColor: "white", color: "black" }}
+                whileHover={{ scale: 1.080 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                key={page.page}
+                key={page.id}
                 size="small"
-                sx={{
-                  color: "white",
-                  marginRight: "1%",
-                  "&:hover": {
-                    background: "#a8a8a8",
-                  },
+                style={{
+                  marginRight: 2,
+                  backgroundColor: router.asPath === page.navigate ? "rgba(255,255,255)" : "rgb(255, 255, 255, 0)",
+                  color: router.asPath === page.navigate ? "rgb(0,0,0)" : "rgba(255,255,255)",
+
                 }}
                 onClick={() => router.push(page.navigate)}
                 startIcon={page.icon}

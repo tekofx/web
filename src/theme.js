@@ -110,6 +110,7 @@ Theme.typography.h1 = {
   color: "#fff",
   paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  textAlign: "center",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "3rem",

@@ -55,7 +55,7 @@ export default function PresentationCard(props) {
                 <Typography variant="card_headline">Species</Typography>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12}>
-                <Typography variant="card_value">{props.species}</Typography>
+                <Typography variant="card_value">{props.species}/</Typography>
                 <Typography variant="card_value" sx={{ color: "#969696" }}>
                   {props.speciesLatin}
                 </Typography>

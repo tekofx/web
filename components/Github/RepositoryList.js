@@ -38,25 +38,20 @@ export default function RepositoryList(props) {
     var reposWithoutImg = [];
     // Check if image exists
     for (let i = 0; i < repos.length; i++) {
-
-
-
-
       const exists = await existsImage(
         "https://raw.githubusercontent.com/tekofx/" +
         repos[i].name +
         "/main/assets/banner.png"
       );
       if (!exists) {
-        repos[i].img = "img/repo-banner-template.png";
-        reposWithoutImg.push(repos[i]);
-      } else {
-        repos[i].img =
-          "https://raw.githubusercontent.com/tekofx/" +
-          repos[i].name +
-          "/main/assets/banner.png";
-        reposWithImg.push(repos[i]);
+        continue;
       }
+      repos[i].img =
+        "https://raw.githubusercontent.com/tekofx/" +
+        repos[i].name +
+        "/main/assets/banner.png";
+      reposWithImg.push(repos[i]);
+
     }
 
     // Join arrays

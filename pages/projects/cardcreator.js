@@ -82,7 +82,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={name}
                                                 required
                                                 label="Name"
                                                 variant="standard"
@@ -92,7 +92,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={species}
                                                 required
                                                 label="Species"
                                                 variant="standard"
@@ -102,7 +102,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={speciesLatin}
                                                 label="Latin Species"
                                                 variant="standard"
                                                 onChange={(e) => setSpeciesLatin(e.target.value)}
@@ -111,7 +111,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={pronouns}
                                                 required
                                                 label="Pronouns"
                                                 variant="standard"
@@ -121,7 +121,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={web}
                                                 label="Web"
                                                 variant="standard"
                                                 onChange={(e) => setWeb(e.target.value)}
@@ -131,7 +131,7 @@ export default function CardCreator() {
                                         <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
                                                 style={{ width: "80%" }}
-
+                                                defaultValue={birthday}
                                                 required
                                                 label="Birthday"
                                                 variant="standard"

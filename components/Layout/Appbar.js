@@ -62,10 +62,14 @@ const ResponsiveAppBar = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 key={page.id}
                 size="small"
-                style={{
-                  marginRight: 10,
+                sx={{
+                  marginRight: 2,
                   backgroundColor: router.asPath === page.navigate ? "rgba(255,255,255)" : "rgb(255, 255, 255, 0)",
                   color: router.asPath === page.navigate ? "rgb(0,0,0)" : "rgba(255,255,255)",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "black",
+                  },
 
                 }}
                 onClick={() => router.push(page.navigate)}

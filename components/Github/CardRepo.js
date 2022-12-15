@@ -24,21 +24,23 @@ export default function AnimatedIcon(props) {
             />
             <CardContent className='cardContent' sx={{ minHeight: 100 }}>
                 <Grid container>
-                    <Grid item sx={{ paddingBottom: "2%", height: 80 }} lg={12} >
+                    <Grid item xs={12} sm={12} md={12} lg={12} >
+                        {props.topics.map((element) =>
+                            <Chip label={element} sx={{ marginRight: 1 }} />
+                        )}
+                    </Grid>
+                    <br />
+                    <br />
+
+                    <Grid item sx={{ paddingBottom: "2%", height: 80 }} xs={12} sm={12} md={12} lg={12} >
                         <Typography gutterBottom variant="h4" component="div">
                             {props.title}
                         </Typography>
-                        <Typography variant="body2">
+                        <Typography variant="body2" >
                             {props.description}
                         </Typography>
                     </Grid>
-                    <br />
-                    <Grid item lg={12} >
-                        {props.topics.map((element) =>
-                            <Chip label={element} sx={{ marginRight: 1 }} />
-                        )
-                        }
-                    </Grid>
+
                 </Grid>
 
 

@@ -2,7 +2,6 @@ import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import QRCode from "./QRCode";
 
 export default function PresentationCard(props) {
-  console.log(props.web)
   return (
     <Card
       id="fursonaCard"

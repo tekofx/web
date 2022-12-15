@@ -2,6 +2,7 @@ import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import QRCode from "./QRCode";
 
 export default function PresentationCard(props) {
+  console.log(props.web)
   return (
     <Card
       id="fursonaCard"
@@ -70,12 +71,12 @@ export default function PresentationCard(props) {
                 <br />
                 <Typography variant="card_value">{props.birthday}</Typography>
               </Grid>
-              <Grid item xs={8} sm={8} md={8} lg={6}>
+              <Grid item xs={8} sm={8} md={8} lg={6} display={props.web === "" ? "none" : "block"}>
                 <Typography variant="card_headline">Website</Typography>
                 <br />
                 <Typography variant="card_value">{props.web}</Typography>
               </Grid>
-              <Grid item xs={4} sm={4} md={4} lg={6}>
+              <Grid item xs={4} sm={4} md={4} lg={6} display={props.web === "" ? "none" : "block"}>
                 <QRCode value={props.web} />
               </Grid>
             </Grid>

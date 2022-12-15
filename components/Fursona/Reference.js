@@ -35,14 +35,18 @@ export default function Reference() {
         </Grid>
         <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
 
+          {selectedColor == "" ?
+            <img src="img/ref-small.jpg" width="100%" />
+            :
+            <Canvas
+              align="left"
+              src="img/ref-small.jpg"
+              width={"100%"}
+              onClick={() => router.push("img/ref.png")}
+              selectedColor={selectedColor}
+            />
+          }
 
-          <Canvas
-            align="left"
-            src="img/ref-small.jpg"
-            width={"100%"}
-            onClick={() => router.push("img/ref.png")}
-            selectedColor={selectedColor}
-          />
 
         </Grid>
         <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>

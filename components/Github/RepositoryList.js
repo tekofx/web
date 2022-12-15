@@ -78,11 +78,11 @@ export default function RepositoryList(props) {
       <Grid
         container
         spacing={{ xs: 1, sm: 1, md: 2, lg: 2 }}
-        columns={{ xs: 12, sm: 12, md: 12, lg: 10, xl: 12 }}
+        columns={{ xs: 12, sm: 12, md: 12, lg: 12 }}
       >
         {(loading ? Array.from(new Array(10)) : repos).map((item, index) =>
           item ? (
-            <Grid item xs={6} sm={4} md={3} lg={2} xl={2} key={index}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={index}>
               <GithubRepo
                 title={item.name}
                 description={item.description}
@@ -92,7 +92,7 @@ export default function RepositoryList(props) {
               />
             </Grid>
           ) : (
-            <Grid item xs={6} sm={4} md={3} lg={2} xl={2} key={index}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={index}>
               <Skeleton animation="wave" variant="rectangular">
                 <GithubRepo
                   title="Title"

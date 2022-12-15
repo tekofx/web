@@ -60,13 +60,6 @@ export default function CardCreator() {
         <Grid item xs={12} sm={12} md={4} lg={7}>
           <Box
             component="form"
-            sx={{
-              "& .MuiTextField-root": {
-                m: 1,
-                width: "25ch",
-              },
-            }}
-            noValidate
             autoComplete="off"
           >
             <Grid container spacing="4">
@@ -74,6 +67,7 @@ export default function CardCreator() {
                 <TextField
                   required
                   label="Name"
+                  defaultValue="uwu"
                   variant="standard"
                   onChange={(e) => setName(e.target.value)}
                 />

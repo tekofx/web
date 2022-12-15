@@ -51,11 +51,11 @@ export default function CardCreator() {
             <Typography variant="body1">
                 Create your fursona custom card and download it
             </Typography>
-            <Grid container spacing={5}>
+            <Grid container spacing={2}>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Paper sx={{ p: 2 }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={12} md={8} lg={5}>
+                        <Grid container >
+                            <Grid item xs={12} sm={12} md={6} lg={5}>
                                 <Card
                                     name={name}
                                     species={species}
@@ -66,7 +66,7 @@ export default function CardCreator() {
                                     img={file}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={12} md={4} lg={7}>
+                            <Grid item xs={12} sm={12} md={6} lg={7}>
                                 <Box
                                     component="form"
                                     sx={{
@@ -78,46 +78,60 @@ export default function CardCreator() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <Grid container spacing="4">
-                                        <Grid item xs={6} sm={6} lg={6}>
+                                    <Grid container spacing="2">
+                                        <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
+                                                style={{ width: "80%" }}
+
                                                 required
                                                 label="Name"
                                                 variant="standard"
                                                 onChange={(e) => setName(e.target.value)}
                                             />
                                         </Grid>
-                                        <Grid item xs={6} sm={6} lg={6}>
+                                        <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
+                                                style={{ width: "80%" }}
+
                                                 required
                                                 label="Species"
                                                 variant="standard"
                                                 onChange={(e) => setSpecies(e.target.value)}
                                             />
                                         </Grid>
-                                        <Grid item xs={6} sm={6} lg={6}>
+                                        <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
+                                                style={{ width: "80%" }}
+
                                                 label="Latin Species"
                                                 variant="standard"
                                                 onChange={(e) => setSpeciesLatin(e.target.value)}
                                             />
                                         </Grid>
-                                        <TextField
-                                            required
-                                            label="Pronouns"
-                                            variant="standard"
-                                            onChange={(e) => setPronouns(e.target.value)}
-                                        />
-                                        <Grid item xs={6} sm={6} lg={6}>
+                                        <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
+                                                style={{ width: "80%" }}
+
+                                                required
+                                                label="Pronouns"
+                                                variant="standard"
+                                                onChange={(e) => setPronouns(e.target.value)}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6} lg={6}>
+                                            <TextField
+                                                style={{ width: "80%" }}
+
                                                 label="Web"
                                                 variant="standard"
                                                 onChange={(e) => setWeb(e.target.value)}
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6} sm={6} lg={6}>
+                                        <Grid item xs={12} sm={6} lg={6}>
                                             <TextField
+                                                style={{ width: "80%" }}
+
                                                 required
                                                 label="Birthday"
                                                 variant="standard"

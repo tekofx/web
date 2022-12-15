@@ -13,7 +13,7 @@ export default function AnimatedIcon(props) {
     const t = getLang().projects;
 
     return (
-        <Card className="card" component={motion.div} whileHover={{ scale: 1.080 }}
+        <Card className="card" component={motion.div} whileHover={{ scale: 1.050 }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
         >
             <CardMedia

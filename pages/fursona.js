@@ -33,7 +33,10 @@ export default function Fursona() {
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
           <Reference />
         </Grid>
-        {/* <Grid item xs={12} sm={12} md={12} lg={6}>
+        {/* <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+          <Gallery />
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={6}>
           <Curiosities />
           <Likes />
         </Grid>
@@ -73,4 +76,14 @@ function Likes() {
 
     </Paper>
   )
+}
+
+function Gallery() {
+  return (
+    <Paper sx={{ paddingLeft: 2, paddingRight: 2 }}>
+      <Typography variant="h2">Gallery</Typography>
+      <img src="https://i.imgur.com/1Z1Z1Z1.jpg" alt="Image" />
+    </Paper>
+  )
+
 }

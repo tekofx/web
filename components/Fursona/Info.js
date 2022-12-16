@@ -15,7 +15,7 @@ import { MoreTimeOutlined } from "@mui/icons-material";
 export default function Info() {
     return (
         <Paper sx={{ paddingLeft: 2, paddingRight: 2 }}>
-            <Grid container spacing={2}>
+            <Grid id="info" container spacing={2}>
 
                 <Grid item xs={12} lg={12}>
                     <Typography align="center" variant="h3">

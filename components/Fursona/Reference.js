@@ -19,9 +19,9 @@ export default function Reference() {
 
 
   return (
-    <Paper sx={{ paddingLeft: 2, paddingRight: 2 }}>
+    <Paper sx={{ p: 2 }}>
 
-      <Grid container spacing={2} >
+      <Grid id="reference" container spacing={2} >
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography variant="h2">Reference</Typography>
           <Typography variant="body1">{t.text}</Typography>

@@ -18,6 +18,7 @@ import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 
 const ResponsiveAppBar = () => {
+  console.log(process.env.PUBLIC_URL)
   const router = useRouter();
   const [value, setValue] = React.useState(router.asPath);
   const t = getLang().pages;
@@ -47,7 +48,7 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/*Desktop Menu*/}
-          <Avatar src="/img/logo.png" />
+          <Avatar src={process.env.PUBLIC_URL + "img/logo.png"} />
 
           <Box
             sx={{

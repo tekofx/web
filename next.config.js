@@ -11,7 +11,7 @@ if (isGithubActions) {
   basePath = "/web"
   imagePath = "/web"
   process.env.FAVICON = "/web"
-  process.env.PUBLIC_URL = "/web"
+  process.env.PUBLIC_URL = "/web/"
 
 }
 

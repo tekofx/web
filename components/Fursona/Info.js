@@ -26,7 +26,7 @@ export default function Info() {
                     <Avatar
                         style={{ alignSelf: "center" }}
                         alt="Remy Sharp"
-                        src="img/avatar.jpg"
+                        src={process.env.PUBLIC_URL + "img/avatar.jpg"}
                         sx={{
                             width: "80%",
                             height: "auto",

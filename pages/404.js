@@ -10,7 +10,7 @@ export default function FourOhfour() {
                     <Avatar
                         component={motion.div}
                         alt="Remy Sharp"
-                        src="img/logo-color.png"
+                        src={process.env.PUBLIC_URL + "img/logo-color.png"}
                         sx={{ width: "100%", height: "auto" }}
                         animate={{
                             rotate: [0, 0, 360, 360, 0],

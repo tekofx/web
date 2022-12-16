@@ -9,7 +9,7 @@ const App = () => {
     await loadFull(main);
   };
 
-  const particlesLoaded = (container) => {};
+  const particlesLoaded = (container) => { };
   return (
     <Particles
       id="tsparticles"
@@ -518,7 +518,7 @@ const App = () => {
               type: "images",
               options: {
                 images: {
-                  src: "img/among_us.png",
+                  src: process.env.PUBLIC_URL + "img/among_us.png",
                   width: 500,
                   height: 634,
                 },

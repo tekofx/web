@@ -19,7 +19,7 @@ export default function Presentation() {
                         alignItems="center"
                     >
 
-                        <Avatar sx={{ width: 400, height: 400 }} src="img/avatar.jpg" />
+                        <Avatar sx={{ width: 400, height: 400 }} src={process.env.PUBLIC_URL + "img/avatar.jpg"} />
                     </Box>
                     <Typography align="center" variant="h2">Hello, I'm Teko an arctic foxxo</Typography>
                     <Typography align="center" variant="h3">I love waffles</Typography>

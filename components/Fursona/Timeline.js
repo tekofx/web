@@ -23,7 +23,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <ImageDialog img="img/v1.0.jpg" width={"75%"} />
+          <ImageDialog img={process.env.PUBLIC_URL + "img/v1.0.jpg"} width={"75%"} />
         </TimelineContent>
       </TimelineItem>
 
@@ -38,7 +38,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <ImageDialog img="img/v1.1.jpg" width={"75%"} />
+          <ImageDialog img={process.env.PUBLIC_URL + "img/v1.1.jpg"} width={"75%"} />
         </TimelineContent>
       </TimelineItem>
 
@@ -53,7 +53,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <ImageDialog img="img/v1.5.jpg" width={"75%"} />
+          <ImageDialog img={process.env.PUBLIC_URL + "img/v1.5.jpg"} width={"75%"} />
         </TimelineContent>
       </TimelineItem>
 
@@ -68,7 +68,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <ImageDialog img="img/v2.0.png" width={"100%"} />
+          <ImageDialog img={process.env.PUBLIC_URL + "img/v2.0.png"} width={"100%"} />
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -82,7 +82,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <ImageDialog img="img/ref-small.jpg" width={"100%"} />
+          <ImageDialog img={process.env.PUBLIC_URL + "img/ref-small.jpg"} width={"100%"} />
         </TimelineContent>
       </TimelineItem>
     </Timeline>

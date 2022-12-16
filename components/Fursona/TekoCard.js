@@ -9,7 +9,7 @@ export default function PresentationCard() {
       pronouns="He/Him"
       web="tekofx.github.com/web"
       birthday="1/1/2001"
-      img="img/card_picture.png"
+      img={process.env.PUBLIC_URL + "img/card_picture.png"}
     />
   );
 }

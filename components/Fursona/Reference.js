@@ -16,13 +16,6 @@ export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
   const [selectedColor, setSelectedColor] = useState("");
-  function Imagen(props) {
-    if (props.selectedColor == "") {
-      return <img src="img/ref-small.jpg" width="100%" />;
-    } else {
-      return <img src="img/among_us.png" width="100%" />;
-    }
-  }
 
 
   return (
@@ -36,11 +29,11 @@ export default function Reference() {
         <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
 
           {selectedColor == "" ?
-            <img src="img/ref-small.jpg" width="100%" />
+            <img src={process.env.PUBLIC_URL + "img/ref-small.jpg"} width="100%" />
             :
             <Canvas
               align="left"
-              src="img/ref-small.jpg"
+              src={process.env.PUBLIC_URL + "img/ref-small.jpg"}
               width={"100%"}
               onClick={() => router.push("img/ref.png")}
               selectedColor={selectedColor}

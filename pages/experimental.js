@@ -10,7 +10,6 @@ import Head from "next/head";
 
 import Items from "../components/Fursona/Items";
 import Abilities from "../components/Fursona/Abilities";
-import CardCreator from "../components/Fursona/CardCreator";
 import getLang from "../components/Language/Lang";
 function Home() {
   const t = getLang().experimental;
@@ -48,9 +47,6 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Abilities />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <CardCreator />
         </Grid>
 
         <Grid item xs={12} sm={12} md={12} lg={12}>

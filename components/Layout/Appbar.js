@@ -52,6 +52,7 @@ const ResponsiveAppBar = () => {
 
           <Box
             sx={{
+              paddingLeft: 1,
               flexGrow: 1,
               display: { xs: "none", sm: "flex", md: "flex" },
             }}

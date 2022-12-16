@@ -18,7 +18,6 @@ import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 
 const ResponsiveAppBar = () => {
-  console.log(process.env.PUBLIC_URL)
   const router = useRouter();
   const [value, setValue] = React.useState(router.asPath);
   const t = getLang().pages;

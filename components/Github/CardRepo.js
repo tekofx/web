@@ -26,7 +26,7 @@ export default function AnimatedIcon(props) {
                 <Grid container>
                     <Grid item xs={12} sm={12} md={12} lg={12} >
                         {props.topics.map((element) =>
-                            <Chip label={element} sx={{ marginRight: 1 }} />
+                            <Chip color="secondary" label={element} sx={{ marginRight: 1 }} />
                         )}
                     </Grid>
                     <br />

@@ -16,35 +16,39 @@ export default function Presentation() {
                 alignItems="center"
                 justifyContent="center" >
 
-                <Grid item lg={12}>
+                <Grid item sx={7} lg={4}>
                     <Box
                         display="flex"
                         justifyContent="center"
                         alignItems="center"
                     >
 
-                        <Avatar sx={{ width: 400, height: 400 }} src={process.env.PUBLIC_URL + "img/avatar.jpg"} />
+                        <Avatar sx={{ width: "100%", height: "auto" }} src={process.env.PUBLIC_URL + "img/avatar.jpg"} />
                     </Box>
-                    <Typography align="center" variant="h2">{t.title}</Typography>
-                    <Typography align="center" variant="h3">{t.text}</Typography>
+
 
 
 
                 </Grid>
+                <Grid item sx={12} lg={12}>
+                    <Typography align="center" variant="h2">{t.title}</Typography>
+                    <Typography align="center" variant="h3">{t.text}</Typography>
+                </Grid>
                 <Grid item lg={12}>
-                    <Box
-                        display="flex"
-                        justifyContent="center"
+
+                    <Grid container spacing={4} jdirection="column"
                         alignItems="center"
+                        justifyContent="center"
                     >
-                        <Stack direction="row" spacing={7}
-
-                        >
+                        <Grid item xs={8} md={2}>
                             <Chip text={t.projects} onClick={() => router.push("/projects")} />
+                        </Grid>
+                        <Grid item xs={8} md={2}>
                             <Chip text={t.fursona} onClick={() => router.push("/fursona")} />
+                        </Grid>
+                    </Grid>
 
-                        </Stack>
-                    </Box>
+
                 </Grid>
 
 

@@ -23,6 +23,7 @@ export default function Index() {
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra" />
         <meta name="twitter:description" content="Home" />
+        <meta property="twitter:image" content={process.env.PUBLIC_URL + "img/ref-small.jpg"} />
       </Head>
 
       <Grid container spacing={4}>

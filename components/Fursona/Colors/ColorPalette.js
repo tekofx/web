@@ -1,109 +1,45 @@
 import { motion } from "framer-motion";
+const colors = [
+  "#2D2D2D",
+  "#A0A0A0",
+  "#F7F7F7",
+  "#2C7DE6",
+  "#00DBFF",
+  "#F0A19C",
+  "#11B55D",
+  "#E2E565",
+]
 export default function ColorPalette(props) {
+  const toggleColorChange = (color) => {
+    console.log(props.selectedColor)
+    if (props.selectedColor === "undefined") {
+      props.setSelectedColor(color)
+    } else {
+      props.setSelectedColor("undefined")
+    }
+  }
+
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#2D2D2D",
-          paddingBottom: "12.5%",
+    <div style={{ display: "flex", flexWrap: "wrap" }} >
+      {colors.map((color) => (
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          style={{
+            height: 0,
+            width: "12.5%",
+            backgroundColor: color,
+            paddingBottom: "12.5%",
+          }}
+          onMouseOver={() => props.setSelectedColor(color)}
+          onMouseLeave={() => props.setSelectedColor("")}
+          onClick={() => toggleColorChange(color)}
+        />
+      ))}
 
-        }}
-        onMouseOver={() => props.setSelectedColor("#2D2D2D")}
-        onMouseLeave={() => props.setSelectedColor("")}
 
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#A0A0A0",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#A0A0A0")}
-        onMouseLeave={() => props.setSelectedColor("")}
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#F7F7F7",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#F7F7F7")}
-        onMouseLeave={() => props.setSelectedColor("")}
 
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#2C7DE6",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#2C7DE6")}
-        onMouseLeave={() => props.setSelectedColor("")}
-
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#00DBFF",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#00DBFF")}
-        onMouseLeave={() => props.setSelectedColor("")}
-
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#F0A19C",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#F0A19C")}
-        onMouseLeave={() => props.setSelectedColor("")}
-
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#11B55D",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#11B55D")}
-        onMouseLeave={() => props.setSelectedColor("")}
-      />
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        style={{
-          height: 0,
-          width: "12.5%",
-          backgroundColor: "#E2E565",
-          paddingBottom: "12.5%",
-        }}
-        onMouseOver={() => props.setSelectedColor("#E2E565")}
-        onMouseLeave={() => props.setSelectedColor("")}
-      />
     </div>
   );
 }

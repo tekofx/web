@@ -47,7 +47,7 @@ export default function Reference() {
           <Typography variant="body1">This palette highlights the color on the ref</Typography>
           <Alert severity="warning" variant="filled">Experimental. Could not work</Alert>
           <br />
-          <ColorPalette setSelectedColor={setSelectedColor} />
+          <ColorPalette setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
           <ColorsTable />
 
           <br />

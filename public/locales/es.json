@@ -18,7 +18,7 @@
   "projects": {
     "title": "Proyectos",
     "text": "Proyectos que haga y en los que estoy trabajando. Sobre todo hago bots de Discord y programas simples de terminal",
-    "button":"Ver en Github"
+    "button": "Ver en Github"
   },
   "gallery": {
     "title": "Galería",
@@ -30,8 +30,14 @@
   "fursona": {
     "text": "Teko es un zorro ártico de pelo azul y ojos amarillos y verdes. Tiene poderes de hielo y puede usarlos para crear objetos a partir del hielo.",
     "name": "Nombre",
-    "species": { "title": "Especie", "value": "Zorro Ártico" },
-    "gender": { "title": "Género", "value": "Hombre" },
+    "species": {
+      "title": "Especie",
+      "value": "Zorro Ártico"
+    },
+    "gender": {
+      "title": "Género",
+      "value": "Hombre"
+    },
     "height": "Altura",
     "birth": "Fecha nacimiento",
     "personality": {
@@ -46,7 +52,10 @@
       "title": "Disgustos",
       "value": "Gente ruidosa, multitudes y sitios calientes"
     },
-    "abilities": { "title": "Habilidades", "value": "Poderes de hielo" },
+    "abilities": {
+      "title": "Habilidades",
+      "value": "Poderes de hielo"
+    },
     "attributes": {
       "title": "Atributos",
       "strength": "Fuerza",
@@ -77,5 +86,11 @@
   "experimental": {
     "title": "Experimental",
     "text": "Esta página contiene una serie de experimentos para esta web. Es posible que no funcionen en tu navegador debido a que están en fase de pruebas"
+  },
+  "presentation": {
+    "title": "Hola soy Teko",
+    "text": "Me gustan los gofres,la programación y la fotografía",
+    "projects": "Proyectos",
+    "fursona": "Fursona info"
   }
 }

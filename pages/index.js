@@ -3,6 +3,8 @@ import Seasons from "../components/Seasons";
 import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
 import getLang from "../components/Language/Lang";
+import Presentation from "../components/Presentation";
+import Snow from "../components/Snow";
 
 
 export default function Index() {
@@ -25,19 +27,22 @@ export default function Index() {
         <meta name="twitter:description" content="Home" />
         <meta property="twitter:image" content={process.env.PUBLIC_URL + "img/ref-small.jpg"} />
       </Head>
+      <div>
+        <Snow />
 
-      <Grid container spacing={4}>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t.title}</Typography>
-          <Typography variant="body1">{t.text}</Typography>
-          <Grid container>
-            <Grid item xs={12} sm={10} md={6} lg={6}>
-              <Seasons />
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={12} md={12} lg={12}>
+            <Typography variant="h1">{t.title}</Typography>
 
-            </Grid>
           </Grid>
+          <Grid item lg={12}>
+
+            <Presentation />
+          </Grid>
+
+
         </Grid>
-      </Grid>
+      </div>
     </div>
   );
 }

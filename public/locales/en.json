@@ -87,5 +87,11 @@
   "experimental": {
     "title": "Experimental",
     "text": "In this page there are some experiments for this webpage. They are currently being tested, so they might not work for you."
+  },
+  "presentation": {
+    "title": "Hello, I'm Teko and arctic foxxo",
+    "text": "I love waffles, photography and programming",
+    "projects": "Projects",
+    "fursona": "Fursona info"
   }
 }

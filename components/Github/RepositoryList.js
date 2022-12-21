@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useEffect } from "react";
-import { Skeleton } from "@mui/material";
+import { Card, CardMedia, Skeleton, CardContent } from "@mui/material";
 import GithubRepo from "./CardRepo";
 import axios, * as others from "axios";
 
@@ -88,15 +88,14 @@ export default function RepositoryList(props) {
             </Grid>
           ) : (
             <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={index}>
-              <Skeleton animation="wave" variant="rectangular">
-                <GithubRepo
-                  title="Title"
-                  description="Cool description "
-                  url="url"
-                  img="/repo-banner-template.png"
-                  topics={[]}
-                />
-              </Skeleton>
+              <Card>
+                <CardMedia>
+                  <Skeleton height="100%" />
+                </CardMedia>
+                <CardContent sx={{ minHeight: 100 }}>
+
+                </CardContent>
+              </Card>
             </Grid>
           )
         )}

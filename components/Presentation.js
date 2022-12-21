@@ -3,10 +3,12 @@ import Chip from "./Chip";
 import { useRouter } from "next/router";
 import Snow from "./Snow";
 import getLang from "./Language/Lang";
+import { useMediaQuery } from "@mui/material";
 
 export default function Presentation() {
     const router = useRouter();
     const t = getLang().presentation;
+    const largeScreen = useMediaQuery(theme => theme.breakpoints.up('md'))
 
 
     return (
@@ -34,22 +36,14 @@ export default function Presentation() {
                     <Typography align="center" variant="h2">{t.title}</Typography>
                     <Typography align="center" variant="h3">{t.text}</Typography>
                 </Grid>
-                <Grid item lg={12}>
+                <Grid item>
 
-                    <Grid container spacing={4} jdirection="column"
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Grid item xs={8} md={2}>
-                            <Chip text={t.projects} onClick={() => router.push("/projects")} />
-                        </Grid>
-                        <Grid item xs={8} md={2}>
-                            <Chip text={t.fursona} onClick={() => router.push("/fursona")} />
-                        </Grid>
-                    </Grid>
-
-
+                    <Stack direction={largeScreen ? "row" : "column"} spacing={2}>
+                        <Chip text={t.projects} onClick={() => router.push("/projects")} />
+                        <Chip text={t.fursona} onClick={() => router.push("/fursona")} />
+                    </Stack>
                 </Grid>
+
 
 
 

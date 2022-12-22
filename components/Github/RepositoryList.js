@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Card, CardMedia, Skeleton, CardContent } from "@mui/material";
 import GithubRepo from "./CardRepo";
 import axios, * as others from "axios";
+import CardRepoSkeleton from "./CardRepoSkeleton";
 
 export default function RepositoryList(props) {
   const [repos, setRepos] = React.useState([]);
@@ -88,14 +89,7 @@ export default function RepositoryList(props) {
             </Grid>
           ) : (
             <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={index}>
-              <Card>
-                <CardMedia>
-                  <Skeleton height="100%" />
-                </CardMedia>
-                <CardContent sx={{ minHeight: 100 }}>
-
-                </CardContent>
-              </Card>
+              <CardRepoSkeleton />
             </Grid>
           )
         )}

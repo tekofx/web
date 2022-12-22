@@ -41,7 +41,6 @@
     "react-qr-code": "^2.0.8",
     "react-tsparticles": "^2.5.3",
     "tsparticles": "^2.5.3",
-    "tsparticles-preset-snow": "^2.6.0",
     "universal-cookie": "^4.0.4"
   },
   "browser": {

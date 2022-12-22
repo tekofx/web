@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ThreeFiber from "../components/ThreeFiber";
-import AmongUS from "../components/AmongUS";
+import AmongUS from "../components/Particles/AmongUS";
 import Timeline from "../components/Fursona/Timeline";
 import Presentation from "../components/Presentation";
 import Head from "next/head";

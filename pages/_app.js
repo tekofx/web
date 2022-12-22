@@ -12,6 +12,7 @@ import Transition from "../components/Layout/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
 import SnowComponent from "../components/Particles/Snow";
+import Leafs from "../components/Particles/Leafs";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 
@@ -24,13 +25,19 @@ if (cookies.get("lang") === undefined) {
   cookies.set("lang", "es");
 }
 
-function Snow() {
+function Seasons() {
   // If it is winter, snow
   const date = new Date();
   const month = date.getMonth();
   if (month === 11 || month === 0 || month === 1) {
     return <SnowComponent />;
   }
+
+  // If it is autumn, leafs
+  if (month === 9 || month === 10) {
+    return <Leafs />;
+  }
+
 }
 
 function MyApp(props) {
@@ -51,7 +58,7 @@ function MyApp(props) {
           <Layout>
             <Transition>
               <Container maxWidth="xl">
-                <Snow />
+                <Seasons />
 
                 <Page>
                   <Component {...pageProps} />

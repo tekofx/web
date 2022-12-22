@@ -1,7 +1,6 @@
 import { Grid, Avatar, Typography, Box, Stack, Paper } from "@mui/material";
 import Chip from "./Chip";
 import { useRouter } from "next/router";
-import Snow from "./Snow";
 import getLang from "./Language/Lang";
 import { useMediaQuery } from "@mui/material";
 

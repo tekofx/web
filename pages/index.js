@@ -4,7 +4,6 @@ import { Grid, Typography } from "@mui/material";
 import Head from "next/head";
 import getLang from "../components/Language/Lang";
 import Presentation from "../components/Presentation";
-import Snow from "../components/Snow";
 
 
 export default function Index() {

@@ -11,7 +11,7 @@ import "../styles/transition.css";
 import Transition from "../components/Layout/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
-import SnowComponent from "../components/Snow";
+import SnowComponent from "../components/Particles/Snow";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 

@@ -2,7 +2,7 @@ import { useCallback, useRef } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { loadSnowPreset } from "tsparticles-preset-snow";
-import Presentation from "./Presentation";
+import Presentation from "../Presentation";
 export default function App() {
     const particlesInit = useCallback(async engine => {
         console.log(engine);

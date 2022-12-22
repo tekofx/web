@@ -34,12 +34,16 @@ export default function App() {
                         },
                     },
                     fpsLimit: 120,
+                    interactivity: {
+                        detectsOn: "window",
+                    },
                     fullScreen: {
                         enable: true,
-                        zIndex: 10,
+                        zIndex: -5,
                     },
                     preset: "snow",
-                }}
+                }
+                }
             />
         </div>
 

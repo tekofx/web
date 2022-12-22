@@ -11,6 +11,7 @@ import "../styles/transition.css";
 import Transition from "../components/Layout/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
+import SnowComponent from "../components/Snow";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 
@@ -21,6 +22,15 @@ const clientSideEmotionCache = createEmotionCache();
 const cookies = new Cookies();
 if (cookies.get("lang") === undefined) {
   cookies.set("lang", "es");
+}
+
+function Snow() {
+  // If it is winter, snow
+  const date = new Date();
+  const month = date.getMonth();
+  if (month === 11 || month === 0 || month === 1) {
+    return <SnowComponent />;
+  }
 }
 
 function MyApp(props) {
@@ -41,6 +51,7 @@ function MyApp(props) {
           <Layout>
             <Transition>
               <Container maxWidth="xl">
+                <Snow />
 
                 <Page>
                   <Component {...pageProps} />

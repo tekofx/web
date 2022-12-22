@@ -28,8 +28,6 @@ export default function Index() {
         <meta property="twitter:image" content={process.env.PUBLIC_URL + "img/ref-small.jpg"} />
       </Head>
       <div>
-        <Snow />
-
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography variant="h1">{t.title}</Typography>

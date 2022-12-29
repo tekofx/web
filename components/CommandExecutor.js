@@ -22,16 +22,7 @@ import Cookies from "universal-cookie";
 
 import { useRouter } from 'next/router';
 function SimpleDialog(props) {
-    const { i18n } = useTranslation();
-    const router = useRouter();
-
-
-    const [open, setOpen] = useState(false)
-    useHotkeys('ctrl+k', () => setOpen(!open), [open])
-    const [selectedIndex, setSelectedIndex] = useState(0);
-
-
-    const commands = [
+    const defaultCommands = [
         {
             title: "Home", description: "Go to Home page", icon: <HomeIcon />, action: function () { router.push("home") }
         },
@@ -64,45 +55,48 @@ function SimpleDialog(props) {
         }
 
     ]
+    const { i18n } = useTranslation();
+    const router = useRouter();
+    const [open, setOpen] = useState(false)
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [commands, setCommands] = useState(defaultCommands)
 
     function onCommandClicked(command, index) {
         setSelectedIndex(index)
-        console.log("Clicked command " + command.title)
         command.action();
         setOpen(false)
     }
-
 
     const handleListItemClick = (key) => {
         if (selectedIndex > 0 && key === "up") {
             setSelectedIndex(selectedIndex - 1)
-
         }
         if (selectedIndex < commands.length - 1 && key === "down") {
             setSelectedIndex(selectedIndex + 1)
-
         }
     };
 
     const handleEnter = () => {
-
         var command = commands[selectedIndex];
-        console.log(command)
         command.action();
         setOpen(false)
-
-
     }
 
+    const onTextFieldChange = (event) => {
+        var temp = defaultCommands.filter(function (command) {
+            return command.description.toLowerCase().includes(event.target.value)
+        });
+        setCommands(temp)
+    }
+    useHotkeys('ctrl+k', () => setOpen(!open), [open])
     useHotkeys('up', () => handleListItemClick("up"), [selectedIndex])
     useHotkeys('down', () => handleListItemClick("down"), [selectedIndex])
     useHotkeys("enter", () => handleEnter(selectedIndex), [selectedIndex])
 
-
     return (
         <Dialog open={open} fullWidth="xl">
             <DialogTitle>Command Executor</DialogTitle>
-            <TextField variant='standard' sx={{ width: "80%" }} />
+            <TextField variant='standard' sx={{ width: "80%" }} onChange={onTextFieldChange} />
 
             <List sx={{ pt: 0 }}>
                 {commands.map((command, index) => (

@@ -35,6 +35,7 @@
     "prop-types": "latest",
     "react": "18.2.0",
     "react-dom": "latest",
+    "react-hotkeys-hook": "^4.3.2",
     "react-i18next": "^12.0.0",
     "react-icons": "^4.6.0",
     "react-particles": "^2.6.0",

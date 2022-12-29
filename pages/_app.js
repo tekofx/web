@@ -15,7 +15,9 @@ import SnowComponent from "../components/Particles/Snow";
 import Leafs from "../components/Particles/Leafs";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
-
+import CommandExecutor from "../components/CommandExecutor"
+import { useHotkeys } from "react-hotkeys-hook";
+import { useState } from "react";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -43,6 +45,12 @@ function Seasons() {
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   useSyncLanguage(cookies.get("lang"));
+  const [open, setOpen] = useState(false)
+  useHotkeys('ctrl+k', () => setOpen(!open), [open])
+
+
+
+
 
   return (
     <div>
@@ -54,6 +62,7 @@ function MyApp(props) {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
+          <CommandExecutor />
 
           <Layout>
             <Transition>

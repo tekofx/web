@@ -18,6 +18,9 @@ import Cookies from "universal-cookie";
 import CommandExecutor from "../components/CommandExecutor"
 import { useHotkeys } from "react-hotkeys-hook";
 import { useState } from "react";
+import { Snackbar, Button, IconButton, Stack, Paper, Typography, Grid } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -44,13 +47,17 @@ function Seasons() {
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   useSyncLanguage(cookies.get("lang"));
-  const [open, setOpen] = useState(false)
-  useHotkeys('ctrl+k', () => setOpen(!open), [open])
 
 
 
+  const action = (
+    <div>
 
+
+    </div>
+  );
 
   return (
     <div>
@@ -63,6 +70,8 @@ function MyApp(props) {
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <CommandExecutor />
+          <Snack />
+
 
           <Layout>
             <Transition>
@@ -88,3 +97,51 @@ MyApp.propTypes = {
 };
 
 export default appWithI18Next(MyApp, ni18nConfig);
+
+
+function Snack() {
+  var random = Math.random();
+  console.log(random)
+  // If random is minor than 0.6 not show snack
+  const [open, setOpen] = useState(random < 0.6 ? false : true);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+  return (
+    <Snackbar
+      open={open}
+      autoHideDuration={10000}
+      onClose={handleClose}
+      message="Note archived"
+    >
+      <Stack bgcolor="white" padding={2} borderRadius={5}>
+
+        <LightbulbIcon color="secondary" />
+
+
+        <Typography color="black" variant="body1">Hint: If you press ctrl+k you can access a command executor</Typography>
+
+
+        <IconButton
+          aria-label="close"
+          color="secondary"
+          onClick={handleClose}
+          size="small"
+        >
+          <CloseIcon />
+        </IconButton>
+      </Stack>
+
+
+    </Snackbar>
+  )
+}

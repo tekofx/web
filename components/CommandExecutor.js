@@ -16,9 +16,11 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 import Cookies from "universal-cookie";
 
-
+import { useRouter } from 'next/router';
 function SimpleDialog(props) {
     const { i18n } = useTranslation();
+    const router = useRouter();
+
 
     const [open, setOpen] = useState(false)
     useHotkeys('ctrl+k', () => setOpen(!open), [open])
@@ -28,12 +30,12 @@ function SimpleDialog(props) {
     const commands = [
         {
             title: "Projects", description: "Go to projects page", icon: <AccountTreeIcon />, action: function () {
-                console.log("projects")
+                router.push("projects")
             }
         },
         {
             title: "About", description: "Go to About page", icon: <AccountTreeIcon />, action: function () {
-                console.log("about")
+                router.push("about")
             }
         },
         {

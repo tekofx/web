@@ -9,7 +9,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
 import { blue } from '@mui/material/colors';
 import { TextField, ListItemButton } from '@mui/material';
+import HomeIcon from "@mui/icons-material/Home";
+import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import PetsIcon from "@mui/icons-material/Pets";
+import InfoIcon from "@mui/icons-material/Info";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useState } from 'react';
 import LanguageIcon from "@mui/icons-material/Language";
@@ -29,14 +33,19 @@ function SimpleDialog(props) {
 
     const commands = [
         {
-            title: "Projects", description: "Go to projects page", icon: <AccountTreeIcon />, action: function () {
-                router.push("projects")
-            }
+            title: "Home", description: "Go to Home page", icon: <HomeIcon />, action: function () { router.push("home") }
         },
         {
-            title: "About", description: "Go to About page", icon: <AccountTreeIcon />, action: function () {
-                router.push("about")
-            }
+            title: "Gallery", description: "Go to Gallery page", icon: <CollectionsIcon />, action: function () { router.push("gallery") }
+        },
+        {
+            title: "Fursona", description: "Go to Fursona page", icon: <PetsIcon />, action: function () { router.push("fursona") }
+        },
+        {
+            title: "Projects", description: "Go to projects page", icon: <AccountTreeIcon />, action: function () { router.push("projects") }
+        },
+        {
+            title: "About", description: "Go to About page", icon: <InfoIcon />, action: function () { router.push("about") }
         },
         {
             title: "English", description: "Change Language to English", icon: <LanguageIcon />, action: function () {

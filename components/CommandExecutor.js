@@ -96,9 +96,18 @@ function SimpleDialog(props) {
     return (
         <Dialog open={open} fullWidth="xl">
             <DialogTitle>Command Executor</DialogTitle>
-            <TextField variant='standard' sx={{ width: "80%" }} onChange={onTextFieldChange} />
-
             <List sx={{ pt: 0 }}>
+                <ListItem>
+                    <TextField label="Search for command" variant='standard' sx={{ width: "80%" }} onChange={onTextFieldChange} autoFocus
+                        inputProps={{
+                            onKeyDown: (e) => {
+                                if (e.key === 'Enter') {
+                                    handleEnter(selectedIndex)
+                                }
+                            },
+                        }}
+                    />
+                </ListItem>
                 {commands.map((command, index) => (
                     <ListItem onClick={() => onCommandClicked(command, index)} key={index}>
                         <ListItemButton

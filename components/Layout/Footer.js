@@ -43,7 +43,7 @@ export default function Footer() {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography align="right" variant="body2">
-              Teko's Tundra {2022 > year ? `${2022}-` : ""}{year}
+              Teko's Tundra 2022 - {year}
             </Typography>
 
           </Grid>

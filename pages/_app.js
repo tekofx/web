@@ -21,6 +21,7 @@ import { useState } from "react";
 import { Snackbar, Button, IconButton, Stack, Paper, Typography, Grid } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import { useMediaQuery } from "@mui/material";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -31,6 +32,9 @@ if (cookies.get("lang") === undefined) {
 }
 
 function Seasons() {
+
+
+
   // If it is winter, snow
   const date = new Date();
   const month = date.getMonth();
@@ -47,17 +51,12 @@ function Seasons() {
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const extraSmallToMid = useMediaQuery(theme.breakpoints.between("xs", "md"));
+
 
   useSyncLanguage(cookies.get("lang"));
 
 
-
-  const action = (
-    <div>
-
-
-    </div>
-  );
 
   return (
     <div>
@@ -69,10 +68,8 @@ function MyApp(props) {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
+          {extraSmallToMid ? "" : <Snack />}
           <CommandExecutor />
-          <Snack />
-
-
           <Layout>
             <Transition>
               <Container maxWidth="xl">
@@ -101,9 +98,9 @@ export default appWithI18Next(MyApp, ni18nConfig);
 
 function Snack() {
   var random = Math.random();
-  console.log(random)
   // If random is minor than 0.6 not show snack
   const [open, setOpen] = useState(random < 0.6 ? false : true);
+
 
   const handleClick = () => {
     setOpen(true);

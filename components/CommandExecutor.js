@@ -19,7 +19,8 @@ import { useState } from 'react';
 import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 import Cookies from "universal-cookie";
-
+import { IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { useRouter } from 'next/router';
 function SimpleDialog(props) {
     const defaultCommands = [
@@ -95,7 +96,11 @@ function SimpleDialog(props) {
 
     return (
         <Dialog open={open} fullWidth="xl">
+
             <DialogTitle>Command Executor</DialogTitle>
+            <IconButton onClick={() => setOpen(false)} sx={{ position: "absolute", top: 0, right: 0 }}>
+                <CloseIcon />
+            </IconButton>
             <List sx={{ pt: 0 }}>
                 <ListItem>
                     <TextField label="Search for command" variant='standard' sx={{ width: "80%" }} onChange={onTextFieldChange} autoFocus

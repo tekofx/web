@@ -1,6 +1,6 @@
 import React from "react";
 import ImageGallery from "../components/ImageGallery";
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
 
@@ -16,8 +16,10 @@ function Gallery() {
         <title>Gallery | Teko Tundra</title>
 
       </Head>
-      <Typography variant="h1">{t.title}</Typography>
-      <Typography variant="body1">{t.text}</Typography>
+      <Paper sx={{ marginTop: 2, marginBottom: 2, p: 2 }}>
+        <Typography variant="h1">{t.title}</Typography>
+        <Typography variant="body1">{t.text}</Typography>
+      </Paper>
       <ImageGallery />
     </div>
   );

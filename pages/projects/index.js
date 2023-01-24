@@ -3,7 +3,6 @@ import RepositoryList from "../../components/Github/RepositoryList";
 import { Typography, Grid, Paper, Card, Box, CardContent, IconButton, CardMedia } from "@mui/material";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Head from "next/head";
-
 import getLang from "../../components/Language/Lang";
 
 
@@ -20,7 +19,9 @@ function Projects() {
       <Grid container spacing={1}>
 
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t.title}</Typography>
+          <Paper sx={{ marginTop: 2 }}>
+            <Typography variant="h1">{t.title}</Typography>
+          </Paper>
         </Grid>
 
         {/* <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -51,7 +52,6 @@ function Projects() {
         </Grid> */}
 
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h2">Github</Typography>
           <RepositoryList />
 
         </Grid>

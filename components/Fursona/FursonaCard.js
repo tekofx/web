@@ -79,6 +79,7 @@ export default function PresentationCard(props) {
                 <QRCode value={props.web} />
               </Grid>
             </Grid>
+
           </CardContent>
         </Grid>
       </Grid>

@@ -1,9 +1,25 @@
-import QRCode from "react-qr-code";
+import React from 'react';
+import { useQRCode } from 'next-qrcode';
 
-export default function About(props) {
+function App() {
+  const { Canvas } = useQRCode();
+
   return (
-    <div style={{ background: "white", padding: "5%" }}>
-      <QRCode value={props.value} size={50} />
-    </div>
+    <Canvas
+      text='https://github.com/Bunlong/next-qrcode'
+      options={{
+        level: 'L',
+        margin: 1,
+        scale: 4,
+        width: 60,
+        color: {
+          dark: '#000000FF',
+          light: '#FFFFFFFF',
+        }
+      }}
+
+    />
   );
 }
+
+export default App;

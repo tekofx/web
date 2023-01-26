@@ -2,7 +2,6 @@ import React from "react";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import ThreeFiber from "../components/ThreeFiber";
 import AmongUS from "../components/Particles/AmongUS";
 import Leafs from "../components/Particles/Leafs";
 import Timeline from "../components/Fursona/Timeline";
@@ -29,10 +28,7 @@ function Home() {
           <Typography variant="body1">{t.text}</Typography>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Typography variant="h2">ThreeFiber</Typography>
-          <ThreeFiber />
-        </Grid>
+
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">TsParticles</Typography>
           <AmongUS />
@@ -50,9 +46,7 @@ function Home() {
           <Abilities />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Presentation />
-        </Grid>
+
       </Grid>
     </div>
   );

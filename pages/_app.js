@@ -22,6 +22,7 @@ import { Snackbar, Button, IconButton, Stack, Paper, Typography, Grid } from "@m
 import CloseIcon from '@mui/icons-material/Close';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import { useMediaQuery } from "@mui/material";
+import { useRouter } from "next/router";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -31,13 +32,21 @@ if (cookies.get("lang") === undefined) {
   cookies.set("lang", "es");
 }
 
-function Seasons() {
+function Seasons(props) {
+  console.log(props.path)
 
 
 
   // If it is winter, snow
   const date = new Date();
   const month = date.getMonth();
+
+
+  // When displaying amongus particles, do not display snow or leafs, because they are not compatible
+  if (props.path === "/experimental") {
+    return null
+  }
+
   if (month === 11 || month === 0 || month === 1) {
     return <SnowComponent />;
   }
@@ -52,6 +61,8 @@ function Seasons() {
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const extraSmallToMid = useMediaQuery(theme.breakpoints.between("xs", "md"));
+  const router = useRouter();
+
 
 
   useSyncLanguage(cookies.get("lang"));
@@ -73,7 +84,7 @@ function MyApp(props) {
           <Layout>
             <Transition>
               <Container maxWidth="xl">
-                <Seasons />
+                <Seasons path={router.pathname} />
 
                 <Page>
                   <Component {...pageProps} />

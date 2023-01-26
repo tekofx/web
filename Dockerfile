@@ -6,7 +6,8 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json ./
-RUN npm i
+COPY yarn.lock ./
+RUN yarn install
 
 
 # Rebuild the source code only when needed
@@ -20,7 +21,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm run build
+RUN yarn build
 
 # If using npm comment out above and use below instead
 # RUN npm run build

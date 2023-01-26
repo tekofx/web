@@ -1,7 +1,8 @@
 version: "3"
 services:
   web:
+    build: .
     container_name: web
     image: test
     ports:
-      - 80:3000
+      - 3000:3000

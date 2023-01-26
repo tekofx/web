@@ -20,8 +20,6 @@
     "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "latest",
     "@next/font": "^13.0.5",
-    "@react-three/drei": "^9.43.3",
-    "@react-three/fiber": "^8.9.1",
     "axios": "^1.2.0",
     "downloadjs": "^1.4.7",
     "framer-motion": "^7.6.12",

@@ -3,14 +3,14 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false
 let assetPrefix = ''
 let basePath = ''
 let imagePath = ""
-process.env.FAVICON = ""
+process.env.FAVICON = "/public/favicon.ico"
 process.env.PUBLIC_URL = "/"
 
 if (isGithubActions) {
   assetPrefix = "/web"
   basePath = "/web"
   imagePath = "/web"
-  process.env.FAVICON = "/web"
+  process.env.FAVICON = "/web/public/favicon.ico"
   process.env.PUBLIC_URL = "/web/"
 
 }

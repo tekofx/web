@@ -1,4 +1,5 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
+console.log(isGithubActions)
 
 let assetPrefix = ''
 let basePath = ''

@@ -1,13 +1,10 @@
-const isGithubActions = process.env.GITHUB_ACTIONS || false
-console.log(process.env)
-
 let assetPrefix = ''
 let basePath = ''
 let imagePath = ""
 process.env.FAVICON = "/public/favicon.ico"
 process.env.PUBLIC_URL = "/"
 
-if (isGithubActions) {
+if (process.env.GITHUB_WORKFLOW==="Deploy Next.js site to Pages") {
   assetPrefix = "/web"
   basePath = "/web"
   imagePath = "/web"

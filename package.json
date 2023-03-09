@@ -16,7 +16,7 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
+    "@mui/icons-material": "^5.11.11",
     "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "latest",
     "@next/font": "^13.0.5",

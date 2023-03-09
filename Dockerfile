@@ -7,6 +7,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 COPY package.json ./
 COPY yarn.lock ./
+COPY .yarnrc ./
 RUN yarn install
 
 

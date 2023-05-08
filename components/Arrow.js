@@ -10,7 +10,7 @@ const point1 = {
 }
 
 const point2 = {
-    x: "20%",
+    x: "30%",
     y: "100%",
 }
 
@@ -54,13 +54,7 @@ const draw2 = {
     }
 };
 
-const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: (i) => ({
-        opacity: 1,
-        transition: { delay: 3 + i * 0.5 }
-    })
-};
+
 
 const Arrow = () => {
 
@@ -101,14 +95,16 @@ const Arrow = () => {
 
                 </motion.svg>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingLeft: "22%" }}>
+            <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingLeft: point2.x }}>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 4 }}
-                    color="#00cc88">
-                    <Typography variant="h5" color="#ffffff" sx={{ paddingTop: 2 }}>
+                    color="#00cc88"
+
+                >
+                    <Typography variant="h4" color="#ffffff" sx={{ fontSize: "2vw" }} >
                         Este es un texto de ejemplo para probar el efecto de animación de la flecha
                     </Typography>
                 </motion.div>

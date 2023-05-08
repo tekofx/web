@@ -18,12 +18,13 @@ function About() {
 
 
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={12} md={12} lg={6}>
-                    <img src={process.env.PUBLIC_URL + "img/avatar.jpg"} alt="Teko Tundra" style={{ width: "100%", height: "auto" }} />
+                <Grid item xs={8} sm={8} md={8} lg={8} style={{ position: 'relative' }}>
+                    <img src={process.env.PUBLIC_URL + "img/avatar.jpg"} alt="Teko Tundra" style={{ width: "50%", height: "auto" }} />
 
-                </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={6}>
-                    <Arrow />
+                    <div style={{ position: 'absolute', top: "40%", left: "30%" }}>
+
+                        <Arrow />
+                    </div>
                 </Grid>
 
 

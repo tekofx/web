@@ -43,6 +43,7 @@ export default function CardCreator() {
         setPronouns(def.pronouns);
         setWeb(def.web);
         setBirthday(def.birthday);
+        setFile(process.env.PUBLIC_URL + "img/avatar.jpg");
     }
 
     return (

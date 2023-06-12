@@ -26,7 +26,7 @@ export default function Reference() {
           <Typography variant="h2">Reference</Typography>
           <Typography variant="body1">{t.text}</Typography>
         </Grid>
-        <Grid item xs={12} sm={12} md={7} lg={8} xl={8}>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
           {selectedColor == "" ?
             <img src={process.env.PUBLIC_URL + "img/ref-small.jpg"} width="100%" />
@@ -42,16 +42,19 @@ export default function Reference() {
 
 
         </Grid>
-        <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <ColorPalette setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
+        </Grid>
+
+        {/* <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
           <Typography variant="h3">Color Reference</Typography>
           <Typography variant="body1">This palette highlights the color on the ref</Typography>
           <Alert severity="warning" variant="filled">Experimental. Could not work</Alert>
           <br />
-          <ColorPalette setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
           <ColorsTable />
 
           <br />
-        </Grid>
+        </Grid> */}
 
       </Grid>
     </Paper>

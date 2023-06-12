@@ -57,11 +57,11 @@ export default function ColorPalette(props) {
             onMouseLeave={() => props.setSelectedColor("")}
             onClick={() => toggleColorChange(color)}
           >
-            <Typography variant="h6" textAlign="center" style={{ color: getContrastColor(color) }}>
-
+            <Typography variant="h4" textAlign="center" style={{ color: getContrastColor(color) }}>
               {color}
             </Typography>
           </motion.div>
+
         </Grid>
       ))}
     </Grid>

@@ -9,7 +9,7 @@ import getLang from "../components/Language/Lang";
 import { RiPlantFill } from "react-icons/ri";
 import { GrPersonalComputer } from "react-icons/gr";
 import Timeline from "../components/Fursona/Timeline";
-
+import About from "../components/Fursona/About";
 export default function Fursona() {
   const t = getLang().fursona;
 
@@ -33,10 +33,18 @@ export default function Fursona() {
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
           <Reference />
         </Grid>
-        {/* <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+        {/** Gallery */}
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
           <Gallery />
         </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={6}>
+
+        {/** About */}
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+
+          <About />
+        </Grid>
+
+        {/* <Grid item xs={12} sm={12} md={12} lg={6}>
           <Curiosities />
           <Likes />
         </Grid>

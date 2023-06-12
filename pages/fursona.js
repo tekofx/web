@@ -10,6 +10,7 @@ import { RiPlantFill } from "react-icons/ri";
 import { GrPersonalComputer } from "react-icons/gr";
 import Timeline from "../components/Fursona/Timeline";
 import About from "../components/Fursona/About";
+import Gallery from "../components/Fursona/Gallery";
 export default function Fursona() {
   const t = getLang().fursona;
 
@@ -33,16 +34,12 @@ export default function Fursona() {
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
           <Reference />
         </Grid>
-        {/** Gallery */}
-        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
-          <Gallery />
-        </Grid>
 
         {/** About */}
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
-
           <About />
         </Grid>
+
 
         {/* <Grid item xs={12} sm={12} md={12} lg={6}>
           <Curiosities />
@@ -51,6 +48,10 @@ export default function Fursona() {
         <Grid container item xs={12} sm={12} md={12} lg={6}>
           <Timeline />
         </Grid> */}
+        {/** Gallery */}
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+          <Gallery />
+        </Grid>
 
       </Grid>
     </div>
@@ -86,12 +87,3 @@ function Likes() {
   )
 }
 
-function Gallery() {
-  return (
-    <Paper sx={{ paddingLeft: 2, paddingRight: 2 }}>
-      <Typography variant="h2">Gallery</Typography>
-      <img src="https://i.imgur.com/1Z1Z1Z1.jpg" alt="Image" />
-    </Paper>
-  )
-
-}

@@ -23,8 +23,8 @@ export default function Reference() {
 
       <Grid id="reference" container spacing={2} >
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h2">Reference</Typography>
-          <Typography variant="body1">{t.text}</Typography>
+          <Typography variant="h2" textAlign="center">Teko Fresnes Xaiden</Typography>
+          <Typography variant="body1" textAlign="center">{t.text}</Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 

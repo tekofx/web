@@ -42,7 +42,7 @@ export default function ColorPalette(props) {
     <Grid container
     >
       {colors.map((color) => (
-        <Grid item lg>
+        <Grid item xs>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 1.1 }}

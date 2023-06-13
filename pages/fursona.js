@@ -36,11 +36,11 @@ export default function Fursona() {
       <br />
 
       {/** Fursona information */}
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={12} md={12} lg={12} >
+      <Grid container spacing={2} paddingRight="10%" paddingLeft="10%">
+        {/*  <Grid item xs={12} sm={12} md={12} lg={12} >
           <Info />
 
-        </Grid>
+        </Grid> */}
         {/** Reference */}
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
           <Reference />

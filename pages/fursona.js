@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Typography, Grid, Paper, Button, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import { Avatar, Typography, Grid, Paper, Button, Accordion, AccordionSummary, AccordionDetails, Box } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
@@ -11,6 +11,7 @@ import { GrPersonalComputer } from "react-icons/gr";
 import Timeline from "../components/Fursona/Timeline";
 import About from "../components/Fursona/About";
 import Gallery from "../components/Fursona/Gallery";
+import Data from "../components/Fursona/Data";
 export default function Fursona() {
   const t = getLang().fursona;
 
@@ -47,9 +48,23 @@ export default function Fursona() {
         </Grid>
 
         {/** About */}
-        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
-          <About />
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
+          <Box sx={{ display: "flex" }}>
+            <Grid container spacing={2}>
+              {/** About */}
+              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
+                <About />
+              </Grid>
+
+              {/** Data */}
+              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
+                <Data />
+              </Grid>
+            </Grid>
+          </Box>
+
         </Grid>
+
 
 
         {/* <Grid item xs={12} sm={12} md={12} lg={6}>

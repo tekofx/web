@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Grid, Typography } from "@mui/material";
+import { useState } from "react";
+import { Grid, Typography, Tooltip, Snackbar, Alert, Slide } from "@mui/material";
+
 const colors = [
   "#2D2D2D",
   "#A0A0A0",
@@ -11,12 +13,20 @@ const colors = [
   "#E2E565",
 ]
 export default function ColorPalette(props) {
+  const [open, setOpen] = useState(false);
+
+
+
+
   const toggleColorChange = (color) => {
-    console.log(props.selectedColor)
+
+    if (props.selectedColor === color) {
+      props.setSelectedColor(color)
+    }
+
+
     if (props.selectedColor === "undefined") {
       props.setSelectedColor(color)
-    } else {
-      props.setSelectedColor("undefined")
     }
   }
   function getContrastColor(hexcolor) {
@@ -37,35 +47,64 @@ export default function ColorPalette(props) {
     return (yiq >= 128) ? '#000000' : '#FFFFFF';
   }
 
+  const onClick = (color) => {
+    props.setSelectedColor(color);
+    // Randomly show snackbar
+    navigator.clipboard.writeText(props.label);
+    if (!open) {
+      setOpen(true);
+    }
+    toggleColorChange(color);
+  };
+
+
 
   return (
-    <Grid container
-    >
-      {colors.map((color) => (
-        <Grid item xs>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            style={{
-              height: "50%",
-              width: "100%",
-              backgroundColor: color,
-              paddingBottom: "50%",
-            }}
-            onMouseOver={() => props.setSelectedColor(color)}
-            onMouseLeave={() => props.setSelectedColor("")}
-            onClick={() => toggleColorChange(color)}
-          >
-            <Typography variant="h4" textAlign="center" style={{ color: getContrastColor(color) }}>
-              {color}
-            </Typography>
-          </motion.div>
+    <>
+      <Grid container
+      >
+        {colors.map((color) => (
+          <Grid item xs>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              style={{
+                height: "50%",
+                width: "100%",
+                backgroundColor: color,
+                paddingBottom: "50%",
+                cursor: "pointer",
+              }}
+              onMouseOver={() => props.setSelectedColor(color)}
+              onMouseLeave={() => props.setSelectedColor("")}
+              onClick={() => onClick(color)}
+            >
+              <Typography variant="h4" textAlign="center" style={{ color: getContrastColor(color) }}>
+                {color}
+              </Typography>
+            </motion.div>
 
-        </Grid>
-      ))}
-    </Grid>
-
+          </Grid>
+        ))}
+      </Grid>
+      <Snackbar
+        open={open}
+        onClose={() => setOpen(false)}
+        autoHideDuration={20000}
+        TransitionComponent={Slide}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        sx={{ bottom: "50px" }}
+      >
+        <Alert
+          onClose={() => setOpen(false)}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Color {props.selectedColor} copied to clipboard
+        </Alert>
+      </Snackbar>
+    </>
 
 
   );

@@ -7,7 +7,7 @@ import { CacheProvider } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/layout";
-import "../styles/transition.css";
+import "../styles/styles.css";
 import Transition from "../components/Layout/Transition";
 import { appWithI18Next, useSyncLanguage } from "ni18n";
 import { ni18nConfig } from "../ni18n.config";
@@ -23,7 +23,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import { useMediaQuery } from "@mui/material";
 import { useRouter } from "next/router";
-import "../styles/gallery.css"
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 

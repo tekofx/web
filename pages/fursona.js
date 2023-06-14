@@ -31,7 +31,7 @@ export default function Fursona() {
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Fursona Information" />
         <meta name="twitter:description" content="Teko is an arctic fox with blue hair and green and yellow eyes. He loves plants, animals, anime and videogames" />
-        <meta property="twitter:image" content={process.env.PUBLIC_URL + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
 
       </Head>
       <br />

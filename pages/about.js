@@ -17,6 +17,17 @@ function About() {
         <meta charSet="utf-8" />
         <title>About | Teko Tundra</title>
 
+
+        <meta name="og:title" content="About | Teko Tundra" />
+        <meta name="og:description" content="Teko is an arctic fox with blue hair and green and yellow eyes" />
+        <meta name="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="tekofx.github.io" />
+        <meta name="twitter:title" content="Teko's Tundra | About" />
+        <meta name="twitter:description" content="Welcome to my webpage" />
+        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+
       </Head>
 
 

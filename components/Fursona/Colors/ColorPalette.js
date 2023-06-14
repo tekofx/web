@@ -15,9 +15,6 @@ const colors = [
 export default function ColorPalette(props) {
   const [open, setOpen] = useState(false);
 
-
-
-
   const toggleColorChange = (color) => {
 
     if (props.selectedColor === color) {
@@ -50,14 +47,21 @@ export default function ColorPalette(props) {
   const onClick = (color) => {
     props.setSelectedColor(color);
     // Randomly show snackbar
-    navigator.clipboard.writeText(props.label);
+    navigator.clipboard.writeText(color);
     if (!open) {
       setOpen(true);
     }
-    toggleColorChange(color);
+    //toggleColorChange(color);
   };
 
 
+  const onMouseOver = (color) => {
+    props.setSelectedColor(color);
+  };
+
+  const onMouseLeave = (color) => {
+    props.setSelectedColor("");
+  };
 
   return (
     <>
@@ -76,8 +80,8 @@ export default function ColorPalette(props) {
                 paddingBottom: "50%",
                 cursor: "pointer",
               }}
-              onMouseOver={() => props.setSelectedColor(color)}
-              onMouseLeave={() => props.setSelectedColor("")}
+              onMouseOver={() => onMouseOver(color)}
+              onMouseLeave={() => onMouseLeave(color)}
               onClick={() => onClick(color)}
             >
               <Typography variant="h4" textAlign="center" style={{ color: getContrastColor(color) }}>
@@ -91,15 +95,14 @@ export default function ColorPalette(props) {
       <Snackbar
         open={open}
         onClose={() => setOpen(false)}
-        autoHideDuration={20000}
+        autoHideDuration={2000}
         TransitionComponent={Slide}
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        sx={{ bottom: "50px" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        sx={{ height: { xs: "8rem", sm: "8rem", md: "2rem", lg: "2rem" }, }}
       >
         <Alert
           onClose={() => setOpen(false)}
           severity="success"
-          sx={{ width: "100%" }}
         >
           Color {props.selectedColor} copied to clipboard
         </Alert>

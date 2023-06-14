@@ -14,7 +14,6 @@ import getLang from "../Language/Lang";
 import { useState } from "react";
 import { motion } from "framer-motion"
 
-const axios = require("axios");
 const aux = [{
     src: process.env.PUBLIC_URL + "img/juaguelin.png",
     title: "By Teko",
@@ -24,6 +23,28 @@ const aux = [{
 }, {
     src: process.env.PUBLIC_URL + "img/among_us.png",
     title: "By Teko",
+    description: "",
+    lightBoxTitle: ""
+},
+{
+    src: process.env.PUBLIC_URL + "img/summer - lgtb.jpg",
+    title: "By Teko",
+    description: "",
+    lightBoxTitle: ""
+},
+{
+    src: process.env.PUBLIC_URL + "img/Merry Foxmas.png",
+    title: "By Teko",
+    description: "",
+    lightBoxTitle: ""
+},
+{
+    src: process.env.PUBLIC_URL + "img/Autumn.png", title: "By Teko",
+    description: "",
+    lightBoxTitle: ""
+},
+{
+    src: process.env.PUBLIC_URL + "img/ref-small.jpg", title: "By Teko",
     description: "",
     lightBoxTitle: ""
 }
@@ -58,52 +79,29 @@ export default function Gallery() {
         <Paper sx={{ p: 2 }}>
             <Typography variant="h1" textAlign="left">{t.title}</Typography>
 
-            <Box sx={{ flexGrow: 1 }}>
-                {loading ? (
-                    <Grid
-                        container
-                        spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
-                        columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
-                    >
-                        {Array.from(Array(30).keys()).map((_, i) => (
-                            <Grid item lg={2} key={i}>
-                                <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
-                            </Grid>
+            {loading ? (
+                <Grid
+                    container
+                    spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+                    columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
+                >
+                    {Array.from(Array(30).keys()).map((_, i) => (
+                        <Grid item lg={2} key={i}>
+                            <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
+                        </Grid>
+                    ))}
+                </Grid>
+            ) : (
+                <div className="gallery">
+                    <div className="pics">
+
+                        {images.map((image) => (
+                            <img src={image.src} alt={image.title} style={{ width: "100%", height: "auto" }} />
                         ))}
-                    </Grid>
-                ) : (
-                    <ImageList
-                        variant="quilted"
-                        sx={{
-                            gridTemplateColumns:
-                                "repeat(auto-fill,minmax(280px,1fr))!important",
-                        }}
-                    >
-                        {images.map((item, key) => (
-                            <ImageListItem
-                                component={motion.li}
-                                whileHover={{ scale: 1.080 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                                key={key}
-                                cols={item.cols || 1}
-                                rows={item.rows || 1}
-                            >
-                                <img
-                                    {...srcset(item.src, 100, item.rows, item.cols)}
-                                    alt={item.lightboxTitle}
-                                    loading="lazy"
-                                    onClick={toggleOpen}
-                                />
-                                <ImageListItemBar
-                                    title={item.title}
-                                    subtitle={item.description}
-                                    position="bottom"
-                                />
-                            </ImageListItem>
-                        ))}
-                    </ImageList>
-                )}
-            </Box>
+                    </div>
+                </div>
+
+            )}
         </Paper>
     );
 }

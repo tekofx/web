@@ -146,7 +146,7 @@ Theme.typography.h3 = {
 Theme.typography.h4 = {
   color: "#fff",
 
-  fontSize: "1.2rem",
+  fontSize: "0.8rem",
 
   [Theme.breakpoints.up("md")]: {
     fontSize: "1.3rem",

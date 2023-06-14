@@ -13,18 +13,18 @@ export default function Index() {
       <Head>
         <meta charSet="utf-8" />
         <title>Home | Teko Tundra</title>
-        <link rel="canonical" href="http://mysite.com/example" />
 
 
-        <meta name="og:title" content="Home" />
-        <meta name="og:description" content="Home page" />
+        <meta name="og:title" content="Teko | Home" />
+        <meta name="og:description" content="Teko's personal webpage" />
         <meta name="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
-        <meta name="twitter:title" content="Teko's Tundra" />
-        <meta name="twitter:description" content="Home" />
-        <meta property="twitter:image" content={process.env.PUBLIC_URL + "img/ref-small.jpg"} />
+        <meta name="twitter:title" content="Teko's Tundra | Home" />
+        <meta name="twitter:description" content="Welcome to Teko's Tundra. Here you can see art, photographies or fursona information" />
+        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+
       </Head>
       <Paper sx={{ marginTop: 4 }} >
         <Grid container spacing={2}>

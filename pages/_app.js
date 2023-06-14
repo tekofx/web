@@ -23,6 +23,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import { useMediaQuery } from "@mui/material";
 import { useRouter } from "next/router";
+import "../styles/gallery.css"
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 

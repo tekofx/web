@@ -28,7 +28,8 @@
     "tabPhotography": "Fotografía"
   },
   "fursona": {
-    "text": "Teko es un zorro ártico de pelo azul y ojos amarillos y verdes. Tiene poderes de hielo y puede usarlos para crear objetos a partir del hielo.",
+    "about": "Teko es un zorro ártico bastante friki que disfruta de los ordenadores, las plantas y los animales. Como buen zorro ártico no soporta bien el calor, pero gracias a sus poderes de hielo puede soportar los veranos sin desmallarse.",
+    "text": "Zorro Ártico",
     "name": "Nombre",
     "species": {
       "title": "Especie",

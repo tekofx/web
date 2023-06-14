@@ -1,15 +1,6 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
-import { Grid, Typography, Paper, IconButton, Stack, Dialog } from "@mui/material";
-import Button from "@mui/material/Button";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import { Grid, Typography, Paper, Stack, Dialog } from "@mui/material";
 import { Skeleton } from "@mui/material";
-import ImageList from "@mui/material/ImageList";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ImageListItem from "@mui/material/ImageListItem";
 import getLang from "../Language/Lang";
 import Theme from "../../src/theme";
 import { useState } from "react";

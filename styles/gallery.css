@@ -11,8 +11,26 @@
 .gallery .pics {
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
-  cursor: pointer;
+  cursor: zoom-in;
   margin-bottom: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.gallery .pic {
+  width: 100%;
+  height: "auto";
+}
+.text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+  padding-top: 2%;
 }
 
 @media (max-width: 991px) {

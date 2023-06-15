@@ -7,8 +7,10 @@ import FurAffinity from "../Icons/FurAffinity";
 import Deviantart from "../Icons/Deviantart";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
+  const [year, setYear] = React.useState(0);
+  React.useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
   return (
     <Grid
       container

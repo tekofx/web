@@ -20,7 +20,7 @@ const variants = {
 const Transition = ({ children }) => {
   const { asPath } = useRouter();
   return (
-    <div className="effect-1">
+    <div >
       <motion.div
         variants={variants}
         animate="in"

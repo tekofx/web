@@ -1,12 +1,13 @@
 import * as React from "react";
-import { Grid, Typography, Paper, Stack, Dialog } from "@mui/material";
+import { Grid, Typography, Paper, Stack, Dialog, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { Skeleton } from "@mui/material";
 import getLang from "../Language/Lang";
 import Theme from "../../src/theme";
 import { useState } from "react";
 import { motion } from "framer-motion"
 import LaunchIcon from '@mui/icons-material/Launch';
-const aux = [{
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+const images = [{
     src: process.env.PUBLIC_URL + "img/juaguelin.png",
     title: "By Teko",
     author: "Teko",
@@ -50,9 +51,9 @@ const aux = [{
 ]
 
 export default function Gallery() {
-    const [images, setImages] = React.useState(aux);
     const [loading, setLoading] = React.useState(false);
     const [value, setValue] = React.useState(0);
+    const [expanded, setExpanded] = React.useState(true);
     const t = getLang().gallery;
 
     const [open, setOpen] = useState(false);
@@ -62,14 +63,7 @@ export default function Gallery() {
     };
 
 
-    function srcset(image, size, rows = 1, cols = 1) {
-        return {
-            src: image,
 
-            width: size * cols,
-            height: size * rows,
-        };
-    }
 
     const onImageClick = (image) => {
         console.log(image);
@@ -80,51 +74,60 @@ export default function Gallery() {
 
 
     return (
-        <>
-            <Paper sx={{ p: 2 }}>
+        <Accordion expanded={expanded} onClick={() => setExpanded(!expanded)}>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+            >
                 <Typography variant="h1" textAlign="left">{t.title}</Typography>
+            </AccordionSummary>
+            <AccordionDetails
+            >
+                <Paper sx={{ p: 2 }}>
 
-                {loading ? (
-                    <Grid
-                        container
-                        spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
-                        columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
-                    >
-                        {Array.from(Array(30).keys()).map((_, i) => (
-                            <Grid item lg={2} key={i}>
-                                <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
-                            </Grid>
-                        ))}
-                    </Grid>
-                ) : (
-                    <div className="gallery">
+                    {loading ? (
+                        <Grid
+                            container
+                            spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+                            columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
+                        >
+                            {Array.from(Array(30).keys()).map((_, i) => (
+                                <Grid item lg={2} key={i}>
+                                    <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    ) : (
+                        <div className="gallery">
 
-                        {images.map((image) => (
-                            <motion.div className="pics"
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                                onClick={() => onImageClick(image)}
-                            >
-                                <img src={image.src} alt={image.title} className="pic" />
-                                <Paper className="text"
-                                    component={motion.div}
-                                    whileHover={{ backgroundColor: Theme.palette.primary.main }}
-                                    transition={{
-                                        ease: "easeIn",
-                                        duration: 0.2,
-                                    }}
+                            {images.map((image) => (
+                                <motion.div className="pics"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                                    onClick={() => onImageClick(image)}
                                 >
-                                    <Stack direction="row" spacing={1}>
-                                        <Typography>Art by {image.author}</Typography>
-                                        <LaunchIcon />
-                                    </Stack>
-                                </Paper>
-                            </motion.div>
-                        ))}
-                    </div>
+                                    <img src={image.src} alt={image.title} className="pic" />
+                                    <Paper className="text"
+                                        component={motion.div}
+                                        whileHover={{ backgroundColor: Theme.palette.primary.main }}
+                                        transition={{
+                                            ease: "easeIn",
+                                            duration: 0.2,
+                                        }}
+                                    >
+                                        <Stack direction="row" spacing={1}>
+                                            <Typography>Art by {image.author}</Typography>
+                                            <LaunchIcon />
+                                        </Stack>
+                                    </Paper>
+                                </motion.div>
+                            ))}
+                        </div>
 
-                )}
-            </Paper>
+                    )}
+                </Paper>
+            </AccordionDetails>
 
             <Dialog open={open} onClose={toggleOpen} maxWidth="lg" PaperProps={{
                 style: {
@@ -134,7 +137,7 @@ export default function Gallery() {
             }}>
                 <img src={value.src} alt={value.title} style={{ height: "100%", width: "auto" }} />
             </Dialog>
-        </>
+        </Accordion >
 
     );
 }

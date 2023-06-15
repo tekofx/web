@@ -26,12 +26,16 @@ export default function Fursona() {
         <meta name="og:title" content="Teko | Fursona" />
         <meta name="og:description" content="Teko is an arctic fox with blue hair and green and yellow eyes" />
         <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://tekofx.github.io/web/fursona" />
+        <meta name="og:image" content="https://tekofx.github.io/web/img/meta/fursona.jpg" />
+        <meta name="og:site_name" content="Teko's Tundra" />
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Fursona Information" />
         <meta name="twitter:description" content="Teko is an arctic fox with blue hair and green and yellow eyes. He loves plants, animals, anime and videogames" />
-        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content="https://tekofx.github.io/web/img/meta/fursona.jpg" />
 
       </Head>
       <br />

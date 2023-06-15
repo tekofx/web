@@ -19,12 +19,14 @@ function Gallery() {
         <meta name="og:title" content="Teko | Gallery" />
         <meta name="og:description" content="Art and photographies" />
         <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://tekofx.github.io/web/gallery" />
+        <meta name="og:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Gallery" />
         <meta name="twitter:description" content="A gallery containing my art and photographies" />
-        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
       </Head>
       <Paper sx={{ marginTop: 2, marginBottom: 2, p: 2 }}>

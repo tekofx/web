@@ -41,7 +41,7 @@ export default function Fursona() {
       <br />
 
       {/** Fursona information */}
-      <Grid container spacing={2} paddingRight="10%" paddingLeft="10%">
+      <Grid container spacing={2} paddingRight={{ xs: "0%", lg: "10%" }} paddingLeft={{ xs: "0%", lg: "10%" }}>
         {/*  <Grid item xs={12} sm={12} md={12} lg={12} >
           <Info />
 
@@ -51,37 +51,22 @@ export default function Fursona() {
           <Reference />
         </Grid>
 
-        {/** About and data */}
-        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
-          <Box sx={{ display: "flex" }}>
-            <Grid container spacing={2}>
-              {/** About */}
-              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <About />
-              </Grid>
-
-              {/** Info */}
-              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <Info />
-              </Grid>
-            </Grid>
-          </Box>
-
+        {/** About */}
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+          <About />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
-          <Box sx={{ display: "flex" }}>
-            <Grid container spacing={2}>
-              {/** About */}
-              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <Stats />
-              </Grid>
-
-
-            </Grid>
-          </Box>
-
+        {/** Info */}
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0 }}>
+          <Info />
         </Grid>
+
+
+        {/** Stats */}
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0 }}>
+          <Stats />
+        </Grid>
+
 
 
 

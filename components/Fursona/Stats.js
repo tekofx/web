@@ -1,17 +1,14 @@
-import { Grid, Paper, Typography, Avatar } from "@mui/material"
+import { Paper, Typography } from "@mui/material"
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
-import { useTranslation } from "react-i18next";
 import getLang from "../Language/Lang";
 import { motion } from "framer-motion"
-import { MoreTimeOutlined } from "@mui/icons-material";
 export default function Stats() {
     const t = getLang().fursona;
     var style = { marginRight: "2%", verticalAlign: "middle" };

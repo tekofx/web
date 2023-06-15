@@ -17,7 +17,7 @@ import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 import CommandExecutor from "../components/CommandExecutor"
 import { useHotkeys } from "react-hotkeys-hook";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Snackbar, Button, IconButton, Stack, Paper, Typography, Grid } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
@@ -33,13 +33,16 @@ if (cookies.get("lang") === undefined) {
 }
 
 function Seasons(props) {
-  console.log(props.path)
+  const [month, setMonth] = useState(null);
+
+  useEffect(() => {
+    const date = new Date();
+    const month = date.getMonth();
+    setMonth(month);
+  }, []);
 
 
 
-  // If it is winter, snow
-  const date = new Date();
-  const month = date.getMonth();
 
 
   // When displaying amongus particles, do not display snow or leafs, because they are not compatible
@@ -108,10 +111,13 @@ export default appWithI18Next(MyApp, ni18nConfig);
 
 
 function Snack() {
-  var random = Math.random();
   // If random is minor than 0.6 not show snack
-  const [open, setOpen] = useState(random < 0.6 ? false : true);
-
+  const [random, setRandom] = useState(null);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setRandom(Math.random());
+    setOpen(random < 0.6 ? false : true);
+  }, []);
 
   const handleClick = () => {
     setOpen(true);

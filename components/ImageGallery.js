@@ -167,11 +167,14 @@ export default function ImageGallery() {
                   alt={item.lightboxTitle}
                   loading="lazy"
                   onClick={toggleOpen}
+                  key={key}
                 />
                 <ImageListItemBar
                   title={item.title}
                   subtitle={item.description}
                   position="bottom"
+                  key={key}
+
                 />
               </ImageListItem>
             ))}

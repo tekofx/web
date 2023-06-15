@@ -11,7 +11,7 @@ import { GrPersonalComputer } from "react-icons/gr";
 import Timeline from "../components/Fursona/Timeline";
 import About from "../components/Fursona/About";
 import Gallery from "../components/Fursona/Gallery";
-import Data from "../components/Fursona/Data";
+import Stats from "../components/Fursona/Stats";
 export default function Fursona() {
   const t = getLang().fursona;
 
@@ -26,18 +26,22 @@ export default function Fursona() {
         <meta name="og:title" content="Teko | Fursona" />
         <meta name="og:description" content="Teko is an arctic fox with blue hair and green and yellow eyes" />
         <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://tekofx.github.io/web/fursona" />
+        <meta name="og:image" content="https://tekofx.github.io/web/img/meta/fursona.jpg" />
+        <meta name="og:site_name" content="Teko's Tundra" />
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Fursona Information" />
         <meta name="twitter:description" content="Teko is an arctic fox with blue hair and green and yellow eyes. He loves plants, animals, anime and videogames" />
-        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content="https://tekofx.github.io/web/img/meta/fursona.jpg" />
 
       </Head>
       <br />
 
       {/** Fursona information */}
-      <Grid container spacing={2} paddingRight="10%" paddingLeft="10%">
+      <Grid container spacing={2} paddingRight={{ xs: "0%", lg: "10%" }} paddingLeft={{ xs: "0%", lg: "10%" }}>
         {/*  <Grid item xs={12} sm={12} md={12} lg={12} >
           <Info />
 
@@ -48,22 +52,21 @@ export default function Fursona() {
         </Grid>
 
         {/** About */}
-        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
-          <Box sx={{ display: "flex" }}>
-            <Grid container spacing={2}>
-              {/** About */}
-              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <About />
-              </Grid>
-
-              {/** Data */}
-              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <Data />
-              </Grid>
-            </Grid>
-          </Box>
-
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0 }}>
+          <About />
         </Grid>
+
+        {/** Info */}
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0 }}>
+          <Info />
+        </Grid>
+
+
+        {/** Stats */}
+        <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0 }}>
+          <Stats />
+        </Grid>
+
 
 
 

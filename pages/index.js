@@ -18,12 +18,14 @@ export default function Index() {
         <meta name="og:title" content="Teko | Home" />
         <meta name="og:description" content="Teko's personal webpage" />
         <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://tekofx.github.io/web" />
+        <meta name="og:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Home" />
         <meta name="twitter:description" content="Welcome to Teko's Tundra. Here you can see art, photographies or fursona information" />
-        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
       </Head>
       <Paper sx={{ marginTop: 4 }} >

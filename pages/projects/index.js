@@ -19,12 +19,14 @@ function Projects() {
         <meta name="og:title" content="Teko | Projects" />
         <meta name="og:description" content="Personal projects" />
         <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://tekofx.github.io/web/projects" />
+        <meta name="og:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="tekofx.github.io" />
         <meta name="twitter:title" content="Teko's Tundra | Projects" />
         <meta name="twitter:description" content="List of projects related to computers and programming" />
-        <meta property="twitter:image" content={"https://tekofx.github.io/web/" + "img/twitter_image.jpg"} />
+        <meta property="twitter:image" content="https://tekofx.github.io/web/img/meta/about.jpg" />
 
       </Head>
       <Grid container spacing={1}>

@@ -1,45 +1,36 @@
-import { Grid, Paper, Typography, Avatar } from "@mui/material"
+import { Paper, Typography } from "@mui/material"
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
-import { useTranslation } from "react-i18next";
 import getLang from "../Language/Lang";
 import { motion } from "framer-motion"
-import { MoreTimeOutlined } from "@mui/icons-material";
-
-export default function Data() {
+export default function Stats() {
     const t = getLang().fursona;
     var style = { marginRight: "2%", verticalAlign: "middle" };
     const values = [
         {
-            name: t.species.title,
-            value: t.species.value,
+            name: t.attributes.strength,
+            value: 1,
             icon: <GiBroadsword style={style} />,
         },
         {
-            name: t.gender.title,
-            value: t.gender.value,
+            name: t.attributes.speed,
+            value: 4,
             icon: <BsFillLightningChargeFill style={style} />,
         },
         {
-            name: t.height,
-            value: "1.80 m",
+            name: t.attributes.intelligence,
+            value: 2,
             icon: <FaBrain style={style} />,
         },
         {
-            name: t.birth,
-            value: "22/09",
-            icon: <BsFillShieldFill style={style} />,
-        },
-        {
-            name: t.personality.title,
-            value: t.personality.value,
+            name: t.attributes.defense,
+            value: 3,
             icon: <BsFillShieldFill style={style} />,
         },
     ];
@@ -47,11 +38,14 @@ export default function Data() {
     return (
         <Paper sx={{ p: 2 }}>
 
+            <Typography variant="h2" >
+                Stats
+            </Typography>
             <Table size="small" >
                 <TableHead>
                     <TableRow>
                         <TableCell>
-                            <Typography>Info</Typography>
+                            <Typography>{t.attributes.title}</Typography>
                         </TableCell>
                         <TableCell></TableCell>
                     </TableRow>
@@ -64,7 +58,8 @@ export default function Data() {
                         >
                             <TableCell>
                                 <Typography variant="body1">
-                                    <b>{value.name}</b>
+                                    {value.icon}
+                                    {value.name}
                                 </Typography>
                             </TableCell>
                             <TableCell>
@@ -75,6 +70,5 @@ export default function Data() {
                 </TableBody>
             </Table>
         </Paper>
-
     );
 }

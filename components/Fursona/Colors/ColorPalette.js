@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Grid, Typography, Tooltip, Snackbar, Alert, Slide } from "@mui/material";
+import { Grid, Typography, Tooltip, Snackbar, Alert, Slide, Grow } from "@mui/material";
 
 const colors = [
   "#2D2D2D",
@@ -69,25 +69,28 @@ export default function ColorPalette(props) {
       >
         {colors.map((color) => (
           <Grid item xs>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              style={{
-                height: "50%",
-                width: "100%",
-                backgroundColor: color,
-                paddingBottom: "50%",
-                cursor: "pointer",
-              }}
-              onMouseOver={() => onMouseOver(color)}
-              onMouseLeave={() => onMouseLeave(color)}
-              onClick={() => onClick(color)}
-            >
-              <Typography variant="h4" textAlign="center" style={{ color: getContrastColor(color) }}>
+            <Tooltip TransitionComponent={Grow}
+              title={<Typography variant="h4" textAlign="center" style={{ color: "white" }}>
                 {color}
-              </Typography>
-            </motion.div>
+              </Typography>} placement="top" arrow sx={{ width: "200%" }}>
+
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                style={{
+                  height: "50%",
+                  width: "100%",
+                  backgroundColor: color,
+                  paddingBottom: "50%",
+                  cursor: "pointer",
+                }}
+                onMouseOver={() => onMouseOver(color)}
+                onMouseLeave={() => onMouseLeave(color)}
+                onClick={() => onClick(color)}
+              />
+
+            </Tooltip>
 
           </Grid>
         ))}

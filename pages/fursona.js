@@ -11,7 +11,7 @@ import { GrPersonalComputer } from "react-icons/gr";
 import Timeline from "../components/Fursona/Timeline";
 import About from "../components/Fursona/About";
 import Gallery from "../components/Fursona/Gallery";
-import Data from "../components/Fursona/Data";
+import Stats from "../components/Fursona/Stats";
 export default function Fursona() {
   const t = getLang().fursona;
 
@@ -51,7 +51,7 @@ export default function Fursona() {
           <Reference />
         </Grid>
 
-        {/** About */}
+        {/** About and data */}
         <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
           <Box sx={{ display: "flex" }}>
             <Grid container spacing={2}>
@@ -60,10 +60,24 @@ export default function Fursona() {
                 <About />
               </Grid>
 
-              {/** Data */}
+              {/** Info */}
               <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
-                <Data />
+                <Info />
               </Grid>
+            </Grid>
+          </Box>
+
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={12} lg={12} sx={{ paddingTop: 0, height: "100%" }}>
+          <Box sx={{ display: "flex" }}>
+            <Grid container spacing={2}>
+              {/** About */}
+              <Grid item xs={12} sm={12} md={6} lg={6} sx={{ paddingTop: 0, height: "100%" }}>
+                <Stats />
+              </Grid>
+
+
             </Grid>
           </Box>
 

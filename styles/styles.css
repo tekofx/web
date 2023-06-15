@@ -7,7 +7,7 @@
   -moz-column-width: 33%; */
 
   columns: 3;
-  column-width: 33%;
+  /* column-width: 33%; */
   padding: 0 12px;
 }
 
@@ -38,19 +38,20 @@
 
 @media (max-width: 991px) {
   .gallery {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
+    /* -webkit-column-count: 2;
+    -moz-column-count: 2; */
     column-count: 2;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .gallery {
-    -webkit-column-count: 1;
+    /* -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
     -webkit-column-width: 100%;
     -moz-column-width: 100%;
-    column-width: 100%;
+    column-width: 100%; */
+    columns: 1;
   }
 }

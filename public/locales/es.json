@@ -28,9 +28,9 @@
     "tabPhotography": "Fotografía"
   },
   "fursona": {
-    "about": "Teko es un zorro ártico bastante friki que disfruta de los ordenadores, las plantas y los animales. Como buen zorro ártico no soporta bien el calor, pero gracias a sus poderes de hielo puede soportar los veranos sin desmallarse.",
     "text": "Zorro Ártico",
     "name": "Nombre",
+    "about": "Teko es un zorro ártico que disfruta de los ordenadores, las plantas y los animales. Como buen zorro ártico no soporta bien el calor, pero gracias a sus poderes de hielo puede soportar los veranos sin desmallarse.",
     "species": {
       "title": "Especie",
       "value": "Zorro Ártico"

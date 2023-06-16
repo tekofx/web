@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -35,7 +35,7 @@ export default function SimpleBottomNavigation() {
     { id: 4, page: t.about, navigate: routes.about, icon: <InfoIcon /> },
   ];
 
-  const [value, setValue] = React.useState(getIdFromPath(router.pathname));
+  const [value, setValue] = useState(getIdFromPath(router.pathname));
 
   function getIdFromPath(path) {
     var array = pages.filter(function (page) {
@@ -49,14 +49,24 @@ export default function SimpleBottomNavigation() {
     }
   }
 
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      setValue(getIdFromPath(url));
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <Box sx={{ width: 500, zIndex: 20 }}>
       <BottomNavigation
         showLabels
         value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
+
         sx={{
           position: "fixed",
           bottom: 0,

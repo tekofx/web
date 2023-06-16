@@ -198,9 +198,9 @@ Theme.typography.body3 = {
 Theme.typography.card_name = {
   color: "#000",
 
-  fontSize: "1.8rem",
+  fontSize: "1.4rem",
 
-  [Theme.breakpoints.up("md")]: {
+  [Theme.breakpoints.up("sm")]: {
     fontSize: "1.8rem",
   },
 };
@@ -208,9 +208,9 @@ Theme.typography.card_name = {
 Theme.typography.card_headline = {
   color: "#889ac5",
 
-  fontSize: "0.8rem",
+  fontSize: "0.6rem",
 
-  [Theme.breakpoints.up("md")]: {
+  [Theme.breakpoints.up("sm")]: {
     fontSize: "0.8rem",
   },
 };
@@ -218,9 +218,9 @@ Theme.typography.card_headline = {
 Theme.typography.card_value = {
   color: "#000",
 
-  fontSize: "1rem",
+  fontSize: "0.8rem",
 
-  [Theme.breakpoints.up("md")]: {
+  [Theme.breakpoints.up("sm")]: {
     fontSize: "1rem",
   },
 };

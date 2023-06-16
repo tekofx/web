@@ -42,14 +42,14 @@ export default function Stats() {
                 Stats
             </Typography>
             <Table size="small" >
-                <TableHead>
+                {/*  <TableHead>
                     <TableRow>
                         <TableCell>
                             <Typography>{t.attributes.title}</Typography>
                         </TableCell>
                         <TableCell></TableCell>
                     </TableRow>
-                </TableHead>
+                </TableHead> */}
                 <TableBody>
                     {values.map((value, key) => (
                         <TableRow key={key} component={motion.tr}

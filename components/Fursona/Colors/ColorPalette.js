@@ -2,47 +2,47 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Grid, Typography, Tooltip, Snackbar, Alert, Slide, Grow } from "@mui/material";
 
-const colors = [
-  "#2D2D2D",
-  "#A0A0A0",
-  "#F7F7F7",
-  "#2C7DE6",
-  "#00DBFF",
-  "#F0A19C",
-  "#11B55D",
-  "#E2E565",
+
+const colors = [{
+  "name": "Fur",
+  "hex": "#2D2D2D"
+},
+{
+  "name": "Fur",
+  "hex": "#A0A0A0"
+},
+{
+  "name": "Fur",
+  "hex": "#F7F7F7"
+},
+{
+  "name": "Hair",
+  "hex": "#2C7DE6"
+},
+{
+  "name": "Hair",
+  "hex": "#00DBFF"
+},
+{
+  "name": "Paws/Ears",
+  "hex": "#F0A19C"
+},
+{
+  "name": "Eyes",
+  "hex": "#11B55D"
+},
+{
+  "name": "Eyes",
+  "hex": "#E2E565"
+},
+
+
 ]
 export default function ColorPalette(props) {
   const [open, setOpen] = useState(false);
 
-  const toggleColorChange = (color) => {
-
-    if (props.selectedColor === color) {
-      props.setSelectedColor(color)
-    }
 
 
-    if (props.selectedColor === "undefined") {
-      props.setSelectedColor(color)
-    }
-  }
-  function getContrastColor(hexcolor) {
-    // If a leading # is provided, remove it
-    if (hexcolor.slice(0, 1) === '#') {
-      hexcolor = hexcolor.slice(1);
-    }
-
-    // Convert to RGB value
-    var r = parseInt(hexcolor.substr(0, 2), 16);
-    var g = parseInt(hexcolor.substr(2, 2), 16);
-    var b = parseInt(hexcolor.substr(4, 2), 16);
-
-    // Get YIQ ratio
-    var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-
-    // Check contrast
-    return (yiq >= 128) ? '#000000' : '#FFFFFF';
-  }
 
   const onClick = (color) => {
     props.setSelectedColor(color);
@@ -71,7 +71,7 @@ export default function ColorPalette(props) {
           <Grid item xs>
             <Tooltip TransitionComponent={Grow}
               title={<Typography variant="h4" textAlign="center" style={{ color: "white" }}>
-                {color}
+                {color.name}
               </Typography>} placement="top" arrow sx={{ width: "200%" }}>
 
               <motion.div
@@ -81,13 +81,13 @@ export default function ColorPalette(props) {
                 style={{
                   height: "50%",
                   width: "100%",
-                  backgroundColor: color,
+                  backgroundColor: color.hex,
                   paddingBottom: "50%",
                   cursor: "pointer",
                 }}
-                onMouseOver={() => onMouseOver(color)}
-                onMouseLeave={() => onMouseLeave(color)}
-                onClick={() => onClick(color)}
+                onMouseOver={() => onMouseOver(color.hex)}
+                onMouseLeave={() => onMouseLeave(color.hex)}
+                onClick={() => onClick(color.hex)}
               />
 
             </Tooltip>

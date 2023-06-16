@@ -9,7 +9,7 @@ export default function Post({ frontmatter, content }) {
     const { title, author, category, date, bannerImage, tags } = frontmatter
 
     return <main>
-        <Image src={bannerImage} width="100%" />
+        <img src={bannerImage} style={{ width: "100%" }} />
         <h1>{title}</h1>
         <h2>{author} || {date}</h2>
         <h3>{category} || {tags.join()}</h3>

@@ -31,6 +31,7 @@
   "fursona": {
     "text": "Arctic fox",
     "name": "Name",
+    "about": "Teko is an arctic fox who enjoys computers, plants and animals. Since he is an arctic fox he cannot stand high temperatures, but thanks to his ice powers, he can make it throught the summer. ",
     "species": {
       "title": "Species",
       "value": "Arctic Fox"

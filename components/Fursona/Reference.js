@@ -29,11 +29,11 @@ export default function Reference() {
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
           {selectedColor == "" ?
-            <img src={process.env.PUBLIC_URL + "img/ref-small.jpg"} width="100%" />
+            <img src={process.env.PUBLIC_URL + "img/ref/ref.png"} width="100%" />
             :
             <Canvas
               align="left"
-              src={process.env.PUBLIC_URL + "img/ref-small.jpg"}
+              src={process.env.PUBLIC_URL + "img/ref/ref.png"}
               width={"100%"}
               onClick={() => router.push("img/ref.png")}
               selectedColor={selectedColor}

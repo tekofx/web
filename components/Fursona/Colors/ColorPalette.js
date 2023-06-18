@@ -56,11 +56,17 @@ export default function ColorPalette(props) {
 
 
   const onMouseOver = (color) => {
-    props.setSelectedColor(color);
+    if (props.selectedColor !== color) {
+
+      props.setSelectedColor(color);
+    }
   };
 
   const onMouseLeave = (color) => {
-    props.setSelectedColor("");
+    if (props.selectedColor !== "") {
+
+      props.setSelectedColor("");
+    }
   };
 
   return (

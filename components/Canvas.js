@@ -56,7 +56,7 @@ export default function Canvas(props) {
 
         function draw() {
             ctx.drawImage(img, 0, 0);
-            const imgData = ctx.getImageData(0, 0, 2000, 800);
+            const imgData = ctx.getImageData(0, 0, img.width, img.height);
             if (props.selectedColor == "") {
                 console.log("no color selected")
                 ctx.putImageData(imgData, 0, 0);

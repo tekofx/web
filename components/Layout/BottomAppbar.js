@@ -41,6 +41,7 @@ export default function SimpleBottomNavigation() {
     var array = pages.filter(function (page) {
       return page.navigate === path;
     });
+    console.log(array);
     if (array.length !== 0) {
       array = array[0];
       return array.id;
@@ -52,6 +53,8 @@ export default function SimpleBottomNavigation() {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
+      var id = getIdFromPath(url);
+      console.log(id);
       setValue(getIdFromPath(url));
     };
 

@@ -33,7 +33,7 @@ export default function Reference() {
             :
             <Canvas
               align="left"
-              src={process.env.PUBLIC_URL + "img/ref/ref.png"}
+              src={process.env.PUBLIC_URL + "img/ref/ref-views.png"}
               width={"100%"}
               onClick={() => router.push("img/ref.png")}
               selectedColor={selectedColor}

@@ -39,7 +39,6 @@ function convertToGray(r, g, b) {
 export default function Canvas(props) {
 
     const canvasRef = useRef(null)
-
     useEffect(() => {
         const canvas = canvasRef.current
 
@@ -48,10 +47,13 @@ export default function Canvas(props) {
         img.src = props.src;
         img.onload = draw;
 
+
+
         canvas.style.width = "100%";
         canvas.style.height = "100%";
         canvas.width = img.width;
         canvas.height = img.height
+
 
 
         function draw() {
@@ -68,10 +70,18 @@ export default function Canvas(props) {
                 const pixels = imgData.data;
 
                 // Tolerance to get the color. The lower the more precise.
-                var tolerance = 80;
+                var tolerance = 50;
                 for (let i = 0; i < pixels.length; i += 4) {
+                    // If pixel is transparent, skip.
+                    if (pixels[i + 3] == 0) {
+                        continue;
+                    }
+
+
                     // Get the difference between the color to maintain and the current color of the pixel.
                     var diff = Math.abs(pixels[i] - colorToMaintain[0]) + Math.abs(pixels[i + 1] - colorToMaintain[1]) + Math.abs(pixels[i + 2] - colorToMaintain[2]);
+
+
                     if (diff > tolerance) {
                         var gray = convertToGray(pixels[i], pixels[i + 1], pixels[i + 2]);
                         if (props.selectedColor == "#2D2D2D") {
@@ -91,5 +101,16 @@ export default function Canvas(props) {
         }
     }, [props.selectedColor])
 
-    return <div><canvas ref={canvasRef} {...props} onClick={props.onClick} /></div>
+    return <div
+        style={{ display: "inline-block", position: "relative", width: "100%", height: "100%" }}
+    >
+        {/* Bubbles */}
+        <img src={process.env.PUBLIC_URL + "img/ref/ref-bubbles.png"} style={{ position: "absolute", top: 0, left: 0, zIndex: 25, width: "100%" }} />
+
+        {/* Views */}
+        <canvas ref={canvasRef} {...props} onClick={props.onClick} style={{ zIndex: 20, position: 'relative' }} />
+
+        {/* Background */}
+        <img src={process.env.PUBLIC_URL + "img/ref/ref-background.png"} style={{ position: "absolute", zIndex: 1, width: "100%", top: 0, left: 0 }} />
+    </div>
 }

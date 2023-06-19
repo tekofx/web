@@ -41,7 +41,7 @@ export default function Fursona() {
       <br />
 
       {/** Fursona information */}
-      <Grid container spacing={2} paddingRight={{ xs: "0%", lg: "10%" }} paddingLeft={{ xs: "0%", lg: "10%" }}>
+      <Grid container spacing={2} paddingRight={{ xs: "0%", md: "10%", lg: "15%" }} paddingLeft={{ xs: "0%", md: "10%", lg: "15%" }}>
         {/*  <Grid item xs={12} sm={12} md={12} lg={12} >
           <Info />
 

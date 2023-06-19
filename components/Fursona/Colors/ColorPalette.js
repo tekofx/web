@@ -49,9 +49,14 @@ export default function ColorPalette(props) {
 
 
   const onClick = (color) => {
-    props.setSelectedColor(color);
-    // Randomly show snackbar
-    navigator.clipboard.writeText(color);
+    if (props.selectedColor !== color) {
+
+
+      props.setSelectedColor(color);
+      navigator.clipboard.writeText(color);
+    } else {
+      props.setSelectedColor("");
+    }
     if (!open) {
       setOpen(true);
     }

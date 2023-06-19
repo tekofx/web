@@ -7,6 +7,7 @@ import Leafs from "../components/Particles/Leafs";
 import Timeline from "../components/Fursona/Timeline";
 import Presentation from "../components/Presentation";
 import Head from "next/head";
+import ThreeFiber from "../components/ThreeFiber";
 
 import Items from "../components/Fursona/Items";
 import getLang from "../components/Language/Lang";
@@ -26,7 +27,10 @@ function Home() {
           <Typography variant="h1">{t.title}</Typography>
           <Typography variant="body1">{t.text}</Typography>
         </Grid>
-
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Typography variant="h2">TsParticles</Typography>
+          <ThreeFiber />
+        </Grid>
 
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">TsParticles</Typography>
@@ -41,7 +45,7 @@ function Home() {
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Items />
         </Grid>
-        
+
 
 
       </Grid>

@@ -6,7 +6,6 @@ import ColorPalette from "./ColorPalette";
 import getLang from "../../Language/Lang";
 import { useRouter } from "next/router";
 import Canvas from "../../Canvas";
-import ColorDetails from "./ColorDetails";
 export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
@@ -41,9 +40,7 @@ export default function Reference() {
           <ColorPalette setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
         </Grid>
 
-        {/*  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <ColorDetails selectedColor={selectedColor} />
-        </Grid> */}
+
 
       </Grid>
     </Paper>

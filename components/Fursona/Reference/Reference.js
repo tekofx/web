@@ -1,17 +1,12 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { Grid, Paper } from "@mui/material";
-import ColorsTable from "./Colors/ColorsTable";
-import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import Slide from "@mui/material/Slide";
-import ColorPalette from "./Colors/ColorPalette";
-import getLang from "../Language/Lang";
+import ColorPalette from "./ColorPalette";
+import getLang from "../../Language/Lang";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import Canvas from "../Canvas";
-import Alert from '@mui/material/Alert';
-
+import Canvas from "../../Canvas";
+import ColorDetails from "./ColorDetails";
 export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
@@ -46,14 +41,8 @@ export default function Reference() {
           <ColorPalette setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
         </Grid>
 
-        {/* <Grid item xs={12} sm={12} md={5} lg={4} xl={4}>
-          <Typography variant="h3">Color Reference</Typography>
-          <Typography variant="body1">This palette highlights the color on the ref</Typography>
-          <Alert severity="warning" variant="filled">Experimental. Could not work</Alert>
-          <br />
-          <ColorsTable />
-
-          <br />
+        {/*  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <ColorDetails selectedColor={selectedColor} />
         </Grid> */}
 
       </Grid>

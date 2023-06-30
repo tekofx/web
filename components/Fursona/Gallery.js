@@ -7,35 +7,38 @@ import { useState } from "react";
 import { motion } from "framer-motion"
 import LaunchIcon from '@mui/icons-material/Launch';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-const images = [{
-    src: process.env.PUBLIC_URL + "img/juaguelin.png",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-}, {
-    src: process.env.PUBLIC_URL + "img/among_us.png",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-},
-{
-    src: process.env.PUBLIC_URL + "img/summer - lgtb.jpg",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-},
-{
-    src: process.env.PUBLIC_URL + "img/Merry Foxmas.png",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-},
-{
-    src: process.env.PUBLIC_URL + "img/Autumn.png", title: "By Teko",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-},
-{
-    src: process.env.PUBLIC_URL + "img/ref-small.jpg", title: "By Teko",
-    author: "Teko",
-    url: "https://twitter.com/teko_fx"
-}
+const images = [
+
+    {
+        src: process.env.PUBLIC_URL + "img/liss.png",
+        author: "Liss",
+        url: "https://twitter.com/lissetvaras"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/juaguelin.png",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    }, {
+        src: process.env.PUBLIC_URL + "img/among_us.png",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/summer - lgtb.jpg",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/Merry Foxmas.png",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/Autumn.png", title: "By Teko",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    },
+
 
 ]
 
@@ -52,7 +55,6 @@ export default function Gallery() {
     };
 
     const onImageClick = (image) => {
-        console.log(image);
         setValue(image);
         setOpen(true);
     };
@@ -116,10 +118,11 @@ export default function Gallery() {
             <Dialog open={open} onClose={toggleOpen} maxWidth="lg" PaperProps={{
                 style: {
                     backgroundColor: 'transparent',
+                    backgroundImage: "unset",
                     boxShadow: 'none',
                 },
             }}>
-                <img src={value.src} alt={value.title} style={{ height: "100%", width: "auto" }} />
+                <img src={value.src} alt={value.title} style={{ height: "100%", width: "100%", objectFit: "contain" }} onClick={toggleOpen} />
             </Dialog>
         </Accordion >
 

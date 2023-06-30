@@ -59,9 +59,8 @@ export default function Canvas(props) {
         function draw() {
             ctx.drawImage(img, 0, 0);
             const imgData = ctx.getImageData(0, 0, img.width, img.height);
-            if (props.selectedColor == "") {
-                ctx.putImageData(imgData, 0, 0);
-            } else {
+            if (props.selectedColor !== "") {
+
                 // This color whill be shown in the image and the rest will be grayed out.
                 const colorToMaintain = convertFromHexToRGB(props.selectedColor)
 

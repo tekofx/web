@@ -24,7 +24,7 @@ export default function Presentation() {
                         alignItems="center"
                     >
 
-                        <Avatar sx={{ width: "100%", height: "auto" }} src={process.env.PUBLIC_URL + "img/avatar.jpg"} />
+                        <Avatar sx={{ width: "100%", height: "auto" }} src={process.env.PUBLIC_URL + "img/liss.png"} />
                     </Box>
 
 

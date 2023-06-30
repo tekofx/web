@@ -102,12 +102,12 @@ export default function Canvas(props) {
         style={{ display: "inline-block", position: "relative", width: "100%", height: "100%" }}
     >
         {/* Bubbles */}
-        <img src={process.env.PUBLIC_URL + "img/ref/ref-bubbles.png"} style={{ position: "absolute", top: 0, left: 0, zIndex: 25, width: "100%" }} />
+        <img src={process.env.PUBLIC_URL + "img/ref/ref-bubbles.png"} style={{ position: "absolute", top: 0, left: 0, width: "100%", zIndex: 25 }} />
 
         {/* Views */}
         <canvas ref={canvasRef} {...props} onClick={props.onClick} style={{ zIndex: 20, position: 'relative' }} />
 
         {/* Background */}
-        <img src={process.env.PUBLIC_URL + "img/ref/ref-background.png"} style={{ position: "absolute", zIndex: 1, width: "100%", top: 0, left: 0 }} />
+        <img src={process.env.PUBLIC_URL + "img/ref/ref-background.png"} style={{ position: "absolute", width: "100%", top: 0, left: 0, zIndex: 1 }} />
     </div>
 }

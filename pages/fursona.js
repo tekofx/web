@@ -4,7 +4,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
 import Info from "../components/Fursona/Info";
-import Reference from "../components/Fursona/Reference";
+import Reference from "../components/Fursona/Reference/Reference";
 import getLang from "../components/Language/Lang";
 import { RiPlantFill } from "react-icons/ri";
 import { GrPersonalComputer } from "react-icons/gr";

@@ -41,7 +41,6 @@ export default function SimpleBottomNavigation() {
     var array = pages.filter(function (page) {
       return page.navigate === path;
     });
-    console.log(array);
     if (array.length !== 0) {
       array = array[0];
       return array.id;
@@ -50,11 +49,15 @@ export default function SimpleBottomNavigation() {
     }
   }
 
+  const onClick = (page) => {
+    setValue(page.id);
+    router.push(page.navigate);
+  };
+
 
   useEffect(() => {
     const handleRouteChange = (url) => {
       var id = getIdFromPath(url);
-      console.log(id);
       setValue(getIdFromPath(url));
     };
 
@@ -82,7 +85,8 @@ export default function SimpleBottomNavigation() {
             key={key}
             label={page.page}
             icon={page.icon}
-            onClick={() => router.push(page.navigate)}
+            onClick={() => onClick(page)}
+
           />
         ))}
         <LanguageSelector />

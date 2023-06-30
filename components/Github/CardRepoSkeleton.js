@@ -13,7 +13,6 @@ export default function CardRepoSkeleton() {
     }
     useEffect(() => {
         setWidth(ref.current.offsetWidth);
-        console.log(ref.current.clientWidth);
     }, []);
     useEffect(() => {
         window.addEventListener("resize", getSize);

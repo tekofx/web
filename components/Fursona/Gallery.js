@@ -8,9 +8,8 @@ import { motion } from "framer-motion"
 import LaunchIcon from '@mui/icons-material/Launch';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const images = [
-
     {
-        src: process.env.PUBLIC_URL + "img/liss.png",
+        src: process.env.PUBLIC_URL + "img/tortugas.png", title: "By Liss",
         author: "Liss",
         url: "https://twitter.com/lissetvaras"
     },
@@ -18,8 +17,19 @@ const images = [
         src: process.env.PUBLIC_URL + "img/juaguelin.png",
         author: "Teko",
         url: "https://twitter.com/teko_fx"
-    }, {
-        src: process.env.PUBLIC_URL + "img/among_us.png",
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/halloween.png",
+        author: "Teko",
+        url: "https://twitter.com/teko_fx"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/eros.png",
+        author: "Eros",
+        url: "https://twitter.com/Eroskyi"
+    },
+    {
+        src: process.env.PUBLIC_URL + "img/Autumn.png", title: "By Teko",
         author: "Teko",
         url: "https://twitter.com/teko_fx"
     },
@@ -34,9 +44,9 @@ const images = [
         url: "https://twitter.com/teko_fx"
     },
     {
-        src: process.env.PUBLIC_URL + "img/Autumn.png", title: "By Teko",
-        author: "Teko",
-        url: "https://twitter.com/teko_fx"
+        src: process.env.PUBLIC_URL + "img/liss.png",
+        author: "Liss",
+        url: "https://twitter.com/lissetvaras"
     },
 
 

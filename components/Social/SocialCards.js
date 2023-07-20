@@ -2,7 +2,8 @@ import * as React from 'react';
 import { FaTwitter, FaDeviantart, FaMastodon, Fa500Px, FaInstagram, FaGithub } from 'react-icons/fa';
 
 import { Grid } from '@mui/material';
-import FurAffinity from '../Icons/FurAffinity';
+import { FurAffinity } from '../Icons/FurAffinity';
+import { Itaku } from '../Icons/Itaku';
 
 import AnimatedCard from './SocialCard';
 
@@ -30,6 +31,9 @@ export default function SocialCards() {
             </Grid>
             <Grid item xs={6} sm={4} md={3} lg={3}>
                 <AnimatedCard icon={<FurAffinity />} content="FurAffinity" subContent="teko." url="https://www.furaffinity.net/user/teko." />
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} lg={3}>
+                <AnimatedCard icon={<Itaku />} content="Itaku" subContent="teko." url="https://www.itaku.ee/profile/teko" />
             </Grid>
         </Grid>
     );

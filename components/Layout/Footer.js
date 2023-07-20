@@ -3,7 +3,7 @@ import { Typography, Box, Grid } from "@mui/material";
 import Twitter from "../Icons/Twitter";
 import Github from "../Icons/Github";
 import Mastodon from "../Icons/Mastodon";
-import FurAffinity from "../Icons/FurAffinity";
+import { AnimatedFuraffinity } from "../Icons/FurAffinity";
 import Deviantart from "../Icons/Deviantart";
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
           <Mastodon />
           <Github />
           <Deviantart />
-          <FurAffinity />
+          <AnimatedFuraffinity />
         </Box>
       </Grid>
       <Grid item xs={6} sm={6} md={6} lg={6}>

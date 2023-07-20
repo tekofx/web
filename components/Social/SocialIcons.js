@@ -5,7 +5,7 @@ import Mastodon from './Animated/Icons/Mastodon'
 import Github from './Animated/Icons/Github'
 import Instagram from './Animated/Icons/Instagram'
 import Icon500px from './Animated/Icons/500px';
-import AnimatedFurAffinity from './Animated/Icons/FurAffinity';
+import { AnimatedFurAffinity } from './Animated/Icons/FurAffinity';
 
 export default function SocialIcons() {
 

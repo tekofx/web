@@ -12,7 +12,7 @@ export default function AnimatedCard(props) {
         onClick={() => window.open(props.url)}
         whileHover={{ scale: 1.080, backgroundColor: "white", color: "black" }}
         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        sx={{ bgcolor: Theme.palette.background.paper, width: "95%", padding: 1, cursor: "pointer" }}
+        sx={{ bgcolor: Theme.palette.background.paper, width: "100%", padding: 1, cursor: "pointer" }}
       >
 
         <Grid container spacing={1}>

@@ -6,11 +6,7 @@ import Timeline from "../components/Fursona/Timeline";
 import Head from "next/head";
 import ThreeFiber from "../components/ThreeFiber";
 
-import Items from "../components/Fursona/Items";
-import getLang from "../components/Language/Lang";
 function Home() {
-  const t = getLang().experimental;
-
   return (
     <div>
       <Head>
@@ -18,10 +14,6 @@ function Home() {
         <title>Experimental | Teko Tundra</title>
       </Head>
       <Grid container spacing={1}>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h1">{t.title}</Typography>
-          <Typography variant="body1">{t.text}</Typography>
-        </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Typography variant="h2">TsParticles</Typography>
           <ThreeFiber />
@@ -35,10 +27,6 @@ function Home() {
         <Grid item xs={12} sm={12} md={8} lg={8}>
           <Typography variant="h2">Timeline</Typography>
           <Timeline />
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Items />
         </Grid>
       </Grid>
     </div>

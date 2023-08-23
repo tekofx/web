@@ -5,11 +5,19 @@ import { useState } from "react";
 import ColorPalette from "./ColorPalette";
 import getLang from "../../Language/Lang";
 import { useRouter } from "next/router";
-import Canvas from "../../Canvas";
+import Canvas from "./Canvas";
+
+interface Color {
+  name: string;
+  hex: string;
+}
 export default function Reference() {
   const t = getLang().fursona;
   const router = useRouter();
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState<Color>({
+    name: "",
+    hex: "",
+  });
 
   return (
     <Paper sx={{ p: 2 }}>
@@ -23,16 +31,14 @@ export default function Reference() {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          {selectedColor == "" ? (
+          {selectedColor.name == "" ? (
             <img
               src={process.env.PUBLIC_URL + "img/ref/ref.png"}
               width="100%"
             />
           ) : (
             <Canvas
-              align="left"
               src={process.env.PUBLIC_URL + "img/ref/ref-views.png"}
-              width={"100%"}
               onClick={() => router.push("img/ref.png")}
               selectedColor={selectedColor}
             />

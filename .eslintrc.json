@@ -1,0 +1,10 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": [
+    "unused-imports"
+  ],
+  "rules": {
+    "no-unused-vars": "error",
+    "unused-imports/no-unused-imports-ts": 2
+  }
+}

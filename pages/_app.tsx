@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import Head from "next/head";
+import { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/system";
 import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider } from "@emotion/react";
+import { CacheProvider, EmotionCache } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/layout";
@@ -15,14 +16,9 @@ import SnowComponent from "../components/Particles/Snow";
 import Leafs from "../components/Particles/Leafs";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
-import CommandExecutor from "../components/CommandExecutor"
-import { useHotkeys } from "react-hotkeys-hook";
 import { useState, useEffect } from "react";
-import { Snackbar, Button, IconButton, Stack, Paper, Typography, Grid } from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import { useMediaQuery } from "@mui/material";
 import { useRouter } from "next/router";
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -32,8 +28,12 @@ if (cookies.get("lang") === undefined) {
   cookies.set("lang", "es");
 }
 
-function Seasons(props) {
-  const [month, setMonth] = useState(null);
+interface SeasonsProps {
+  path: string;
+}
+
+function Seasons(props: SeasonsProps) {
+  const [month, setMonth] = useState<number>(0);
 
   useEffect(() => {
     const date = new Date();
@@ -41,13 +41,9 @@ function Seasons(props) {
     setMonth(month);
   }, []);
 
-
-
-
-
   // When displaying amongus particles, do not display snow or leafs, because they are not compatible
   if (props.path === "/experimental") {
-    return null
+    return <></>;
   }
 
   if (month === 11 || month === 0 || month === 1) {
@@ -58,32 +54,31 @@ function Seasons(props) {
   if (month === 9 || month === 10) {
     return <Leafs />;
   }
-
 }
 
-function MyApp(props) {
+export interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const extraSmallToMid = useMediaQuery(theme.breakpoints.between("xs", "md"));
   const router = useRouter();
 
-
-
   useSyncLanguage(cookies.get("lang"));
-
-
 
   return (
     <div>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="icon" href="https://raw.githubusercontent.com/tekofx/web/main/public/favicon.ico" />
+        <link
+          rel="icon"
+          href="https://raw.githubusercontent.com/tekofx/web/main/public/favicon.ico"
+        />
       </Head>
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          {extraSmallToMid ? "" : <Snack />}
-          <CommandExecutor />
           <Layout>
             <Transition>
               <Container maxWidth="xl">
@@ -107,55 +102,5 @@ MyApp.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
+// @ts-ignore
 export default appWithI18Next(MyApp, ni18nConfig);
-
-
-function Snack() {
-  // If random is minor than 0.6 not show snack
-  const [random, setRandom] = useState(null);
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    setRandom(Math.random());
-    setOpen(random < 0.6 ? false : true);
-  }, []);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setOpen(false);
-  };
-  return (
-    <Snackbar
-      open={open}
-      autoHideDuration={10000}
-      onClose={handleClose}
-      message="Note archived"
-    >
-      <Stack bgcolor="white" padding={2} borderRadius={5}>
-
-        <LightbulbIcon color="secondary" />
-
-
-        <Typography color="black" variant="body1">Hint: If you press ctrl+k you can access a command executor</Typography>
-
-
-        <IconButton
-          aria-label="close"
-          color="secondary"
-          onClick={handleClose}
-          size="small"
-        >
-          <CloseIcon />
-        </IconButton>
-      </Stack>
-
-
-    </Snackbar>
-  )
-}

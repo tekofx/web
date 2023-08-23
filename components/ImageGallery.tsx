@@ -1,6 +1,4 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Grid, Typography, Paper } from "@mui/material";
 import Button from "@mui/material/Button";
@@ -11,11 +9,15 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
 import getLang from "./Language/Lang";
-import { useState } from "react";
-import { motion } from "framer-motion"
-
-const axios = require("axios");
-
+import { useState, SyntheticEvent } from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
+import { EmotionJSX } from "@emotion/react/types/jsx-namespace";
+interface Post {
+  title: string;
+  src: string;
+  description: EmotionJSX.Element;
+}
 const allPostsGallery =
   "https://backend.deviantart.com/rss.xml?type=deviation&q=by%3Atekofx+sort%3Atime+meta%3Aall";
 const drawingsGallery =
@@ -23,9 +25,9 @@ const drawingsGallery =
 const photographyGallery =
   "https://backend.deviantart.com/rss.xml?q=gallery%3Atekofx%2F76968076&type=deviation";
 export default function ImageGallery() {
-  const [posts, setPosts] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
-  const [value, setValue] = React.useState(0);
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [value, setValue] = useState(0);
   const t = getLang().gallery;
 
   const [open, setOpen] = useState(false);
@@ -33,15 +35,9 @@ export default function ImageGallery() {
   const toggleOpen = () => {
     setOpen(!open);
   };
-  const getImages = async (url) => {
-    var repos;
-    await axios
-      .get(url)
-      .then((response) => {
-        repos = response.data;
-        // Check if image exists
-      })
-      .catch((error) => { });
+  const getImages = async (url: string) => {
+    var response = await axios.get(url);
+    var repos = response.data;
 
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(repos, "text/xml");
@@ -53,7 +49,7 @@ export default function ImageGallery() {
       var post = posts[i].childNodes;
       var title = null;
       var imageLink = null;
-      var deviantartLink = null;
+      var deviantartLink = undefined;
 
       for (var j = 0; j < post.length; j++) {
         if (post[j].nodeName === "title") {
@@ -61,7 +57,7 @@ export default function ImageGallery() {
         }
 
         if (post[j].nodeName === "media:content") {
-          imageLink = post[j].getAttribute("url");
+          imageLink = (post[j] as Element).getAttribute("url");
         }
 
         if (post[j].nodeName === "link") {
@@ -70,10 +66,10 @@ export default function ImageGallery() {
       }
       if (imageLink !== null) {
         postsData.push({
-          title: title,
+          title: title || "",
           src: imageLink,
           description: (
-            <Button target="_blank" href={deviantartLink}>
+            <Button target="_blank" href={deviantartLink || ""}>
               Deviantart
             </Button>
           ),
@@ -83,7 +79,7 @@ export default function ImageGallery() {
     setPosts(postsData);
   };
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
     switch (newValue) {
       case 0:
         getImages(allPostsGallery);
@@ -100,7 +96,7 @@ export default function ImageGallery() {
     setValue(newValue);
   };
 
-  function srcset(image, size, rows = 1, cols = 1) {
+  function srcset(image: string, size: number, rows = 1, cols = 1) {
     return {
       src: image,
 
@@ -119,7 +115,6 @@ export default function ImageGallery() {
 
   return (
     <Paper>
-
       <Box sx={{ flexGrow: 1 }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
@@ -156,15 +151,14 @@ export default function ImageGallery() {
             {posts.map((item, key) => (
               <ImageListItem
                 component={motion.li}
-                whileHover={{ scale: 1.080 }}
+                whileHover={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 key={key}
-                cols={item.cols || 1}
-                rows={item.rows || 1}
+                cols={1}
+                rows={1}
               >
                 <img
-                  {...srcset(item.src, 100, item.rows, item.cols)}
-                  alt={item.lightboxTitle}
+                  {...srcset(item.src, 100)}
                   loading="lazy"
                   onClick={toggleOpen}
                   key={key}
@@ -174,7 +168,6 @@ export default function ImageGallery() {
                   subtitle={item.description}
                   position="bottom"
                   key={key}
-
                 />
               </ImageListItem>
             ))}

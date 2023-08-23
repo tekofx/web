@@ -1,11 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import { useTranslation } from "react-i18next";
 import AmongUS from "../components/Particles/AmongUS";
-import Leafs from "../components/Particles/Leafs";
 import Timeline from "../components/Fursona/Timeline";
-import Presentation from "../components/Presentation";
 import Head from "next/head";
 import ThreeFiber from "../components/ThreeFiber";
 
@@ -14,13 +11,11 @@ import getLang from "../components/Language/Lang";
 function Home() {
   const t = getLang().experimental;
 
-
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
         <title>Experimental | Teko Tundra</title>
-
       </Head>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -45,9 +40,6 @@ function Home() {
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <Items />
         </Grid>
-
-
-
       </Grid>
     </div>
   );

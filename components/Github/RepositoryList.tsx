@@ -19,38 +19,41 @@ export default function RepositoryList() {
 
   async function existsImage(url: string): Promise<boolean> {
     var output = false;
-    await axios.get(url).then(() => {
-      output = true;
-    });
+    await axios
+      .get(url)
+      .then(() => {
+        output = true;
+      })
+      .catch(() => {
+        output = false;
+      });
     return output;
   }
 
   const getRepos = async () => {
     const url = "https://api.github.com/users/tekofx/repos";
-    var response = await axios.get(url);
+    var response = await axios.get<Repo[]>(url);
     var repos = response.data;
 
-    var reposWithImg = [];
-    // Check if image exists
-    for (let i = 0; i < repos.length; i++) {
+    var resposTemp: Repo[] = [];
+
+    repos.forEach(async (repo) => {
       const exists = await existsImage(
         "https://raw.githubusercontent.com/tekofx/" +
-          repos[i].name +
+          repo.name +
           "/main/assets/banner.png"
       );
-      if (!exists) {
-        continue;
+      if (exists) {
+        console.log("Image  found");
+        repo.img =
+          "https://raw.githubusercontent.com/tekofx/" +
+          repo.name +
+          "/main/assets/banner.png";
+        resposTemp.push(repo);
       }
-      repos[i].img =
-        "https://raw.githubusercontent.com/tekofx/" +
-        repos[i].name +
-        "/main/assets/banner.png";
-      reposWithImg.push(repos[i]);
-    }
-
-    // Join arrays
-    repos = [];
-    setRepos(repos);
+    });
+    console.log(resposTemp);
+    setRepos(resposTemp);
   };
 
   useEffect(() => {
@@ -76,13 +79,7 @@ export default function RepositoryList() {
             ))
           : repos.map((item, index) => (
               <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={index}>
-                <GithubRepo
-                  title={item.name}
-                  description={item.description}
-                  url={item.html_url}
-                  img={item.img}
-                  topics={item.topics}
-                />
+                <GithubRepo repo={item} />
               </Grid>
             ))}
       </Grid>

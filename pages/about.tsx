@@ -3,12 +3,9 @@ import Avatar from "@mui/material/Avatar";
 import { Paper, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import SocialCards from "../components/Social/SocialCards";
-import getLang from "../components/Language/Lang";
 import Head from "next/head";
 
 function About() {
-  const t = getLang().about;
-
   return (
     <div>
       <Head>
@@ -40,7 +37,7 @@ function About() {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Paper sx={{ marginTop: 2 }}>
-            <Typography variant="h1">{t.title}</Typography>
+            <Typography variant="h1">About</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -56,16 +53,18 @@ function About() {
               </Grid>
               <Grid item xs={12} sm={9} md={9} lg={9}>
                 <Typography variant="body1" paragraph>
-                  {t.text1}
+                  Welcome to my webpage!
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  {t.text2}
+                  I'm Teko, a computer engineering student from Spain.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  {t.text3}{" "}
+                  I am a learning computer engineer and programmer, who likes to
+                  code simple projects like Discord bots or this webpage.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  {t.text4}
+                  Besides that I also enjoy photography and drawing furries and
+                  cute stuff.
                 </Typography>
               </Grid>
             </Grid>
@@ -75,8 +74,7 @@ function About() {
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Paper sx={{ marginBottom: 2, p: 2 }}>
             <Typography variant="h2" align="center">
-              {" "}
-              {t.subtitle}
+              Socials
             </Typography>
           </Paper>
           <SocialCards />

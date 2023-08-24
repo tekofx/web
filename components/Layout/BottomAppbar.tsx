@@ -8,7 +8,6 @@ import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "../Language/LanguageSelector";
 import { useRouter } from "next/router";
-import getLang from "../Language/Lang";
 import { Stack } from "@mui/material";
 
 interface Page {
@@ -21,25 +20,23 @@ interface Page {
 export default function SimpleBottomNavigation() {
   const router = useRouter();
 
-  const t = getLang().pages;
-
   const pages = [
-    { id: 0, page: t.home, navigate: routes.home, icon: <HomeIcon /> },
+    { id: 0, page: "Home", navigate: routes.home, icon: <HomeIcon /> },
     {
       id: 1,
-      page: t.projects,
+      page: "Projects",
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
       id: 2,
-      page: t.gallery,
+      page: "Gallery",
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { id: 3, page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { id: 4, page: t.about, navigate: routes.about, icon: <InfoIcon /> },
+    { id: 4, page: "About", navigate: routes.about, icon: <InfoIcon /> },
   ];
   const [value, setValue] = useState<number>(getIdFromPath(router.pathname));
 

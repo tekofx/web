@@ -6,29 +6,27 @@ import TableRow from "@mui/material/TableRow";
 import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
-import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 export default function Stats() {
-  const t = getLang().fursona;
   var style = { marginRight: "2%", verticalAlign: "middle" };
   const values = [
     {
-      name: t.attributes.strength,
+      name: "Strength",
       value: 1,
       icon: <GiBroadsword style={style} />,
     },
     {
-      name: t.attributes.speed,
+      name: "Speed",
       value: 4,
       icon: <BsFillLightningChargeFill style={style} />,
     },
     {
-      name: t.attributes.intelligence,
+      name: "Intelligence",
       value: 2,
       icon: <FaBrain style={style} />,
     },
     {
-      name: t.attributes.defense,
+      name: "Defense",
       value: 3,
       icon: <BsFillShieldFill style={style} />,
     },

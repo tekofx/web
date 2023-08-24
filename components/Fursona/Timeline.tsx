@@ -1,19 +1,21 @@
-import * as React from "react";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import Typography from "@mui/material/Typography";
-import { Paper } from "@mui/material";
+import {
+  Timeline,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineDot,
+  TimelineContent,
+} from "@mui/lab";
+
+import { Paper, Typography } from "@mui/material";
 import ImageDialog from "../ImageDialog";
 
 export default function CustomizedTimeline() {
   return (
     <Paper sx={{ paddingLeft: 2, paddingRight: 2 }}>
       <Typography variant="h2">Evolution</Typography>
+      {/*@ts-ignore*/}
       <Timeline position="alternate">
         <TimelineItem>
           <TimelineOppositeContent sx={{ m: "auto 0" }} align="right">

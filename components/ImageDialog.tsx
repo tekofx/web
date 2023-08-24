@@ -2,7 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import Slide from "@mui/material/Slide";
-const Transition = React.forwardRef(function Transition(props, ref) {
+import { TransitionProps } from "@mui/material/transitions";
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>
+) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
@@ -20,6 +26,7 @@ export default function Reference({ img, width }: ReferenceProps) {
     <>
       <img src={img} alt="" width={width || "100%"} onClick={toggleOpen} />
       <Dialog
+        // @ts-ignore
         TransitionComponent={Transition}
         open={open}
         PaperProps={{

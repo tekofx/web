@@ -9,6 +9,7 @@ export default function AnimatedIcon(props: Props) {
   return (
     //@ts-ignore
     <IconButton
+      // @ts-ignore
       LinkComponent={motion.a}
       target="_blank"
       href={props.url}

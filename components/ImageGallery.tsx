@@ -1,6 +1,5 @@
-import Box from "@mui/material/Box";
 import { useEffect } from "react";
-import { Grid, Typography, Paper } from "@mui/material";
+import { Grid, Typography, Paper, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -115,65 +114,64 @@ export default function ImageGallery() {
 
   return (
     <Paper>
-      <Box sx={{ flexGrow: 1 }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label={<Typography>{t.tabAll}</Typography>} />
-            <Tab label={<Typography>{t.tabDrawings}</Typography>} />
-            <Tab label={<Typography>{t.tabPhotography}</Typography>} />
-          </Tabs>
-        </Box>
-        {loading ? (
-          <Grid
-            container
-            spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
-            columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
-          >
-            {Array.from(Array(30).keys()).map((_, i) => (
-              <Grid item lg={2} key={i}>
-                <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
-              </Grid>
-            ))}
-          </Grid>
-        ) : (
-          <ImageList
-            variant="quilted"
-            sx={{
-              mb: 8,
-              gridTemplateColumns:
-                "repeat(auto-fill,minmax(280px,1fr))!important",
-            }}
-          >
-            {posts.map((item, key) => (
-              <ImageListItem
-                component={motion.li}
-                whileHover={{ scale: 1.08 }}
-                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+      <Stack direction="row" sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label={<Typography>{t.tabAll}</Typography>} />
+          <Tab label={<Typography>{t.tabDrawings}</Typography>} />
+          <Tab label={<Typography>{t.tabPhotography}</Typography>} />
+        </Tabs>
+      </Stack>
+      {loading ? (
+        <Grid
+          container
+          spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+          columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
+        >
+          {Array.from(Array(30).keys()).map((_, i) => (
+            <Grid item lg={2} key={i}>
+              <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <ImageList
+          variant="quilted"
+          sx={{
+            mb: 8,
+            gridTemplateColumns:
+              "repeat(auto-fill,minmax(280px,1fr))!important",
+          }}
+        >
+          {posts.map((item, key) => (
+            <ImageListItem
+              // @ts-ignore
+              component={motion.li}
+              whileHover={{ scale: 1.08 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              key={key}
+              cols={1}
+              rows={1}
+            >
+              <img
+                {...srcset(item.src, 100)}
+                loading="lazy"
+                onClick={toggleOpen}
                 key={key}
-                cols={1}
-                rows={1}
-              >
-                <img
-                  {...srcset(item.src, 100)}
-                  loading="lazy"
-                  onClick={toggleOpen}
-                  key={key}
-                />
-                <ImageListItemBar
-                  title={item.title}
-                  subtitle={item.description}
-                  position="bottom"
-                  key={key}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        )}
-      </Box>
+              />
+              <ImageListItemBar
+                title={item.title}
+                subtitle={item.description}
+                position="bottom"
+                key={key}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      )}
     </Paper>
   );
 }

@@ -26,6 +26,7 @@ const Transition = ({ children }: TransitionProps) => {
   const { asPath } = useRouter();
   return (
     <div>
+      {/*@ts-ignore */}
       <motion.div
         variants={variants}
         animate="in"

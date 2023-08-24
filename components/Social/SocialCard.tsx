@@ -19,6 +19,7 @@ export default function AnimatedCard({
   return (
     <ThemeProvider theme={Theme}>
       <Paper
+        // @ts-ignore
         component={motion.div}
         onClick={() => window.open(url)}
         whileHover={{ scale: 1.08, backgroundColor: "white", color: "black" }}

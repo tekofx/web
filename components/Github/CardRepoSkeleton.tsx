@@ -1,5 +1,4 @@
-import { Skeleton, Paper, Grid } from "@mui/material";
-import { Box } from "@mui/system";
+import { Skeleton, Paper, Grid, Box } from "@mui/material";
 export default function CardRepoSkeleton() {
   return (
     <div>

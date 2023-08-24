@@ -22,6 +22,7 @@ export default function CardRepo(props: Props) {
   return (
     <Card
       className="card"
+      // @ts-ignore
       component={motion.div}
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}

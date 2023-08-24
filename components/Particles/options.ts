@@ -10,16 +10,7 @@ const AmongUSOptions = {
     size: "cover",
     opacity: 1,
   },
-  backgroundMask: {
-    composite: "destination-out",
-    cover: {
-      color: {
-        value: "#fff",
-      },
-      opacity: 1,
-    },
-    enable: false,
-  },
+
   fullScreen: {
     enable: false,
     zIndex: 0,

@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Avatar,
-  Typography,
-  Box,
-  Stack,
-  Paper,
-  Theme,
-} from "@mui/material";
+import { Grid, Avatar, Typography, Stack, Paper, Theme } from "@mui/material";
 import Chip from "./Chip";
 import { useRouter } from "next/router";
 import getLang from "./Language/Lang";
@@ -29,12 +21,12 @@ export default function Presentation() {
         justifyContent="center"
       >
         <Grid item xs={7} lg={4}>
-          <Box display="flex" justifyContent="center" alignItems="center">
+          <Stack display="flex" justifyContent="center" alignItems="center">
             <Avatar
               sx={{ width: "100%", height: "auto" }}
               src={process.env.PUBLIC_URL + "img/liss.png"}
             />
-          </Box>
+          </Stack>
         </Grid>
         <Grid item xs={12} lg={12}>
           <Typography align="center" variant="h2">

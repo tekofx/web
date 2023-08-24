@@ -43,7 +43,7 @@ export default function ThreeFiber() {
     <Paper sx={{ height: "400px" }}>
       <Canvas style={{ background: "hotpink" }}>
         <CameraAngle />
-        <OrbitControls autoRotate="true" />
+        <OrbitControls autoRotate={true} />
         <Stars />
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 15, 10]} angle={0.3} />

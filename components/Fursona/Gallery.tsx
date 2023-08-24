@@ -1,6 +1,5 @@
 import * as React from "react";
 import {
-  Grid,
   Typography,
   Paper,
   Stack,
@@ -9,7 +8,6 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
-import { Skeleton } from "@mui/material";
 import getLang from "../Language/Lang";
 import Theme from "../../src/theme";
 import { useState } from "react";
@@ -69,7 +67,6 @@ const images = [
 ];
 
 export default function Gallery() {
-  const [loading, setLoading] = React.useState(false);
   const [value, setValue] = React.useState<Image>(images[0]);
   const [expanded, setExpanded] = React.useState(true);
   const t = getLang().gallery;
@@ -99,21 +96,10 @@ export default function Gallery() {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        {loading ? (
-          <Grid
-            container
-            spacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
-            columns={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}
-          >
-            {Array.from(Array(30).keys()).map((_, i) => (
-              <Grid item lg={2} key={i}>
-                <Skeleton variant="rectangular" sx={{ minHeight: 200 }} />
-              </Grid>
-            ))}
-          </Grid>
-        ) : (
-          <div className="gallery">
-            {images.map((image: Image) => (
+        <div className="gallery">
+          {images.map((image: Image) => (
+            <>
+              {/*@ts-ignore */}
               <motion.div
                 key={image.src}
                 className="pics"
@@ -124,6 +110,7 @@ export default function Gallery() {
                 <img src={image.src} alt={image.title} className="pic" />
                 <Paper
                   className="text"
+                  // @ts-ignore
                   component={motion.div}
                   whileHover={{ backgroundColor: Theme.palette.primary.main }}
                   transition={{
@@ -141,9 +128,9 @@ export default function Gallery() {
                   </Stack>
                 </Paper>
               </motion.div>
-            ))}
-          </div>
-        )}
+            </>
+          ))}
+        </div>
       </AccordionDetails>
 
       <Dialog

@@ -57,6 +57,7 @@ export default function Info() {
           {values.map((value, key) => (
             <TableRow
               key={key}
+              // @ts-ignore
               component={motion.tr}
               whileHover={{ scale: 1.08 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}

@@ -109,6 +109,7 @@ export default function ColorPalette(props: Props) {
               arrow
               sx={{ width: "200%" }}
             >
+              {/*@ts-ignore */}
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1.1 }}

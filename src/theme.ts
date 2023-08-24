@@ -1,6 +1,5 @@
 import { Roboto } from "@next/font/google";
 import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
 
 export const fonts = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -20,7 +19,7 @@ var Theme = createTheme({
       main: "#259bf9",
     },
     background: {
-      main: "#303030",
+      default: "#303030",
     },
     error: {
       main: "#f0a19c",
@@ -30,19 +29,6 @@ var Theme = createTheme({
     },
   },
   components: {
-    MuiAvatar: {
-      variants: [
-        {
-          props: { variant: "logo" },
-          style: {
-            width: "10%",
-            height: "auto",
-            maxWidth: "10%",
-            maxHeight: "10%",
-          },
-        },
-      ],
-    },
     MuiAppBar: {
       styleOverrides: {
         // Name of the slot
@@ -92,14 +78,14 @@ var Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: fonts,
+    /* fontFamily: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"], */
 
-    appBar: {
-      fontSize: "1.5rem",
-      fontWeight: "bold",
+    h2: {
+      fontSize: "20rem",
       color: "#fff",
-      fontStyle: "italic",
-      textDecoration: "none",
+      paddingBottom: "0.5rem",
+      paddingTop: "0.5rem",
+      textAlign: "center",
     },
   },
 });
@@ -186,9 +172,6 @@ Theme.typography.body3 = {
 
   fontSize: "0.8rem",
 
-  "@media (min-width:600px)": {
-    fontSize: "0.8rem",
-  },
   [Theme.breakpoints.up("md")]: {
     fontSize: "1rem",
   },

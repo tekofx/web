@@ -12,7 +12,6 @@ function App(props: Props) {
     <Canvas
       text={props.text}
       options={{
-        level: "L",
         margin: 1,
         scale: 4,
         width: 60,

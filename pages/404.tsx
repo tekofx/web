@@ -1,12 +1,13 @@
-import { Box, Grid, Alert, Avatar } from "@mui/material";
+import { Grid, Alert, Avatar } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function FourOhfour() {
   return (
-    <Box height="1000px">
+    <div style={{ height: "1000px" }}>
       <Grid container justifyContent="center" alignItems="center" spacing={2}>
         <Grid item xs={10} sm={10} md={8} lg={3}>
           <Avatar
+            // @ts-ignore
             component={motion.div}
             alt="Remy Sharp"
             src={process.env.PUBLIC_URL + "img/logo-color.png"}
@@ -29,6 +30,6 @@ export default function FourOhfour() {
           </Alert>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 }

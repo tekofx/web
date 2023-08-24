@@ -12,10 +12,10 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "latest",
     "@mui/lab": "^5.0.0-alpha.140",
     "@mui/material": "^5.14.5",
@@ -23,10 +23,10 @@
     "@react-three/drei": "^9.80.5",
     "@react-three/fiber": "^8.13.3",
     "axios": "^1.2.0",
-    "framer-motion": "^7.6.12",
+    "framer-motion": "latest",
     "html-to-image": "^1.11.11",
     "i18next": "^22.0.6",
-    "next": "latest",
+    "next": "^13.4.19",
     "next-i18next": "^13.0.0",
     "next-qrcode": "^2.4.0",
     "ni18n": "^1.0.5",
@@ -35,11 +35,13 @@
     "react-dom": "latest",
     "react-i18next": "^12.0.0",
     "react-icons": "^4.6.0",
-    "react-particles": "^2.6.0",
-    "react-tsparticles": "^2.5.3",
+    "react-tsparticles": "^2.12.2",
     "three": "^0.153.0",
-    "tsparticles": "^2.5.3",
+    "tsparticles": "^2.12.0",
     "universal-cookie": "^4.0.4"
+  },
+  "resolutions": {
+    "@types/react": "18.2.15"
   },
   "browser": {
     "fs": true,
@@ -47,11 +49,15 @@
     "os": false
   },
   "devDependencies": {
-    "@types/node": "^20.5.3",
-    "@types/react": "^18.2.21",
-    "eslint": "^8.47.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/three": "^0.155.1",
+    "eslint": "latest",
     "eslint-config-next": "^13.4.19",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
   }
 }

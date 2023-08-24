@@ -56,7 +56,7 @@ function About() {
                   Welcome to my webpage!
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I'm Teko, a computer engineering student from Spain.
+                  I&apos;m Teko, a computer engineering student from Spain.
                 </Typography>
                 <Typography variant="body1" paragraph>
                   I am a learning computer engineer and programmer, who likes to

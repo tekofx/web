@@ -28,7 +28,7 @@ export default function Presentation() {
         </Grid>
         <Grid item xs={12} lg={12}>
           <Typography align="center" variant="h2">
-            Hello, I'm Teko and arctic foxxo
+            Hello, I&apos;m Teko and arctic foxxo
           </Typography>
           <Typography align="center" variant="h3">
             I love waffles, photography and programming

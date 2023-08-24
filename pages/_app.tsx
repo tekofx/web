@@ -62,5 +62,4 @@ MyApp.propTypes = {
 };
 
 // @ts-ignore
-//export default appWithI18Next(MyApp, ni18nConfig);
 export default MyApp;

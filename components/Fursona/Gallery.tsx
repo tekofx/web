@@ -8,7 +8,6 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
-import getLang from "../Language/Lang";
 import Theme from "../../src/theme";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -69,7 +68,6 @@ const images = [
 export default function Gallery() {
   const [value, setValue] = React.useState<Image>(images[0]);
   const [expanded, setExpanded] = React.useState(true);
-  const t = getLang().gallery;
 
   const [open, setOpen] = useState(false);
 
@@ -92,7 +90,7 @@ export default function Gallery() {
         sx={{ margin: "10px", cursor: "pointer" }}
       >
         <Typography variant="h1" textAlign="left">
-          {t.title}
+          Gallery
         </Typography>
       </AccordionSummary>
       <AccordionDetails>

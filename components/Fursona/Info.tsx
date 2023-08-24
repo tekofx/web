@@ -6,36 +6,34 @@ import TableRow from "@mui/material/TableRow";
 import { GiBroadsword } from "react-icons/gi";
 import { BsFillLightningChargeFill, BsFillShieldFill } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
-import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 
 export default function Info() {
-  const t = getLang().fursona;
   var style = { marginRight: "2%", verticalAlign: "middle" };
   const values = [
     {
-      name: t.species.title,
-      value: t.species.value,
+      name: "Species",
+      value: "Arctic Fox",
       icon: <GiBroadsword style={style} />,
     },
     {
-      name: t.gender.title,
-      value: t.gender.value,
+      name: "Gender",
+      value: "Male",
       icon: <BsFillLightningChargeFill style={style} />,
     },
     {
-      name: t.height,
+      name: "Height",
       value: "1.80 m",
       icon: <FaBrain style={style} />,
     },
     {
-      name: t.birth,
+      name: "Birthdate",
       value: "22/09",
       icon: <BsFillShieldFill style={style} />,
     },
     {
-      name: t.personality.title,
-      value: t.personality.value,
+      name: "Personality",
+      value: "Positive, shy, cheerful",
       icon: <BsFillShieldFill style={style} />,
     },
   ];

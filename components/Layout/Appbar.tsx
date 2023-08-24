@@ -11,29 +11,27 @@ import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 import LanguageSelector from "../Language/LanguageSelector";
 import { useRouter } from "next/router";
-import getLang from "../Language/Lang";
 import { motion } from "framer-motion";
 import { Stack } from "@mui/material";
 
 const ResponsiveAppBar = () => {
   const router = useRouter();
-  const t = getLang().pages;
 
   const pages = [
-    { page: t.home, navigate: routes.home, icon: <HomeIcon /> },
+    { page: "Home", navigate: routes.home, icon: <HomeIcon /> },
     {
-      page: t.projects,
+      page: "Projects",
       navigate: routes.projects,
       icon: <AccountTreeIcon />,
     },
     {
-      page: t.gallery,
+      page: "Gallery",
       navigate: routes.gallery,
       icon: <CollectionsIcon />,
     },
     { page: "Fursona", navigate: routes.fursona, icon: <PetsIcon /> },
 
-    { page: t.about, navigate: routes.about, icon: <InfoIcon /> },
+    { page: "About", navigate: routes.about, icon: <InfoIcon /> },
   ];
 
   return (

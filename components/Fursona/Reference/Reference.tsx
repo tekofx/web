@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import { Grid, Paper } from "@mui/material";
 import { useState } from "react";
 import ColorPalette from "./ColorPalette";
-import getLang from "../../Language/Lang";
 import { useRouter } from "next/router";
 import Canvas from "./Canvas";
 
@@ -12,7 +11,6 @@ interface Color {
   hex: string;
 }
 export default function Reference() {
-  const t = getLang().fursona;
   const router = useRouter();
   const [selectedColor, setSelectedColor] = useState<Color>({
     name: "",
@@ -27,7 +25,7 @@ export default function Reference() {
             Teko Fresnes Xaiden
           </Typography>
           <Typography variant="body1" textAlign="center">
-            {t.text}
+            Arctic Fox
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>

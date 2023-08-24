@@ -1,12 +1,10 @@
 import { Grid, Avatar, Typography, Stack, Paper, Theme } from "@mui/material";
 import Chip from "./Chip";
 import { useRouter } from "next/router";
-import getLang from "./Language/Lang";
 import { useMediaQuery } from "@mui/material";
 
 export default function Presentation() {
   const router = useRouter();
-  const t = getLang().presentation;
   const largeScreen = useMediaQuery((theme: Theme) =>
     theme.breakpoints.up("md")
   );
@@ -30,16 +28,16 @@ export default function Presentation() {
         </Grid>
         <Grid item xs={12} lg={12}>
           <Typography align="center" variant="h2">
-            {t.title}
+            Hello, I&apos;m Teko and arctic foxxo
           </Typography>
           <Typography align="center" variant="h3">
-            {t.text}
+            I love waffles, photography and programming
           </Typography>
         </Grid>
         <Grid item>
           <Stack direction={largeScreen ? "row" : "column"} spacing={2}>
-            <Chip text={t.projects} onClick={() => router.push("/projects")} />
-            <Chip text={t.fursona} onClick={() => router.push("/fursona")} />
+            <Chip text="Projects" onClick={() => router.push("/projects")} />
+            <Chip text="Fursona info" onClick={() => router.push("/fursona")} />
           </Stack>
         </Grid>
       </Grid>

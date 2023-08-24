@@ -9,8 +9,6 @@ import createEmotionCache from "../src/createEmotionCache";
 import Layout from "../components/Layout/layout";
 import "../styles/styles.css";
 import Transition from "../components/Layout/Transition";
-import { appWithI18Next, useSyncLanguage } from "ni18n";
-import { ni18nConfig } from "../ni18n.config";
 import Page from "../components/Layout/page";
 import Cookies from "universal-cookie";
 import { Container } from "@mui/material";
@@ -30,8 +28,6 @@ export interface MyAppProps extends AppProps {
 
 function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
-  useSyncLanguage(cookies.get("lang"));
 
   return (
     <CacheProvider value={emotionCache}>
@@ -66,4 +62,4 @@ MyApp.propTypes = {
 };
 
 // @ts-ignore
-export default appWithI18Next(MyApp, ni18nConfig);
+export default MyApp;

@@ -1,11 +1,10 @@
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import { MouseEvent, useState } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
-import { useTranslation } from "react-i18next";
 import Cookies from "universal-cookie";
 import CheckIcon from "@mui/icons-material/Check";
 export default function BasicMenu() {
-  const { i18n } = useTranslation();
+  const cookies = new Cookies();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -16,9 +15,7 @@ export default function BasicMenu() {
   };
 
   const changeLanguageHandler = (value: string) => {
-    const cookies = new Cookies();
     cookies.set("lang", value);
-    i18n.changeLanguage(value);
   };
 
   return (
@@ -42,7 +39,7 @@ export default function BasicMenu() {
             changeLanguageHandler("es");
           }}
         >
-          Español {i18n.language === "es" ? <CheckIcon /> : ""}
+          Español {cookies.get("lang") === "es" ? <CheckIcon /> : ""}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -50,7 +47,7 @@ export default function BasicMenu() {
             changeLanguageHandler("en");
           }}
         >
-          English{i18n.language === "en" ? <CheckIcon /> : ""}
+          English{cookies.get("lang") === "en" ? <CheckIcon /> : ""}
         </MenuItem>
       </Menu>
     </div>

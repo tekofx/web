@@ -6,19 +6,19 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Chip, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import getLang from "../Language/Lang";
-
-interface Props {
-  title: string;
+interface Repo {
+  name: string;
   description: string;
-  url: string;
+  html_url: string;
   img: string;
   topics: string[];
 }
 
-export default function CardRepo(props: Props) {
-  const t = getLang().projects;
+interface Props {
+  repo: Repo;
+}
 
+export default function CardRepo({ repo }: Props) {
   return (
     <Card
       className="card"
@@ -27,11 +27,11 @@ export default function CardRepo(props: Props) {
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
     >
-      <CardMedia component="img" width="auto" image={props.img} />
+      <CardMedia component="img" width="auto" image={repo.img} />
       <CardContent className="cardContent" sx={{ minHeight: 100 }}>
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
-            {props.topics.map((element) => (
+            {repo.topics.map((element) => (
               <Chip
                 key={element}
                 color="secondary"
@@ -52,9 +52,9 @@ export default function CardRepo(props: Props) {
             lg={12}
           >
             <Typography gutterBottom variant="h4" component="div">
-              {props.title}
+              {repo.name}
             </Typography>
-            <Typography variant="body2">{props.description}</Typography>
+            <Typography variant="body2">{repo.description}</Typography>
           </Grid>
         </Grid>
       </CardContent>
@@ -63,10 +63,10 @@ export default function CardRepo(props: Props) {
           className="button"
           variant="contained"
           target="_blank"
-          href={props.url}
+          href={repo.html_url}
           size="small"
         >
-          {t.button}
+          View on github
         </Button>
       </CardActions>
     </Card>

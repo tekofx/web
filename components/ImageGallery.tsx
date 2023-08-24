@@ -7,7 +7,6 @@ import { Skeleton } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageListItem from "@mui/material/ImageListItem";
-import getLang from "./Language/Lang";
 import { useState, SyntheticEvent } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -27,7 +26,6 @@ export default function ImageGallery() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [value, setValue] = useState(0);
-  const t = getLang().gallery;
 
   const [open, setOpen] = useState(false);
 
@@ -120,9 +118,9 @@ export default function ImageGallery() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label={<Typography>{t.tabAll}</Typography>} />
-          <Tab label={<Typography>{t.tabDrawings}</Typography>} />
-          <Tab label={<Typography>{t.tabPhotography}</Typography>} />
+          <Tab label={<Typography>All</Typography>} />
+          <Tab label={<Typography>Drawings</Typography>} />
+          <Tab label={<Typography>Photography</Typography>} />
         </Tabs>
       </Stack>
       {loading ? (

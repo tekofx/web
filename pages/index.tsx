@@ -1,10 +1,7 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import Head from "next/head";
-import getLang from "../components/Language/Lang";
 import Presentation from "../components/Presentation";
-
 export default function Index() {
-  const t = getLang().home;
   return (
     <div>
       <Head>
@@ -35,7 +32,7 @@ export default function Index() {
       <Paper sx={{ marginTop: 4 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Typography variant="h1">{t.title}</Typography>
+            <Typography variant="h1">Welcome</Typography>
           </Grid>
           <Grid item lg={12}>
             <Presentation />

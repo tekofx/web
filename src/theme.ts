@@ -78,7 +78,7 @@ var Theme = createTheme({
     },
   },
   typography: {
-    /* fontFamily: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"], */
+    fontFamily: "Segoe UI, Roboto, Helvetica Neue, Arial",
 
     h2: {
       fontSize: "20rem",

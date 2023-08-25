@@ -37,21 +37,21 @@ export default function RepositoryList() {
 
     var resposTemp: Repo[] = [];
 
-    repos.forEach(async (repo) => {
+    for (const repo of repos) {
       const exists = await existsImage(
         "https://raw.githubusercontent.com/tekofx/" +
           repo.name +
           "/main/assets/banner.png"
       );
       if (exists) {
-        console.log("Image  found");
+        console.log("Image found");
         repo.img =
           "https://raw.githubusercontent.com/tekofx/" +
           repo.name +
           "/main/assets/banner.png";
         resposTemp.push(repo);
       }
-    });
+    }
     console.log(resposTemp);
     setRepos(resposTemp);
   };

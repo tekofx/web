@@ -9,7 +9,6 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
-import LanguageSelector from "../Language/LanguageSelector";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { Stack } from "@mui/material";
@@ -82,8 +81,6 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Stack>
-
-          <LanguageSelector />
         </Toolbar>
       </Container>
     </AppBar>

@@ -158,13 +158,11 @@ export default function ImageGallery() {
                 {...srcset(item.src, 100)}
                 loading="lazy"
                 onClick={toggleOpen}
-                key={key}
               />
               <ImageListItemBar
                 title={item.title}
                 subtitle={item.description}
                 position="bottom"
-                key={key}
               />
             </ImageListItem>
           ))}

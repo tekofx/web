@@ -44,7 +44,6 @@ export default function RepositoryList() {
           "/main/assets/banner.png"
       );
       if (exists) {
-        console.log("Image found");
         repo.img =
           "https://raw.githubusercontent.com/tekofx/" +
           repo.name +
@@ -52,7 +51,6 @@ export default function RepositoryList() {
         resposTemp.push(repo);
       }
     }
-    console.log(resposTemp);
     setRepos(resposTemp);
   };
 

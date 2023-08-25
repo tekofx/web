@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 interface Image {
+  id: number;
   src: string;
   title?: string;
   author: string;
@@ -22,43 +23,50 @@ interface Image {
 
 const images = [
   {
+    id: 0,
     src: process.env.PUBLIC_URL + "img/tortugas.png",
-    title: "By Liss",
     author: "Liss",
     url: "https://twitter.com/lissetvaras",
   },
   {
+    id: 1,
     src: process.env.PUBLIC_URL + "img/juaguelin.png",
     author: "Teko",
     url: "https://twitter.com/teko_fx",
   },
   {
+    id: 2,
     src: process.env.PUBLIC_URL + "img/halloween.png",
     author: "Teko",
     url: "https://twitter.com/teko_fx",
   },
   {
+    id: 3,
     src: process.env.PUBLIC_URL + "img/eros.png",
     author: "Eros",
     url: "https://twitter.com/Eroskyi",
   },
   {
+    id: 4,
     src: process.env.PUBLIC_URL + "img/Autumn.png",
     title: "By Teko",
     author: "Teko",
     url: "https://twitter.com/teko_fx",
   },
   {
+    id: 5,
     src: process.env.PUBLIC_URL + "img/summer - lgtb.jpg",
     author: "Teko",
     url: "https://twitter.com/teko_fx",
   },
   {
+    id: 6,
     src: process.env.PUBLIC_URL + "img/Merry Foxmas.png",
     author: "Teko",
     url: "https://twitter.com/teko_fx",
   },
   {
+    id: 7,
     src: process.env.PUBLIC_URL + "img/liss.png",
     author: "Liss",
     url: "https://twitter.com/lissetvaras",
@@ -96,10 +104,9 @@ export default function Gallery() {
       <AccordionDetails>
         <div className="gallery">
           {images.map((image: Image) => (
-            <>
+            <div key={image.id}>
               {/*@ts-ignore */}
               <motion.div
-                key={image.src}
                 className="pics"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
@@ -126,7 +133,7 @@ export default function Gallery() {
                   </Stack>
                 </Paper>
               </motion.div>
-            </>
+            </div>
           ))}
         </div>
       </AccordionDetails>

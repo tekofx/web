@@ -6,7 +6,6 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
-import LanguageSelector from "../Language/LanguageSelector";
 import { useRouter } from "next/router";
 import { Stack } from "@mui/material";
 
@@ -41,7 +40,9 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = useState<number>(getIdFromPath(router.pathname));
 
   function getIdFromPath(path: string) {
-    const page = pages.find((page) => page.navigate === path);
+    const page = pages.find(
+      (page) => page.navigate === "/" + path.split("/")[1]
+    );
     if (page) {
       return page.id;
     }
@@ -84,7 +85,6 @@ export default function SimpleBottomNavigation() {
             onClick={() => onClick(page)}
           />
         ))}
-        <LanguageSelector />
       </BottomNavigation>
     </Stack>
   );

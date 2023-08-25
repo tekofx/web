@@ -29,7 +29,7 @@ export default function CardRepo({ repo }: Props) {
     >
       <CardMedia component="img" width="auto" image={repo.img} />
       <CardContent className="cardContent" sx={{ minHeight: 100 }}>
-        <Grid container>
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             {repo.topics.map((element) => (
               <Chip
@@ -40,8 +40,6 @@ export default function CardRepo({ repo }: Props) {
               />
             ))}
           </Grid>
-          <br />
-          <br />
 
           <Grid
             item

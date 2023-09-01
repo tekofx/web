@@ -25,7 +25,7 @@ export default function SocialCards() {
         url="https://twitter.com/teko_fx"
         />
       </Grid>
-<Grid item xs={12} sm={4} md={3} lg={3}>
+ <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaCloud />}
           content="Bluesky"

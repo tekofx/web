@@ -17,7 +17,7 @@ import AnimatedCard from "./SocialCard";
 export default function SocialCards() {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaTwitter />}
           content="Twitter"
@@ -25,7 +25,7 @@ export default function SocialCards() {
         url="https://twitter.com/teko_fx"
         />
       </Grid>
-<Grid item xs={6} sm={4} md={3} lg={3}>
+<Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaCloud />}
           content="Bluesky"
@@ -33,7 +33,7 @@ export default function SocialCards() {
           url="https://bsky.app/profile/tekofx.bsky.social"
         />
 </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaMastodon />}
           content="Mastodon"
@@ -41,7 +41,7 @@ export default function SocialCards() {
           url="https://meow.social/@teko"
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaGithub />}
           content="Github"
@@ -49,7 +49,7 @@ export default function SocialCards() {
           url="https://github.com/tekofx"
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaDeviantart />}
           content="DeviantArt"
@@ -57,7 +57,7 @@ export default function SocialCards() {
           url="https://www.deviantart.com/tekofx"
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<Fa500Px />}
           content="500px"
@@ -65,7 +65,7 @@ export default function SocialCards() {
           url="https://500px.com/p/tekofx"
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaInstagram />}
           content="Instagram"
@@ -73,7 +73,7 @@ export default function SocialCards() {
           url="https://www.instagram.com/teko_fx/"
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FurAffinity />}
           content="FurAffinity"
@@ -81,7 +81,7 @@ export default function SocialCards() {
           url="https://www.furaffinity.net/user/teko."
         />
       </Grid>
-      <Grid item xs={6} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<Itaku />}
           content="Itaku"

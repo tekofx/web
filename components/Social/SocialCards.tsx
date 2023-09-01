@@ -21,17 +21,18 @@ export default function SocialCards() {
         <AnimatedCard
           icon={<FaTwitter />}
           content="Twitter"
-          subcontent="@tekofx.bsky.social"
-        url="https://bsky.app/profile/tekofx.bsky.social"
+          subcontent="@Teko_fx"
+        url="https://twitter.com/teko_fx"
         />
       </Grid>
 <Grid item xs={6} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaCloud />}
           content="Bluesky"
-          subcontent="@Teko_fx"
-          url="https://twitter.com/teko_fx"
+          subcontent="@tekofx.bsky.social"
+          url="https://bsky.app/profile/tekofx.bsky.social"
         />
+</Grid>
       <Grid item xs={6} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaMastodon />}

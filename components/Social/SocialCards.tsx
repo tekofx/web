@@ -5,7 +5,7 @@ import {
   Fa500Px,
   FaInstagram,
   FaGithub,
-FaCloud
+  FaCloud,
 } from "react-icons/fa";
 
 import { Grid } from "@mui/material";
@@ -22,17 +22,17 @@ export default function SocialCards() {
           icon={<FaTwitter />}
           content="Twitter"
           subcontent="@Teko_fx"
-        url="https://twitter.com/teko_fx"
+          url="https://twitter.com/teko_fx"
         />
       </Grid>
- <Grid item xs={12} sm={4} md={3} lg={3}>
+      <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaCloud />}
           content="Bluesky"
           subcontent="@tekofx.bsky.social"
           url="https://bsky.app/profile/tekofx.bsky.social"
         />
-</Grid>
+      </Grid>
       <Grid item xs={12} sm={4} md={3} lg={3}>
         <AnimatedCard
           icon={<FaMastodon />}

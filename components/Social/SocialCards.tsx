@@ -29,8 +29,8 @@ export default function SocialCards() {
         <AnimatedCard
           icon={<FaCloud />}
           content="Bluesky"
-          subcontent="@tekofx.bsky.social"
-          url="https://bsky.app/profile/tekofx.bsky.social"
+          subcontent="@tekofx.es"
+          url="https://bsky.app/profile/tekofx.es"
         />
       </Grid>
       <Grid item xs={12} sm={4} md={3} lg={3}>

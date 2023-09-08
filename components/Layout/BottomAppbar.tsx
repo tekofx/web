@@ -40,8 +40,15 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = useState<number>(getIdFromPath(router.pathname));
 
   function getIdFromPath(path: string) {
+    // @ts-ignore
+    var index = path.indexOf(process.env.PUBLIC_URL);
+    var substring = path.substring(index);
+    console.log(substring);
+    // tekofx.github.io/web/projects/card
+    // www.tekofx.es/projects/card
+
     const page = pages.find(
-      (page) => page.navigate === "/" + path.split("/")[1]
+      (page) => substring.includes(page.navigate) && page.navigate !== "/"
     );
     if (page) {
       return page.id;

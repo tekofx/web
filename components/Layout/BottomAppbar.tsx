@@ -43,9 +43,6 @@ export default function SimpleBottomNavigation() {
     // @ts-ignore
     var index = path.indexOf(process.env.PUBLIC_URL);
     var substring = path.substring(index);
-    console.log(substring);
-    // tekofx.github.io/web/projects/card
-    // www.tekofx.es/projects/card
 
     const page = pages.find(
       (page) => substring.includes(page.navigate) && page.navigate !== "/"
@@ -81,7 +78,7 @@ export default function SimpleBottomNavigation() {
           position: "fixed",
           bottom: 0,
           width: "100%",
-          display: { sx: "block", md: "none", lg: "none" },
+          display: "block",
         }}
       >
         {pages.map((page, key) => (

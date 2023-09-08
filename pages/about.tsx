@@ -71,7 +71,7 @@ function About() {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Grid id="socials" item xs={12} sm={12} md={12} lg={12}>
           <Paper sx={{ marginBottom: 2, p: 2 }}>
             <Typography variant="h2" align="center">
               Socials

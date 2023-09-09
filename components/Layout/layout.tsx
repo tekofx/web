@@ -7,13 +7,12 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const extraSmall = useMediaQuery(Theme.breakpoints.down("xs"));
+  const extraSmall = useMediaQuery(Theme.breakpoints.down("sm"));
   return (
     <>
       <Appbar />
-
       <main>{children}</main>
-      {extraSmall && <BottomAppBar />}
+      <BottomAppBar />
     </>
   );
 }

@@ -40,12 +40,8 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = useState<number>(getIdFromPath(router.pathname));
 
   function getIdFromPath(path: string) {
-    // @ts-ignore
-    var index = path.indexOf(process.env.PUBLIC_URL);
-    var substring = path.substring(index);
-
     const page = pages.find(
-      (page) => substring.includes(page.navigate) && page.navigate !== "/"
+      (page) => page.navigate === "/" + path.split("/")[1]
     );
     if (page) {
       return page.id;
@@ -78,7 +74,7 @@ export default function SimpleBottomNavigation() {
           position: "fixed",
           bottom: 0,
           width: "100%",
-          display: "block",
+          display: { sx: "block", md: "none", lg: "none" },
         }}
       >
         {pages.map((page, key) => (

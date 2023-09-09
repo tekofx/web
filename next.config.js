@@ -4,13 +4,13 @@ let imagePath = "";
 process.env.FAVICON = "/public/favicon.ico";
 process.env.PUBLIC_URL = "/";
 
-if (process.env.GITHUB_WORKFLOW === "Deploy Next.js site to Pages") {
+/* if (process.env.GITHUB_WORKFLOW === "Deploy Next.js site to Pages") {
   assetPrefix = "/web";
   basePath = "/web";
   imagePath = "/web";
   process.env.FAVICON = "/web/public/favicon.ico";
   process.env.PUBLIC_URL = "/web/";
-}
+} */
 
 module.exports = {
   output: "standalone",

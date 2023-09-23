@@ -110,9 +110,13 @@ export default function Gallery() {
                 className="pics"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                onClick={() => onImageClick(image)}
               >
-                <img src={image.src} alt={image.title} className="pic" />
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className="pic"
+                  onClick={() => onImageClick(image)}
+                />
                 <Paper
                   className="text"
                   // @ts-ignore

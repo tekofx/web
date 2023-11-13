@@ -25,7 +25,7 @@
     "axios": "^1.6.0",
     "framer-motion": "latest",
     "html-to-image": "^1.11.11",
-    "next": "^13.4.19",
+    "next": "^13.5.0",
     "next-qrcode": "^2.4.0",
     "prop-types": "^15.8.1",
     "react": "latest",

@@ -27,6 +27,7 @@
     "html-to-image": "^1.11.11",
     "next": "^13.5.0",
     "next-qrcode": "^2.4.0",
+    "postcss": "8.4.31",
     "prop-types": "^15.8.1",
     "react": "latest",
     "react-dom": "latest",

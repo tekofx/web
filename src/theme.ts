@@ -8,6 +8,13 @@ export const fonts = Roboto({
   fallback: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"],
 });
 
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  fallback: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"],
+});
+
 // Create a theme instance.
 var Theme = createTheme({
   palette: {
@@ -79,7 +86,7 @@ var Theme = createTheme({
   },
   typography: {
     // @ts-ignore
-    fontFamily: fonts,
+    fontFamily: roboto,
 
     h2: {
       fontSize: "20rem",

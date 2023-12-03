@@ -22,7 +22,7 @@
     "@next/font": "^13.0.5",
     "@react-three/drei": "^9.80.5",
     "@react-three/fiber": "^8.13.3",
-    "axios": "^1.2.0",
+    "axios": "^1.6.0",
     "framer-motion": "latest",
     "html-to-image": "^1.11.11",
     "next": "^13.5.0",

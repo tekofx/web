@@ -85,7 +85,7 @@ export default function SocialCards() {
         <AnimatedCard
           icon={<Itaku />}
           content="Itaku"
-          subcontent="teko."
+          subcontent="@teko"
           url="https://www.itaku.ee/profile/teko"
         />
       </Grid>

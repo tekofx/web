@@ -19,7 +19,6 @@
     "@mui/icons-material": "latest",
     "@mui/lab": "^5.0.0-alpha.140",
     "@mui/material": "^5.14.5",
-    "@next/font": "^13.0.5",
     "@react-three/drei": "^9.80.5",
     "@react-three/fiber": "^8.13.3",
     "axios": "^1.6.0",

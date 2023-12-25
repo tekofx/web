@@ -1,4 +1,4 @@
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
 
 export const fonts = Roboto({

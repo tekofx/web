@@ -1,20 +1,10 @@
-import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 import { createTheme } from "@mui/material/styles";
 
-export const fonts = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"],
+const roboto = localFont({
+  src: "./fonts/Roboto-Regular.ttf",
 });
-
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ['"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial"],
-});
-
+export const fonts = roboto;
 // Create a theme instance.
 var Theme = createTheme({
   palette: {

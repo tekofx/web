@@ -32,6 +32,10 @@ const colors = [
     hex: "#00DBFF",
   },
   {
+    name: "Ponytail",
+    hex: "#E4302A",
+  },
+  {
     name: "Paws/Ears",
     hex: "#F0A19C",
   },
@@ -42,10 +46,6 @@ const colors = [
   {
     name: "Eyes",
     hex: "#E2E565",
-  },
-  {
-    name: "Ponytail",
-    hex: "#E4302A",
   },
 ];
 
